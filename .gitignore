@@ -1,0 +1,48 @@
+# Entorno virtual
+.venv/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos pesados y descargas
+agents/ingestion/downloads/*
+!agents/ingestion/downloads/.gitkeep
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+# Configuración y logs
+*.log
+archive.txt
+.env
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db

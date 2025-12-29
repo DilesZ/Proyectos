@@ -1,0 +1,33 @@
+# Multi-Agent Orchestrator Configuration
+
+version: "1.0"
+
+system:
+  workspace_root: "c:\\Orquestador"
+  projects_dir: "projects"
+  inputs_dir: "inputs"
+
+agents:
+  strategist:
+    role: "Business Strategy & Analysis"
+    input_format: ["txt", "pdf", "md"] # NotebookLM exports
+    output_format: "json"
+  
+  designer:
+    role: "UI/UX & Prototyping"
+    input_format: "json" # Strategy JSON
+    output_format: ["css", "html"] # Opal exports
+    
+  engineer:
+    role: "Full-Stack Development"
+    tech_stack: 
+      frontend: "React + Vite"
+      styling: "Vanilla CSS (Design System)"
+      backend: "Node.js (Optional)"
+    
+  marketer:
+    role: "Copywriting & SEO"
+    tone: "Professional, Persuasive"
+
+workflow:
+  default_pipeline: ["strategist", "designer", "engineer", "marketer"]
