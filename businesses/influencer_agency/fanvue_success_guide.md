@@ -43,4 +43,12 @@ Para asegurar que tu influencer siempre sea la misma:
 4. **Validación**: Pasar las fotos por un filtro de "Realismo Humano" antes de publicar.
 
 ---
+
+## Stack Gratuito Recomendado
+- **Imagen**: SDXL/ComfyUI + LoRA (entrenamiento en Colab/Kaggle), ControlNet (OpenPose/Reference).
+- **Vídeo (hablar)**: SadTalker o Wav2Lip (lip‑sync) con audio de **Bark/Coqui TTS**.
+- **Vídeo (cinemática)**: Deforum/AnimateDiff o efecto Ken Burns con `ffmpeg`.
+- **Batch**: SeaArt/Freepik en sus modos gratuitos cuando proceda, priorizando pipelines locales.
+
+---
 **Próximo Paso**: ¿Quieres que diseñemos el primer "Storyline" (Ej: "La vecina deportista") para generar las fotos del dataset o prefieres configurar los parámetros técnicos de entrenamiento del LoRA?

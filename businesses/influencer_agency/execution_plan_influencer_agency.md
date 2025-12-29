@@ -24,10 +24,13 @@
     - **Wan 2.6**: For realistic movement and talking heads.
     - **Higgsfield**: For cinematic camera control (Zoom/Pan).
     - **Viyou**: For viral dance trends and "living portraits".
-- **Audio Tools**: ElevenLabs for voice consistency.
+- **Audio Tools**: Bark / Coqui TTS (gratuito) para voz consistente.
 - **Platforms**: Fanvue (Monetization), Instagram/TikTok (Traffic).
 - **Automation**: AI Chat integration for Fanvue messaging.
 - **Human/Dev Time**: 10-15 hours/week for strategy and prompt engineering.
+
+### Free-Only Compute
+- **Local GPU** o **Google Colab/Kaggle (gratuito)** para SDXL, LoRA y pipelines de ComfyUI.
 
 ## 3. Comprehensive Timeline
 - **Days 1-3**: Persona design and voice cloning.

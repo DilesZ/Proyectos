@@ -18,3 +18,10 @@
     - Apply **LoRA** (Character Face) at 0.8 strength.
     - Apply **ControlNet** (OpenPose) using the Perchance draft as reference.
 3.  **Upscaling**: Use **Ultimate SD Upscale** for 4k resolution.
+
+---
+
+## 🧑‍💻 Compute Gratuito
+- **Local GPU** o **Google Colab/Kaggle (planes gratuitos)** para ejecutar SDXL/ComfyUI.
+- **Entrenamiento LoRA**: **kohya_ss** en Colab/Kaggle (plantillas disponibles) con datasets de 40–60 imágenes.
+- **Etiquetado**: **wd14 tagger** para auto‑etiquetar datasets si se requiere.

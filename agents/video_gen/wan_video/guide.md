@@ -5,7 +5,7 @@
 ## 🧰 Tool Stack
 1.  **Wan 2.6 (Alibaba)**:
     - *Best For*: Realistic human movement, long clips (5s+), and "Lip Sync" (Story Mode).
-    - *Cost*: Free/Open Source (Local) or API.
+    - *Cost*: Puede requerir API/plan; usar alternativas gratuitas si se exige 0 coste.
 2.  **Higgsfield AI**:
     - *Best For*: **Camera Control**. Use this when you need a specific "Zoom In", "Pan Left", or "Crane Shot" to make the video look cinematic.
     - *Feature*: "Diffuse" app allows precise control over motion.
@@ -28,3 +28,10 @@
 1.  **Input**: Portrait image + Audio file (ElevenLabs).
 2.  **Tool**: Wan 2.6 "Live Portrait" mode.
 3.  **Output**: The character speaking the daily update.
+
+---
+
+## Alternativas Gratuitas (Stack 0 Coste)
+- **Lip‑Sync / Hablar a cámara**: **SadTalker**, **Wav2Lip** (open‑source).
+- **Movimiento/Cinemática desde foto**: **Deforum**, **AnimateDiff** (SD plugins), o efecto **Ken Burns** con `ffmpeg`.
+- **Audio TTS**: **Bark** o **Coqui TTS** para voces naturales sin coste.

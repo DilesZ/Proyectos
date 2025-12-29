@@ -62,6 +62,12 @@
 - Mantener **Higgsfield** para “cinematics” en fotos estáticas; combinar con **Viyou** para tendencias de baile que generen alcance orgánico.
 - Incorporar guías **Apatero** para pricing ($9.99–19.99), volumen semanal y calendarización PPV.
 
+### Nota de Coste (Ruta 0€)
+- **Pykaso / Viyou / Higgsfield / Wan 2.6**: pueden requerir pagos o créditos; priorizar **stack gratuito**:
+  - **Imagen**: SDXL + ComfyUI + LoRA (Colab/Kaggle).
+  - **Vídeo hablar**: SadTalker/Wav2Lip + **Bark/Coqui TTS**.
+  - **Cinemática**: Deforum/AnimateDiff o Ken Burns con `ffmpeg`.
+
 ### Próximas Acciones
 - Ejecutar un piloto con Elena: dataset en ComfyUI, LoRA en RunPod, 3 vídeos bienvenida (Wan 2.6), 2 reels trend (Viyou), 5 fotos cinematizadas (Higgsfield).
 - Medir conversión de CTA en reels y respuesta a PPV; iterar prompts y lip‑sync según retención y tips.
