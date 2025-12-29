@@ -1,33 +1,82 @@
-# Multi-Agent Orchestrator Configuration
+# Multi-Agent Orchestrator Configuration v2.0
 
-version: "1.0"
+version: "2.0"
 
 system:
   workspace_root: "c:\\Orquestador"
-  projects_dir: "projects"
-  inputs_dir: "inputs"
+  businesses_dir: "businesses"  # Renamed from 'projects'
+  agents_dir: "agents"
+  models_dir: "models"
+  mcp_dir: "mcp"
 
 agents:
   strategist:
     role: "Business Strategy & Analysis"
-    input_format: ["txt", "pdf", "md"] # NotebookLM exports
+    tools: ["NotebookLM", "Brave Search"]
+    input_format: ["txt", "pdf", "md"]
     output_format: "json"
-  
+
+  ingestion:
+    role: "Content Harvesting"
+    tools: ["yt-dlp", "Instagram Scraper"]
+    output_dir: "agents/ingestion/downloads"
+
+  trend_watcher:
+    role: "Market Intelligence & Tool Scouting"
+    sources: "agents/trend_watcher/sources.md"
+    focus: ["YouTube (Matt Wolfe, Wes Roth)", "Instagram (AI Wealth, Tech Trends)"]
+    output_format: "Opportunity Report (Markdown)"
+
+  image_gen:
+    role: "Visual Content Creation"
+    sub_agents:
+      nano_banana:
+        role: "Rapid Prototyping & SFW Assets"
+        provider: "Freepik (Gemini 2.5 Flash Image)"
+        cost: "Low/Free"
+        use_case: "Social media, thumbnails, datasheet visualization"
+      stable_diffusion:
+        role: "High-Fidelity & Adult Content"
+        provider: "Local/Cloud (SDXL/Pony V6)"
+        cost: "Medium (GPU Compute)"
+        use_case: "Fanvue exclusive, consistency (LoRA), NSFW"
+
+  video_gen:
+    role: "Video Content Creation"
+    sub_agents:
+      wan_video:
+        role: "Character Video & Lip-Sync"
+        provider: "Wan 2.6 (Alibaba)"
+        use_case: "Stories, Reels, Intro videos"
+
   designer:
     role: "UI/UX & Prototyping"
-    input_format: "json" # Strategy JSON
-    output_format: ["css", "html"] # Opal exports
-    
+    tools: ["Opal", "Figma (Conceptual)"]
+
   engineer:
     role: "Full-Stack Development"
     tech_stack: 
       frontend: "React + Vite"
-      styling: "Vanilla CSS (Design System)"
-      backend: "Node.js (Optional)"
-    
+      styling: "Vanilla CSS / Tailwind"
+      backend: "Node.js / Supabase"
+
   marketer:
-    role: "Copywriting & SEO"
-    tone: "Professional, Persuasive"
+    role: "Copywriting & Growth"
+    tools: ["SEO Analyzer", "Copywriter"]
+
+models:
+  personas_path: "models/personas"
+  prompts_path: "models/prompts"
+  loras_path: "models/loras"
+
+mcp:
+  servers:
+    - name: "filesystem"
+      path: "mcp/filesystem"
+    - name: "freepik_connector"
+      path: "mcp/freepik"
+      status: "planned"
 
 workflow:
-  default_pipeline: ["strategist", "designer", "engineer", "marketer"]
+  default_pipeline: ["ingestion", "strategist", "image_gen", "video_gen", "marketer"]
+  web_app_pipeline: ["strategist", "designer", "engineer"]

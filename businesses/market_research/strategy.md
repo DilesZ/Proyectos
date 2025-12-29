@@ -18,3 +18,13 @@ Optimizar el perfil de usuario para calificar en estudios de mercado de alta rem
 - **Especialización**: Los perfiles técnicos (IT, Marketing, Salud) pagan mucho más.
 - **Rapidez**: Ser de los primeros en responder al screener (filtro).
 - **Honestidad Estratégica**: Responder lo que buscan las empresas sin mentir, pero resaltando la experiencia relevante.
+
+---
+
+## 📘 Guía Operativa Paso a Paso
+1. Preparar LinkedIn y CV con experiencia alineada a estudios objetivo.
+2. Configurar cuentas en Respondent/UserInterview y alertas por nicho.
+3. Aplicar diariamente a 3–5 estudios con respuestas optimizadas por IA.
+4. Preparar entrevista: guion de puntos clave y ejemplos de valor.
+5. Registrar resultados y pagos, optimizar perfiles y especialización.
+6. Escalar: abrir nuevos nichos de mayor remuneración y mejorar tasa de aceptación.
