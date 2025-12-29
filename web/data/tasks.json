@@ -1,0 +1,51 @@
+{
+  "businesses": [
+    {
+      "key": "influencer_agency",
+      "name": "Influencer IA (Fanvue)",
+      "tasks": [
+        { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup" },
+        { "id": "fanvue_02_imagen_maestra", "title": "Generar Imagen Maestra con Nano Banana Pro", "points": 20, "badge": "Anchor" },
+        { "id": "fanvue_03_dataset_lora", "title": "Crear dataset y entrenar LoRA en Colab/Kaggle", "points": 30, "badge": "Consistency" },
+        { "id": "fanvue_04_datasheet_30", "title": "Producir datasheet SFW de 30 imágenes", "points": 25, "badge": "SFW" },
+        { "id": "fanvue_05_sets_nsfc", "title": "Crear 10 sets NSFW con SDXL + LoRA", "points": 30, "badge": "NSFW" },
+        { "id": "fanvue_06_video_bienvenida", "title": "3 vídeos de bienvenida (Wan/SadTalker)", "points": 20, "badge": "Welcome" },
+        { "id": "fanvue_07_cinematic", "title": "5 cinemáticas con Higgsfield/Deforum", "points": 20, "badge": "Cinematics" },
+        { "id": "fanvue_08_trend_reels", "title": "2 reels tendencia con Viyou/stack local", "points": 15, "badge": "Trends" },
+        { "id": "fanvue_09_infra", "title": "Configurar Fanvue + Landing + IG/TikTok", "points": 15, "badge": "Infra" },
+        { "id": "fanvue_10_publicacion", "title": "Publicar diario: 1 Reel + 1 Story", "points": 20, "badge": "Routine" },
+        { "id": "fanvue_11_ppv_dm", "title": "Activar PPV y Boyfriend Experience en DM", "points": 30, "badge": "Monetize" },
+        { "id": "fanvue_12_cupos", "title": "Plan de cupos gratuitos Wan/Higgsfield/Viyou/Pykaso", "points": 15, "badge": "FreeQuota" },
+        { "id": "fanvue_13_optimizacion", "title": "Optimizar prompts y lip-sync con métricas", "points": 20, "badge": "Optimize" }
+      ]
+    },
+    {
+      "key": "kdp_publishing",
+      "name": "KDP Publishing",
+      "tasks": [
+        { "id": "kdp_01_nicho", "title": "Seleccionar nicho con BSR objetivo", "points": 15, "badge": "Research" },
+        { "id": "kdp_02_titulo_keywords", "title": "Definir título/subtítulo y keywords", "points": 10, "badge": "SEO" },
+        { "id": "kdp_03_coloring", "title": "Generar 50 láminas con Nano Banana + Vectorizer", "points": 25, "badge": "Coloring" },
+        { "id": "kdp_04_storybook", "title": "Texto+ilustraciones con Gemini Storybook/alternativa", "points": 25, "badge": "Story" },
+        { "id": "kdp_05_workbook", "title": "Redacción y maquetación de workbook", "points": 20, "badge": "Workbook" },
+        { "id": "kdp_06_portada", "title": "Portada con SDXL/Flux y tipografía", "points": 15, "badge": "Cover" },
+        { "id": "kdp_07_maquetacion", "title": "Maquetación KDP y export PDF", "points": 15, "badge": "Layout" },
+        { "id": "kdp_08_publicacion", "title": "Publicar con metadatos y pricing", "points": 10, "badge": "Publish" },
+        { "id": "kdp_09_lanzamiento", "title": "Lanzamiento social y reseñas iniciales", "points": 10, "badge": "Launch" },
+        { "id": "kdp_10_iteracion", "title": "Iterar por analítica y crear serie", "points": 20, "badge": "Iterate" }
+      ]
+    },
+    {
+      "key": "market_research",
+      "name": "Investigación de mercado",
+      "tasks": [
+        { "id": "mr_01_linkedin", "title": "Preparar LinkedIn/CV alineados", "points": 10, "badge": "Profile" },
+        { "id": "mr_02_cuentas", "title": "Configurar cuentas y alertas", "points": 10, "badge": "Setup" },
+        { "id": "mr_03_aplicar", "title": "Aplicar 3–5 estudios diarios", "points": 20, "badge": "Apply" },
+        { "id": "mr_04_entrevista", "title": "Guion y ejemplos para entrevista", "points": 15, "badge": "Interview" },
+        { "id": "mr_05_registro", "title": "Registrar resultados y pagos", "points": 10, "badge": "Log" },
+        { "id": "mr_06_escalar", "title": "Escalar nichos mejor pagados", "points": 20, "badge": "Scale" }
+      ]
+    }
+  ]
+}
