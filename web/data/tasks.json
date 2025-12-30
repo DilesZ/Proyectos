@@ -609,44 +609,64 @@
       ]
     },
     {
-      "key": "market_research",
-      "name": "Investigación de mercado",
+      "key": "programmatic_seo",
+      "name": "SEO Programático con IA",
       "tasks": [
-        { "id": "mr_01_linkedin", "title": "Preparar LinkedIn/CV alineados", "points": 10, "badge": "Profile",
+        { "id": "ps_01_nicho", "title": "Seleccionar nicho y modelo de monetización", "points": 10, "badge": "Plan",
           "subtasks": [
-            { "id": "mr_01_01_cv", "title": "Actualizar CV y skills", "points": 4 },
-            { "id": "mr_01_02_linkedin", "title": "Optimizar LinkedIn", "points": 3 },
-            { "id": "mr_01_03_roles", "title": "Enfoque en roles pagados", "points": 3 }
+            { "id": "ps_01_01_investigacion", "title": "Analizar SERPs/afiliados/volumen", "points": 5,
+              "steps": [
+                { "id": "ps_01_01_investigacion_s01", "title": "Evaluar competencia/top keywords" },
+                { "id": "ps_01_01_investigacion_s02", "title": "Definir intención usuario" },
+                { "id": "ps_01_01_investigacion_s03", "title": "Elegir nicho principal" }
+              ]
+            },
+            { "id": "ps_01_02_objetivos", "title": "Definir KPIs (CTR, clicks, RPM)", "points": 5,
+              "steps": [
+                { "id": "ps_01_02_objetivos_s01", "title": "Establecer métricas y umbrales" },
+                { "id": "ps_01_02_objetivos_s02", "title": "Crear tablero seguimiento" }
+              ]
+            }
           ]
         },
-        { "id": "mr_02_cuentas", "title": "Configurar cuentas y alertas", "points": 10, "badge": "Setup",
+        { "id": "ps_02_stack", "title": "Configurar stack (dominio, CMS/static, Vercel)", "points": 15, "badge": "Stack",
           "subtasks": [
-            { "id": "mr_02_01_respondent", "title": "Cuenta Respondent/UserInterview", "points": 5 },
-            { "id": "mr_02_02_alertas", "title": "Alertas por nicho", "points": 5 }
+            { "id": "ps_02_01_dominio", "title": "Comprar dominio y DNS", "points": 5 },
+            { "id": "ps_02_02_cms", "title": "Elegir CMS/headless/estático", "points": 5 },
+            { "id": "ps_02_03_deploy", "title": "Configurar build y deploy en Vercel", "points": 5 }
           ]
         },
-        { "id": "mr_03_aplicar", "title": "Aplicar 3–5 estudios diarios", "points": 20, "badge": "Apply",
+        { "id": "ps_03_dataset", "title": "Diseñar dataset y plantillas programáticas", "points": 15, "badge": "Data",
           "subtasks": [
-            { "id": "mr_03_01_diario", "title": "Enviar 3–5 aplicaciones", "points": 12 },
-            { "id": "mr_03_02_opt", "title": "Optimizar respuestas IA", "points": 8 }
+            { "id": "ps_03_01_esquema", "title": "Definir esquema de entidades/atributos", "points": 5 },
+            { "id": "ps_03_02_prompts", "title": "Crear prompts y plantilla HTML", "points": 5 },
+            { "id": "ps_03_03_interlink", "title": "Plan interlinking automático", "points": 5 }
           ]
         },
-        { "id": "mr_04_entrevista", "title": "Guion y ejemplos para entrevista", "points": 15, "badge": "Interview",
+        { "id": "ps_04_generacion", "title": "Generar 50–100 páginas con IA", "points": 20, "badge": "Gen",
           "subtasks": [
-            { "id": "mr_04_01_guion", "title": "Guion de puntos clave", "points": 7 },
-            { "id": "mr_04_02_ejemplos", "title": "Casos y ejemplos", "points": 8 }
+            { "id": "ps_04_01_batch", "title": "Generación batch con QA", "points": 10,
+              "steps": [
+                { "id": "ps_04_01_batch_s01", "title": "Ejecutar pipeline de generación" },
+                { "id": "ps_04_01_batch_s02", "title": "Validación factual/estilo" },
+                { "id": "ps_04_01_batch_s03", "title": "Publicar lote inicial" }
+              ]
+            },
+            { "id": "ps_04_02_mejora", "title": "Optimizar títulos/meta/CTAs", "points": 10 }
           ]
         },
-        { "id": "mr_05_registro", "title": "Registrar resultados y pagos", "points": 10, "badge": "Log",
+        { "id": "ps_05_seo", "title": "SEO técnico y rendimiento", "points": 15, "badge": "SEO",
           "subtasks": [
-            { "id": "mr_05_01_tracker", "title": "Tracker de estudios/pagos", "points": 5 },
-            { "id": "mr_05_02_mejora", "title": "Mejorar perfil según feedback", "points": 5 }
+            { "id": "ps_05_01_sitemap", "title": "Sitemap/robots/canonical", "points": 5 },
+            { "id": "ps_05_02_schema", "title": "Añadir schema y validarlo", "points": 5 },
+            { "id": "ps_05_03_cwv", "title": "Core Web Vitals optimizados", "points": 5 }
           ]
         },
-        { "id": "mr_06_escalar", "title": "Escalar nichos mejor pagados", "points": 20, "badge": "Scale",
+        { "id": "ps_06_monetizacion", "title": "Monetizar y escalar", "points": 20, "badge": "Scale",
           "subtasks": [
-            { "id": "mr_06_01_nuevos", "title": "Abrir 2 nichos de alto pago", "points": 10 },
-            { "id": "mr_06_02_ratio", "title": "Mejorar tasa aceptación", "points": 10 }
+            { "id": "ps_06_01_afiliados", "title": "Integrar afiliados/Adsense", "points": 10 },
+            { "id": "ps_06_02_tracking", "title": "Configurar tracking y reporting", "points": 5 },
+            { "id": "ps_06_03_escalar", "title": "Plan de 2 nuevos subnichos", "points": 5 }
           ]
         }
       ]
