@@ -444,12 +444,22 @@
           "subtasks": [
             { "id": "aa_04_01_ficha", "title": "Ficha de producto", "points": 5,
               "steps": [
-                { "id": "aa_04_01_ficha_s01", "title": "Título/meta/CTA" },
-                { "id": "aa_04_01_ficha_s02", "title": "Schema Product/Review" }
+                { "id": "aa_04_01_ficha_s01", "title": "Título/meta/CTA", "prompt": "Genera title/meta y 3 CTAs persuasivos por ficha con copy orientado a clicks." },
+                { "id": "aa_04_01_ficha_s02", "title": "Schema Product/Review", "prompt": "Entrega JSON‑LD para Product con AggregateRating y offers." }
               ]
             },
-            { "id": "aa_04_02_comparativa", "title": "Página comparativa", "points": 5 },
-            { "id": "aa_04_03_guia", "title": "Guía de compra", "points": 5 }
+            { "id": "aa_04_02_comparativa", "title": "Página comparativa", "points": 5,
+              "steps": [
+                { "id": "aa_04_02_comparativa_s01", "title": "Tabla y criterios", "prompt": "Define tabla comparativa con criterios (precio, rating, features clave) y resumen accionable." },
+                { "id": "aa_04_02_comparativa_s02", "title": "Prompts comparativa", "prompt": "Escribe prompt para generar comparativa con pros/cons y recomendación final." }
+              ]
+            },
+            { "id": "aa_04_03_guia", "title": "Guía de compra", "points": 5,
+              "steps": [
+                { "id": "aa_04_03_guia_s01", "title": "Estructura de guía", "prompt": "Propón estructura H1/H2/H3 con criterios de decisión y FAQs." },
+                { "id": "aa_04_03_guia_s02", "title": "Prompt guía", "prompt": "Escribe prompt para guía de compra que incluya recomendaciones por perfil de usuario." }
+              ]
+            }
           ]
         },
         { "id": "aa_05_contenido", "title": "Generación de contenido con IA", "points": 20, "badge": "Gen",
@@ -457,39 +467,90 @@
             { "id": "aa_05_01_prompts", "title": "Prompts por tipo de página", "points": 8 },
             { "id": "aa_05_02_batch", "title": "Generar 50 páginas con QA", "points": 12,
               "steps": [
-                { "id": "aa_05_02_batch_s01", "title": "Ejecutar pipeline" },
-                { "id": "aa_05_02_batch_s02", "title": "Validación factual/estilo" },
-                { "id": "aa_05_02_batch_s03", "title": "Publicar lote inicial" }
+                { "id": "aa_05_02_batch_s01", "title": "Ejecutar pipeline", "prompt": "Indica parámetros de ejecución, tamaño de lote y control de calidad automatizado." },
+                { "id": "aa_05_02_batch_s02", "title": "Validación factual/estilo", "prompt": "Define checklist de QA y prompts de verificación de factualidad y estilo." },
+                { "id": "aa_05_02_batch_s03", "title": "Publicar lote inicial", "prompt": "Describe proceso de publicación y actualización de sitemap/robots." }
               ]
             }
           ]
         },
         { "id": "aa_06_seo", "title": "SEO técnico y on‑page", "points": 20, "badge": "SEO",
           "subtasks": [
-            { "id": "aa_06_01_sitemap", "title": "Sitemap/robots/canonical", "points": 7 },
-            { "id": "aa_06_02_schema", "title": "Schema Product/AggregateRating", "points": 7 },
-            { "id": "aa_06_03_interlink", "title": "Interlinking programático", "points": 6 }
+            { "id": "aa_06_01_sitemap", "title": "Sitemap/robots/canonical", "points": 7,
+              "steps": [
+                { "id": "aa_06_01_sitemap_s01", "title": "Sitemaps y robots", "prompt": "Especifica sitemaps por tipo de página y reglas en robots.txt." },
+                { "id": "aa_06_01_sitemap_s02", "title": "Canonicals", "prompt": "Define reglas de canonical para evitar duplicidades." }
+              ]
+            },
+            { "id": "aa_06_02_schema", "title": "Schema Product/AggregateRating", "points": 7,
+              "steps": [
+                { "id": "aa_06_02_schema_s01", "title": "JSON‑LD", "prompt": "Entrega JSON‑LD para Product y AggregateRating con ejemplos." },
+                { "id": "aa_06_02_schema_s02", "title": "Validación", "prompt": "Lista pasos de validación y corrección de errores." }
+              ]
+            },
+            { "id": "aa_06_03_interlink", "title": "Interlinking programático", "points": 6,
+              "steps": [
+                { "id": "aa_06_03_interlink_s01", "title": "Reglas interlink", "prompt": "Propón reglas de interlinking entre fichas, comparativas y guías." },
+                { "id": "aa_06_03_interlink_s02", "title": "Mapa de enlaces", "prompt": "Genera mapa de enlaces para 50 páginas iniciales." }
+              ]
+            }
           ]
         },
         { "id": "aa_07_compliance", "title": "Compliance Amazon Afiliados", "points": 10, "badge": "Legal",
           "subtasks": [
-            { "id": "aa_07_01_disclaimer", "title": "Disclaimer y política", "points": 4 },
-            { "id": "aa_07_02_tos", "title": "Revisar TOS (sin precios en tiempo real)", "points": 3 },
-            { "id": "aa_07_03_links", "title": "Enlaces con tag de afiliado", "points": 3 }
+            { "id": "aa_07_01_disclaimer", "title": "Disclaimer y política", "points": 4,
+              "steps": [
+                { "id": "aa_07_01_disclaimer_s01", "title": "Textos legales", "prompt": "Redacta disclaimer y políticas requeridas por Amazon Afiliados." }
+              ]
+            },
+            { "id": "aa_07_02_tos", "title": "Revisar TOS (sin precios en tiempo real)", "points": 3,
+              "steps": [
+                { "id": "aa_07_02_tos_s01", "title": "Checklist TOS", "prompt": "Entrega checklist de cumplimiento (no mostrar precios en tiempo real, fuentes permitidas)." }
+              ]
+            },
+            { "id": "aa_07_03_links", "title": "Enlaces con tag de afiliado", "points": 3,
+              "steps": [
+                { "id": "aa_07_03_links_s01", "title": "Integración de tags", "prompt": "Especifica cómo incorporar los tags de afiliado en enlaces y verificar tracking." }
+              ]
+            }
           ]
         },
         { "id": "aa_08_tracking", "title": "Tracking y monetización", "points": 15, "badge": "Analytics",
           "subtasks": [
-            { "id": "aa_08_01_ga4", "title": "GA4/UTM/click tracking", "points": 5 },
-            { "id": "aa_08_02_kpis", "title": "Dashboard RPM/CTR/ingresos", "points": 5 },
-            { "id": "aa_08_03_ab", "title": "Test A/B de CTAs", "points": 5 }
+            { "id": "aa_08_01_ga4", "title": "GA4/UTM/click tracking", "points": 5,
+              "steps": [
+                { "id": "aa_08_01_ga4_s01", "title": "Eventos y UTM", "prompt": "Define eventos GA4 y esquema UTM para medir clicks y rutas de conversión." }
+              ]
+            },
+            { "id": "aa_08_02_kpis", "title": "Dashboard RPM/CTR/ingresos", "points": 5,
+              "steps": [
+                { "id": "aa_08_02_kpis_s01", "title": "Diseño de dashboard", "prompt": "Propón layout y métricas para seguimiento semanal y mensual." }
+              ]
+            },
+            { "id": "aa_08_03_ab", "title": "Test A/B de CTAs", "points": 5,
+              "steps": [
+                { "id": "aa_08_03_ab_s01", "title": "Hipótesis y variantes", "prompt": "Diseña 3 hipótesis de CTAs y sus variantes A/B con criterios de éxito." }
+              ]
+            }
           ]
         },
         { "id": "aa_09_escalado", "title": "Escalar a 2–3 subnichos", "points": 15, "badge": "Scale",
           "subtasks": [
-            { "id": "aa_09_01_dup", "title": "Duplicar plantillas y datasets", "points": 5 },
-            { "id": "aa_09_02_pipeline", "title": "Automatizar pipeline semanal", "points": 5 },
-            { "id": "aa_09_03_serps", "title": "Revisión SERPs y updates", "points": 5 }
+            { "id": "aa_09_01_dup", "title": "Duplicar plantillas y datasets", "points": 5,
+              "steps": [
+                { "id": "aa_09_01_dup_s01", "title": "Estrategia de duplicación", "prompt": "Define proceso para duplicar plantillas/datasets y adaptar a nuevos subnichos." }
+              ]
+            },
+            { "id": "aa_09_02_pipeline", "title": "Automatizar pipeline semanal", "points": 5,
+              "steps": [
+                { "id": "aa_09_02_pipeline_s01", "title": "Agenda y automatización", "prompt": "Diseña agenda de generación semanal y automatización de publicación." }
+              ]
+            },
+            { "id": "aa_09_03_serps", "title": "Revisión SERPs y updates", "points": 5,
+              "steps": [
+                { "id": "aa_09_03_serps_s01", "title": "Monitoreo y updates", "prompt": "Propón rutina de revisión SERPs y actualización de contenidos por cambios." }
+              ]
+            }
           ]
         }
       ]
@@ -716,57 +777,125 @@
           "subtasks": [
             { "id": "ps_01_01_investigacion", "title": "Analizar SERPs/afiliados/volumen", "points": 5,
               "steps": [
-                { "id": "ps_01_01_investigacion_s01", "title": "Evaluar competencia/top keywords" },
-                { "id": "ps_01_01_investigacion_s02", "title": "Definir intención usuario" },
-                { "id": "ps_01_01_investigacion_s03", "title": "Elegir nicho principal" }
+                { "id": "ps_01_01_investigacion_s01", "title": "Evaluar competencia/top keywords", "prompt": "Actúa como analista SEO. Lista 30 keywords long‑tail con intención transaccional para {{pais}} en el nicho {{pre_nicho}}. Incluye volumen estimado, dificultad, CPC y competidores top con sus títulos/meta. Devuelve tabla priorizada por oportunidad (CTR x intención / dificultad)." },
+                { "id": "ps_01_01_investigacion_s02", "title": "Definir intención usuario", "prompt": "Clasifica las 30 keywords en intención (informacional, comparativa, transaccional). Para cada intención, propone tipos de página (ficha, comparativa, guía) y ejemplos de H1/H2." },
+                { "id": "ps_01_01_investigacion_s03", "title": "Elegir nicho principal", "prompt": "Selecciona el nicho ganador usando criterios: RPM objetivo {{rpm_objetivo}}, competencia <= {{dif_max}}, volumen total >= {{vol_min}}. Explica el racional y lista 3 subnichos candidatos." }
               ]
             },
             { "id": "ps_01_02_objetivos", "title": "Definir KPIs (CTR, clicks, RPM)", "points": 5,
               "steps": [
-                { "id": "ps_01_02_objetivos_s01", "title": "Establecer métricas y umbrales" },
-                { "id": "ps_01_02_objetivos_s02", "title": "Crear tablero seguimiento" }
+                { "id": "ps_01_02_objetivos_s01", "title": "Establecer métricas y umbrales", "prompt": "Define KPIs y umbrales: CTR objetivo por plantilla, tiempo en página, clicks/1000 visitas, RPM esperado por fuente (afiliados/Adsense). Devuelve una matriz de objetivos para 30/60/90 días." },
+                { "id": "ps_01_02_objetivos_s02", "title": "Crear tablero seguimiento", "prompt": "Propón estructura de dashboard (métricas, fuentes de datos, periodicidad). Incluye eventos GA4/UTM necesarios y definición de éxito semanal." }
               ]
             }
           ]
         },
         { "id": "ps_02_stack", "title": "Configurar stack (dominio, CMS/static, Vercel)", "points": 15, "badge": "Stack",
           "subtasks": [
-            { "id": "ps_02_01_dominio", "title": "Comprar dominio y DNS", "points": 5 },
-            { "id": "ps_02_02_cms", "title": "Elegir CMS/headless/estático", "points": 5 },
-            { "id": "ps_02_03_deploy", "title": "Configurar build y deploy en Vercel", "points": 5 }
+            { "id": "ps_02_01_dominio", "title": "Comprar dominio y DNS", "points": 5,
+              "steps": [
+                { "id": "ps_02_01_dominio_s01", "title": "Listar 3 nichos candidatos", "prompt": "Genera 3 naming options por nicho con criterios de marca, disponibilidad .com y relevancia SEO. Incluye sugerencias de subdominios por subnicho." },
+                { "id": "ps_02_01_dominio_s02", "title": "Disponibilidad y criterios", "prompt": "Evalúa disponibilidad y criterios (memorable, corto, keyword parcial). Recomienda 1 dominio final por nicho y justifica." },
+                { "id": "ps_02_01_dominio_s03", "title": "Compra y DNS", "prompt": "Lista registros DNS necesarios (A/AAAA/CNAME/TXT) para Vercel y verificación de GA4/Search Console." }
+              ]
+            },
+            { "id": "ps_02_02_cms", "title": "Elegir CMS/headless/estático", "points": 5,
+              "steps": [
+                { "id": "ps_02_02_cms_s01", "title": "Evaluar opciones", "prompt": "Compara opciones (Next.js static, Astro, Hugo, headless CMS). Incluye pros/cons para programmatic SEO y coste." },
+                { "id": "ps_02_02_cms_s02", "title": "Seleccionar y scaffold", "prompt": "Propón estructura de proyecto (carpetas, componentes, templates). Entrega lista de ficheros iniciales y comandos de scaffold." }
+              ]
+            },
+            { "id": "ps_02_03_deploy", "title": "Configurar build y deploy en Vercel", "points": 5,
+              "steps": [
+                { "id": "ps_02_03_deploy_s01", "title": "Configurar vercel.json", "prompt": "Especifica rewrites/headers necesarios para servir contenido estático y sitemap/robots. Incluye configuración de caché segura." },
+                { "id": "ps_02_03_deploy_s02", "title": "Build y test", "prompt": "Define comandos de build y pruebas básicas de enlaces y meta tags. Entrega checklist de verificación." },
+                { "id": "ps_02_03_deploy_s03", "title": "Deploy y preview", "prompt": "Indica pasos para conectar repo y dominios en Vercel. Describe cómo revisar previews y logs." }
+              ]
+            }
           ]
         },
         { "id": "ps_03_dataset", "title": "Diseñar dataset y plantillas programáticas", "points": 15, "badge": "Data",
           "subtasks": [
-            { "id": "ps_03_01_esquema", "title": "Definir esquema de entidades/atributos", "points": 5 },
-            { "id": "ps_03_02_prompts", "title": "Crear prompts y plantilla HTML", "points": 5 },
-            { "id": "ps_03_03_interlink", "title": "Plan interlinking automático", "points": 5 }
+            { "id": "ps_03_01_esquema", "title": "Definir esquema de entidades/atributos", "points": 5,
+              "steps": [
+                { "id": "ps_03_01_esquema_s01", "title": "Entidades y atributos", "prompt": "Diseña entidades (Producto, Categoría, Comparativa, Guía) y atributos mínimos para generación programática." },
+                { "id": "ps_03_01_esquema_s02", "title": "Normalización", "prompt": "Propón normalización/validación de datos (rangos, tipos, formatos). Incluye ejemplo JSON." }
+              ]
+            },
+            { "id": "ps_03_02_prompts", "title": "Crear prompts y plantilla HTML", "points": 5,
+              "steps": [
+                { "id": "ps_03_02_prompts_s01", "title": "Prompt ficha", "prompt": "Escribe prompt detallado para ficha de producto con H1/H2, pros/cons, especificaciones, CTA y disclaimer." },
+                { "id": "ps_03_02_prompts_s02", "title": "Prompt comparativa", "prompt": "Escribe prompt para comparativa de 5 productos con tabla, criterios y conclusiones accionables." },
+                { "id": "ps_03_02_prompts_s03", "title": "Plantilla HTML", "prompt": "Define plantilla HTML semántica (schema, breadcrumbs, meta) compatible con SEO programático." }
+              ]
+            },
+            { "id": "ps_03_03_interlink", "title": "Plan interlinking automático", "points": 5,
+              "steps": [
+                { "id": "ps_03_03_interlink_s01", "title": "Reglas de enlaces", "prompt": "Diseña reglas para enlazar fichas↔comparativas↔guías basadas en categoría e intención." },
+                { "id": "ps_03_03_interlink_s02", "title": "Mapa de enlaces", "prompt": "Genera un mapa de enlaces para 30 páginas iniciales y explica criterios de priorización." }
+              ]
+            }
           ]
         },
         { "id": "ps_04_generacion", "title": "Generar 50–100 páginas con IA", "points": 20, "badge": "Gen",
           "subtasks": [
             { "id": "ps_04_01_batch", "title": "Generación batch con QA", "points": 10,
               "steps": [
-                { "id": "ps_04_01_batch_s01", "title": "Ejecutar pipeline de generación" },
-                { "id": "ps_04_01_batch_s02", "title": "Validación factual/estilo" },
-                { "id": "ps_04_01_batch_s03", "title": "Publicar lote inicial" }
+                { "id": "ps_04_01_batch_s01", "title": "Ejecutar pipeline de generación", "prompt": "Indica parámetros de ejecución (tamaño lote, temperatura, fuentes). Devuelve checklist de preparación y comandos." },
+                { "id": "ps_04_01_batch_s02", "title": "Validación factual/estilo", "prompt": "Proporciona criterios de QA (factualidad, consistencia, tono). Incluye prompts de revisión automatizada." },
+                { "id": "ps_04_01_batch_s03", "title": "Publicar lote inicial", "prompt": "Define proceso de publicación (paths, sitemap update, ping Search Console). Checklist final." }
               ]
             },
-            { "id": "ps_04_02_mejora", "title": "Optimizar títulos/meta/CTAs", "points": 10 }
+            { "id": "ps_04_02_mejora", "title": "Optimizar títulos/meta/CTAs", "points": 10,
+              "steps": [
+                { "id": "ps_04_02_mejora_s01", "title": "Variantes de title/meta", "prompt": "Genera 3 variantes de title/meta por página max 60/160 chars con keywords y alto CTR." },
+                { "id": "ps_04_02_mejora_s02", "title": "CTAs y placements", "prompt": "Propón CTAs y su placement (above the fold, mid, end) con copy orientado a clicks." }
+              ]
+            }
           ]
         },
         { "id": "ps_05_seo", "title": "SEO técnico y rendimiento", "points": 15, "badge": "SEO",
           "subtasks": [
-            { "id": "ps_05_01_sitemap", "title": "Sitemap/robots/canonical", "points": 5 },
-            { "id": "ps_05_02_schema", "title": "Añadir schema y validarlo", "points": 5 },
-            { "id": "ps_05_03_cwv", "title": "Core Web Vitals optimizados", "points": 5 }
+            { "id": "ps_05_01_sitemap", "title": "Sitemap/robots/canonical", "points": 5,
+              "steps": [
+                { "id": "ps_05_01_sitemap_s01", "title": "Generar sitemaps", "prompt": "Especifica generación de sitemap index + secciones (fichas, comparativas, guías) y robots.txt." },
+                { "id": "ps_05_01_sitemap_s02", "title": "Canonicals", "prompt": "Define reglas de canonical y noindex para páginas duplicadas o filtros." }
+              ]
+            },
+            { "id": "ps_05_02_schema", "title": "Añadir schema y validarlo", "points": 5,
+              "steps": [
+                { "id": "ps_05_02_schema_s01", "title": "Schema por plantilla", "prompt": "Entrega JSON‑LD para Product, ItemList, Article y BreadcrumbList con ejemplos." },
+                { "id": "ps_05_02_schema_s02", "title": "Validación", "prompt": "Lista herramientas y pasos de validación (Rich Results, Search Console). Checklist de errores comunes." }
+              ]
+            },
+            { "id": "ps_05_03_cwv", "title": "Core Web Vitals optimizados", "points": 5,
+              "steps": [
+                { "id": "ps_05_03_cwv_s01", "title": "Optimización rendimiento", "prompt": "Recomienda optimizaciones para LCP/CLS/INP en sitio estático (images, fonts, caching)." },
+                { "id": "ps_05_03_cwv_s02", "title": "Medición y umbrales", "prompt": "Define medición con Lighthouse/Pagespeed y umbrales de aprobación." }
+              ]
+            }
           ]
         },
         { "id": "ps_06_monetizacion", "title": "Monetizar y escalar", "points": 20, "badge": "Scale",
           "subtasks": [
-            { "id": "ps_06_01_afiliados", "title": "Integrar afiliados/Adsense", "points": 10 },
-            { "id": "ps_06_02_tracking", "title": "Configurar tracking y reporting", "points": 5 },
-            { "id": "ps_06_03_escalar", "title": "Plan de 2 nuevos subnichos", "points": 5 }
+            { "id": "ps_06_01_afiliados", "title": "Integrar afiliados/Adsense", "points": 10,
+              "steps": [
+                { "id": "ps_06_01_afiliados_s01", "title": "Redes y requisitos", "prompt": "Lista redes de afiliación relevantes y requisitos de integración (incluye Amazon si aplica)." },
+                { "id": "ps_06_01_afiliados_s02", "title": "Política de enlaces", "prompt": "Define política de enlaces y disclosure para cumplimiento." }
+              ]
+            },
+            { "id": "ps_06_02_tracking", "title": "Configurar tracking y reporting", "points": 5,
+              "steps": [
+                { "id": "ps_06_02_tracking_s01", "title": "Eventos y UTM", "prompt": "Especifica eventos GA4 y esquema UTM para medir clicks y conversiones." },
+                { "id": "ps_06_02_tracking_s02", "title": "Dashboards", "prompt": "Diseña reporte semanal con KPIs (CTR, RPM, ingresos) y alertas." }
+              ]
+            },
+            { "id": "ps_06_03_escalar", "title": "Plan de 2 nuevos subnichos", "points": 5,
+              "steps": [
+                { "id": "ps_06_03_escalar_s01", "title": "Selección subnichos", "prompt": "Propón 2 subnichos con criterios de tráfico orgánico y monetización." },
+                { "id": "ps_06_03_escalar_s02", "title": "Plan de duplicación", "prompt": "Define cómo duplicar dataset/plantillas y ajustar interlinking." }
+              ]
+            }
           ]
         }
       ]
