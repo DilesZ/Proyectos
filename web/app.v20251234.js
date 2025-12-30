@@ -32,7 +32,9 @@ function hasSteps(json){try{const bs=json.businesses||[];for(const b of bs){for(
 function safeBusinesses(obj){try{const bs=(obj&&Array.isArray(obj.businesses))?obj.businesses:[];return bs}catch(e){return []}}
 async function getTasks(){
   try{
-    const r=await fetch(`./data/tasks.json?v=${dataVersion}`,{cache:"no-store"});
+    const localUrl=`${window.location.origin}/data/tasks.json?v=${dataVersion}`;
+    const r=await fetch(localUrl,{cache:"no-store"});
+    console.log("[Orquestador] fetch local", localUrl, r.status);
     if(r.ok){
       const j=await r.json();
       return j
