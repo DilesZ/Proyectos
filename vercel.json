@@ -7,5 +7,25 @@
     { "src": "/app.js", "dest": "web/app.js" },
     { "src": "/data/(.*)", "dest": "web/data/$1" },
     { "src": "/(.*)", "dest": "web/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/app.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
+      "source": "/styles.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    }
   ]
 }

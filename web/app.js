@@ -1,5 +1,5 @@
 const state={tasks:{},progress:{}}
-const dataVersion="20251230"
+const dataVersion="20251232"
 const storeKey="orquestador_progress_v1"
 const elTabs=document.getElementById("businessTabs")
 const elContent=document.getElementById("content")
@@ -41,5 +41,5 @@ async function getTasks(){
   }catch(e){}
   return fallbackTasks
 }
-async function init(){state.tasks=await getTasks();state.progress=loadProgress();renderTabs(state.tasks.businesses);const s=computeStats(state.tasks.businesses);elTotalPoints.textContent=s.points;elTotalCompleted.textContent=s.completed;elTotalTasks.textContent=s.total}
+async function init(){state.tasks=await getTasks();state.progress=loadProgress();document.getElementById("appVersion").textContent=`v${dataVersion}`;console.log("[Orquestador] app version", dataVersion, {hasSteps: hasSteps(state.tasks)});renderTabs(state.tasks.businesses);const s=computeStats(state.tasks.businesses);elTotalPoints.textContent=s.points;elTotalCompleted.textContent=s.completed;elTotalTasks.textContent=s.total}
 init()
