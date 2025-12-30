@@ -35,3 +35,15 @@
 - **Lip‑Sync / Hablar a cámara**: **SadTalker**, **Wav2Lip** (open‑source).
 - **Movimiento/Cinemática desde foto**: **Deforum**, **AnimateDiff** (SD plugins), o efecto **Ken Burns** con `ffmpeg`.
 - **Audio TTS**: **Bark** o **Coqui TTS** para voces naturales sin coste.
+
+---
+
+## Modos de Cupo Gratuito (Mantener en el Flujo)
+- **Wan 2.6**: Si existe opción de “no gastar créditos” o cupo diario gratuito, habilitarlo y planificar 1–3 clips/día (bienvenida, story time).
+- **Higgsfield**: Usar “Diffuse” en modo gratuito para 2–5 cinemáticas/día (zoom/paneo sobre fotos estáticas).
+- **Viyou**: Aprovechar plantillas virales con cuota diaria → 1–2 reels/día.
+- **Pykaso**: Usar cuando permita creación/subida con cupo gratis; ideal para validar mercado.
+
+### Planificación
+- Crear una “cola diaria” con prioridades: bienvenida (Wan) > cinemáticas (Higgsfield) > tendencias (Viyou).
+- Si se agotan los cupos, usar el stack 0€ local (SadTalker/Wav2Lip, Deforum/AnimateDiff).

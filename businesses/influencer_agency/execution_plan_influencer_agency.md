@@ -25,6 +25,7 @@
     - **Higgsfield**: For cinematic camera control (Zoom/Pan).
     - **Viyou**: For viral dance trends and "living portraits".
 - **Audio Tools**: Bark / Coqui TTS (gratuito) para voz consistente.
+ - **Free Quotas**: Mantener **Pykaso/Viyou/Higgsfield/Wan** si ofrecen cupo diario gratuito.
 - **Platforms**: Fanvue (Monetization), Instagram/TikTok (Traffic).
 - **Automation**: AI Chat integration for Fanvue messaging.
 - **Human/Dev Time**: 10-15 hours/week for strategy and prompt engineering.
@@ -55,4 +56,5 @@
 7. Configurar Fanvue (precio $9.99–14.99), Landing/Linktree, IG/TikTok y calentar cuentas.
 8. Publicar a ritmo diario (Reel + Story) y activar “Boyfriend Experience” en DM.
 9. Enviar PPV 2–3 veces/semana con copy persuasivo y segmentación.
-10. Optimizar con Trend Watcher (últimos 30 días), ajustar prompts y lip‑sync según métricas.
+10. Plan de cupos gratuitos: programar 1–3 clips/día en Wan/Higgsfield/Viyou y validar “prompt‑to‑Fanvue” con Pykaso cuando haya cupo.
+11. Optimizar con Trend Watcher (últimos 30 días), ajustar prompts y lip‑sync según métricas.

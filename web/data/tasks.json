@@ -4,47 +4,298 @@
       "key": "influencer_agency",
       "name": "Influencer IA (Fanvue)",
       "tasks": [
-        { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup" },
-        { "id": "fanvue_02_imagen_maestra", "title": "Generar Imagen Maestra con Nano Banana Pro", "points": 20, "badge": "Anchor" },
-        { "id": "fanvue_03_dataset_lora", "title": "Crear dataset y entrenar LoRA en Colab/Kaggle", "points": 30, "badge": "Consistency" },
-        { "id": "fanvue_04_datasheet_30", "title": "Producir datasheet SFW de 30 imágenes", "points": 25, "badge": "SFW" },
-        { "id": "fanvue_05_sets_nsfc", "title": "Crear 10 sets NSFW con SDXL + LoRA", "points": 30, "badge": "NSFW" },
-        { "id": "fanvue_06_video_bienvenida", "title": "3 vídeos de bienvenida (Wan/SadTalker)", "points": 20, "badge": "Welcome" },
-        { "id": "fanvue_07_cinematic", "title": "5 cinemáticas con Higgsfield/Deforum", "points": 20, "badge": "Cinematics" },
-        { "id": "fanvue_08_trend_reels", "title": "2 reels tendencia con Viyou/stack local", "points": 15, "badge": "Trends" },
-        { "id": "fanvue_09_infra", "title": "Configurar Fanvue + Landing + IG/TikTok", "points": 15, "badge": "Infra" },
-        { "id": "fanvue_10_publicacion", "title": "Publicar diario: 1 Reel + 1 Story", "points": 20, "badge": "Routine" },
-        { "id": "fanvue_11_ppv_dm", "title": "Activar PPV y Boyfriend Experience en DM", "points": 30, "badge": "Monetize" },
-        { "id": "fanvue_12_cupos", "title": "Plan de cupos gratuitos Wan/Higgsfield/Viyou/Pykaso", "points": 15, "badge": "FreeQuota" },
-        { "id": "fanvue_13_optimizacion", "title": "Optimizar prompts y lip-sync con métricas", "points": 20, "badge": "Optimize" }
+        { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup",
+          "subtasks": [
+            { "id": "fanvue_01_01_arquetipo", "title": "Elegir arquetipo (fit/gamer/elegante)", "points": 2 },
+            { "id": "fanvue_01_02_nombre", "title": "Nombre/handle y bio convincente", "points": 2 },
+            { "id": "fanvue_01_03_paleta", "title": "Paleta estética y estilo de vestuario", "points": 2 },
+            { "id": "fanvue_01_04_riesgo", "title": "Checklist de compliance/riesgos", "points": 2 },
+            { "id": "fanvue_01_05_copy", "title": "CTA y tono de marca", "points": 2 }
+          ]
+        },
+        { "id": "fanvue_02_imagen_maestra", "title": "Generar Imagen Maestra con Nano Banana Pro", "points": 20, "badge": "Anchor",
+          "subtasks": [
+            { "id": "fanvue_02_01_prompt", "title": "Redactar prompt anchor (3 vistas)", "points": 5 },
+            { "id": "fanvue_02_02_generar", "title": "Generar y seleccionar mejor ancla", "points": 5 },
+            { "id": "fanvue_02_03_export", "title": "Exportar y documentar parámetros", "points": 5 },
+            { "id": "fanvue_02_04_variacion", "title": "Probar 3 variaciones controladas", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_03_dataset_lora", "title": "Crear dataset y entrenar LoRA en Colab/Kaggle", "points": 30, "badge": "Consistency",
+          "subtasks": [
+            { "id": "fanvue_03_01_dataset", "title": "Generar 40–60 imágenes variadas", "points": 8 },
+            { "id": "fanvue_03_02_caption", "title": "Captioning y limpieza de dataset", "points": 6 },
+            { "id": "fanvue_03_03_train", "title": "Entrenar LoRA (kohya_ss)", "points": 8 },
+            { "id": "fanvue_03_04_eval", "title": "Evaluar consistencia (≥95%)", "points": 8 }
+          ]
+        },
+        { "id": "fanvue_04_datasheet_30", "title": "Producir datasheet SFW de 30 imágenes", "points": 25, "badge": "SFW",
+          "subtasks": [
+            { "id": "fanvue_04_01_setup", "title": "Configurar ControlNet/InstantID", "points": 6 },
+            { "id": "fanvue_04_02_batch", "title": "Batch de 30 escenarios", "points": 8 },
+            { "id": "fanvue_04_03_qc", "title": "Filtro de realismo humano", "points": 6 },
+            { "id": "fanvue_04_04_catalogo", "title": "Catalogar y etiquetar assets", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_05_sets_nsfc", "title": "Crear 10 sets NSFW con SDXL + LoRA", "points": 30, "badge": "NSFW",
+          "subtasks": [
+            { "id": "fanvue_05_01_prompts", "title": "Diseñar prompts y límites", "points": 6 },
+            { "id": "fanvue_05_02_skin", "title": "Skin textures y luz realista", "points": 8 },
+            { "id": "fanvue_05_03_sets", "title": "Generar 10 sets x 5 fotos", "points": 10 },
+            { "id": "fanvue_05_04_qc", "title": "QC y curación final", "points": 6 }
+          ]
+        },
+        { "id": "fanvue_06_video_bienvenida", "title": "3 vídeos de bienvenida (Wan/SadTalker)", "points": 20, "badge": "Welcome",
+          "subtasks": [
+            { "id": "fanvue_06_01_script", "title": "Escribir scripts (30–45s)", "points": 5 },
+            { "id": "fanvue_06_02_tts", "title": "Generar voz (Bark/Coqui)", "points": 5 },
+            { "id": "fanvue_06_03_lipsync", "title": "Lip‑sync (Wan/SadTalker)", "points": 5 },
+            { "id": "fanvue_06_04_export", "title": "Export y subtítulos", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_07_cinematic", "title": "5 cinemáticas con Higgsfield/Deforum", "points": 20, "badge": "Cinematics",
+          "subtasks": [
+            { "id": "fanvue_07_01_select", "title": "Elegir 5 fotos hero", "points": 5 },
+            { "id": "fanvue_07_02_motion", "title": "Configurar zoom/paneo", "points": 5 },
+            { "id": "fanvue_07_03_export", "title": "Export y música ligera", "points": 5 },
+            { "id": "fanvue_07_04_thumb", "title": "Miniaturas para reels", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_08_trend_reels", "title": "2 reels tendencia con Viyou/stack local", "points": 15, "badge": "Trends",
+          "subtasks": [
+            { "id": "fanvue_08_01_scan", "title": "Escanear audios y plantillas", "points": 5 },
+            { "id": "fanvue_08_02_apply", "title": "Aplicar a la persona (face ref)", "points": 5 },
+            { "id": "fanvue_08_03_cta", "title": "CTA y hashtags", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_09_infra", "title": "Configurar Fanvue + Landing + IG/TikTok", "points": 15, "badge": "Infra",
+          "subtasks": [
+            { "id": "fanvue_09_01_fanvue", "title": "Perfil y pricing", "points": 5 },
+            { "id": "fanvue_09_02_landing", "title": "Landing/Linktree", "points": 5 },
+            { "id": "fanvue_09_03_social", "title": "IG/TikTok setup y warmup", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_10_publicacion", "title": "Publicar diario: 1 Reel + 1 Story", "points": 20, "badge": "Routine",
+          "subtasks": [
+            { "id": "fanvue_10_01_calendar", "title": "Calendario semanal", "points": 7 },
+            { "id": "fanvue_10_02_schedule", "title": "Programar 7 publicaciones", "points": 7 },
+            { "id": "fanvue_10_03_reply", "title": "Responder comentarios/DM", "points": 6 }
+          ]
+        },
+        { "id": "fanvue_11_ppv_dm", "title": "Activar PPV y Boyfriend Experience en DM", "points": 30, "badge": "Monetize",
+          "subtasks": [
+            { "id": "fanvue_11_01_welcome", "title": "Mensaje de bienvenida", "points": 6 },
+            { "id": "fanvue_11_02_ppv", "title": "2–3 PPV/semana", "points": 12 },
+            { "id": "fanvue_11_03_mass_dm", "title": "DM diario (bd/gn)", "points": 6 },
+            { "id": "fanvue_11_04_tips", "title": "Menu de tips y upsell", "points": 6 }
+          ]
+        },
+        { "id": "fanvue_12_cupos", "title": "Plan de cupos gratuitos Wan/Higgsfield/Viyou/Pykaso", "points": 15, "badge": "FreeQuota",
+          "subtasks": [
+            { "id": "fanvue_12_01_modes", "title": "Activar modos sin crédito", "points": 5 },
+            { "id": "fanvue_12_02_queue", "title": "Cola diaria 1–3 clips", "points": 5 },
+            { "id": "fanvue_12_03_fallback", "title": "Fallback a stack local", "points": 5 }
+          ]
+        },
+        { "id": "fanvue_13_optimizacion", "title": "Optimizar prompts y lip-sync con métricas", "points": 20, "badge": "Optimize",
+          "subtasks": [
+            { "id": "fanvue_13_01_metrics", "title": "Medir CTR/conv/tips", "points": 7 },
+            { "id": "fanvue_13_02_prompts", "title": "Iterar prompts y audio", "points": 7 },
+            { "id": "fanvue_13_03_doc", "title": "Documentar mejoras", "points": 6 }
+          ]
+        }
       ]
     },
     {
       "key": "kdp_publishing",
       "name": "KDP Publishing",
       "tasks": [
-        { "id": "kdp_01_nicho", "title": "Seleccionar nicho con BSR objetivo", "points": 15, "badge": "Research" },
-        { "id": "kdp_02_titulo_keywords", "title": "Definir título/subtítulo y keywords", "points": 10, "badge": "SEO" },
-        { "id": "kdp_03_coloring", "title": "Generar 50 láminas con Nano Banana + Vectorizer", "points": 25, "badge": "Coloring" },
-        { "id": "kdp_04_storybook", "title": "Texto+ilustraciones con Gemini Storybook/alternativa", "points": 25, "badge": "Story" },
-        { "id": "kdp_05_workbook", "title": "Redacción y maquetación de workbook", "points": 20, "badge": "Workbook" },
-        { "id": "kdp_06_portada", "title": "Portada con SDXL/Flux y tipografía", "points": 15, "badge": "Cover" },
-        { "id": "kdp_07_maquetacion", "title": "Maquetación KDP y export PDF", "points": 15, "badge": "Layout" },
-        { "id": "kdp_08_publicacion", "title": "Publicar con metadatos y pricing", "points": 10, "badge": "Publish" },
-        { "id": "kdp_09_lanzamiento", "title": "Lanzamiento social y reseñas iniciales", "points": 10, "badge": "Launch" },
-        { "id": "kdp_10_iteracion", "title": "Iterar por analítica y crear serie", "points": 20, "badge": "Iterate" }
+        { "id": "kdp_01_nicho", "title": "Seleccionar nicho con BSR objetivo", "points": 15, "badge": "Research",
+          "subtasks": [
+            { "id": "kdp_01_01_bsr", "title": "Analizar BSR y reviews", "points": 5 },
+            { "id": "kdp_01_02_gaps", "title": "Detectar huecos y estilo", "points": 5 },
+            { "id": "kdp_01_03_title", "title": "Propuesta título/subtítulo", "points": 5 }
+          ]
+        },
+        { "id": "kdp_02_titulo_keywords", "title": "Definir título/subtítulo y keywords", "points": 10, "badge": "SEO",
+          "subtasks": [
+            { "id": "kdp_02_01_kw", "title": "Keywords primarias/secundarias", "points": 5 },
+            { "id": "kdp_02_02_meta", "title": "Meta y categorías", "points": 5 }
+          ]
+        },
+        { "id": "kdp_03_coloring", "title": "Generar 50 láminas con Nano Banana + Vectorizer", "points": 25, "badge": "Coloring",
+          "subtasks": [
+            { "id": "kdp_03_01_prompt", "title": "Lista de 50 prompts", "points": 8 },
+            { "id": "kdp_03_02_gen", "title": "Generación y curación", "points": 9 },
+            { "id": "kdp_03_03_vector", "title": "Vectorizar y QA impresión", "points": 8 }
+          ]
+        },
+        { "id": "kdp_04_storybook", "title": "Texto+ilustraciones con Gemini Storybook/alternativa", "points": 25, "badge": "Story",
+          "subtasks": [
+            { "id": "kdp_04_01_outline", "title": "Outline y personajes", "points": 8 },
+            { "id": "kdp_04_02_gen", "title": "Generar páginas + audio", "points": 9 },
+            { "id": "kdp_04_03_edit", "title": "Edición global (Sudowrite)", "points": 8 }
+          ]
+        },
+        { "id": "kdp_05_workbook", "title": "Redacción y maquetación de workbook", "points": 20, "badge": "Workbook",
+          "subtasks": [
+            { "id": "kdp_05_01_prompts", "title": "Prompts/ejercicios", "points": 7 },
+            { "id": "kdp_05_02_layout", "title": "Plantilla y estilos", "points": 7 },
+            { "id": "kdp_05_03_qc", "title": "QA y revisión", "points": 6 }
+          ]
+        },
+        { "id": "kdp_06_portada", "title": "Portada con SDXL/Flux y tipografía", "points": 15, "badge": "Cover",
+          "subtasks": [
+            { "id": "kdp_06_01_sd", "title": "Render SDXL/Flux", "points": 7 },
+            { "id": "kdp_06_02_typo", "title": "Tipografías y composición", "points": 8 }
+          ]
+        },
+        { "id": "kdp_07_maquetacion", "title": "Maquetación KDP y export PDF", "points": 15, "badge": "Layout",
+          "subtasks": [
+            { "id": "kdp_07_01_template", "title": "Plantilla 8.5x11 o similar", "points": 7 },
+            { "id": "kdp_07_02_export", "title": "Export y verificación", "points": 8 }
+          ]
+        },
+        { "id": "kdp_08_publicacion", "title": "Publicar con metadatos y pricing", "points": 10, "badge": "Publish",
+          "subtasks": [
+            { "id": "kdp_08_01_meta", "title": "Completar metadatos", "points": 5 },
+            { "id": "kdp_08_02_price", "title": "Precio competitivo", "points": 5 }
+          ]
+        },
+        { "id": "kdp_09_lanzamiento", "title": "Lanzamiento social y reseñas iniciales", "points": 10, "badge": "Launch",
+          "subtasks": [
+            { "id": "kdp_09_01_posts", "title": "3–5 posts sociales", "points": 5 },
+            { "id": "kdp_09_02_reviews", "title": "Solicitar reseñas", "points": 5 }
+          ]
+        },
+        { "id": "kdp_10_iteracion", "title": "Iterar por analítica y crear serie", "points": 20, "badge": "Iterate",
+          "subtasks": [
+            { "id": "kdp_10_01_analytics", "title": "Analítica KDP", "points": 10 },
+            { "id": "kdp_10_02_series", "title": "Plan serie/volumen 2", "points": 10 }
+          ]
+        }
       ]
     },
     {
       "key": "market_research",
       "name": "Investigación de mercado",
       "tasks": [
-        { "id": "mr_01_linkedin", "title": "Preparar LinkedIn/CV alineados", "points": 10, "badge": "Profile" },
-        { "id": "mr_02_cuentas", "title": "Configurar cuentas y alertas", "points": 10, "badge": "Setup" },
-        { "id": "mr_03_aplicar", "title": "Aplicar 3–5 estudios diarios", "points": 20, "badge": "Apply" },
-        { "id": "mr_04_entrevista", "title": "Guion y ejemplos para entrevista", "points": 15, "badge": "Interview" },
-        { "id": "mr_05_registro", "title": "Registrar resultados y pagos", "points": 10, "badge": "Log" },
-        { "id": "mr_06_escalar", "title": "Escalar nichos mejor pagados", "points": 20, "badge": "Scale" }
+        { "id": "mr_01_linkedin", "title": "Preparar LinkedIn/CV alineados", "points": 10, "badge": "Profile",
+          "subtasks": [
+            { "id": "mr_01_01_cv", "title": "Actualizar CV y skills", "points": 4 },
+            { "id": "mr_01_02_linkedin", "title": "Optimizar LinkedIn", "points": 3 },
+            { "id": "mr_01_03_roles", "title": "Enfoque en roles pagados", "points": 3 }
+          ]
+        },
+        { "id": "mr_02_cuentas", "title": "Configurar cuentas y alertas", "points": 10, "badge": "Setup",
+          "subtasks": [
+            { "id": "mr_02_01_respondent", "title": "Cuenta Respondent/UserInterview", "points": 5 },
+            { "id": "mr_02_02_alertas", "title": "Alertas por nicho", "points": 5 }
+          ]
+        },
+        { "id": "mr_03_aplicar", "title": "Aplicar 3–5 estudios diarios", "points": 20, "badge": "Apply",
+          "subtasks": [
+            { "id": "mr_03_01_diario", "title": "Enviar 3–5 aplicaciones", "points": 12 },
+            { "id": "mr_03_02_opt", "title": "Optimizar respuestas IA", "points": 8 }
+          ]
+        },
+        { "id": "mr_04_entrevista", "title": "Guion y ejemplos para entrevista", "points": 15, "badge": "Interview",
+          "subtasks": [
+            { "id": "mr_04_01_guion", "title": "Guion de puntos clave", "points": 7 },
+            { "id": "mr_04_02_ejemplos", "title": "Casos y ejemplos", "points": 8 }
+          ]
+        },
+        { "id": "mr_05_registro", "title": "Registrar resultados y pagos", "points": 10, "badge": "Log",
+          "subtasks": [
+            { "id": "mr_05_01_tracker", "title": "Tracker de estudios/pagos", "points": 5 },
+            { "id": "mr_05_02_mejora", "title": "Mejorar perfil según feedback", "points": 5 }
+          ]
+        },
+        { "id": "mr_06_escalar", "title": "Escalar nichos mejor pagados", "points": 20, "badge": "Scale",
+          "subtasks": [
+            { "id": "mr_06_01_nuevos", "title": "Abrir 2 nichos de alto pago", "points": 10 },
+            { "id": "mr_06_02_ratio", "title": "Mejorar tasa aceptación", "points": 10 }
+          ]
+        }
+    },
+    {
+      "key": "music_arbitrage",
+      "name": "IA Música (Covers/Originales/Servicios)",
+      "tasks": [
+        { "id": "music_01_objetivo", "title": "Definir modelo: covers/licencia, originales o servicios", "points": 10, "badge": "Plan",
+          "subtasks": [
+            { "id": "music_01_01_decidir", "title": "Elegir modelo principal", "points": 5 },
+            { "id": "music_01_02_kpis", "title": "KPIs (streams/ventas/CTR)", "points": 5 }
+          ]
+        },
+        { "id": "music_02_stack", "title": "Configurar stack gratuito (Demucs, MusicGen, RVC)", "points": 15, "badge": "Stack",
+          "subtasks": [
+            { "id": "music_02_01_demucs", "title": "Instalar Demucs/UVR", "points": 5 },
+            { "id": "music_02_02_musicgen", "title": "MusicGen local listo", "points": 5 },
+            { "id": "music_02_03_rvc", "title": "RVC/So‑VITS para voz genérica", "points": 5 }
+          ]
+        },
+        { "id": "music_03_trend", "title": "Detectar 3 tendencias musicales (TikTok/Shorts)", "points": 10, "badge": "Trend",
+          "subtasks": [
+            { "id": "music_03_01_scan", "title": "Escaneo y selección de 3 trends", "points": 10 }
+          ]
+        },
+        { "id": "music_04_base", "title": "Generar 3 bases con Suno/Udio/MusicGen", "points": 20, "badge": "Gen",
+          "subtasks": [
+            { "id": "music_04_01_suno", "title": "Generar base 1 (Suno/Udio)", "points": 7 },
+            { "id": "music_04_02_musicgen", "title": "Generar base 2 (MusicGen)", "points": 7 },
+            { "id": "music_04_03_select", "title": "Seleccionar mejores tomas", "points": 6 }
+          ]
+        },
+        { "id": "music_05_voz", "title": "Grabar/convertir voz genérica (RVC, no imitativa)", "points": 20, "badge": "Vocal",
+          "subtasks": [
+            { "id": "music_05_01_letra", "title": "Escribir/ajustar letra genérica", "points": 6 },
+            { "id": "music_05_02_grabar", "title": "Grabar voz base", "points": 7 },
+            { "id": "music_05_03_convertir", "title": "Convertir timbre genérico (RVC)", "points": 7 }
+          ]
+        },
+        { "id": "music_06_mix", "title": "Mezcla/master suave (‑14 LUFS)", "points": 15, "badge": "Mix",
+          "subtasks": [
+            { "id": "music_06_01_mix", "title": "Balance y EQ", "points": 7 },
+            { "id": "music_06_02_master", "title": "Master a ‑14 LUFS", "points": 8 }
+          ]
+        },
+        { "id": "music_07_licencia", "title": "Tramitar licencia mecánica para 1 cover", "points": 25, "badge": "Legal",
+          "subtasks": [
+            { "id": "music_07_01_plataforma", "title": "Elegir distribuidor (Cover)", "points": 10 },
+            { "id": "music_07_02_formal", "title": "Trámite licencia y metadata", "points": 15 }
+          ]
+        },
+        { "id": "music_08_publicar", "title": "Publicar en YouTube/Shorts y 1 DSP (si licenciado)", "points": 15, "badge": "Publish",
+          "subtasks": [
+            { "id": "music_08_01_youtube", "title": "Subir a YouTube/Shorts", "points": 8 },
+            { "id": "music_08_02_dsp", "title": "Enviar a DSP (si aplica)", "points": 7 }
+          ]
+        },
+        { "id": "music_09_packs", "title": "Crear 1 pack de loops/backing (sin melodías protegidas)", "points": 20, "badge": "Pack",
+          "subtasks": [
+            { "id": "music_09_01_crear", "title": "Crear 10 loops/backing", "points": 10 },
+            { "id": "music_09_02_gumroad", "title": "Publicar en Gumroad", "points": 10 }
+          ]
+        },
+        { "id": "music_10_freelance", "title": "Abrir 2 gigs (karaoke/tema para canal)", "points": 15, "badge": "Service",
+          "subtasks": [
+            { "id": "music_10_01_gig1", "title": "Gig karaoke/backing", "points": 8 },
+            { "id": "music_10_02_gig2", "title": "Gig tema para canal", "points": 7 }
+          ]
+        },
+        { "id": "music_11_patreon", "title": "Crear Patreon/Gumroad y ofrecer descargas", "points": 10, "badge": "Monetize",
+          "subtasks": [
+            { "id": "music_11_01_patreon", "title": "Crear niveles Patreon", "points": 5 },
+            { "id": "music_11_02_beneficios", "title": "Beneficios/descargas", "points": 5 }
+          ]
+        },
+        { "id": "music_12_iterar", "title": "Iterar según métricas (CTR/streams/ventas)", "points": 15, "badge": "Optimize",
+          "subtasks": [
+            { "id": "music_12_01_metrics", "title": "Analizar métricas clave", "points": 8 },
+            { "id": "music_12_02_mejorar", "title": "Mejorar género/tempo/CTA", "points": 7 }
+          ]
+        }
       ]
     }
   ]

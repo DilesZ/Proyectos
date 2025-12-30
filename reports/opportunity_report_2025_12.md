@@ -67,6 +67,7 @@
   - **Imagen**: SDXL + ComfyUI + LoRA (Colab/Kaggle).
   - **Vídeo hablar**: SadTalker/Wav2Lip + **Bark/Coqui TTS**.
   - **Cinemática**: Deforum/AnimateDiff o Ken Burns con `ffmpeg`.
+ - **Cupos diarios**: Si ofrecen cuotas gratuitas (x imágenes/vídeos al día), mantenerlos en el flujo con una **cola diaria** y usar el stack local cuando se agoten.
 
 ### Próximas Acciones
 - Ejecutar un piloto con Elena: dataset en ComfyUI, LoRA en RunPod, 3 vídeos bienvenida (Wan 2.6), 2 reels trend (Viyou), 5 fotos cinematizadas (Higgsfield).
