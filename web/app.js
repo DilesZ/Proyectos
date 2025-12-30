@@ -1,4 +1,5 @@
 const state={tasks:{},progress:{}}
+const dataVersion="20251230"
 const storeKey="orquestador_progress_v1"
 const elTabs=document.getElementById("businessTabs")
 const elContent=document.getElementById("content")
@@ -22,6 +23,23 @@ list.querySelectorAll(".chevron-sub").forEach(ch=>{ch.addEventListener("click",e
 list.querySelectorAll("input[type=checkbox]").forEach(chk=>{chk.addEventListener("change",e=>{const id=e.target.dataset.id;const hasSub=e.target.dataset.hassub==="true";const hasSteps=e.target.dataset.hassteps==="true";const parent=e.target.dataset.parent;const checked=e.target.checked;if(hasSub){const task=b.tasks.find(x=>x.id===id);for(const s of task.subtasks){const steps=s.steps||[];if(steps.length>0){for(const st of steps){state.progress[st.id]=checked}state.progress[s.id]=checked}else{state.progress[s.id]=checked}}}else if(hasSteps){const sub=b.tasks.flatMap(x=>x.subtasks||[]).find(x=>x.id===id);const steps=sub.steps||[];for(const st of steps){state.progress[st.id]=checked}state.progress[id]=checked}else if(parent){state.progress[id]=checked;const sub=b.tasks.flatMap(x=>x.subtasks||[]).find(x=>x.id===parent);const steps=sub.steps||[];const allDone=steps.every(st=>state.progress[st.id]===true);state.progress[parent]=allDone}else{state.progress[id]=checked}saveProgress();renderBusiness(b);const sAll=computeStats(state.tasks.businesses);elTotalPoints.textContent=sAll.points;elTotalCompleted.textContent=sAll.completed;elTotalTasks.textContent=sAll.total})})
 elContent.appendChild(card)}
 const fallbackTasks={"businesses":[{"key":"influencer_agency","name":"Influencer IA (Fanvue)","tasks":[{"id":"fanvue_01_arquetipo","title":"Definir arquetipo y branding","points":10,"badge":"Setup"},{"id":"fanvue_02_imagen_maestra","title":"Generar Imagen Maestra con Nano Banana Pro","points":20,"badge":"Anchor"},{"id":"fanvue_03_dataset_lora","title":"Crear dataset y entrenar LoRA en Colab/Kaggle","points":30,"badge":"Consistency"},{"id":"fanvue_04_datasheet_30","title":"Producir datasheet SFW de 30 imágenes","points":25,"badge":"SFW"},{"id":"fanvue_05_sets_nsfc","title":"Crear 10 sets NSFW con SDXL + LoRA","points":30,"badge":"NSFW"},{"id":"fanvue_06_video_bienvenida","title":"3 vídeos de bienvenida (Wan/SadTalker)","points":20,"badge":"Welcome"},{"id":"fanvue_07_cinematic","title":"5 cinemáticas con Higgsfield/Deforum","points":20,"badge":"Cinematics"},{"id":"fanvue_08_trend_reels","title":"2 reels tendencia con Viyou/stack local","points":15,"badge":"Trends"},{"id":"fanvue_09_infra","title":"Configurar Fanvue + Landing + IG/TikTok","points":15,"badge":"Infra"},{"id":"fanvue_10_publicacion","title":"Publicar diario: 1 Reel + 1 Story","points":20,"badge":"Routine"},{"id":"fanvue_11_ppv_dm","title":"Activar PPV y Boyfriend Experience en DM","points":30,"badge":"Monetize"},{"id":"fanvue_12_cupos","title":"Plan de cupos gratuitos Wan/Higgsfield/Viyou/Pykaso","points":15,"badge":"FreeQuota"},{"id":"fanvue_13_optimizacion","title":"Optimizar prompts y lip-sync con métricas","points":20,"badge":"Optimize"}]},{"key":"kdp_publishing","name":"KDP Publishing","tasks":[{"id":"kdp_01_nicho","title":"Seleccionar nicho con BSR objetivo","points":15,"badge":"Research"},{"id":"kdp_02_titulo_keywords","title":"Definir título/subtítulo y keywords","points":10,"badge":"SEO"},{"id":"kdp_03_coloring","title":"Generar 50 láminas con Nano Banana + Vectorizer","points":25,"badge":"Coloring"},{"id":"kdp_04_storybook","title":"Texto+ilustraciones con Gemini Storybook/alternativa","points":25,"badge":"Story"},{"id":"kdp_05_workbook","title":"Redacción y maquetación de workbook","points":20,"badge":"Workbook"},{"id":"kdp_06_portada","title":"Portada con SDXL/Flux y tipografía","points":15,"badge":"Cover"},{"id":"kdp_07_maquetacion","title":"Maquetación KDP y export PDF","points":15,"badge":"Layout"},{"id":"kdp_08_publicacion","title":"Publicar con metadatos y pricing","points":10,"badge":"Publish"},{"id":"kdp_09_lanzamiento","title":"Lanzamiento social y reseñas iniciales","points":10,"badge":"Launch"},{"id":"kdp_10_iteracion","title":"Iterar por analítica y crear serie","points":20,"badge":"Iterate"}]},{"key":"market_research","name":"Investigación de mercado","tasks":[{"id":"mr_01_linkedin","title":"Preparar LinkedIn/CV alineados","points":10,"badge":"Profile"},{"id":"mr_02_cuentas","title":"Configurar cuentas y alertas","points":10,"badge":"Setup"},{"id":"mr_03_aplicar","title":"Aplicar 3–5 estudios diarios","points":20,"badge":"Apply"},{"id":"mr_04_entrevista","title":"Guion y ejemplos para entrevista","points":15,"badge":"Interview"},{"id":"mr_05_registro","title":"Registrar resultados y pagos","points":10,"badge":"Log"},{"id":"mr_06_escalar","title":"Escalar nichos mejor pagados","points":20,"badge":"Scale"}]}]}
-async function getTasks(){try{const r=await fetch("./data/tasks.json");if(r.ok){return await r.json()}}catch(e){}try{const r=await fetch("https://raw.githubusercontent.com/DilesZ/Proyectos/main/web/data/tasks.json");if(r.ok){return await r.json()}}catch(e){}return fallbackTasks}
+function hasSteps(json){try{const bs=json.businesses||[];for(const b of bs){for(const t of (b.tasks||[])){for(const s of (t.subtasks||[])){if(Array.isArray(s.steps)&&s.steps.length>0){return true}}}}}catch(e){}return false}
+async function getTasks(){
+  try{
+    const r=await fetch(`./data/tasks.json?v=${dataVersion}`,{cache:"no-store"});
+    if(r.ok){
+      const j=await r.json();
+      if(hasSteps(j)){return j}
+    }
+  }catch(e){}
+  try{
+    const r=await fetch(`https://raw.githubusercontent.com/DilesZ/Proyectos/main/web/data/tasks.json?ts=${dataVersion}`,{cache:"no-store"});
+    if(r.ok){
+      const j=await r.json();
+      return j
+    }
+  }catch(e){}
+  return fallbackTasks
+}
 async function init(){state.tasks=await getTasks();state.progress=loadProgress();renderTabs(state.tasks.businesses);const s=computeStats(state.tasks.businesses);elTotalPoints.textContent=s.points;elTotalCompleted.textContent=s.completed;elTotalTasks.textContent=s.total}
 init()
