@@ -8,37 +8,37 @@
           "subtasks": [
             { "id": "fanvue_01_01_arquetipo", "title": "Elegir arquetipo (fit/gamer/elegante)", "points": 2,
               "steps": [
-                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos" },
-                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia y hashtags" },
-                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar arquetipo final" }
+                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos", "prompt": "Genera 3 nichos/arquetipos (fit/gamer/elegante/otro) con descripción breve, audiencia objetivo y ejemplos de creadores. Incluye riesgos y oportunidades." },
+                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia y hashtags", "prompt": "Para cada nicho, lista 20 hashtags de IG/TikTok, tipo de contenido que mejor funciona y ejemplos de captions con alto CTR." },
+                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar arquetipo final", "prompt": "Elige el arquetipo óptimo justificando por potencial de ingresos, facilidad de producción con IA y cumplimiento de políticas." }
               ]
             },
             { "id": "fanvue_01_02_nombre", "title": "Nombre/handle y bio convincente", "points": 2,
               "steps": [
-                { "id": "fanvue_01_02_nombre_s01", "title": "Generar 20 handles" },
-                { "id": "fanvue_01_02_nombre_s02", "title": "Comprobar disponibilidad IG/TikTok" },
-                { "id": "fanvue_01_02_nombre_s03", "title": "Redactar bio 140–160 caracteres" }
+                { "id": "fanvue_01_02_nombre_s01", "title": "Generar 20 handles", "prompt": "Genera 20 handles para IG/TikTok alineados al arquetipo elegido, memorables, cortos y sin números aleatorios." },
+                { "id": "fanvue_01_02_nombre_s02", "title": "Comprobar disponibilidad IG/TikTok", "prompt": "Indica cómo verificar disponibilidad y sugiere alternativas cercanas si están ocupados." },
+                { "id": "fanvue_01_02_nombre_s03", "title": "Redactar bio 140–160 caracteres", "prompt": "Redacta 5 bios distintas con tono persuasivo, clara propuesta de valor y CTA hacia Fanvue." }
               ]
             },
             { "id": "fanvue_01_03_paleta", "title": "Paleta estética y estilo de vestuario", "points": 2,
               "steps": [
-                { "id": "fanvue_01_03_paleta_s01", "title": "Definir paleta de color" },
-                { "id": "fanvue_01_03_paleta_s02", "title": "Crear moodboard en Pinterest" },
-                { "id": "fanvue_01_03_paleta_s03", "title": "Lista de 5 prendas clave" }
+                { "id": "fanvue_01_03_paleta_s01", "title": "Definir paleta de color", "prompt": "Propón paleta primaria/secundaria y códigos hex en línea con el arquetipo y plataforma." },
+                { "id": "fanvue_01_03_paleta_s02", "title": "Crear moodboard en Pinterest", "prompt": "Describe los 10 elementos visuales del moodboard (poses, fondos, vestuario) y su justificación." },
+                { "id": "fanvue_01_03_paleta_s03", "title": "Lista de 5 prendas clave", "prompt": "Enumera 5 prendas/estilos consistentes con el arquetipo y su uso en prompts." }
               ]
             },
             { "id": "fanvue_01_04_riesgo", "title": "Checklist de compliance/riesgos", "points": 2,
               "steps": [
-                { "id": "fanvue_01_04_riesgo_s01", "title": "Revisar políticas Fanvue/IG/TikTok" },
-                { "id": "fanvue_01_04_riesgo_s02", "title": "Anotar límites y do/don't" },
-                { "id": "fanvue_01_04_riesgo_s03", "title": "Aprobar checklist de compliance" }
+                { "id": "fanvue_01_04_riesgo_s01", "title": "Revisar políticas Fanvue/IG/TikTok", "prompt": "Resume las políticas clave de contenido permitido/prohibido y límites de IA." },
+                { "id": "fanvue_01_04_riesgo_s02", "title": "Anotar límites y do/don't", "prompt": "Lista prácticas recomendadas y errores a evitar para mantener cuentas sanas." },
+                { "id": "fanvue_01_04_riesgo_s03", "title": "Aprobar checklist de compliance", "prompt": "Genera un checklist de 10 puntos para validar cada publicación antes de subirla." }
               ]
             },
             { "id": "fanvue_01_05_copy", "title": "CTA y tono de marca", "points": 2,
               "steps": [
-                { "id": "fanvue_01_05_copy_s01", "title": "Escribir 5 CTAs" },
-                { "id": "fanvue_01_05_copy_s02", "title": "Probar tonos (friendly/tease)" },
-                { "id": "fanvue_01_05_copy_s03", "title": "Elegir CTA por defecto" }
+                { "id": "fanvue_01_05_copy_s01", "title": "Escribir 5 CTAs", "prompt": "Redacta 5 CTAs orientados a acción (Fanvue/DM), con microbeneficio y urgencia ligera." },
+                { "id": "fanvue_01_05_copy_s02", "title": "Probar tonos (friendly/tease)", "prompt": "Genera variantes de copy en tonos friendly/tease/elite y sugiere cuándo usar cada uno." },
+                { "id": "fanvue_01_05_copy_s03", "title": "Elegir CTA por defecto", "prompt": "Elige el CTA base y justifica por previsión de CTR." }
               ]
             }
           ]
@@ -47,30 +47,30 @@
           "subtasks": [
             { "id": "fanvue_02_01_prompt", "title": "Redactar prompt anchor (3 vistas)", "points": 5,
               "steps": [
-                { "id": "fanvue_02_01_prompt_s01", "title": "Escribir prompt base" },
-                { "id": "fanvue_02_01_prompt_s02", "title": "Añadir 3 vistas/cámaras" },
-                { "id": "fanvue_02_01_prompt_s03", "title": "Definir seeds/params clave" }
+                { "id": "fanvue_02_01_prompt_s01", "title": "Escribir prompt base", "prompt": "Escribe prompt anchor para Nano Banana Pro que defina arquetipo, outfit, fondo, iluminación y estilo, evitando artefactos y over‑processing." },
+                { "id": "fanvue_02_01_prompt_s02", "title": "Añadir 3 vistas/cámaras", "prompt": "Genera variantes del prompt con 3 ángulos (close‑up, medio, plano americano) y distintas focales." },
+                { "id": "fanvue_02_01_prompt_s03", "title": "Definir seeds/params clave", "prompt": "Propón seeds y parámetros (CFG, sampler, steps, resize) reproducibles y documentados." }
               ]
             },
             { "id": "fanvue_02_02_generar", "title": "Generar y seleccionar mejor ancla", "points": 5,
               "steps": [
-                { "id": "fanvue_02_02_generar_s01", "title": "Ejecutar lote de imágenes" },
-                { "id": "fanvue_02_02_generar_s02", "title": "Preseleccionar top 3" },
-                { "id": "fanvue_02_02_generar_s03", "title": "Elegir ancla final" }
+                { "id": "fanvue_02_02_generar_s01", "title": "Ejecutar lote de imágenes", "prompt": "Indica tamaño de lote y criterios de descarte (piel/manos/ojos, luces/sombras, composición)." },
+                { "id": "fanvue_02_02_generar_s02", "title": "Preseleccionar top 3", "prompt": "Define checklist de calidad para elegir las 3 mejores imágenes." },
+                { "id": "fanvue_02_02_generar_s03", "title": "Elegir ancla final", "prompt": "Selecciona la imagen ancla y documenta por qué maximiza CTR y consistencia." }
               ]
             },
             { "id": "fanvue_02_03_export", "title": "Exportar y documentar parámetros", "points": 5,
               "steps": [
-                { "id": "fanvue_02_03_export_s01", "title": "Guardar PNG/WEBP" },
-                { "id": "fanvue_02_03_export_s02", "title": "Registrar parámetros" },
-                { "id": "fanvue_02_03_export_s03", "title": "Archivar en carpeta de proyecto" }
+                { "id": "fanvue_02_03_export_s01", "title": "Guardar PNG/WEBP", "prompt": "Recomienda formatos y compresión óptima para redes sociales." },
+                { "id": "fanvue_02_03_export_s02", "title": "Registrar parámetros", "prompt": "Genera plantilla de registro (prompt, seed, CFG, sampler, steps)." },
+                { "id": "fanvue_02_03_export_s03", "title": "Archivar en carpeta de proyecto", "prompt": "Define estructura de carpetas y naming consistente." }
               ]
             },
             { "id": "fanvue_02_04_variacion", "title": "Probar 3 variaciones controladas", "points": 5,
               "steps": [
-                { "id": "fanvue_02_04_variacion_s01", "title": "Generar 3 variaciones" },
-                { "id": "fanvue_02_04_variacion_s02", "title": "Comparar con ancla" },
-                { "id": "fanvue_02_04_variacion_s03", "title": "Documentar cambios efectivos" }
+                { "id": "fanvue_02_04_variacion_s01", "title": "Generar 3 variaciones", "prompt": "Escribe prompts para 3 variaciones controladas (outfit/fondo/iluminación) manteniendo identidad." },
+                { "id": "fanvue_02_04_variacion_s02", "title": "Comparar con ancla", "prompt": "Propón métricas visuales de comparación (consistencia, atractivo, claridad)." },
+                { "id": "fanvue_02_04_variacion_s03", "title": "Documentar cambios efectivos", "prompt": "Anota qué cambios mejoran CTR y cuáles degradan consistencia." }
               ]
             }
           ]
@@ -79,30 +79,30 @@
           "subtasks": [
             { "id": "fanvue_03_01_dataset", "title": "Generar 40–60 imágenes variadas", "points": 8,
               "steps": [
-                { "id": "fanvue_03_01_dataset_s01", "title": "Definir poses y escenarios" },
-                { "id": "fanvue_03_01_dataset_s02", "title": "Generar lote 40–60" },
-                { "id": "fanvue_03_01_dataset_s03", "title": "Eliminar duplicados/artefactos" }
+                { "id": "fanvue_03_01_dataset_s01", "title": "Definir poses y escenarios", "prompt": "Lista 20 poses y 10 escenarios alineados al arquetipo con variación de fondos/luz." },
+                { "id": "fanvue_03_01_dataset_s02", "title": "Generar lote 40–60", "prompt": "Especifica parámetros por lote para diversidad sin perder identidad." },
+                { "id": "fanvue_03_01_dataset_s03", "title": "Eliminar duplicados/artefactos", "prompt": "Checklist de descarte (duplicados, manos/ojos, texturas erróneas)." }
               ]
             },
             { "id": "fanvue_03_02_caption", "title": "Captioning y limpieza de dataset", "points": 6,
               "steps": [
-                { "id": "fanvue_03_02_caption_s01", "title": "Definir esquema de captions" },
-                { "id": "fanvue_03_02_caption_s02", "title": "Aplicar captioning automático" },
-                { "id": "fanvue_03_02_caption_s03", "title": "Corrección manual en 10 muestras" }
+                { "id": "fanvue_03_02_caption_s01", "title": "Definir esquema de captions", "prompt": "Propón formato de captions (pose, outfit, fondo, luz, estilo) para entrenamiento." },
+                { "id": "fanvue_03_02_caption_s02", "title": "Aplicar captioning automático", "prompt": "Indica herramientas y parámetros para captioning batch." },
+                { "id": "fanvue_03_02_caption_s03", "title": "Corrección manual en 10 muestras", "prompt": "Checklist para corregir 10 captions y mejorar calidad." }
               ]
             },
             { "id": "fanvue_03_03_train", "title": "Entrenar LoRA (kohya_ss)", "points": 8,
               "steps": [
-                { "id": "fanvue_03_03_train_s01", "title": "Configurar kohya_ss en Colab" },
-                { "id": "fanvue_03_03_train_s02", "title": "Entrenar 3 epochs" },
-                { "id": "fanvue_03_03_train_s03", "title": "Guardar LoRA y logs" }
+                { "id": "fanvue_03_03_train_s01", "title": "Configurar kohya_ss en Colab", "prompt": "Especifica notebook/params (network_dim/alpha/lr, batch) para LoRA." },
+                { "id": "fanvue_03_03_train_s02", "title": "Entrenar 3 epochs", "prompt": "Indica epochs, evaluación intermedia y criterios de parada." },
+                { "id": "fanvue_03_03_train_s03", "title": "Guardar LoRA y logs", "prompt": "Define naming y almacenamiento de LoRA/logs y versión." }
               ]
             },
             { "id": "fanvue_03_04_eval", "title": "Evaluar consistencia (≥95%)", "points": 8,
               "steps": [
-                { "id": "fanvue_03_04_eval_s01", "title": "Probar 10 prompts de validación" },
-                { "id": "fanvue_03_04_eval_s02", "title": "Medir similitud y consistencia" },
-                { "id": "fanvue_03_04_eval_s03", "title": "Ajustar parámetros si <95%" }
+                { "id": "fanvue_03_04_eval_s01", "title": "Probar 10 prompts de validación", "prompt": "Escribe 10 prompts para validar identidad/consistencia en distintas condiciones." },
+                { "id": "fanvue_03_04_eval_s02", "title": "Medir similitud y consistencia", "prompt": "Propón método de medición (CLIP/SSIM/embeddings) y umbral ≥95%." },
+                { "id": "fanvue_03_04_eval_s03", "title": "Ajustar parámetros si <95%", "prompt": "Sugiere ajustes (learning rate/regularización/dataset) si el umbral no se cumple." }
               ]
             }
           ]
@@ -111,30 +111,30 @@
           "subtasks": [
             { "id": "fanvue_04_01_setup", "title": "Configurar ControlNet/InstantID", "points": 6,
               "steps": [
-                { "id": "fanvue_04_01_setup_s01", "title": "Instalar/activar ControlNet" },
-                { "id": "fanvue_04_01_setup_s02", "title": "Cargar InstantID/face refs" },
-                { "id": "fanvue_04_01_setup_s03", "title": "Verificar outputs de prueba" }
+                { "id": "fanvue_04_01_setup_s01", "title": "Instalar/activar ControlNet", "prompt": "Indica modelos ControlNet necesarios (OpenPose/Depth) y cómo activarlos." },
+                { "id": "fanvue_04_01_setup_s02", "title": "Cargar InstantID/face refs", "prompt": "Explica cómo obtener y cargar referencias de rostro con InstantID." },
+                { "id": "fanvue_04_01_setup_s03", "title": "Verificar outputs de prueba", "prompt": "Checklist de verificación (rasgos, piel, ojos, manos)." }
               ]
             },
             { "id": "fanvue_04_02_batch", "title": "Batch de 30 escenarios", "points": 8,
               "steps": [
-                { "id": "fanvue_04_02_batch_s01", "title": "Listar 30 prompts/escenarios" },
-                { "id": "fanvue_04_02_batch_s02", "title": "Ejecutar batch y guardar" },
-                { "id": "fanvue_04_02_batch_s03", "title": "Organizar salidas por tema" }
+                { "id": "fanvue_04_02_batch_s01", "title": "Listar 30 prompts/escenarios", "prompt": "Escribe 30 prompts SFW con variedad de escenarios y outfits." },
+                { "id": "fanvue_04_02_batch_s02", "title": "Ejecutar batch y guardar", "prompt": "Especifica parámetros de ejecución batch y naming." },
+                { "id": "fanvue_04_02_batch_s03", "title": "Organizar salidas por tema", "prompt": "Define estructura de carpetas por tema/fecha." }
               ]
             },
             { "id": "fanvue_04_03_qc", "title": "Filtro de realismo humano", "points": 6,
               "steps": [
-                { "id": "fanvue_04_03_qc_s01", "title": "Revisar piel/manos/ojos" },
-                { "id": "fanvue_04_03_qc_s02", "title": "Descartar uncanny/artefactos" },
-                { "id": "fanvue_04_03_qc_s03", "title": "Quedar 30 finales" }
+                { "id": "fanvue_04_03_qc_s01", "title": "Revisar piel/manos/ojos", "prompt": "Checklist de QC para piel/manos/ojos e iluminación." },
+                { "id": "fanvue_04_03_qc_s02", "title": "Descartar uncanny/artefactos", "prompt": "Reglas para descartar outputs con uncanny y artefactos." },
+                { "id": "fanvue_04_03_qc_s03", "title": "Quedar 30 finales", "prompt": "Criterios para seleccionar 30 imágenes finales." }
               ]
             },
             { "id": "fanvue_04_04_catalogo", "title": "Catalogar y etiquetar assets", "points": 5,
               "steps": [
-                { "id": "fanvue_04_04_catalogo_s01", "title": "Nombrar archivos consistente" },
-                { "id": "fanvue_04_04_catalogo_s02", "title": "Añadir etiquetas/temas" },
-                { "id": "fanvue_04_04_catalogo_s03", "title": "Subir a carpeta del proyecto" }
+                { "id": "fanvue_04_04_catalogo_s01", "title": "Nombrar archivos consistente", "prompt": "Propón convención de nombres con arquetipo/tema/fecha." },
+                { "id": "fanvue_04_04_catalogo_s02", "title": "Añadir etiquetas/temas", "prompt": "Lista taxonomía de etiquetas por outfit/escenario/tono." },
+                { "id": "fanvue_04_04_catalogo_s03", "title": "Subir a carpeta del proyecto", "prompt": "Describe estructura y backups recomendados." }
               ]
             }
           ]
@@ -143,30 +143,30 @@
           "subtasks": [
             { "id": "fanvue_05_01_prompts", "title": "Diseñar prompts y límites", "points": 6,
               "steps": [
-                { "id": "fanvue_05_01_prompts_s01", "title": "Definir límites y seguridad" },
-                { "id": "fanvue_05_01_prompts_s02", "title": "Escribir 10 prompts base" },
-                { "id": "fanvue_05_01_prompts_s03", "title": "Validar outputs seguros" }
+                { "id": "fanvue_05_01_prompts_s01", "title": "Definir límites y seguridad", "prompt": "Lista límites NSFW permitidos y disclaimers. Define palabras/temas prohibidos." },
+                { "id": "fanvue_05_01_prompts_s02", "title": "Escribir 10 prompts base", "prompt": "Genera 10 prompts NSFW controlados con foco en piel/luz realista y elegancia." },
+                { "id": "fanvue_05_01_prompts_s03", "title": "Validar outputs seguros", "prompt": "Checklist de validación de cumplimiento antes de publicar." }
               ]
             },
             { "id": "fanvue_05_02_skin", "title": "Skin textures y luz realista", "points": 8,
               "steps": [
-                { "id": "fanvue_05_02_skin_s01", "title": "Configurar texturas de piel" },
-                { "id": "fanvue_05_02_skin_s02", "title": "Ajustar iluminación realista" },
-                { "id": "fanvue_05_02_skin_s03", "title": "Afinar sampler/CFG" }
+                { "id": "fanvue_05_02_skin_s01", "title": "Configurar texturas de piel", "prompt": "Recomienda modelos/ajustes para piel natural (specular/subsurface)." },
+                { "id": "fanvue_05_02_skin_s02", "title": "Ajustar iluminación realista", "prompt": "Propón esquemas de luz (softbox, rim light) y how‑to en prompts." },
+                { "id": "fanvue_05_02_skin_s03", "title": "Afinar sampler/CFG", "prompt": "Sugerencias de sampler/CFG/steps para balance entre detalle y naturalidad." }
               ]
             },
             { "id": "fanvue_05_03_sets", "title": "Generar 10 sets x 5 fotos", "points": 10,
               "steps": [
-                { "id": "fanvue_05_03_sets_s01", "title": "Planear 10 sets temáticos" },
-                { "id": "fanvue_05_03_sets_s02", "title": "Generar 5 fotos por set" },
-                { "id": "fanvue_05_03_sets_s03", "title": "Seleccionar mejores tomas" }
+                { "id": "fanvue_05_03_sets_s01", "title": "Planear 10 sets temáticos", "prompt": "Lista 10 temas con outfit, fondo, props y poses." },
+                { "id": "fanvue_05_03_sets_s02", "title": "Generar 5 fotos por set", "prompt": "Indica parámetros y variaciones por toma dentro de cada set." },
+                { "id": "fanvue_05_03_sets_s03", "title": "Seleccionar mejores tomas", "prompt": "Criterios para elegir 50 imágenes finales (atractivo, consistencia, calidad)." }
               ]
             },
             { "id": "fanvue_05_04_qc", "title": "QC y curación final", "points": 6,
               "steps": [
-                { "id": "fanvue_05_04_qc_s01", "title": "Revisar artefactos y anatomía" },
-                { "id": "fanvue_05_04_qc_s02", "title": "Curación y descarte" },
-                { "id": "fanvue_05_04_qc_s03", "title": "Exportar set final" }
+                { "id": "fanvue_05_04_qc_s01", "title": "Revisar artefactos y anatomía", "prompt": "Checklist de anatomía y artefactos comunes para descartar." },
+                { "id": "fanvue_05_04_qc_s02", "title": "Curación y descarte", "prompt": "Proceso de curación final y criterios de descarte." },
+                { "id": "fanvue_05_04_qc_s03", "title": "Exportar set final", "prompt": "Recomendaciones de export y compresión para Fanvue/IG/TikTok." }
               ]
             }
           ]
@@ -175,30 +175,30 @@
           "subtasks": [
             { "id": "fanvue_06_01_script", "title": "Escribir scripts (30–45s)", "points": 5,
               "steps": [
-                { "id": "fanvue_06_01_script_s01", "title": "Escribir 3 guiones" },
-                { "id": "fanvue_06_01_script_s02", "title": "Incluir CTA/beneficio" },
-                { "id": "fanvue_06_01_script_s03", "title": "Ajustar tiempo 30–45s" }
+                { "id": "fanvue_06_01_script_s01", "title": "Escribir 3 guiones", "prompt": "Redacta 3 guiones de 30–45s con presentación, valor y cierre." },
+                { "id": "fanvue_06_01_script_s02", "title": "Incluir CTA/beneficio", "prompt": "Incluye beneficios concretos (exclusivos, DM, descuentos) y CTA a seguir/comprar." },
+                { "id": "fanvue_06_01_script_s03", "title": "Ajustar tiempo 30–45s", "prompt": "Revisa duración y da recomendaciones de ritmo y pausas." }
               ]
             },
             { "id": "fanvue_06_02_tts", "title": "Generar voz (Bark/Coqui)", "points": 5,
               "steps": [
-                { "id": "fanvue_06_02_tts_s01", "title": "Elegir voz/tono" },
-                { "id": "fanvue_06_02_tts_s02", "title": "Generar audio limpio" },
-                { "id": "fanvue_06_02_tts_s03", "title": "Normalizar y cortar" }
+                { "id": "fanvue_06_02_tts_s01", "title": "Elegir voz/tono", "prompt": "Propón 3 voces/tonos (cálido/energético/susurro leve) según arquetipo." },
+                { "id": "fanvue_06_02_tts_s02", "title": "Generar audio limpio", "prompt": "Instrucciones para generar audio sin ruido y con buena dicción." },
+                { "id": "fanvue_06_02_tts_s03", "title": "Normalizar y cortar", "prompt": "Pasos para normalizar volumen y cortar silencios." }
               ]
             },
             { "id": "fanvue_06_03_lipsync", "title": "Lip‑sync (Wan/SadTalker)", "points": 5,
               "steps": [
-                { "id": "fanvue_06_03_lipsync_s01", "title": "Preparar vídeo base" },
-                { "id": "fanvue_06_03_lipsync_s02", "title": "Aplicar lip‑sync" },
-                { "id": "fanvue_06_03_lipsync_s03", "title": "Ajustar sincronía fina" }
+                { "id": "fanvue_06_03_lipsync_s01", "title": "Preparar vídeo base", "prompt": "Selecciona clip base y parámetros de entrada (fps, resolución)." },
+                { "id": "fanvue_06_03_lipsync_s02", "title": "Aplicar lip‑sync", "prompt": "Indica pasos en Wan/SadTalker y ajustes clave." },
+                { "id": "fanvue_06_03_lipsync_s03", "title": "Ajustar sincronía fina", "prompt": "Checklist de correcciones de sincronía (offset, curva)." }
               ]
             },
             { "id": "fanvue_06_04_export", "title": "Export y subtítulos", "points": 5,
               "steps": [
-                { "id": "fanvue_06_04_export_s01", "title": "Crear subtítulos SRT" },
-                { "id": "fanvue_06_04_export_s02", "title": "Exportar 1080p" },
-                { "id": "fanvue_06_04_export_s03", "title": "Guardar versión final" }
+                { "id": "fanvue_06_04_export_s01", "title": "Crear subtítulos SRT", "prompt": "Genera archivo SRT a partir del guion final." },
+                { "id": "fanvue_06_04_export_s02", "title": "Exportar 1080p", "prompt": "Recomienda bitrate y códec para 1080p optimizado." },
+                { "id": "fanvue_06_04_export_s03", "title": "Guardar versión final", "prompt": "Estructura de nombres y backups para versiones." }
               ]
             }
           ]
@@ -207,30 +207,30 @@
           "subtasks": [
             { "id": "fanvue_07_01_select", "title": "Elegir 5 fotos hero", "points": 5,
               "steps": [
-                { "id": "fanvue_07_01_select_s01", "title": "Seleccionar 5 imágenes ancla" },
-                { "id": "fanvue_07_01_select_s02", "title": "Verificar resolución/encuadre" },
-                { "id": "fanvue_07_01_select_s03", "title": "Organizar por temática" }
+                { "id": "fanvue_07_01_select_s01", "title": "Seleccionar 5 imágenes ancla", "prompt": "Criterios para elegir 5 imágenes con mejor potencial de motion." },
+                { "id": "fanvue_07_01_select_s02", "title": "Verificar resolución/encuadre", "prompt": "Checklist de resolución/encuadre para evitar artefactos al animar." },
+                { "id": "fanvue_07_01_select_s03", "title": "Organizar por temática", "prompt": "Agrupa por temática y define narrativa breve por clip." }
               ]
             },
             { "id": "fanvue_07_02_motion", "title": "Configurar zoom/paneo", "points": 5,
               "steps": [
-                { "id": "fanvue_07_02_motion_s01", "title": "Definir keyframes" },
-                { "id": "fanvue_07_02_motion_s02", "title": "Ajustar velocidad/curvas" },
-                { "id": "fanvue_07_02_motion_s03", "title": "Previsualizar movimiento" }
+                { "id": "fanvue_07_02_motion_s01", "title": "Definir keyframes", "prompt": "Genera plan de keyframes (zoom/paneo) por clip." },
+                { "id": "fanvue_07_02_motion_s02", "title": "Ajustar velocidad/curvas", "prompt": "Recomendaciones de curvas de velocidad para estética suave." },
+                { "id": "fanvue_07_02_motion_s03", "title": "Previsualizar movimiento", "prompt": "Pasos para previsualizar y corregir jitter." }
               ]
             },
             { "id": "fanvue_07_03_export", "title": "Export y música ligera", "points": 5,
               "steps": [
-                { "id": "fanvue_07_03_export_s01", "title": "Exportar clips" },
-                { "id": "fanvue_07_03_export_s02", "title": "Añadir música ligera" },
-                { "id": "fanvue_07_03_export_s03", "title": "Nivelar audio/vídeo" }
+                { "id": "fanvue_07_03_export_s01", "title": "Exportar clips", "prompt": "Ajustes de export (fps/bitrate) para reels." },
+                { "id": "fanvue_07_03_export_s02", "title": "Añadir música ligera", "prompt": "Elige música libre de derechos y ajusta niveles." },
+                { "id": "fanvue_07_03_export_s03", "title": "Nivelar audio/vídeo", "prompt": "Checklist de niveles y mezcla final." }
               ]
             },
             { "id": "fanvue_07_04_thumb", "title": "Miniaturas para reels", "points": 5,
               "steps": [
-                { "id": "fanvue_07_04_thumb_s01", "title": "Diseñar miniaturas" },
-                { "id": "fanvue_07_04_thumb_s02", "title": "Texto/overlay llamativo" },
-                { "id": "fanvue_07_04_thumb_s03", "title": "Exportar 1080x1920" }
+                { "id": "fanvue_07_04_thumb_s01", "title": "Diseñar miniaturas", "prompt": "Guía para miniaturas con alto CTR (composición, color)." },
+                { "id": "fanvue_07_04_thumb_s02", "title": "Texto/overlay llamativo", "prompt": "Propón textos/overlays persuasivos y ubicación." },
+                { "id": "fanvue_07_04_thumb_s03", "title": "Exportar 1080x1920", "prompt": "Especifica export a 1080x1920 con compresión óptima." }
               ]
             }
           ]
@@ -239,23 +239,23 @@
           "subtasks": [
             { "id": "fanvue_08_01_scan", "title": "Escanear audios y plantillas", "points": 5,
               "steps": [
-                { "id": "fanvue_08_01_scan_s01", "title": "Revisar tendencias en Reels/TT" },
-                { "id": "fanvue_08_01_scan_s02", "title": "Guardar 5 audios top" },
-                { "id": "fanvue_08_01_scan_s03", "title": "Elegir 2 plantillas" }
+                { "id": "fanvue_08_01_scan_s01", "title": "Revisar tendencias en Reels/TT", "prompt": "Indica fuentes y señales para detectar tendencias vigentes (audio, formato)." },
+                { "id": "fanvue_08_01_scan_s02", "title": "Guardar 5 audios top", "prompt": "Criterios para elegir 5 audios de alto rendimiento." },
+                { "id": "fanvue_08_01_scan_s03", "title": "Elegir 2 plantillas", "prompt": "Selecciona 2 plantillas compatibles con face‑ref y alto CTR." }
               ]
             },
             { "id": "fanvue_08_02_apply", "title": "Aplicar a la persona (face ref)", "points": 5,
               "steps": [
-                { "id": "fanvue_08_02_apply_s01", "title": "Seleccionar face ref" },
-                { "id": "fanvue_08_02_apply_s02", "title": "Aplicar plantilla" },
-                { "id": "fanvue_08_02_apply_s03", "title": "Ajustar ritmo y cortes" }
+                { "id": "fanvue_08_02_apply_s01", "title": "Seleccionar face ref", "prompt": "Criterios para elegir face ref con buena iluminación y ángulo." },
+                { "id": "fanvue_08_02_apply_s02", "title": "Aplicar plantilla", "prompt": "Pasos para aplicar plantilla en Viyou/stack local." },
+                { "id": "fanvue_08_02_apply_s03", "title": "Ajustar ritmo y cortes", "prompt": "Guía para editar ritmo y cortes acorde al audio." }
               ]
             },
             { "id": "fanvue_08_03_cta", "title": "CTA y hashtags", "points": 5,
               "steps": [
-                { "id": "fanvue_08_03_cta_s01", "title": "Escribir caption corto" },
-                { "id": "fanvue_08_03_cta_s02", "title": "Añadir 8–12 hashtags" },
-                { "id": "fanvue_08_03_cta_s03", "title": "CTA hacia Fanvue" }
+                { "id": "fanvue_08_03_cta_s01", "title": "Escribir caption corto", "prompt": "Redacta 3 captions cortos con CTA y microbeneficio." },
+                { "id": "fanvue_08_03_cta_s02", "title": "Añadir 8–12 hashtags", "prompt": "Propón 12 hashtags con combinación de alto/medio/bajo volumen." },
+                { "id": "fanvue_08_03_cta_s03", "title": "CTA hacia Fanvue", "prompt": "Define CTA y ubicación en descripción/overlay." }
               ]
             }
           ]
@@ -346,23 +346,23 @@
           "subtasks": [
             { "id": "fanvue_12_01_modes", "title": "Activar modos sin crédito", "points": 5,
               "steps": [
-                { "id": "fanvue_12_01_modes_s01", "title": "Activar modos free en servicios" },
-                { "id": "fanvue_12_01_modes_s02", "title": "Registrar cupos disponibles" },
-                { "id": "fanvue_12_01_modes_s03", "title": "Automatizar cola diaria" }
+                { "id": "fanvue_12_01_modes_s01", "title": "Activar modos free en servicios", "prompt": "Activa modos gratuitos en Wan/Higgsfield/Viyou/Pykaso. Documenta pasos, límites por día y condiciones de cola. Incluye enlaces directos y capturas de configuración." },
+                { "id": "fanvue_12_01_modes_s02", "title": "Registrar cupos disponibles", "prompt": "Crea una hoja con columnas servicio, cupo diario, hora de reseteo y estado. Registra disponibilidad y bloquea slots para producción." },
+                { "id": "fanvue_12_01_modes_s03", "title": "Automatizar cola diaria", "prompt": "Define automatización con IFTTT/cron/Notion API: programa ejecución diaria de 1–3 clips por servicio y notificaciones de éxito/fallo." }
               ]
             },
             { "id": "fanvue_12_02_queue", "title": "Cola diaria 1–3 clips", "points": 5,
               "steps": [
-                { "id": "fanvue_12_02_queue_s01", "title": "Programar 1–3 clips diarios" },
-                { "id": "fanvue_12_02_queue_s02", "title": "Verificar resultados" },
-                { "id": "fanvue_12_02_queue_s03", "title": "Ajustar si hay fallos" }
+                { "id": "fanvue_12_02_queue_s01", "title": "Programar 1–3 clips diarios", "prompt": "Genera plan de publicación con horas recomendadas y plantillas de prompts base para 1–3 clips/día por plataforma." },
+                { "id": "fanvue_12_02_queue_s02", "title": "Verificar resultados", "prompt": "Checklist de verificación: lip‑sync, calidad de piel/manos/ojos, audio limpio, duración adecuada. Marca OK/KO por clip." },
+                { "id": "fanvue_12_02_queue_s03", "title": "Ajustar si hay fallos", "prompt": "Lista ajustes rápidos por tipo de fallo (desincronía, artefactos, voz) y recomiende reintentos o cambio de servicio." }
               ]
             },
             { "id": "fanvue_12_03_fallback", "title": "Fallback a stack local", "points": 5,
               "steps": [
-                { "id": "fanvue_12_03_fallback_s01", "title": "Configurar stack local" },
-                { "id": "fanvue_12_03_fallback_s02", "title": "Definir triggers de fallback" },
-                { "id": "fanvue_12_03_fallback_s03", "title": "Probar flujo de contingencia" }
+                { "id": "fanvue_12_03_fallback_s01", "title": "Configurar stack local", "prompt": "Prepara stack local (SDXL + LoRA, kohya_ss, SadTalker/Wan offline). Documenta instalación, modelos y rutas de proyecto." },
+                { "id": "fanvue_12_03_fallback_s02", "title": "Definir triggers de fallback", "prompt": "Especifica reglas: si servicio falla >15 min o límite de cupo, activar pipeline local. Incluye condiciones y responsables." },
+                { "id": "fanvue_12_03_fallback_s03", "title": "Probar flujo de contingencia", "prompt": "Ejecuta prueba end‑to‑end de contingencia: genera clip, verifica QC y registra tiempos/estado." }
               ]
             }
           ]
@@ -371,23 +371,23 @@
           "subtasks": [
             { "id": "fanvue_13_01_metrics", "title": "Medir CTR/conv/tips", "points": 7,
               "steps": [
-                { "id": "fanvue_13_01_metrics_s01", "title": "Configurar tracking CTR" },
-                { "id": "fanvue_13_01_metrics_s02", "title": "Exportar métricas semanales" },
-                { "id": "fanvue_13_01_metrics_s03", "title": "Construir dashboard simple" }
+                { "id": "fanvue_13_01_metrics_s01", "title": "Configurar tracking CTR", "prompt": "Configura tracking CTR/conv/tips con UTM y hoja de control. Define UTM_source (ig/tiktok), UTM_campaign, y columnas: fecha, post_id, impresiones, clicks, CTR, suscripciones, tips. Incluye ejemplo de URLs con UTM." },
+                { "id": "fanvue_13_01_metrics_s02", "title": "Exportar métricas semanales", "prompt": "Genera export semanal desde IG/TikTok/Bitly. Agrega totales, medias, máximos/mínimos y gráficos simples. Filtra por arquetipo/outfit/tema." },
+                { "id": "fanvue_13_01_metrics_s03", "title": "Construir dashboard simple", "prompt": "Diseña dashboard en Sheets/Notion con tarjetas de CTR, conversión y tips, usando colores por umbral. Añade tabla por prompt/audio y tendencia semanal." }
               ]
             },
             { "id": "fanvue_13_02_prompts", "title": "Iterar prompts y audio", "points": 7,
               "steps": [
-                { "id": "fanvue_13_02_prompts_s01", "title": "Iterar prompts por CTR" },
-                { "id": "fanvue_13_02_prompts_s02", "title": "Probar audios alternativos" },
-                { "id": "fanvue_13_02_prompts_s03", "title": "A/B testing en 2 reels" }
+                { "id": "fanvue_13_02_prompts_s01", "title": "Iterar prompts por CTR", "prompt": "Propón 5 iteraciones de prompt para Nano Banana/SDXL basadas en CTR. Cambia outfit/fondo/iluminación manteniendo identidad/LoRA {{token_lora}}. Entrega versiones A/B con parámetros y expected CTR." },
+                { "id": "fanvue_13_02_prompts_s02", "title": "Probar audios alternativos", "prompt": "Genera 3 variantes TTS (Bark/Coqui) con tono {{tono}} y tempo recomendado. Indica parámetros y export (WAV/OGG) para mejor claridad y energía." },
+                { "id": "fanvue_13_02_prompts_s03", "title": "A/B testing en 2 reels", "prompt": "Diseña A/B test: 2 reels con horario idéntico, captions/hashtags controlados. Define hipótesis, métricas (CTR, retención), duración del test y criterios de ganador." }
               ]
             },
             { "id": "fanvue_13_03_doc", "title": "Documentar mejoras", "points": 6,
               "steps": [
-                { "id": "fanvue_13_03_doc_s01", "title": "Documentar hallazgos" },
-                { "id": "fanvue_13_03_doc_s02", "title": "Actualizar guía de estilo" },
-                { "id": "fanvue_13_03_doc_s03", "title": "Registrar cambios efectivos" }
+                { "id": "fanvue_13_03_doc_s01", "title": "Documentar hallazgos", "prompt": "Resume qué cambios aumentaron CTR/conv y cuáles no. Incluye ejemplos de prompts/audios y métricas asociadas." },
+                { "id": "fanvue_13_03_doc_s02", "title": "Actualizar guía de estilo", "prompt": "Actualiza guía con reglas de prompts, audio y lip‑sync: do/don’t, parámetros base y plantillas aprobadas." },
+                { "id": "fanvue_13_03_doc_s03", "title": "Registrar cambios efectivos", "prompt": "Crea changelog con versiones de prompts/audio, fecha, responsables y resultados. Añade enlaces a assets." }
               ]
             }
           ]
