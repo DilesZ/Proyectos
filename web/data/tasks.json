@@ -395,6 +395,106 @@
       ]
     },
     {
+      "key": "amazon_affiliates",
+      "name": "Amazon Afiliados con IA",
+      "tasks": [
+        { "id": "aa_01_analizador", "title": "Analizador de tendencias (BSR, categorías, reseñas)", "points": 15, "badge": "Trend",
+          "subtasks": [
+            { "id": "aa_01_01_fuentes", "title": "Recolectar datos (Best Sellers/BSR/ratings)", "points": 7,
+              "steps": [
+                { "id": "aa_01_01_fuentes_s01", "title": "Definir categorías objetivo" },
+                { "id": "aa_01_01_fuentes_s02", "title": "Obtener top productos por categoría" },
+                { "id": "aa_01_01_fuentes_s03", "title": "Guardar métricas BSR/ratings/precio" }
+              ]
+            },
+            { "id": "aa_01_02_senales", "title": "Detectar señales de demanda/estacionalidad", "points": 8,
+              "steps": [
+                { "id": "aa_01_02_senales_s01", "title": "Identificar picos y estacionalidad" },
+                { "id": "aa_01_02_senales_s02", "title": "Filtrar por precio/margen" },
+                { "id": "aa_01_02_senales_s03", "title": "Lista corta: 30 productos" }
+              ]
+            }
+          ]
+        },
+        { "id": "aa_02_seleccion", "title": "Selección de productos e intención de búsqueda", "points": 15, "badge": "Plan",
+          "subtasks": [
+            { "id": "aa_02_01_keywords", "title": "Mapa de keywords long‑tail", "points": 8,
+              "steps": [
+                { "id": "aa_02_01_keywords_s01", "title": "Extraer queries con IA" },
+                { "id": "aa_02_01_keywords_s02", "title": "Clusterizar por intención" },
+                { "id": "aa_02_01_keywords_s03", "title": "Priorizar por CTR/competencia" }
+              ]
+            },
+            { "id": "aa_02_02_match", "title": "Match producto‑keyword", "points": 7,
+              "steps": [
+                { "id": "aa_02_02_match_s01", "title": "Asignar keywords por SKU" },
+                { "id": "aa_02_02_match_s02", "title": "Definir ángulos de contenido" }
+              ]
+            }
+          ]
+        },
+        { "id": "aa_03_stack", "title": "Stack y CMS (estático/headless + Vercel)", "points": 15, "badge": "Stack",
+          "subtasks": [
+            { "id": "aa_03_01_dominio", "title": "Dominio y DNS", "points": 5 },
+            { "id": "aa_03_02_cms", "title": "Elegir CMS/estático/headless", "points": 5 },
+            { "id": "aa_03_03_deploy", "title": "Build y deploy en Vercel", "points": 5 }
+          ]
+        },
+        { "id": "aa_04_plantillas", "title": "Plantillas de páginas y componentes", "points": 15, "badge": "UI",
+          "subtasks": [
+            { "id": "aa_04_01_ficha", "title": "Ficha de producto", "points": 5,
+              "steps": [
+                { "id": "aa_04_01_ficha_s01", "title": "Título/meta/CTA" },
+                { "id": "aa_04_01_ficha_s02", "title": "Schema Product/Review" }
+              ]
+            },
+            { "id": "aa_04_02_comparativa", "title": "Página comparativa", "points": 5 },
+            { "id": "aa_04_03_guia", "title": "Guía de compra", "points": 5 }
+          ]
+        },
+        { "id": "aa_05_contenido", "title": "Generación de contenido con IA", "points": 20, "badge": "Gen",
+          "subtasks": [
+            { "id": "aa_05_01_prompts", "title": "Prompts por tipo de página", "points": 8 },
+            { "id": "aa_05_02_batch", "title": "Generar 50 páginas con QA", "points": 12,
+              "steps": [
+                { "id": "aa_05_02_batch_s01", "title": "Ejecutar pipeline" },
+                { "id": "aa_05_02_batch_s02", "title": "Validación factual/estilo" },
+                { "id": "aa_05_02_batch_s03", "title": "Publicar lote inicial" }
+              ]
+            }
+          ]
+        },
+        { "id": "aa_06_seo", "title": "SEO técnico y on‑page", "points": 20, "badge": "SEO",
+          "subtasks": [
+            { "id": "aa_06_01_sitemap", "title": "Sitemap/robots/canonical", "points": 7 },
+            { "id": "aa_06_02_schema", "title": "Schema Product/AggregateRating", "points": 7 },
+            { "id": "aa_06_03_interlink", "title": "Interlinking programático", "points": 6 }
+          ]
+        },
+        { "id": "aa_07_compliance", "title": "Compliance Amazon Afiliados", "points": 10, "badge": "Legal",
+          "subtasks": [
+            { "id": "aa_07_01_disclaimer", "title": "Disclaimer y política", "points": 4 },
+            { "id": "aa_07_02_tos", "title": "Revisar TOS (sin precios en tiempo real)", "points": 3 },
+            { "id": "aa_07_03_links", "title": "Enlaces con tag de afiliado", "points": 3 }
+          ]
+        },
+        { "id": "aa_08_tracking", "title": "Tracking y monetización", "points": 15, "badge": "Analytics",
+          "subtasks": [
+            { "id": "aa_08_01_ga4", "title": "GA4/UTM/click tracking", "points": 5 },
+            { "id": "aa_08_02_kpis", "title": "Dashboard RPM/CTR/ingresos", "points": 5 },
+            { "id": "aa_08_03_ab", "title": "Test A/B de CTAs", "points": 5 }
+          ]
+        },
+        { "id": "aa_09_escalado", "title": "Escalar a 2–3 subnichos", "points": 15, "badge": "Scale",
+          "subtasks": [
+            { "id": "aa_09_01_dup", "title": "Duplicar plantillas y datasets", "points": 5 },
+            { "id": "aa_09_02_pipeline", "title": "Automatizar pipeline semanal", "points": 5 },
+            { "id": "aa_09_03_serps", "title": "Revisión SERPs y updates", "points": 5 }
+          ]
+        }
+      ]
+    },
+    {
       "key": "kdp_publishing",
       "name": "KDP Publishing",
       "tasks": [
