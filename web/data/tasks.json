@@ -402,16 +402,16 @@
           "subtasks": [
             { "id": "aa_01_01_fuentes", "title": "Recolectar datos (Best Sellers/BSR/ratings)", "points": 7,
               "steps": [
-                { "id": "aa_01_01_fuentes_s01", "title": "Definir categorías objetivo" },
-                { "id": "aa_01_01_fuentes_s02", "title": "Obtener top productos por categoría" },
-                { "id": "aa_01_01_fuentes_s03", "title": "Guardar métricas BSR/ratings/precio" }
+                { "id": "aa_01_01_fuentes_s01", "title": "Definir categorías objetivo", "prompt": "Lista 10 categorías objetivo y criterios (demanda, margen, estacionalidad). Incluye geos/idiomas y riesgo de saturación." },
+                { "id": "aa_01_01_fuentes_s02", "title": "Obtener top productos por categoría", "prompt": "Obtén top‑50 por categoría desde Best Sellers/BSR con ASIN, título, rating y precio. Evita scraping bloqueado; prioriza fuentes permitidas/PA‑API si aplica." },
+                { "id": "aa_01_01_fuentes_s03", "title": "Guardar métricas BSR/ratings/precio", "prompt": "Guarda CSV con columnas: categoría, ASIN, BSR, rating, reviews, precio, fecha. Normaliza BSR y agrega índice de momentum." }
               ]
             },
             { "id": "aa_01_02_senales", "title": "Detectar señales de demanda/estacionalidad", "points": 8,
               "steps": [
-                { "id": "aa_01_02_senales_s01", "title": "Identificar picos y estacionalidad" },
-                { "id": "aa_01_02_senales_s02", "title": "Filtrar por precio/margen" },
-                { "id": "aa_01_02_senales_s03", "title": "Lista corta: 30 productos" }
+                { "id": "aa_01_02_senales_s01", "title": "Identificar picos y estacionalidad", "prompt": "Analiza picos/estacionalidad con Google Trends y series de BSR. Marca ventanas (pre‑temporada, pico, post‑pico) por categoría." },
+                { "id": "aa_01_02_senales_s02", "title": "Filtrar por precio/margen", "prompt": "Filtra por rango de precio y margen estimado. Calcula RPM/CTR esperado con datos históricos y excluye low‑margin." },
+                { "id": "aa_01_02_senales_s03", "title": "Lista corta: 30 productos", "prompt": "Entrega shortlist de 30 productos priorizados con score (demanda, competencia, margen). Incluye recomendación por tipo de página." }
               ]
             }
           ]
@@ -420,24 +420,24 @@
           "subtasks": [
             { "id": "aa_02_01_keywords", "title": "Mapa de keywords long‑tail", "points": 8,
               "steps": [
-                { "id": "aa_02_01_keywords_s01", "title": "Extraer queries con IA" },
-                { "id": "aa_02_01_keywords_s02", "title": "Clusterizar por intención" },
-                { "id": "aa_02_01_keywords_s03", "title": "Priorizar por CTR/competencia" }
+                { "id": "aa_02_01_keywords_s01", "title": "Extraer queries con IA", "prompt": "Extrae 200 queries long‑tail usando IA, Autocomplete y People Also Ask. Formatea por categoría y limpia duplicados." },
+                { "id": "aa_02_01_keywords_s02", "title": "Clusterizar por intención", "prompt": "Clusteriza en intención (informacional, comparativa, transaccional). Asigna H1/H2 sugeridos y tipo de página ideal." },
+                { "id": "aa_02_01_keywords_s03", "title": "Priorizar por CTR/competencia", "prompt": "Calcula score por query: CTR esperado, competencia, estacionalidad. Devuelve top‑100 priorizadas con justificación." }
               ]
             },
             { "id": "aa_02_02_match", "title": "Match producto‑keyword", "points": 7,
               "steps": [
-                { "id": "aa_02_02_match_s01", "title": "Asignar keywords por SKU" },
-                { "id": "aa_02_02_match_s02", "title": "Definir ángulos de contenido" }
+                { "id": "aa_02_02_match_s01", "title": "Asignar keywords por SKU", "prompt": "Mapea 3–5 keywords por SKU/ASIN basadas en intent. Devuelve tabla SKU→keywords con nota de ajuste si cambia temporada." },
+                { "id": "aa_02_02_match_s02", "title": "Definir ángulos de contenido", "prompt": "Define ángulos (comparativa, guía, reseña profunda) por keyword. Indica CTA y esquema de interlinking recomendado." }
               ]
             }
           ]
         },
         { "id": "aa_03_stack", "title": "Stack y CMS (estático/headless + Vercel)", "points": 15, "badge": "Stack",
           "subtasks": [
-            { "id": "aa_03_01_dominio", "title": "Dominio y DNS", "points": 5 },
-            { "id": "aa_03_02_cms", "title": "Elegir CMS/estático/headless", "points": 5 },
-            { "id": "aa_03_03_deploy", "title": "Build y deploy en Vercel", "points": 5 }
+            { "id": "aa_03_01_dominio", "title": "Dominio y DNS", "points": 5, "prompt": "Propón nombre de dominio, estructura de subdominios y pasos DNS. Incluye configuración en Vercel y verificación." },
+            { "id": "aa_03_02_cms", "title": "Elegir CMS/estático/headless", "points": 5, "prompt": "Compara opciones (estático/headless CMS). Recomienda stack (Next/Vite + headless) y justifica por velocidad/SEO." },
+            { "id": "aa_03_03_deploy", "title": "Build y deploy en Vercel", "points": 5, "prompt": "Entrega pasos de build/deploy en Vercel, rewrites necesarios y variables de entorno para tracking." }
           ]
         },
         { "id": "aa_04_plantillas", "title": "Plantillas de páginas y componentes", "points": 15, "badge": "UI",
@@ -464,7 +464,7 @@
         },
         { "id": "aa_05_contenido", "title": "Generación de contenido con IA", "points": 20, "badge": "Gen",
           "subtasks": [
-            { "id": "aa_05_01_prompts", "title": "Prompts por tipo de página", "points": 8 },
+            { "id": "aa_05_01_prompts", "title": "Prompts por tipo de página", "points": 8, "prompt": "Genera plantillas de prompts por tipo de página (ficha, comparativa, guía) con estructura, tono y variables {{producto}}, {{categoria}}, {{perfil}}." },
             { "id": "aa_05_02_batch", "title": "Generar 50 páginas con QA", "points": 12,
               "steps": [
                 { "id": "aa_05_02_batch_s01", "title": "Ejecutar pipeline", "prompt": "Indica parámetros de ejecución, tamaño de lote y control de calidad automatizado." },
