@@ -5,6 +5,7 @@
   "routes": [
     { "src": "/styles.css", "dest": "web/styles.css" },
     { "src": "/app.js", "dest": "web/app.js" },
+    { "src": "/app.v20251233.js", "dest": "web/app.v20251233.js" },
     { "src": "/data/(.*)", "dest": "web/data/$1" },
     { "src": "/(.*)", "dest": "web/index.html" }
   ],
@@ -29,6 +30,18 @@
     },
     {
       "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    },
+    {
+      "source": "/",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, max-age=0" }
       ]
