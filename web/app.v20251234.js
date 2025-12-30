@@ -22,24 +22,46 @@ list.querySelectorAll(".chevron").forEach(ch=>{ch.addEventListener("click",e=>{c
 list.querySelectorAll(".chevron-sub").forEach(ch=>{ch.addEventListener("click",e=>{const el=e.target;el.classList.toggle("open");const next=el.parentElement.parentElement.parentElement.nextElementSibling;if(next && next.classList.contains("steps")){next.style.display=(next.style.display==="none"?"block":"none")}})})
 list.querySelectorAll("input[type=checkbox]").forEach(chk=>{chk.addEventListener("change",e=>{const id=e.target.dataset.id;const hasSub=e.target.dataset.hassub==="true";const hasSteps=e.target.dataset.hassteps==="true";const parent=e.target.dataset.parent;const checked=e.target.checked;if(hasSub){const task=b.tasks.find(x=>x.id===id);for(const s of task.subtasks){const steps=s.steps||[];if(steps.length>0){for(const st of steps){state.progress[st.id]=checked}state.progress[s.id]=checked}else{state.progress[s.id]=checked}}}else if(hasSteps){const sub=b.tasks.flatMap(x=>x.subtasks||[]).find(x=>x.id===id);const steps=sub.steps||[];for(const st of steps){state.progress[st.id]=checked}state.progress[id]=checked}else if(parent){state.progress[id]=checked;const sub=b.tasks.flatMap(x=>x.subtasks||[]).find(x=>x.id===parent);const steps=sub.steps||[];const allDone=steps.every(st=>state.progress[st.id]===true);state.progress[parent]=allDone}else{state.progress[id]=checked}saveProgress();renderBusiness(b);const sAll=computeStats(state.tasks.businesses);elTotalPoints.textContent=sAll.points;elTotalCompleted.textContent=sAll.completed;elTotalTasks.textContent=sAll.total})})
 elContent.appendChild(card)}
-const fallbackTasks={"businesses":[]}
-function hasSteps(json){try{const bs=json.businesses||[];for(const b of bs){for(const t of (b.tasks||[])){for(const s of (t.subtasks||[])){if(Array.isArray(s.steps)&&s.steps.length>0){return true}}}}}catch(e){}return false}
+const fallbackTasks={"businesses":[
+  {"key":"influencer_agency","name":"Influencer IA (Fanvue)","tasks":[{"id":"fanvue_placeholder","title":"Cargar tasks.json","points":0,"badge":"Data"}]},
+  {"key":"kdp_publishing","name":"KDP Publishing","tasks":[{"id":"kdp_placeholder","title":"Cargar tasks.json","points":0,"badge":"Data"}]},
+  {"key":"market_research","name":"Investigación de mercado","tasks":[{"id":"mr_placeholder","title":"Cargar tasks.json","points":0,"badge":"Data"}]},
+  {"key":"music_arbitrage","name":"IA Música (Covers/Originales/Servicios)","tasks":[{"id":"music_placeholder","title":"Cargar tasks.json","points":0,"badge":"Data"}]}
+]}
+function hasSteps(json){try{const bs=json.businesses||[];for(const b of bs){for(const t of (b.tasks||[])){for(const s of (t.subtasks||[])){if(Array.isArray(s.steps)&&s.steps.length>0){return true}}}}}catch(e){console.warn("hasSteps error",e)}return false}
+function safeBusinesses(obj){try{const bs=(obj&&Array.isArray(obj.businesses))?obj.businesses:[];return bs}catch(e){return []}}
 async function getTasks(){
   try{
     const r=await fetch(`./data/tasks.json?v=${dataVersion}`,{cache:"no-store"});
     if(r.ok){
       const j=await r.json();
-      if(hasSteps(j)){return j}
+      return j
     }
-  }catch(e){}
+  }catch(e){console.warn("local tasks.json fetch failed",e)}
   try{
     const r=await fetch(`https://raw.githubusercontent.com/DilesZ/Proyectos/main/web/data/tasks.json?ts=${dataVersion}`,{cache:"no-store"});
     if(r.ok){
       const j=await r.json();
       return j
     }
-  }catch(e){}
+  }catch(e){console.warn("raw tasks.json fetch failed",e)}
   return fallbackTasks
 }
-async function init(){state.tasks=await getTasks();state.progress=loadProgress();document.getElementById("appVersion").textContent=`v${dataVersion}`;console.log("[Orquestador] app version", dataVersion, {hasSteps: hasSteps(state.tasks)});renderTabs(state.tasks.businesses);const s=computeStats(state.tasks.businesses);elTotalPoints.textContent=s.points;elTotalCompleted.textContent=s.completed;elTotalTasks.textContent=s.total}
+async function init(){
+  state.tasks=await getTasks();
+  state.progress=loadProgress();
+  document.getElementById("appVersion").textContent=`v${dataVersion}`;
+  window.OrqAppVersion=dataVersion;
+  const bs=safeBusinesses(state.tasks);
+  console.log("[Orquestador] app version", dataVersion, {hasSteps: hasSteps(state.tasks), businessesCount: bs.length});
+  if(bs.length===0){
+    elTabs.innerHTML="";
+    elContent.innerHTML=`<div class="card"><h2>Sin datos</h2><div class="stats">No se pudo cargar /data/tasks.json</div></div>`;
+    elTotalPoints.textContent="0";elTotalCompleted.textContent="0";elTotalTasks.textContent="0";
+    return;
+  }
+  renderTabs(bs);
+  const s=computeStats(bs);
+  elTotalPoints.textContent=s.points;elTotalCompleted.textContent=s.completed;elTotalTasks.textContent=s.total
+}
 init()
