@@ -4,1151 +4,390 @@
       "key": "influencer_agency",
       "name": "Influencer IA (Fanvue)",
       "tasks": [
-        { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup",
-          "description": "Fase inicial crítica para definir la identidad del negocio. Aquí decidiremos quién es nuestra influencer, a quién se dirige y cómo se presentará al mundo.",
-          "time": "2 horas",
-          "difficulty": "Media",
-          "subtasks": [
-            { "id": "fanvue_01_01_arquetipo", "title": "Elegir arquetipo (fit/gamer/elegante)", "points": 2,
-              "description": "Selección del nicho de mercado. Un buen arquetipo debe ser rentable, sostenible y tener una audiencia clara.",
-              "time": "45 min",
-              "difficulty": "Fácil",
-              "steps": [
-                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos", 
-                  "prompt": "Genera 3 nichos/arquetipos (fit/gamer/elegante/otro) con descripción breve, audiencia objetivo y ejemplos de creadores. Incluye riesgos y oportunidades.",
-                  "guide": "### 🎯 Objetivo\nIdentificar 3 posibles caminos para nuestra influencer.\n\n### 📝 Instrucciones\n1. Abre **NotebookLM** o **ChatGPT**.\n2. Usa el prompt proporcionado.\n3. Analiza las opciones basándote en:\n   - **Rentabilidad**: ¿Pagan los usuarios en este nicho?\n   - **Saturación**: ¿Hay demasiada competencia?\n   - **Facilidad**: ¿Podemos generar contenido constante?\n\n### 💡 Consejo Pro\nEl nicho 'Gamer' suele tener alta retención, mientras que 'Fitness' tiene mayor alcance viral." 
-                },
-                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia y hashtags", 
-                  "prompt": "Para cada nicho, lista 20 hashtags de IG/TikTok, tipo de contenido que mejor funciona y ejemplos de captions con alto CTR.",
-                  "guide": "### 📊 Análisis de Mercado\nUna vez tengas los nichos, valídalos en Instagram y TikTok.\n\n1. Busca los hashtags sugeridos.\n2. Observa qué reels tienen más de 100k vistas.\n3. Anota los 'hooks' (ganchos) visuales que usan."
-                },
-                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar arquetipo final", 
-                  "prompt": "Elige el arquetipo óptimo justificando por potencial de ingresos, facilidad de producción con IA y cumplimiento de políticas.",
-                  "guide": "### 🏆 Decisión Final\nEs hora de elegir. No busques la perfección, busca la viabilidad.\n\n**Criterios de desempate:**\n- ¿Qué dataset de LoRA es más fácil de conseguir?\n- ¿Qué contenido te divierte más 'producir'?"
-                }
-              ]
-            },
-            { "id": "fanvue_01_02_nombre", "title": "Nombre/handle y bio convincente", "points": 2,
-              "steps": [
-                { "id": "fanvue_01_02_nombre_s01", "title": "Generar 20 handles", "prompt": "Genera 20 handles para IG/TikTok alineados al arquetipo elegido, memorables, cortos y sin números aleatorios." },
-                { "id": "fanvue_01_02_nombre_s02", "title": "Comprobar disponibilidad IG/TikTok", "prompt": "Indica cómo verificar disponibilidad y sugiere alternativas cercanas si están ocupados." },
-                { "id": "fanvue_01_02_nombre_s03", "title": "Redactar bio 140–160 caracteres", "prompt": "Redacta 5 bios distintas con tono persuasivo, clara propuesta de valor y CTA hacia Fanvue." }
-              ]
-            },
-            { "id": "fanvue_01_03_paleta", "title": "Paleta estética y estilo de vestuario", "points": 2,
-              "steps": [
-                { "id": "fanvue_01_03_paleta_s01", "title": "Definir paleta de color", "prompt": "Propón paleta primaria/secundaria y códigos hex en línea con el arquetipo y plataforma." },
-                { "id": "fanvue_01_03_paleta_s02", "title": "Crear moodboard en Pinterest", "prompt": "Describe los 10 elementos visuales del moodboard (poses, fondos, vestuario) y su justificación." },
-                { "id": "fanvue_01_03_paleta_s03", "title": "Lista de 5 prendas clave", "prompt": "Enumera 5 prendas/estilos consistentes con el arquetipo y su uso en prompts." }
-              ]
-            },
-            { "id": "fanvue_01_04_riesgo", "title": "Checklist de compliance/riesgos", "points": 2,
-              "steps": [
-                { "id": "fanvue_01_04_riesgo_s01", "title": "Revisar políticas Fanvue/IG/TikTok", "prompt": "Resume las políticas clave de contenido permitido/prohibido y límites de IA." },
-                { "id": "fanvue_01_04_riesgo_s02", "title": "Anotar límites y do/don't", "prompt": "Lista prácticas recomendadas y errores a evitar para mantener cuentas sanas." },
-                { "id": "fanvue_01_04_riesgo_s03", "title": "Aprobar checklist de compliance", "prompt": "Genera un checklist de 10 puntos para validar cada publicación antes de subirla." }
-              ]
-            },
-            { "id": "fanvue_01_05_copy", "title": "CTA y tono de marca", "points": 2,
-              "steps": [
-                { "id": "fanvue_01_05_copy_s01", "title": "Escribir 5 CTAs", "prompt": "Redacta 5 CTAs orientados a acción (Fanvue/DM), con microbeneficio y urgencia ligera." },
-                { "id": "fanvue_01_05_copy_s02", "title": "Probar tonos (friendly/tease)", "prompt": "Genera variantes de copy en tonos friendly/tease/elite y sugiere cuándo usar cada uno." },
-                { "id": "fanvue_01_05_copy_s03", "title": "Elegir CTA por defecto", "prompt": "Elige el CTA base y justifica por previsión de CTR." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_02_imagen_maestra", "title": "Generar Imagen Maestra con Nano Banana Pro", "points": 20, "badge": "Anchor",
-          "subtasks": [
-            { "id": "fanvue_02_01_prompt", "title": "Redactar prompt anchor (3 vistas)", "points": 5,
-              "steps": [
-                { "id": "fanvue_02_01_prompt_s01", "title": "Escribir prompt base", "prompt": "Escribe prompt anchor para Nano Banana Pro que defina arquetipo, outfit, fondo, iluminación y estilo, evitando artefactos y over‑processing." },
-                { "id": "fanvue_02_01_prompt_s02", "title": "Añadir 3 vistas/cámaras", "prompt": "Genera variantes del prompt con 3 ángulos (close‑up, medio, plano americano) y distintas focales." },
-                { "id": "fanvue_02_01_prompt_s03", "title": "Definir seeds/params clave", "prompt": "Propón seeds y parámetros (CFG, sampler, steps, resize) reproducibles y documentados." }
-              ]
-            },
-            { "id": "fanvue_02_02_generar", "title": "Generar y seleccionar mejor ancla", "points": 5,
-              "steps": [
-                { "id": "fanvue_02_02_generar_s01", "title": "Ejecutar lote de imágenes", "prompt": "Indica tamaño de lote y criterios de descarte (piel/manos/ojos, luces/sombras, composición)." },
-                { "id": "fanvue_02_02_generar_s02", "title": "Preseleccionar top 3", "prompt": "Define checklist de calidad para elegir las 3 mejores imágenes." },
-                { "id": "fanvue_02_02_generar_s03", "title": "Elegir ancla final", "prompt": "Selecciona la imagen ancla y documenta por qué maximiza CTR y consistencia." }
-              ]
-            },
-            { "id": "fanvue_02_03_export", "title": "Exportar y documentar parámetros", "points": 5,
-              "steps": [
-                { "id": "fanvue_02_03_export_s01", "title": "Guardar PNG/WEBP", "prompt": "Recomienda formatos y compresión óptima para redes sociales." },
-                { "id": "fanvue_02_03_export_s02", "title": "Registrar parámetros", "prompt": "Genera plantilla de registro (prompt, seed, CFG, sampler, steps)." },
-                { "id": "fanvue_02_03_export_s03", "title": "Archivar en carpeta de proyecto", "prompt": "Define estructura de carpetas y naming consistente." }
-              ]
-            },
-            { "id": "fanvue_02_04_variacion", "title": "Probar 3 variaciones controladas", "points": 5,
-              "steps": [
-                { "id": "fanvue_02_04_variacion_s01", "title": "Generar 3 variaciones", "prompt": "Escribe prompts para 3 variaciones controladas (outfit/fondo/iluminación) manteniendo identidad." },
-                { "id": "fanvue_02_04_variacion_s02", "title": "Comparar con ancla", "prompt": "Propón métricas visuales de comparación (consistencia, atractivo, claridad)." },
-                { "id": "fanvue_02_04_variacion_s03", "title": "Documentar cambios efectivos", "prompt": "Anota qué cambios mejoran CTR y cuáles degradan consistencia." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_03_dataset_lora", "title": "Crear dataset y entrenar LoRA en Colab/Kaggle", "points": 30, "badge": "Consistency",
-          "subtasks": [
-            { "id": "fanvue_03_01_dataset", "title": "Generar 40–60 imágenes variadas", "points": 8,
-              "steps": [
-                { "id": "fanvue_03_01_dataset_s01", "title": "Definir poses y escenarios", "prompt": "Lista 20 poses y 10 escenarios alineados al arquetipo con variación de fondos/luz." },
-                { "id": "fanvue_03_01_dataset_s02", "title": "Generar lote 40–60", "prompt": "Especifica parámetros por lote para diversidad sin perder identidad." },
-                { "id": "fanvue_03_01_dataset_s03", "title": "Eliminar duplicados/artefactos", "prompt": "Checklist de descarte (duplicados, manos/ojos, texturas erróneas)." }
-              ]
-            },
-            { "id": "fanvue_03_02_caption", "title": "Captioning y limpieza de dataset", "points": 6,
-              "steps": [
-                { "id": "fanvue_03_02_caption_s01", "title": "Definir esquema de captions", "prompt": "Propón formato de captions (pose, outfit, fondo, luz, estilo) para entrenamiento." },
-                { "id": "fanvue_03_02_caption_s02", "title": "Aplicar captioning automático", "prompt": "Indica herramientas y parámetros para captioning batch." },
-                { "id": "fanvue_03_02_caption_s03", "title": "Corrección manual en 10 muestras", "prompt": "Checklist para corregir 10 captions y mejorar calidad." }
-              ]
-            },
-            { "id": "fanvue_03_03_train", "title": "Entrenar LoRA (kohya_ss)", "points": 8,
-              "steps": [
-                { "id": "fanvue_03_03_train_s01", "title": "Configurar kohya_ss en Colab", "prompt": "Especifica notebook/params (network_dim/alpha/lr, batch) para LoRA." },
-                { "id": "fanvue_03_03_train_s02", "title": "Entrenar 3 epochs", "prompt": "Indica epochs, evaluación intermedia y criterios de parada." },
-                { "id": "fanvue_03_03_train_s03", "title": "Guardar LoRA y logs", "prompt": "Define naming y almacenamiento de LoRA/logs y versión." }
-              ]
-            },
-            { "id": "fanvue_03_04_eval", "title": "Evaluar consistencia (≥95%)", "points": 8,
-              "steps": [
-                { "id": "fanvue_03_04_eval_s01", "title": "Probar 10 prompts de validación", "prompt": "Escribe 10 prompts para validar identidad/consistencia en distintas condiciones." },
-                { "id": "fanvue_03_04_eval_s02", "title": "Medir similitud y consistencia", "prompt": "Propón método de medición (CLIP/SSIM/embeddings) y umbral ≥95%." },
-                { "id": "fanvue_03_04_eval_s03", "title": "Ajustar parámetros si <95%", "prompt": "Sugiere ajustes (learning rate/regularización/dataset) si el umbral no se cumple." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_04_datasheet_30", "title": "Producir datasheet SFW de 30 imágenes", "points": 25, "badge": "SFW",
-          "subtasks": [
-            { "id": "fanvue_04_01_setup", "title": "Configurar ControlNet/InstantID", "points": 6,
-              "steps": [
-                { "id": "fanvue_04_01_setup_s01", "title": "Instalar/activar ControlNet", "prompt": "Indica modelos ControlNet necesarios (OpenPose/Depth) y cómo activarlos." },
-                { "id": "fanvue_04_01_setup_s02", "title": "Cargar InstantID/face refs", "prompt": "Explica cómo obtener y cargar referencias de rostro con InstantID." },
-                { "id": "fanvue_04_01_setup_s03", "title": "Verificar outputs de prueba", "prompt": "Checklist de verificación (rasgos, piel, ojos, manos)." }
-              ]
-            },
-            { "id": "fanvue_04_02_batch", "title": "Batch de 30 escenarios", "points": 8,
-              "steps": [
-                { "id": "fanvue_04_02_batch_s01", "title": "Listar 30 prompts/escenarios", "prompt": "Escribe 30 prompts SFW con variedad de escenarios y outfits." },
-                { "id": "fanvue_04_02_batch_s02", "title": "Ejecutar batch y guardar", "prompt": "Especifica parámetros de ejecución batch y naming." },
-                { "id": "fanvue_04_02_batch_s03", "title": "Organizar salidas por tema", "prompt": "Define estructura de carpetas por tema/fecha." }
-              ]
-            },
-            { "id": "fanvue_04_03_qc", "title": "Filtro de realismo humano", "points": 6,
-              "steps": [
-                { "id": "fanvue_04_03_qc_s01", "title": "Revisar piel/manos/ojos", "prompt": "Checklist de QC para piel/manos/ojos e iluminación." },
-                { "id": "fanvue_04_03_qc_s02", "title": "Descartar uncanny/artefactos", "prompt": "Reglas para descartar outputs con uncanny y artefactos." },
-                { "id": "fanvue_04_03_qc_s03", "title": "Quedar 30 finales", "prompt": "Criterios para seleccionar 30 imágenes finales." }
-              ]
-            },
-            { "id": "fanvue_04_04_catalogo", "title": "Catalogar y etiquetar assets", "points": 5,
-              "steps": [
-                { "id": "fanvue_04_04_catalogo_s01", "title": "Nombrar archivos consistente", "prompt": "Propón convención de nombres con arquetipo/tema/fecha." },
-                { "id": "fanvue_04_04_catalogo_s02", "title": "Añadir etiquetas/temas", "prompt": "Lista taxonomía de etiquetas por outfit/escenario/tono." },
-                { "id": "fanvue_04_04_catalogo_s03", "title": "Subir a carpeta del proyecto", "prompt": "Describe estructura y backups recomendados." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_05_sets_nsfc", "title": "Crear 10 sets NSFW con SDXL + LoRA", "points": 30, "badge": "NSFW",
-          "subtasks": [
-            { "id": "fanvue_05_01_prompts", "title": "Diseñar prompts y límites", "points": 6,
-              "steps": [
-                { "id": "fanvue_05_01_prompts_s01", "title": "Definir límites y seguridad", "prompt": "Lista límites NSFW permitidos y disclaimers. Define palabras/temas prohibidos." },
-                { "id": "fanvue_05_01_prompts_s02", "title": "Escribir 10 prompts base", "prompt": "Genera 10 prompts NSFW controlados con foco en piel/luz realista y elegancia." },
-                { "id": "fanvue_05_01_prompts_s03", "title": "Validar outputs seguros", "prompt": "Checklist de validación de cumplimiento antes de publicar." }
-              ]
-            },
-            { "id": "fanvue_05_02_skin", "title": "Skin textures y luz realista", "points": 8,
-              "steps": [
-                { "id": "fanvue_05_02_skin_s01", "title": "Configurar texturas de piel", "prompt": "Recomienda modelos/ajustes para piel natural (specular/subsurface)." },
-                { "id": "fanvue_05_02_skin_s02", "title": "Ajustar iluminación realista", "prompt": "Propón esquemas de luz (softbox, rim light) y how‑to en prompts." },
-                { "id": "fanvue_05_02_skin_s03", "title": "Afinar sampler/CFG", "prompt": "Sugerencias de sampler/CFG/steps para balance entre detalle y naturalidad." }
-              ]
-            },
-            { "id": "fanvue_05_03_sets", "title": "Generar 10 sets x 5 fotos", "points": 10,
-              "steps": [
-                { "id": "fanvue_05_03_sets_s01", "title": "Planear 10 sets temáticos", "prompt": "Lista 10 temas con outfit, fondo, props y poses." },
-                { "id": "fanvue_05_03_sets_s02", "title": "Generar 5 fotos por set", "prompt": "Indica parámetros y variaciones por toma dentro de cada set." },
-                { "id": "fanvue_05_03_sets_s03", "title": "Seleccionar mejores tomas", "prompt": "Criterios para elegir 50 imágenes finales (atractivo, consistencia, calidad)." }
-              ]
-            },
-            { "id": "fanvue_05_04_qc", "title": "QC y curación final", "points": 6,
-              "steps": [
-                { "id": "fanvue_05_04_qc_s01", "title": "Revisar artefactos y anatomía", "prompt": "Checklist de anatomía y artefactos comunes para descartar." },
-                { "id": "fanvue_05_04_qc_s02", "title": "Curación y descarte", "prompt": "Proceso de curación final y criterios de descarte." },
-                { "id": "fanvue_05_04_qc_s03", "title": "Exportar set final", "prompt": "Recomendaciones de export y compresión para Fanvue/IG/TikTok." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_06_video_bienvenida", "title": "3 vídeos de bienvenida (Wan/SadTalker)", "points": 20, "badge": "Welcome",
-          "subtasks": [
-            { "id": "fanvue_06_01_script", "title": "Escribir scripts (30–45s)", "points": 5,
-              "steps": [
-                { "id": "fanvue_06_01_script_s01", "title": "Escribir 3 guiones", "prompt": "Redacta 3 guiones de 30–45s con presentación, valor y cierre." },
-                { "id": "fanvue_06_01_script_s02", "title": "Incluir CTA/beneficio", "prompt": "Incluye beneficios concretos (exclusivos, DM, descuentos) y CTA a seguir/comprar." },
-                { "id": "fanvue_06_01_script_s03", "title": "Ajustar tiempo 30–45s", "prompt": "Revisa duración y da recomendaciones de ritmo y pausas." }
-              ]
-            },
-            { "id": "fanvue_06_02_tts", "title": "Generar voz (Bark/Coqui)", "points": 5,
-              "steps": [
-                { "id": "fanvue_06_02_tts_s01", "title": "Elegir voz/tono", "prompt": "Propón 3 voces/tonos (cálido/energético/susurro leve) según arquetipo." },
-                { "id": "fanvue_06_02_tts_s02", "title": "Generar audio limpio", "prompt": "Instrucciones para generar audio sin ruido y con buena dicción." },
-                { "id": "fanvue_06_02_tts_s03", "title": "Normalizar y cortar", "prompt": "Pasos para normalizar volumen y cortar silencios." }
-              ]
-            },
-            { "id": "fanvue_06_03_lipsync", "title": "Lip‑sync (Wan/SadTalker)", "points": 5,
-              "steps": [
-                { "id": "fanvue_06_03_lipsync_s01", "title": "Preparar vídeo base", "prompt": "Selecciona clip base y parámetros de entrada (fps, resolución)." },
-                { "id": "fanvue_06_03_lipsync_s02", "title": "Aplicar lip‑sync", "prompt": "Indica pasos en Wan/SadTalker y ajustes clave." },
-                { "id": "fanvue_06_03_lipsync_s03", "title": "Ajustar sincronía fina", "prompt": "Checklist de correcciones de sincronía (offset, curva)." }
-              ]
-            },
-            { "id": "fanvue_06_04_export", "title": "Export y subtítulos", "points": 5,
-              "steps": [
-                { "id": "fanvue_06_04_export_s01", "title": "Crear subtítulos SRT", "prompt": "Genera archivo SRT a partir del guion final." },
-                { "id": "fanvue_06_04_export_s02", "title": "Exportar 1080p", "prompt": "Recomienda bitrate y códec para 1080p optimizado." },
-                { "id": "fanvue_06_04_export_s03", "title": "Guardar versión final", "prompt": "Estructura de nombres y backups para versiones." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_07_cinematic", "title": "5 cinemáticas con Higgsfield/Deforum", "points": 20, "badge": "Cinematics",
-          "subtasks": [
-            { "id": "fanvue_07_01_select", "title": "Elegir 5 fotos hero", "points": 5,
-              "steps": [
-                { "id": "fanvue_07_01_select_s01", "title": "Seleccionar 5 imágenes ancla", "prompt": "Criterios para elegir 5 imágenes con mejor potencial de motion." },
-                { "id": "fanvue_07_01_select_s02", "title": "Verificar resolución/encuadre", "prompt": "Checklist de resolución/encuadre para evitar artefactos al animar." },
-                { "id": "fanvue_07_01_select_s03", "title": "Organizar por temática", "prompt": "Agrupa por temática y define narrativa breve por clip." }
-              ]
-            },
-            { "id": "fanvue_07_02_motion", "title": "Configurar zoom/paneo", "points": 5,
-              "steps": [
-                { "id": "fanvue_07_02_motion_s01", "title": "Definir keyframes", "prompt": "Genera plan de keyframes (zoom/paneo) por clip." },
-                { "id": "fanvue_07_02_motion_s02", "title": "Ajustar velocidad/curvas", "prompt": "Recomendaciones de curvas de velocidad para estética suave." },
-                { "id": "fanvue_07_02_motion_s03", "title": "Previsualizar movimiento", "prompt": "Pasos para previsualizar y corregir jitter." }
-              ]
-            },
-            { "id": "fanvue_07_03_export", "title": "Export y música ligera", "points": 5,
-              "steps": [
-                { "id": "fanvue_07_03_export_s01", "title": "Exportar clips", "prompt": "Ajustes de export (fps/bitrate) para reels." },
-                { "id": "fanvue_07_03_export_s02", "title": "Añadir música ligera", "prompt": "Elige música libre de derechos y ajusta niveles." },
-                { "id": "fanvue_07_03_export_s03", "title": "Nivelar audio/vídeo", "prompt": "Checklist de niveles y mezcla final." }
-              ]
-            },
-            { "id": "fanvue_07_04_thumb", "title": "Miniaturas para reels", "points": 5,
-              "steps": [
-                { "id": "fanvue_07_04_thumb_s01", "title": "Diseñar miniaturas", "prompt": "Guía para miniaturas con alto CTR (composición, color)." },
-                { "id": "fanvue_07_04_thumb_s02", "title": "Texto/overlay llamativo", "prompt": "Propón textos/overlays persuasivos y ubicación." },
-                { "id": "fanvue_07_04_thumb_s03", "title": "Exportar 1080x1920", "prompt": "Especifica export a 1080x1920 con compresión óptima." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_08_trend_reels", "title": "2 reels tendencia con Viyou/stack local", "points": 15, "badge": "Trends",
-          "subtasks": [
-            { "id": "fanvue_08_01_scan", "title": "Escanear audios y plantillas", "points": 5,
-              "steps": [
-                { "id": "fanvue_08_01_scan_s01", "title": "Revisar tendencias en Reels/TT", "prompt": "Indica fuentes y señales para detectar tendencias vigentes (audio, formato)." },
-                { "id": "fanvue_08_01_scan_s02", "title": "Guardar 5 audios top", "prompt": "Criterios para elegir 5 audios de alto rendimiento." },
-                { "id": "fanvue_08_01_scan_s03", "title": "Elegir 2 plantillas", "prompt": "Selecciona 2 plantillas compatibles con face‑ref y alto CTR." }
-              ]
-            },
-            { "id": "fanvue_08_02_apply", "title": "Aplicar a la persona (face ref)", "points": 5,
-              "steps": [
-                { "id": "fanvue_08_02_apply_s01", "title": "Seleccionar face ref", "prompt": "Criterios para elegir face ref con buena iluminación y ángulo." },
-                { "id": "fanvue_08_02_apply_s02", "title": "Aplicar plantilla", "prompt": "Pasos para aplicar plantilla en Viyou/stack local." },
-                { "id": "fanvue_08_02_apply_s03", "title": "Ajustar ritmo y cortes", "prompt": "Guía para editar ritmo y cortes acorde al audio." }
-              ]
-            },
-            { "id": "fanvue_08_03_cta", "title": "CTA y hashtags", "points": 5,
-              "steps": [
-                { "id": "fanvue_08_03_cta_s01", "title": "Escribir caption corto", "prompt": "Redacta 3 captions cortos con CTA y microbeneficio." },
-                { "id": "fanvue_08_03_cta_s02", "title": "Añadir 8–12 hashtags", "prompt": "Propón 12 hashtags con combinación de alto/medio/bajo volumen." },
-                { "id": "fanvue_08_03_cta_s03", "title": "CTA hacia Fanvue", "prompt": "Define CTA y ubicación en descripción/overlay." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_09_infra", "title": "Configurar Fanvue + Landing + IG/TikTok", "points": 15, "badge": "Infra",
-          "subtasks": [
-            { "id": "fanvue_09_01_fanvue", "title": "Perfil y pricing", "points": 5,
-              "steps": [
-                { "id": "fanvue_09_01_fanvue_s01", "title": "Crear cuenta Fanvue" },
-                { "id": "fanvue_09_01_fanvue_s02", "title": "Configurar precios" },
-                { "id": "fanvue_09_01_fanvue_s03", "title": "Subir 10 fotos iniciales" }
-              ]
-            },
-            { "id": "fanvue_09_02_landing", "title": "Landing/Linktree", "points": 5,
-              "steps": [
-                { "id": "fanvue_09_02_landing_s01", "title": "Crear Linktree" },
-                { "id": "fanvue_09_02_landing_s02", "title": "Landing básica" },
-                { "id": "fanvue_09_02_landing_s03", "title": "Enlazar redes y Fanvue" }
-              ]
-            },
-            { "id": "fanvue_09_03_social", "title": "IG/TikTok setup y warmup", "points": 5,
-              "steps": [
-                { "id": "fanvue_09_03_social_s01", "title": "Crear cuentas IG/TikTok" },
-                { "id": "fanvue_09_03_social_s02", "title": "Publicar 3 warmups" },
-                { "id": "fanvue_09_03_social_s03", "title": "Optimizar bio y enlaces" }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_10_publicacion", "title": "Publicar diario: 1 Reel + 1 Story", "points": 20, "badge": "Routine",
-          "subtasks": [
-            { "id": "fanvue_10_01_calendar", "title": "Calendario semanal", "points": 7,
-              "steps": [
-                { "id": "fanvue_10_01_calendar_s01", "title": "Planificar días/horas" },
-                { "id": "fanvue_10_01_calendar_s02", "title": "Definir tipo de contenido" },
-                { "id": "fanvue_10_01_calendar_s03", "title": "Crear plantillas" }
-              ]
-            },
-            { "id": "fanvue_10_02_schedule", "title": "Programar 7 publicaciones", "points": 7,
-              "steps": [
-                { "id": "fanvue_10_02_schedule_s01", "title": "Programar 7 posts" },
-                { "id": "fanvue_10_02_schedule_s02", "title": "Revisar miniaturas" },
-                { "id": "fanvue_10_02_schedule_s03", "title": "Verificar horarios" }
-              ]
-            },
-            { "id": "fanvue_10_03_reply", "title": "Responder comentarios/DM", "points": 6,
-              "steps": [
-                { "id": "fanvue_10_03_reply_s01", "title": "Crear plantillas de respuesta" },
-                { "id": "fanvue_10_03_reply_s02", "title": "Responder diariamente" },
-                { "id": "fanvue_10_03_reply_s03", "title": "Guardar leads y preferencias" }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_11_ppv_dm", "title": "Activar PPV y Boyfriend Experience en DM", "points": 30, "badge": "Monetize",
-          "subtasks": [
-            { "id": "fanvue_11_01_welcome", "title": "Mensaje de bienvenida", "points": 6,
-              "steps": [
-                { "id": "fanvue_11_01_welcome_s01", "title": "Escribir mensaje inicial DM" },
-                { "id": "fanvue_11_01_welcome_s02", "title": "Configurar autoresponder" },
-                { "id": "fanvue_11_01_welcome_s03", "title": "Segmentar por interés" }
-              ]
-            },
-            { "id": "fanvue_11_02_ppv", "title": "2–3 PPV/semana", "points": 12,
-              "steps": [
-                { "id": "fanvue_11_02_ppv_s01", "title": "Plan de 3 PPV semanales" },
-                { "id": "fanvue_11_02_ppv_s02", "title": "Crear contenido PPV" },
-                { "id": "fanvue_11_02_ppv_s03", "title": "Enviar a lista segmentada" }
-              ]
-            },
-            { "id": "fanvue_11_03_mass_dm", "title": "DM diario (bd/gn)", "points": 6,
-              "steps": [
-                { "id": "fanvue_11_03_mass_dm_s01", "title": "Crear lista diaria" },
-                { "id": "fanvue_11_03_mass_dm_s02", "title": "Enviar buenos días" },
-                { "id": "fanvue_11_03_mass_dm_s03", "title": "Enviar buenas noches" }
-              ]
-            },
-            { "id": "fanvue_11_04_tips", "title": "Menu de tips y upsell", "points": 6,
-              "steps": [
-                { "id": "fanvue_11_04_tips_s01", "title": "Definir menú de tips" },
-                { "id": "fanvue_11_04_tips_s02", "title": "Crear ofertas de upsell" },
-                { "id": "fanvue_11_04_tips_s03", "title": "Optimizar pricing por respuesta" }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_12_cupos", "title": "Plan de cupos gratuitos Wan/Higgsfield/Viyou/Pykaso", "points": 15, "badge": "FreeQuota",
-          "subtasks": [
-            { "id": "fanvue_12_01_modes", "title": "Activar modos sin crédito", "points": 5,
-              "steps": [
-                { "id": "fanvue_12_01_modes_s01", "title": "Activar modos free en servicios", "prompt": "Activa modos gratuitos en Wan/Higgsfield/Viyou/Pykaso. Documenta pasos, límites por día y condiciones de cola. Incluye enlaces directos y capturas de configuración." },
-                { "id": "fanvue_12_01_modes_s02", "title": "Registrar cupos disponibles", "prompt": "Crea una hoja con columnas servicio, cupo diario, hora de reseteo y estado. Registra disponibilidad y bloquea slots para producción." },
-                { "id": "fanvue_12_01_modes_s03", "title": "Automatizar cola diaria", "prompt": "Define automatización con IFTTT/cron/Notion API: programa ejecución diaria de 1–3 clips por servicio y notificaciones de éxito/fallo." }
-              ]
-            },
-            { "id": "fanvue_12_02_queue", "title": "Cola diaria 1–3 clips", "points": 5,
-              "steps": [
-                { "id": "fanvue_12_02_queue_s01", "title": "Programar 1–3 clips diarios", "prompt": "Genera plan de publicación con horas recomendadas y plantillas de prompts base para 1–3 clips/día por plataforma." },
-                { "id": "fanvue_12_02_queue_s02", "title": "Verificar resultados", "prompt": "Checklist de verificación: lip‑sync, calidad de piel/manos/ojos, audio limpio, duración adecuada. Marca OK/KO por clip." },
-                { "id": "fanvue_12_02_queue_s03", "title": "Ajustar si hay fallos", "prompt": "Lista ajustes rápidos por tipo de fallo (desincronía, artefactos, voz) y recomiende reintentos o cambio de servicio." }
-              ]
-            },
-            { "id": "fanvue_12_03_fallback", "title": "Fallback a stack local", "points": 5,
-              "steps": [
-                { "id": "fanvue_12_03_fallback_s01", "title": "Configurar stack local", "prompt": "Prepara stack local (SDXL + LoRA, kohya_ss, SadTalker/Wan offline). Documenta instalación, modelos y rutas de proyecto." },
-                { "id": "fanvue_12_03_fallback_s02", "title": "Definir triggers de fallback", "prompt": "Especifica reglas: si servicio falla >15 min o límite de cupo, activar pipeline local. Incluye condiciones y responsables." },
-                { "id": "fanvue_12_03_fallback_s03", "title": "Probar flujo de contingencia", "prompt": "Ejecuta prueba end‑to‑end de contingencia: genera clip, verifica QC y registra tiempos/estado." }
-              ]
-            }
-          ]
-        },
-        { "id": "fanvue_13_optimizacion", "title": "Optimizar prompts y lip-sync con métricas", "points": 20, "badge": "Optimize",
-          "subtasks": [
-            { "id": "fanvue_13_01_metrics", "title": "Medir CTR/conv/tips", "points": 7,
-              "steps": [
-                { "id": "fanvue_13_01_metrics_s01", "title": "Configurar tracking CTR", "prompt": "Configura tracking CTR/conv/tips con UTM y hoja de control. Define UTM_source (ig/tiktok), UTM_campaign, y columnas: fecha, post_id, impresiones, clicks, CTR, suscripciones, tips. Incluye ejemplo de URLs con UTM." },
-                { "id": "fanvue_13_01_metrics_s02", "title": "Exportar métricas semanales", "prompt": "Genera export semanal desde IG/TikTok/Bitly. Agrega totales, medias, máximos/mínimos y gráficos simples. Filtra por arquetipo/outfit/tema." },
-                { "id": "fanvue_13_01_metrics_s03", "title": "Construir dashboard simple", "prompt": "Diseña dashboard en Sheets/Notion con tarjetas de CTR, conversión y tips, usando colores por umbral. Añade tabla por prompt/audio y tendencia semanal." }
-              ]
-            },
-            { "id": "fanvue_13_02_prompts", "title": "Iterar prompts y audio", "points": 7,
-              "steps": [
-                { "id": "fanvue_13_02_prompts_s01", "title": "Iterar prompts por CTR", "prompt": "Propón 5 iteraciones de prompt para Nano Banana/SDXL basadas en CTR. Cambia outfit/fondo/iluminación manteniendo identidad/LoRA {{token_lora}}. Entrega versiones A/B con parámetros y expected CTR." },
-                { "id": "fanvue_13_02_prompts_s02", "title": "Probar audios alternativos", "prompt": "Genera 3 variantes TTS (Bark/Coqui) con tono {{tono}} y tempo recomendado. Indica parámetros y export (WAV/OGG) para mejor claridad y energía." },
-                { "id": "fanvue_13_02_prompts_s03", "title": "A/B testing en 2 reels", "prompt": "Diseña A/B test: 2 reels con horario idéntico, captions/hashtags controlados. Define hipótesis, métricas (CTR, retención), duración del test y criterios de ganador." }
-              ]
-            },
-            { "id": "fanvue_13_03_doc", "title": "Documentar mejoras", "points": 6,
-              "steps": [
-                { "id": "fanvue_13_03_doc_s01", "title": "Documentar hallazgos", "prompt": "Resume qué cambios aumentaron CTR/conv y cuáles no. Incluye ejemplos de prompts/audios y métricas asociadas." },
-                { "id": "fanvue_13_03_doc_s02", "title": "Actualizar guía de estilo", "prompt": "Actualiza guía con reglas de prompts, audio y lip‑sync: do/don’t, parámetros base y plantillas aprobadas." },
-                { "id": "fanvue_13_03_doc_s03", "title": "Registrar cambios efectivos", "prompt": "Crea changelog con versiones de prompts/audio, fecha, responsables y resultados. Añade enlaces a assets." }
-              ]
-            }
-          ]
-        }
+        { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup", "description": "Fase inicial crítica para definir la identidad del negocio.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "fanvue_01_01_arquetipo", "title": "Elegir arquetipo (fit/gamer/elegante)", "points": 2, "description": "Selección del nicho de mercado.", "time": "45 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos", "prompt": "Genera 3 nichos...", "guide": "### 🎯 Objetivo\nIdentificar 3 posibles caminos.\n\n### 📝 Instrucciones\n1. Usa ChatGPT para listar nichos.\n2. Evalúa rentabilidad." },
+                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia", "prompt": "Lista hashtags...", "guide": "### 📊 Análisis\nValida en Instagram/TikTok los hashtags." },
+                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar final", "prompt": "Elige óptimo...", "guide": "### 🏆 Decisión\nElige el que te sea más fácil producir." }
+            ]},
+            { "id": "fanvue_01_02_nombre", "title": "Nombre/handle y bio", "points": 2, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_01_02_nombre_s01", "title": "Generar handles", "guide": "### 📝 Naming\nGenera 20 ideas y verifica en Namechk." },
+                { "id": "fanvue_01_02_nombre_s02", "title": "Verificar disp.", "guide": "### ✅ Check\nAsegura que esté libre en IG y TikTok." },
+                { "id": "fanvue_01_02_nombre_s03", "title": "Redactar bio", "guide": "### ✍️ Bio\nEscribe una bio con gancho y CTA." }
+            ]},
+            { "id": "fanvue_01_03_paleta", "title": "Estética y Vestuario", "points": 2, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_01_03_paleta_s01", "title": "Paleta color", "guide": "### 🎨 Colores\nDefine 3 colores primarios." },
+                { "id": "fanvue_01_03_paleta_s02", "title": "Moodboard", "guide": "### 🖼️ Pinterest\nCrea un tablero de inspiración." },
+                { "id": "fanvue_01_03_paleta_s03", "title": "Prendas clave", "guide": "### 👗 Outfit\nDefine el estilo de ropa recurrente." }
+            ]},
+            { "id": "fanvue_01_04_riesgo", "title": "Compliance", "points": 2, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_01_04_riesgo_s01", "title": "Leer normas", "guide": "### ⚖️ Reglas\nRevisa ToS de Fanvue e Instagram." },
+                { "id": "fanvue_01_04_riesgo_s02", "title": "Límites", "guide": "### 🚫 Do's & Don'ts\nDefine qué contenido no harás." },
+                { "id": "fanvue_01_04_riesgo_s03", "title": "Checklist", "guide": "### ✅ Validación\nCrea una lista de chequeo pre-post." }
+            ]},
+            { "id": "fanvue_01_05_copy", "title": "Copywriting", "points": 2, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_01_05_copy_s01", "title": "CTAs", "guide": "### 📣 Call to Action\nRedacta frases para que hagan click." },
+                { "id": "fanvue_01_05_copy_s02", "title": "Tono", "guide": "### 🗣️ Voz\nDefine la personalidad (dulce, ruda, etc)." },
+                { "id": "fanvue_01_05_copy_s03", "title": "CTA Default", "guide": "### 🏆 Principal\nElige tu CTA estándar." }
+            ]}
+        ]},
+        { "id": "fanvue_02_imagen_maestra", "title": "Generar Imagen Maestra", "points": 20, "badge": "Anchor", "description": "Creación de la imagen base de referencia.", "time": "3 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "fanvue_02_01_prompt", "title": "Prompt Anchor", "points": 5, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_02_01_prompt_s01", "title": "Prompt base", "guide": "### 📝 Prompting\nDescribe detalladamente a tu personaje." },
+                { "id": "fanvue_02_01_prompt_s02", "title": "Vistas", "guide": "### 📷 Ángulos\nPrepara variaciones de cámara." },
+                { "id": "fanvue_02_01_prompt_s03", "title": "Params", "guide": "### ⚙️ Config\nAnota seed, sampler y steps." }
+            ]},
+            { "id": "fanvue_02_02_generar", "title": "Generar y elegir", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "fanvue_02_02_generar_s01", "title": "Batch", "guide": "### 🚀 Generar\nCrea 20+ imágenes." },
+                { "id": "fanvue_02_02_generar_s02", "title": "Filtrar", "guide": "### 🔍 Selección\nDescarta errores anatómicos." },
+                { "id": "fanvue_02_02_generar_s03", "title": "Finalista", "guide": "### 👑 Anchor\nElige la mejor imagen." }
+            ]},
+            { "id": "fanvue_02_03_export", "title": "Exportar", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_02_03_export_s01", "title": "Formatos", "guide": "### 💾 Guardar\nGuarda en PNG y WEBP." },
+                { "id": "fanvue_02_03_export_s02", "title": "Metadata", "guide": "### 📝 Info\nGuarda los parámetros de generación." },
+                { "id": "fanvue_02_03_export_s03", "title": "Organizar", "guide": "### 🗂️ Carpetas\nCrea estructura de assets." }
+            ]},
+            { "id": "fanvue_02_04_variacion", "title": "Test Variaciones", "points": 5, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_02_04_variacion_s01", "title": "Cambiar fondo", "guide": "### 🔄 Fondo\nPrueba cambiar el entorno manteniendo la cara." },
+                { "id": "fanvue_02_04_variacion_s02", "title": "Comparar", "guide": "### 🆚 Review\nVerifica consistencia." },
+                { "id": "fanvue_02_04_variacion_s03", "title": "Anotar", "guide": "### 📓 Log\nRegistra qué funcionó mejor." }
+            ]}
+        ]},
+        { "id": "fanvue_03_dataset_lora", "title": "Entrenar LoRA", "points": 30, "badge": "Consistency", "description": "Entrenamiento del modelo para consistencia facial.", "time": "4 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "fanvue_03_01_dataset", "title": "Dataset 40-60 imgs", "points": 8, "time": "2 horas", "difficulty": "Media", "steps": [
+                { "id": "fanvue_03_01_dataset_s01", "title": "Planificar", "guide": "### 📋 Shot List\nLista poses y ángulos necesarios." },
+                { "id": "fanvue_03_01_dataset_s02", "title": "Generar", "guide": "### 🏭 Producción\nCrea las imágenes base." },
+                { "id": "fanvue_03_01_dataset_s03", "title": "Limpiar", "guide": "### 🧹 Clean\nElimina las defectuosas." }
+            ]},
+            { "id": "fanvue_03_02_caption", "title": "Captioning", "points": 6, "time": "1 hora", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_03_02_caption_s01", "title": "Esquema", "guide": "### 🏷️ Formato\nDefine cómo describirás las imágenes." },
+                { "id": "fanvue_03_02_caption_s02", "title": "Auto-tag", "guide": "### 🤖 Tagger\nUsa WD14 o BLIP." },
+                { "id": "fanvue_03_02_caption_s03", "title": "Corregir", "guide": "### ✍️ Edit\nAsegura la keyword de activación." }
+            ]},
+            { "id": "fanvue_03_03_train", "title": "Entrenar (Kohya)", "points": 8, "time": "1 hora", "difficulty": "Difícil", "steps": [
+                { "id": "fanvue_03_03_train_s01", "title": "Config", "guide": "### ⚙️ Setup\nPrepara el Colab de Kohya." },
+                { "id": "fanvue_03_03_train_s02", "title": "Run", "guide": "### 🏃 Start\nEjecuta el entrenamiento." },
+                { "id": "fanvue_03_03_train_s03", "title": "Save", "guide": "### 💾 Download\nDescarga los safetensors." }
+            ]},
+            { "id": "fanvue_03_04_eval", "title": "Evaluar", "points": 8, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_03_04_eval_s01", "title": "Test prompts", "guide": "### 🧪 Testing\nPrueba el modelo en situaciones difíciles." },
+                { "id": "fanvue_03_04_eval_s02", "title": "Score", "guide": "### 💯 Nota\nEvalúa del 1 al 10 el parecido." },
+                { "id": "fanvue_03_04_eval_s03", "title": "Ajustar", "guide": "### 🔧 Tweak\nAjusta el peso del LoRA si es necesario." }
+            ]}
+        ]},
+        { "id": "fanvue_04_datasheet_30", "title": "Pack SFW Inicial", "points": 25, "badge": "SFW", "description": "Primer lote de contenido para redes.", "time": "3 horas", "difficulty": "Media", "subtasks": [
+            { "id": "fanvue_04_01_setup", "title": "ControlNet", "points": 6, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "fanvue_04_01_setup_s01", "title": "Install", "guide": "### 📥 Instalar\nAsegura tener los modelos de ControlNet." },
+                { "id": "fanvue_04_01_setup_s02", "title": "InstantID", "guide": "### 🆔 Backup\nConfigura InstantID por si falla el LoRA." },
+                { "id": "fanvue_04_01_setup_s03", "title": "Verify", "guide": "### ✅ Check\nHaz una prueba rápida." }
+            ]},
+            { "id": "fanvue_04_02_batch", "title": "Batch 30", "points": 8, "time": "1.5 horas", "difficulty": "Media", "steps": [
+                { "id": "fanvue_04_02_batch_s01", "title": "Prompts", "guide": "### 📝 Lista\nPrepara 30 ideas distintas." },
+                { "id": "fanvue_04_02_batch_s02", "title": "Ejecutar", "guide": "### 🚀 Run\nGenera en lote." },
+                { "id": "fanvue_04_02_batch_s03", "title": "Sort", "guide": "### 🗂️ Organizar\nClasifica los resultados." }
+            ]},
+            { "id": "fanvue_04_03_qc", "title": "QC", "points": 6, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_04_03_qc_s01", "title": "Manos/Ojos", "guide": "### 👁️ Zoom\nRevisa detalles anatómicos." },
+                { "id": "fanvue_04_03_qc_s02", "title": "Realismo", "guide": "### 📸 Photo-real\nDescarta lo que parezca dibujo." },
+                { "id": "fanvue_04_03_qc_s03", "title": "Select", "guide": "### 🌟 Top 30\nQuédate solo con lo mejor." }
+            ]},
+            { "id": "fanvue_04_04_catalogo", "title": "Catalogar", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "fanvue_04_04_catalogo_s01", "title": "Rename", "guide": "### 🏷️ Nombre\nUsa fechas y descripciones." },
+                { "id": "fanvue_04_04_catalogo_s02", "title": "Tags", "guide": "### 📌 Etiquetas\nOrganiza por tipo de contenido." },
+                { "id": "fanvue_04_04_catalogo_s03", "title": "Upload", "guide": "### ☁️ Drive\nSube a la nube." }
+            ]}
+        ]}
       ]
     },
     {
       "key": "amazon_affiliates",
       "name": "Amazon Afiliados con IA",
       "tasks": [
-        { "id": "aa_01_analizador", "title": "Analizador de tendencias (BSR, categorías, reseñas)", "points": 15, "badge": "Trend",
-          "subtasks": [
-            { "id": "aa_01_01_fuentes", "title": "Recolectar datos (Best Sellers/BSR/ratings)", "points": 7,
-              "steps": [
-                { "id": "aa_01_01_fuentes_s01", "title": "Definir categorías objetivo", "prompt": "Lista 10 categorías objetivo y criterios (demanda, margen, estacionalidad). Incluye geos/idiomas y riesgo de saturación." },
-                { "id": "aa_01_01_fuentes_s02", "title": "Obtener top productos por categoría", "prompt": "Obtén top‑50 por categoría desde Best Sellers/BSR con ASIN, título, rating y precio. Evita scraping bloqueado; prioriza fuentes permitidas/PA‑API si aplica." },
-                { "id": "aa_01_01_fuentes_s03", "title": "Guardar métricas BSR/ratings/precio", "prompt": "Guarda CSV con columnas: categoría, ASIN, BSR, rating, reviews, precio, fecha. Normaliza BSR y agrega índice de momentum." }
-              ]
-            },
-            { "id": "aa_01_02_senales", "title": "Detectar señales de demanda/estacionalidad", "points": 8,
-              "steps": [
-                { "id": "aa_01_02_senales_s01", "title": "Identificar picos y estacionalidad", "prompt": "Analiza picos/estacionalidad con Google Trends y series de BSR. Marca ventanas (pre‑temporada, pico, post‑pico) por categoría." },
-                { "id": "aa_01_02_senales_s02", "title": "Filtrar por precio/margen", "prompt": "Filtra por rango de precio y margen estimado. Calcula RPM/CTR esperado con datos históricos y excluye low‑margin." },
-                { "id": "aa_01_02_senales_s03", "title": "Lista corta: 30 productos", "prompt": "Entrega shortlist de 30 productos priorizados con score (demanda, competencia, margen). Incluye recomendación por tipo de página." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_02_seleccion", "title": "Selección de productos e intención de búsqueda", "points": 15, "badge": "Plan",
-          "subtasks": [
-            { "id": "aa_02_01_keywords", "title": "Mapa de keywords long‑tail", "points": 8,
-              "steps": [
-                { "id": "aa_02_01_keywords_s01", "title": "Extraer queries con IA", "prompt": "Extrae 200 queries long‑tail usando IA, Autocomplete y People Also Ask. Formatea por categoría y limpia duplicados." },
-                { "id": "aa_02_01_keywords_s02", "title": "Clusterizar por intención", "prompt": "Clusteriza en intención (informacional, comparativa, transaccional). Asigna H1/H2 sugeridos y tipo de página ideal." },
-                { "id": "aa_02_01_keywords_s03", "title": "Priorizar por CTR/competencia", "prompt": "Calcula score por query: CTR esperado, competencia, estacionalidad. Devuelve top‑100 priorizadas con justificación." }
-              ]
-            },
-            { "id": "aa_02_02_match", "title": "Match producto‑keyword", "points": 7,
-              "steps": [
-                { "id": "aa_02_02_match_s01", "title": "Asignar keywords por SKU", "prompt": "Mapea 3–5 keywords por SKU/ASIN basadas en intent. Devuelve tabla SKU→keywords con nota de ajuste si cambia temporada." },
-                { "id": "aa_02_02_match_s02", "title": "Definir ángulos de contenido", "prompt": "Define ángulos (comparativa, guía, reseña profunda) por keyword. Indica CTA y esquema de interlinking recomendado." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_03_stack", "title": "Stack y CMS (estático/headless + Vercel)", "points": 15, "badge": "Stack",
-          "subtasks": [
-            { "id": "aa_03_01_dominio", "title": "Dominio y DNS", "points": 5, "prompt": "Propón nombre de dominio, estructura de subdominios y pasos DNS. Incluye configuración en Vercel y verificación." },
-            { "id": "aa_03_02_cms", "title": "Elegir CMS/estático/headless", "points": 5, "prompt": "Compara opciones (estático/headless CMS). Recomienda stack (Next/Vite + headless) y justifica por velocidad/SEO." },
-            { "id": "aa_03_03_deploy", "title": "Build y deploy en Vercel", "points": 5, "prompt": "Entrega pasos de build/deploy en Vercel, rewrites necesarios y variables de entorno para tracking." }
-          ]
-        },
-        { "id": "aa_04_plantillas", "title": "Plantillas de páginas y componentes", "points": 15, "badge": "UI",
-          "subtasks": [
-            { "id": "aa_04_01_ficha", "title": "Ficha de producto", "points": 5,
-              "steps": [
-                { "id": "aa_04_01_ficha_s01", "title": "Título/meta/CTA", "prompt": "Genera title/meta y 3 CTAs persuasivos por ficha con copy orientado a clicks." },
-                { "id": "aa_04_01_ficha_s02", "title": "Schema Product/Review", "prompt": "Entrega JSON‑LD para Product con AggregateRating y offers." }
-              ]
-            },
-            { "id": "aa_04_02_comparativa", "title": "Página comparativa", "points": 5,
-              "steps": [
-                { "id": "aa_04_02_comparativa_s01", "title": "Tabla y criterios", "prompt": "Define tabla comparativa con criterios (precio, rating, features clave) y resumen accionable." },
-                { "id": "aa_04_02_comparativa_s02", "title": "Prompts comparativa", "prompt": "Escribe prompt para generar comparativa con pros/cons y recomendación final." }
-              ]
-            },
-            { "id": "aa_04_03_guia", "title": "Guía de compra", "points": 5,
-              "steps": [
-                { "id": "aa_04_03_guia_s01", "title": "Estructura de guía", "prompt": "Propón estructura H1/H2/H3 con criterios de decisión y FAQs." },
-                { "id": "aa_04_03_guia_s02", "title": "Prompt guía", "prompt": "Escribe prompt para guía de compra que incluya recomendaciones por perfil de usuario." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_05_contenido", "title": "Generación de contenido con IA", "points": 20, "badge": "Gen",
-          "subtasks": [
-            { "id": "aa_05_01_prompts", "title": "Prompts por tipo de página", "points": 8, "prompt": "Genera plantillas de prompts por tipo de página (ficha, comparativa, guía) con estructura, tono y variables {{producto}}, {{categoria}}, {{perfil}}." },
-            { "id": "aa_05_02_batch", "title": "Generar 50 páginas con QA", "points": 12,
-              "steps": [
-                { "id": "aa_05_02_batch_s01", "title": "Ejecutar pipeline", "prompt": "Indica parámetros de ejecución, tamaño de lote y control de calidad automatizado." },
-                { "id": "aa_05_02_batch_s02", "title": "Validación factual/estilo", "prompt": "Define checklist de QA y prompts de verificación de factualidad y estilo." },
-                { "id": "aa_05_02_batch_s03", "title": "Publicar lote inicial", "prompt": "Describe proceso de publicación y actualización de sitemap/robots." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_06_seo", "title": "SEO técnico y on‑page", "points": 20, "badge": "SEO",
-          "subtasks": [
-            { "id": "aa_06_01_sitemap", "title": "Sitemap/robots/canonical", "points": 7,
-              "steps": [
-                { "id": "aa_06_01_sitemap_s01", "title": "Sitemaps y robots", "prompt": "Especifica sitemaps por tipo de página y reglas en robots.txt." },
-                { "id": "aa_06_01_sitemap_s02", "title": "Canonicals", "prompt": "Define reglas de canonical para evitar duplicidades." }
-              ]
-            },
-            { "id": "aa_06_02_schema", "title": "Schema Product/AggregateRating", "points": 7,
-              "steps": [
-                { "id": "aa_06_02_schema_s01", "title": "JSON‑LD", "prompt": "Entrega JSON‑LD para Product y AggregateRating con ejemplos." },
-                { "id": "aa_06_02_schema_s02", "title": "Validación", "prompt": "Lista pasos de validación y corrección de errores." }
-              ]
-            },
-            { "id": "aa_06_03_interlink", "title": "Interlinking programático", "points": 6,
-              "steps": [
-                { "id": "aa_06_03_interlink_s01", "title": "Reglas interlink", "prompt": "Propón reglas de interlinking entre fichas, comparativas y guías." },
-                { "id": "aa_06_03_interlink_s02", "title": "Mapa de enlaces", "prompt": "Genera mapa de enlaces para 50 páginas iniciales." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_07_compliance", "title": "Compliance Amazon Afiliados", "points": 10, "badge": "Legal",
-          "subtasks": [
-            { "id": "aa_07_01_disclaimer", "title": "Disclaimer y política", "points": 4,
-              "steps": [
-                { "id": "aa_07_01_disclaimer_s01", "title": "Textos legales", "prompt": "Redacta disclaimer y políticas requeridas por Amazon Afiliados." }
-              ]
-            },
-            { "id": "aa_07_02_tos", "title": "Revisar TOS (sin precios en tiempo real)", "points": 3,
-              "steps": [
-                { "id": "aa_07_02_tos_s01", "title": "Checklist TOS", "prompt": "Entrega checklist de cumplimiento (no mostrar precios en tiempo real, fuentes permitidas)." }
-              ]
-            },
-            { "id": "aa_07_03_links", "title": "Enlaces con tag de afiliado", "points": 3,
-              "steps": [
-                { "id": "aa_07_03_links_s01", "title": "Integración de tags", "prompt": "Especifica cómo incorporar los tags de afiliado en enlaces y verificar tracking." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_08_tracking", "title": "Tracking y monetización", "points": 15, "badge": "Analytics",
-          "subtasks": [
-            { "id": "aa_08_01_ga4", "title": "GA4/UTM/click tracking", "points": 5,
-              "steps": [
-                { "id": "aa_08_01_ga4_s01", "title": "Eventos y UTM", "prompt": "Define eventos GA4 y esquema UTM para medir clicks y rutas de conversión." }
-              ]
-            },
-            { "id": "aa_08_02_kpis", "title": "Dashboard RPM/CTR/ingresos", "points": 5,
-              "steps": [
-                { "id": "aa_08_02_kpis_s01", "title": "Diseño de dashboard", "prompt": "Propón layout y métricas para seguimiento semanal y mensual." }
-              ]
-            },
-            { "id": "aa_08_03_ab", "title": "Test A/B de CTAs", "points": 5,
-              "steps": [
-                { "id": "aa_08_03_ab_s01", "title": "Hipótesis y variantes", "prompt": "Diseña 3 hipótesis de CTAs y sus variantes A/B con criterios de éxito." }
-              ]
-            }
-          ]
-        },
-        { "id": "aa_09_escalado", "title": "Escalar a 2–3 subnichos", "points": 15, "badge": "Scale",
-          "subtasks": [
-            { "id": "aa_09_01_dup", "title": "Duplicar plantillas y datasets", "points": 5,
-              "steps": [
-                { "id": "aa_09_01_dup_s01", "title": "Estrategia de duplicación", "prompt": "Define proceso para duplicar plantillas/datasets y adaptar a nuevos subnichos." }
-              ]
-            },
-            { "id": "aa_09_02_pipeline", "title": "Automatizar pipeline semanal", "points": 5,
-              "steps": [
-                { "id": "aa_09_02_pipeline_s01", "title": "Agenda y automatización", "prompt": "Diseña agenda de generación semanal y automatización de publicación." }
-              ]
-            },
-            { "id": "aa_09_03_serps", "title": "Revisión SERPs y updates", "points": 5,
-              "steps": [
-                { "id": "aa_09_03_serps_s01", "title": "Monitoreo y updates", "prompt": "Propón rutina de revisión SERPs y actualización de contenidos por cambios." }
-              ]
-            }
-          ]
-        }
+        { "id": "aa_01_analizador", "title": "Analizador de tendencias", "points": 15, "badge": "Trend", "description": "Encontrar productos ganadores.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "aa_01_01_fuentes", "title": "Recolectar datos", "points": 7, "time": "1 hora", "difficulty": "Fácil", "steps": [
+                { "id": "aa_01_01_fuentes_s01", "title": "Categorías", "guide": "### 🎯 Nichos\nElige 10 categorías prometedoras." },
+                { "id": "aa_01_01_fuentes_s02", "title": "Top 50", "guide": "### 📊 Bestsellers\nAnaliza los más vendidos de Amazon." },
+                { "id": "aa_01_01_fuentes_s03", "title": "Excel", "guide": "### 💾 CSV\nGuarda los datos clave." }
+            ]},
+            { "id": "aa_01_02_senales", "title": "Validar demanda", "points": 8, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "aa_01_02_senales_s01", "title": "Trends", "guide": "### 📈 Google Trends\nVerifica interés estable o creciente." },
+                { "id": "aa_01_02_senales_s02", "title": "Precio", "guide": "### 💰 Ticket Medio\nBusca productos >30€." },
+                { "id": "aa_01_02_senales_s03", "title": "Shortlist", "guide": "### 📝 Selección\nElige los 30 mejores." }
+            ]}
+        ]},
+        { "id": "aa_02_seleccion", "title": "Selección de productos", "points": 15, "badge": "Plan", "description": "Estrategia de contenidos.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+             { "id": "aa_02_01_keywords", "title": "Keyword Research", "points": 8, "time": "1 hora", "difficulty": "Media", "steps": [
+                 { "id": "aa_02_01_keywords_s01", "title": "Queries", "guide": "### 🔑 Preguntas\nBusca qué pregunta la gente sobre el producto." },
+                 { "id": "aa_02_01_keywords_s02", "title": "Intención", "guide": "### 🧠 Tipo\nClasifica en Info o Transaccional." },
+                 { "id": "aa_02_01_keywords_s03", "title": "Priorizar", "guide": "### 🔝 Score\nOrdena por potencial de venta." }
+             ]},
+             { "id": "aa_02_02_match", "title": "Mapping", "points": 7, "time": "1 hora", "difficulty": "Fácil", "steps": [
+                 { "id": "aa_02_02_match_s01", "title": "Asignar", "guide": "### 🔗 Link\nRelaciona keywords con productos." },
+                 { "id": "aa_02_02_match_s02", "title": "Formato", "guide": "### 📐 Tipo Post\nDecide si es Review o Comparativa." }
+             ]}
+        ]},
+        { "id": "aa_03_stack", "title": "Stack Tecnológico", "points": 15, "badge": "Stack", "description": "Montar la web.", "time": "2 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "aa_03_01_dominio", "title": "Dominio", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "aa_03_01_dominio_s01", "title": "Comprar", "guide": "### 🌐 Namecheap\nRegistra un .com relevante." },
+                { "id": "aa_03_01_dominio_s02", "title": "DNS", "guide": "### ⚙️ Config\nConecta con tu hosting." }
+            ]},
+            { "id": "aa_03_02_cms", "title": "CMS", "points": 5, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "aa_03_02_cms_s01", "title": "Elección", "guide": "### 💻 Astro/Next\nUsa SSG para velocidad máxima." }
+            ]},
+            { "id": "aa_03_03_deploy", "title": "Vercel", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "aa_03_03_deploy_s01", "title": "Deploy", "guide": "### 🚀 Launch\nDespliega el proyecto." }
+            ]}
+        ]},
+        { "id": "aa_04_plantillas", "title": "Diseño UI", "points": 15, "badge": "UI", "description": "Crear plantillas de conversión.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "aa_04_01_ficha", "title": "Ficha Producto", "points": 5, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "aa_04_01_ficha_s01", "title": "Layout", "guide": "### 📄 Diseño\nEstructura clara con botón de compra visible." },
+                { "id": "aa_04_01_ficha_s02", "title": "Schema", "guide": "### 🤖 JSON-LD\nImplementa Product Schema." }
+            ]},
+            { "id": "aa_04_02_comparativa", "title": "Comparativa", "points": 5, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "aa_04_02_comparativa_s01", "title": "Tabla", "guide": "### 🆚 Grid\nDiseña tabla de características." }
+            ]},
+            { "id": "aa_04_03_guia", "title": "Blog Post", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "aa_04_03_guia_s01", "title": "Estructura", "guide": "### 📚 Artículo\nCabeceras H2/H3 claras." }
+            ]}
+        ]},
+        { "id": "aa_05_contenido", "title": "Generar Contenido", "points": 20, "badge": "Gen", "description": "Creación masiva de textos.", "time": "4 horas", "difficulty": "Media", "subtasks": [
+             { "id": "aa_05_01_prompts", "title": "Prompts", "points": 8, "time": "1 hora", "difficulty": "Media", "steps": [
+                 { "id": "aa_05_01_prompts_s01", "title": "Templates", "guide": "### 📝 Ingeniería\nDiseña prompts robustos." }
+             ]},
+             { "id": "aa_05_02_batch", "title": "Producción", "points": 12, "time": "3 horas", "difficulty": "Media", "steps": [
+                 { "id": "aa_05_02_batch_s01", "title": "Generar", "guide": "### 🏭 Run\nEjecuta la generación." },
+                 { "id": "aa_05_02_batch_s02", "title": "QA", "guide": "### 🕵️‍♂️ Revisar\nLee muestras aleatorias." },
+                 { "id": "aa_05_02_batch_s03", "title": "Publicar", "guide": "### 🚀 Upload\nSube a la web." }
+             ]}
+        ]}
       ]
     },
     {
       "key": "kdp_publishing",
       "name": "KDP Publishing",
       "tasks": [
-        { "id": "kdp_01_nicho", "title": "Seleccionar nicho con BSR objetivo", "points": 15, "badge": "Research",
-          "subtasks": [
-            { "id": "kdp_01_01_bsr", "title": "Analizar BSR y reviews", "points": 5,
-              "steps": [
-                { "id": "kdp_01_01_bsr_s01", "title": "Recolectar 20 productos top" },
-                { "id": "kdp_01_01_bsr_s02", "title": "Anotar BSR y ratings" },
-                { "id": "kdp_01_01_bsr_s03", "title": "Resumen de pains/reviews" }
-              ]
-            },
-            { "id": "kdp_01_02_gaps", "title": "Detectar huecos y estilo", "points": 5,
-              "steps": [
-                { "id": "kdp_01_02_gaps_s01", "title": "Identificar huecos de contenido" },
-                { "id": "kdp_01_02_gaps_s02", "title": "Definir estilo/tema" },
-                { "id": "kdp_01_02_gaps_s03", "title": "Validar demanda rápida" }
-              ]
-            },
-            { "id": "kdp_01_03_title", "title": "Propuesta título/subtítulo", "points": 5,
-              "steps": [
-                { "id": "kdp_01_03_title_s01", "title": "Escribir 10 títulos" },
-                { "id": "kdp_01_03_title_s02", "title": "Seleccionar subtítulos" },
-                { "id": "kdp_01_03_title_s03", "title": "Elegir final por keywords" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_02_titulo_keywords", "title": "Definir título/subtítulo y keywords", "points": 10, "badge": "SEO",
-          "subtasks": [
-            { "id": "kdp_02_01_kw", "title": "Keywords primarias/secundarias", "points": 5,
-              "steps": [
-                { "id": "kdp_02_01_kw_s01", "title": "Extraer keywords de competencia" },
-                { "id": "kdp_02_01_kw_s02", "title": "Listar 15 keywords" },
-                { "id": "kdp_02_01_kw_s03", "title": "Elegir 7 principales" }
-              ]
-            },
-            { "id": "kdp_02_02_meta", "title": "Meta y categorías", "points": 5,
-              "steps": [
-                { "id": "kdp_02_02_meta_s01", "title": "Definir categorías KDP" },
-                { "id": "kdp_02_02_meta_s02", "title": "Escribir descripción SEO" },
-                { "id": "kdp_02_02_meta_s03", "title": "Preparar 7 keywords KDP" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_03_coloring", "title": "Generar 50 láminas con Nano Banana + Vectorizer", "points": 25, "badge": "Coloring",
-          "subtasks": [
-            { "id": "kdp_03_01_prompt", "title": "Lista de 50 prompts", "points": 8,
-              "steps": [
-                { "id": "kdp_03_01_prompt_s01", "title": "Investigar 5 subtemas" },
-                { "id": "kdp_03_01_prompt_s02", "title": "Escribir 50 prompts variando dificultad" },
-                { "id": "kdp_03_01_prompt_s03", "title": "Validar apto para colorear" }
-              ]
-            },
-            { "id": "kdp_03_02_gen", "title": "Generación y curación", "points": 9,
-              "steps": [
-                { "id": "kdp_03_02_gen_s01", "title": "Generar imágenes por lote" },
-                { "id": "kdp_03_02_gen_s02", "title": "Curar y eliminar artefactos" },
-                { "id": "kdp_03_02_gen_s03", "title": "Quedar con 50 láminas" }
-              ]
-            },
-            { "id": "kdp_03_03_vector", "title": "Vectorizar y QA impresión", "points": 8,
-              "steps": [
-                { "id": "kdp_03_03_vector_s01", "title": "Vectorizar en SVG/AI" },
-                { "id": "kdp_03_03_vector_s02", "title": "QA para impresión 300 DPI" },
-                { "id": "kdp_03_03_vector_s03", "title": "Exportar PDF de prueba" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_04_storybook", "title": "Texto+ilustraciones con Gemini Storybook/alternativa", "points": 25, "badge": "Story",
-          "subtasks": [
-            { "id": "kdp_04_01_outline", "title": "Outline y personajes", "points": 8,
-              "steps": [
-                { "id": "kdp_04_01_outline_s01", "title": "Definir estructura 12–24 páginas" },
-                { "id": "kdp_04_01_outline_s02", "title": "Desarrollar personajes" },
-                { "id": "kdp_04_01_outline_s03", "title": "Validar tono/edades" }
-              ]
-            },
-            { "id": "kdp_04_02_gen", "title": "Generar páginas + audio", "points": 9,
-              "steps": [
-                { "id": "kdp_04_02_gen_s01", "title": "Generar texto por capítulo" },
-                { "id": "kdp_04_02_gen_s02", "title": "Crear ilustraciones por página" },
-                { "id": "kdp_04_02_gen_s03", "title": "Añadir audio narrado opcional" }
-              ]
-            },
-            { "id": "kdp_04_03_edit", "title": "Edición global (Sudowrite)", "points": 8,
-              "steps": [
-                { "id": "kdp_04_03_edit_s01", "title": "Edición de estilo y gramática" },
-                { "id": "kdp_04_03_edit_s02", "title": "Cohesión texto/imagen" },
-                { "id": "kdp_04_03_edit_s03", "title": "Revisión final" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_05_workbook", "title": "Redacción y maquetación de workbook", "points": 20, "badge": "Workbook",
-          "subtasks": [
-            { "id": "kdp_05_01_prompts", "title": "Prompts/ejercicios", "points": 7,
-              "steps": [
-                { "id": "kdp_05_01_prompts_s01", "title": "Escribir 50 ejercicios" },
-                { "id": "kdp_05_01_prompts_s02", "title": "Ordenar por dificultad" },
-                { "id": "kdp_05_01_prompts_s03", "title": "Revisión pedagógica" }
-              ]
-            },
-            { "id": "kdp_05_02_layout", "title": "Plantilla y estilos", "points": 7,
-              "steps": [
-                { "id": "kdp_05_02_layout_s01", "title": "Diseñar plantilla" },
-                { "id": "kdp_05_02_layout_s02", "title": "Aplicar estilos/guías" },
-                { "id": "kdp_05_02_layout_s03", "title": "Preparar archivos maestros" }
-              ]
-            },
-            { "id": "kdp_05_03_qc", "title": "QA y revisión", "points": 6,
-              "steps": [
-                { "id": "kdp_05_03_qc_s01", "title": "QA ortografía" },
-                { "id": "kdp_05_03_qc_s02", "title": "QA diseño/consistencia" },
-                { "id": "kdp_05_03_qc_s03", "title": "Checklist final" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_06_portada", "title": "Portada con SDXL/Flux y tipografía", "points": 15, "badge": "Cover",
-          "subtasks": [
-            { "id": "kdp_06_01_sd", "title": "Render SDXL/Flux", "points": 7,
-              "steps": [
-                { "id": "kdp_06_01_sd_s01", "title": "Generar 5 opciones de portada" },
-                { "id": "kdp_06_01_sd_s02", "title": "Elegir mejor render" },
-                { "id": "kdp_06_01_sd_s03", "title": "Exportar a alta resolución" }
-              ]
-            },
-            { "id": "kdp_06_02_typo", "title": "Tipografías y composición", "points": 8,
-              "steps": [
-                { "id": "kdp_06_02_typo_s01", "title": "Seleccionar 2 tipografías" },
-                { "id": "kdp_06_02_typo_s02", "title": "Composición y jerarquía" },
-                { "id": "kdp_06_02_typo_s03", "title": "Exportar portada final" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_07_maquetacion", "title": "Maquetación KDP y export PDF", "points": 15, "badge": "Layout",
-          "subtasks": [
-            { "id": "kdp_07_01_template", "title": "Plantilla 8.5x11 o similar", "points": 7,
-              "steps": [
-                { "id": "kdp_07_01_template_s01", "title": "Ajustar tamaño/bleed" },
-                { "id": "kdp_07_01_template_s02", "title": "Insertar contenidos" },
-                { "id": "kdp_07_01_template_s03", "title": "Revisar márgenes/guías" }
-              ]
-            },
-            { "id": "kdp_07_02_export", "title": "Export y verificación", "points": 8,
-              "steps": [
-                { "id": "kdp_07_02_export_s01", "title": "Exportar PDF/X" },
-                { "id": "kdp_07_02_export_s02", "title": "Verificación en KDP" },
-                { "id": "kdp_07_02_export_s03", "title": "Corregir errores si aparecen" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_08_publicacion", "title": "Publicar con metadatos y pricing", "points": 10, "badge": "Publish",
-          "subtasks": [
-            { "id": "kdp_08_01_meta", "title": "Completar metadatos", "points": 5,
-              "steps": [
-                { "id": "kdp_08_01_meta_s01", "title": "Cargar archivos interior/portada" },
-                { "id": "kdp_08_01_meta_s02", "title": "Completar descripción/keywords" },
-                { "id": "kdp_08_01_meta_s03", "title": "Seleccionar categorías" }
-              ]
-            },
-            { "id": "kdp_08_02_price", "title": "Precio competitivo", "points": 5,
-              "steps": [
-                { "id": "kdp_08_02_price_s01", "title": "Analizar precios competencia" },
-                { "id": "kdp_08_02_price_s02", "title": "Fijar precio objetivo" },
-                { "id": "kdp_08_02_price_s03", "title": "Revisar royalties" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_09_lanzamiento", "title": "Lanzamiento social y reseñas iniciales", "points": 10, "badge": "Launch",
-          "subtasks": [
-            { "id": "kdp_09_01_posts", "title": "3–5 posts sociales", "points": 5,
-              "steps": [
-                { "id": "kdp_09_01_posts_s01", "title": "Diseñar 3 creatividades" },
-                { "id": "kdp_09_01_posts_s02", "title": "Publicar en 2 redes" },
-                { "id": "kdp_09_01_posts_s03", "title": "CTA a Amazon listing" }
-              ]
-            },
-            { "id": "kdp_09_02_reviews", "title": "Solicitar reseñas", "points": 5,
-              "steps": [
-                { "id": "kdp_09_02_reviews_s01", "title": "Lista de 10 contactos" },
-                { "id": "kdp_09_02_reviews_s02", "title": "Enviar solicitud/review" },
-                { "id": "kdp_09_02_reviews_s03", "title": "Registrar respuestas" }
-              ]
-            }
-          ]
-        },
-        { "id": "kdp_10_iteracion", "title": "Iterar por analítica y crear serie", "points": 20, "badge": "Iterate",
-          "subtasks": [
-            { "id": "kdp_10_01_analytics", "title": "Analítica KDP", "points": 10,
-              "steps": [
-                { "id": "kdp_10_01_analytics_s01", "title": "Revisar ventas/BSR" },
-                { "id": "kdp_10_01_analytics_s02", "title": "Detectar páginas mejor/peor" },
-                { "id": "kdp_10_01_analytics_s03", "title": "Plan de mejora" }
-              ]
-            },
-            { "id": "kdp_10_02_series", "title": "Plan serie/volumen 2", "points": 10,
-              "steps": [
-                { "id": "kdp_10_02_series_s01", "title": "Definir tema volumen 2" },
-                { "id": "kdp_10_02_series_s02", "title": "Calendario de producción" },
-                { "id": "kdp_10_02_series_s03", "title": "Recursos y objetivos" }
-              ]
-            }
-          ]
-        }
+        { "id": "kdp_01_nicho", "title": "Seleccionar nicho", "points": 15, "badge": "Research", "description": "Investigación de mercado.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "kdp_01_01_bsr", "title": "Analizar BSR", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "kdp_01_01_bsr_s01", "title": "Top 20", "guide": "### 📊 Lista\nEncuentra los más vendidos." },
+                { "id": "kdp_01_01_bsr_s02", "title": "Rank", "guide": "### 📉 BSR < 100k\nValida ventas estimadas." },
+                { "id": "kdp_01_01_bsr_s03", "title": "Reviews", "guide": "### 💬 Quejas\nBusca oportunidades de mejora." }
+            ]},
+            { "id": "kdp_01_02_gaps", "title": "Huecos", "points": 5, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "kdp_01_02_gaps_s01", "title": "Diferenciación", "guide": "### 🦄 Único\nDefine tu propuesta de valor." },
+                { "id": "kdp_01_02_gaps_s02", "title": "Estilo", "guide": "### 🎨 Visual\nElige estética." },
+                { "id": "kdp_01_02_gaps_s03", "title": "Validar", "guide": "### ✅ Check\nConfirma volumen de búsqueda." }
+            ]},
+            { "id": "kdp_01_03_title", "title": "Título", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_01_03_title_s01", "title": "Ideas", "guide": "### ✍️ Draft\nEscribe 10 opciones." },
+                { "id": "kdp_01_03_title_s02", "title": "Keywords", "guide": "### 🔑 SEO\nIncluye palabras clave." },
+                { "id": "kdp_01_03_title_s03", "title": "Final", "guide": "### 🏆 Elegir\nSelecciona el mejor." }
+            ]}
+        ]},
+        { "id": "kdp_02_interior", "title": "Maquetación del Interior", "points": 15, "badge": "Design", "description": "Diseño del contenido.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "kdp_02_01_setup", "title": "Configurar doc", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_02_01_setup_s01", "title": "Tamaño", "guide": "### 📏 Dimensiones\n8.5x11 es estándar." },
+                { "id": "kdp_02_01_setup_s02", "title": "Márgenes", "guide": "### 🛡️ Bleed\nAñade sangrado si es necesario." }
+            ]},
+            { "id": "kdp_02_02_layout", "title": "Maquetar", "points": 10, "time": "1.5 horas", "difficulty": "Media", "steps": [
+                { "id": "kdp_02_02_layout_s01", "title": "Paginar", "guide": "### 🔢 Números\nColoca números de página." },
+                { "id": "kdp_02_02_layout_s02", "title": "PDF", "guide": "### 📤 Exportar\nGuarda como PDF de alta calidad." }
+            ]}
+        ]},
+        { "id": "kdp_03_coloring", "title": "Generar Láminas", "points": 25, "badge": "Coloring", "description": "Crear las imágenes para colorear.", "time": "3 horas", "difficulty": "Media", "subtasks": [
+            { "id": "kdp_03_01_prompt", "title": "Prompts", "points": 8, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "kdp_03_01_prompt_s01", "title": "Temas", "guide": "### 📂 Secciones\nDivide el libro por temáticas." },
+                { "id": "kdp_03_01_prompt_s02", "title": "Escribir", "guide": "### 📝 Redactar\nCrea prompts 'line art'." },
+                { "id": "kdp_03_01_prompt_s03", "title": "Test", "guide": "### 🖍️ Probar\nVerifica que se pueda colorear." }
+            ]},
+            { "id": "kdp_03_02_gen", "title": "Generar", "points": 9, "time": "1.5 horas", "difficulty": "Media", "steps": [
+                { "id": "kdp_03_02_gen_s01", "title": "Midjourney", "guide": "### 🏭 Run\nGenera las imágenes." },
+                { "id": "kdp_03_02_gen_s02", "title": "Curar", "guide": "### 🧹 Limpiar\nElimina errores." },
+                { "id": "kdp_03_02_gen_s03", "title": "Seleccionar", "guide": "### 🌟 Top 50\nElige las mejores." }
+            ]},
+            { "id": "kdp_03_03_vector", "title": "Vectorizar", "points": 8, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_03_03_vector_s01", "title": "SVG", "guide": "### 📐 Vector\nConvierte a vectores para calidad infinita." },
+                { "id": "kdp_03_03_vector_s02", "title": "300 DPI", "guide": "### 🖨️ Calidad\nAsegura resolución de impresión." },
+                { "id": "kdp_03_03_vector_s03", "title": "Final", "guide": "### 📄 PDF\nMonta el PDF final." }
+            ]}
+        ]},
+        { "id": "kdp_04_qa", "title": "Revisión QA", "points": 10, "badge": "QA", "description": "Control de calidad.", "time": "1 hora", "difficulty": "Fácil", "subtasks": [
+            { "id": "kdp_04_01_preview", "title": "Online", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_04_01_preview_s01", "title": "Previewer", "guide": "### 🔍 KDP Tool\nUsa la herramienta online de Amazon." }
+            ]},
+            { "id": "kdp_04_02_proof", "title": "Físico", "points": 5, "time": "10 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_04_02_proof_s01", "title": "Pedir copia", "guide": "### 📦 Muestra\nEncarga una copia de prueba." }
+            ]}
+        ]},
+        { "id": "kdp_06_portada", "title": "Diseño de Portada", "points": 15, "badge": "Cover", "description": "La cara del libro.", "time": "1.5 horas", "difficulty": "Media", "subtasks": [
+            { "id": "kdp_06_01_sd", "title": "Imagen", "points": 7, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "kdp_06_01_sd_s01", "title": "Generar", "guide": "### 🖼️ Arte\nCrea una imagen llamativa." },
+                { "id": "kdp_06_01_sd_s02", "title": "Elegir", "guide": "### 👁️ Impacto\nDebe verse bien en pequeño." },
+                { "id": "kdp_06_01_sd_s03", "title": "Upscale", "guide": "### 💾 4K\nMejora la resolución." }
+            ]},
+            { "id": "kdp_06_02_typo", "title": "Texto", "points": 8, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "kdp_06_02_typo_s01", "title": "Fuente", "guide": "### 🅰️ Tipografía\nUsa letras grandes y legibles." },
+                { "id": "kdp_06_02_typo_s02", "title": "Layout", "guide": "### 📏 Composición\nEquilibra imagen y texto." },
+                { "id": "kdp_06_02_typo_s03", "title": "PDF", "guide": "### 📤 Exportar\nGuarda la cubierta completa." }
+            ]}
+        ]},
+        { "id": "kdp_07_marketing", "title": "Marketing A+", "points": 20, "badge": "Ads", "description": "Contenido enriquecido.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "kdp_07_01_aplus", "title": "Contenido A+", "points": 10, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "kdp_07_01_aplus_s01", "title": "Diseñar", "guide": "### 🖼️ Banners\nMuestra el interior del libro." },
+                { "id": "kdp_07_01_aplus_s02", "title": "Subir", "guide": "### 🔗 Amazon\nAplica el contenido al ASIN." }
+            ]},
+            { "id": "kdp_07_02_ads", "title": "Ads", "points": 10, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "kdp_07_02_ads_s01", "title": "Auto", "guide": "### 🤖 Campaña\nInicia campaña automática barata." }
+            ]}
+        ]},
+        { "id": "kdp_08_publicacion", "title": "Publicar", "points": 10, "badge": "Publish", "description": "Lanzamiento.", "time": "1 hora", "difficulty": "Fácil", "subtasks": [
+            { "id": "kdp_08_01_meta", "title": "Datos", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_08_01_meta_s01", "title": "Subir", "guide": "### 📤 Archivos\nCarga interior y portada." },
+                { "id": "kdp_08_01_meta_s02", "title": "Texto", "guide": "### 📝 Info\nRellena título y descripción." },
+                { "id": "kdp_08_01_meta_s03", "title": "Cats", "guide": "### 📂 Categorías\nElige las correctas." }
+            ]},
+            { "id": "kdp_08_02_price", "title": "Precio", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "kdp_08_02_price_s01", "title": "Analizar", "guide": "### 💸 Mercado\nRevisa precios similares." },
+                { "id": "kdp_08_02_price_s02", "title": "Fijar", "guide": "### 🏷️ PVP\nPon un precio competitivo." },
+                { "id": "kdp_08_02_price_s03", "title": "Royalties", "guide": "### 💰 Margen\nVerifica tu ganancia." }
+            ]}
+        ]}
       ]
     },
     {
       "key": "programmatic_seo",
-      "name": "SEO Programático con IA",
+      "name": "SEO Programático",
       "tasks": [
-        { "id": "ps_01_nicho", "title": "Seleccionar nicho y modelo de monetización", "points": 10, "badge": "Plan",
-          "subtasks": [
-            { "id": "ps_01_01_investigacion", "title": "Analizar SERPs/afiliados/volumen", "points": 5,
-              "steps": [
-                { "id": "ps_01_01_investigacion_s01", "title": "Evaluar competencia/top keywords", "prompt": "Actúa como analista SEO. Lista 30 keywords long‑tail con intención transaccional para {{pais}} en el nicho {{pre_nicho}}. Incluye volumen estimado, dificultad, CPC y competidores top con sus títulos/meta. Devuelve tabla priorizada por oportunidad (CTR x intención / dificultad)." },
-                { "id": "ps_01_01_investigacion_s02", "title": "Definir intención usuario", "prompt": "Clasifica las 30 keywords en intención (informacional, comparativa, transaccional). Para cada intención, propone tipos de página (ficha, comparativa, guía) y ejemplos de H1/H2." },
-                { "id": "ps_01_01_investigacion_s03", "title": "Elegir nicho principal", "prompt": "Selecciona el nicho ganador usando criterios: RPM objetivo {{rpm_objetivo}}, competencia <= {{dif_max}}, volumen total >= {{vol_min}}. Explica el racional y lista 3 subnichos candidatos." }
-              ]
-            },
-            { "id": "ps_01_02_objetivos", "title": "Definir KPIs (CTR, clicks, RPM)", "points": 5,
-              "steps": [
-                { "id": "ps_01_02_objetivos_s01", "title": "Establecer métricas y umbrales", "prompt": "Define KPIs y umbrales: CTR objetivo por plantilla, tiempo en página, clicks/1000 visitas, RPM esperado por fuente (afiliados/Adsense). Devuelve una matriz de objetivos para 30/60/90 días." },
-                { "id": "ps_01_02_objetivos_s02", "title": "Crear tablero seguimiento", "prompt": "Propón estructura de dashboard (métricas, fuentes de datos, periodicidad). Incluye eventos GA4/UTM necesarios y definición de éxito semanal." }
-              ]
-            }
-          ]
-        },
-        { "id": "ps_02_stack", "title": "Configurar stack (dominio, CMS/static, Vercel)", "points": 15, "badge": "Stack",
-          "subtasks": [
-            { "id": "ps_02_01_dominio", "title": "Comprar dominio y DNS", "points": 5,
-              "steps": [
-                { "id": "ps_02_01_dominio_s01", "title": "Listar 3 nichos candidatos", "prompt": "Genera 3 naming options por nicho con criterios de marca, disponibilidad .com y relevancia SEO. Incluye sugerencias de subdominios por subnicho." },
-                { "id": "ps_02_01_dominio_s02", "title": "Disponibilidad y criterios", "prompt": "Evalúa disponibilidad y criterios (memorable, corto, keyword parcial). Recomienda 1 dominio final por nicho y justifica." },
-                { "id": "ps_02_01_dominio_s03", "title": "Compra y DNS", "prompt": "Lista registros DNS necesarios (A/AAAA/CNAME/TXT) para Vercel y verificación de GA4/Search Console." }
-              ]
-            },
-            { "id": "ps_02_02_cms", "title": "Elegir CMS/headless/estático", "points": 5,
-              "steps": [
-                { "id": "ps_02_02_cms_s01", "title": "Evaluar opciones", "prompt": "Compara opciones (Next.js static, Astro, Hugo, headless CMS). Incluye pros/cons para programmatic SEO y coste." },
-                { "id": "ps_02_02_cms_s02", "title": "Seleccionar y scaffold", "prompt": "Propón estructura de proyecto (carpetas, componentes, templates). Entrega lista de ficheros iniciales y comandos de scaffold." }
-              ]
-            },
-            { "id": "ps_02_03_deploy", "title": "Configurar build y deploy en Vercel", "points": 5,
-              "steps": [
-                { "id": "ps_02_03_deploy_s01", "title": "Configurar vercel.json", "prompt": "Especifica rewrites/headers necesarios para servir contenido estático y sitemap/robots. Incluye configuración de caché segura." },
-                { "id": "ps_02_03_deploy_s02", "title": "Build y test", "prompt": "Define comandos de build y pruebas básicas de enlaces y meta tags. Entrega checklist de verificación." },
-                { "id": "ps_02_03_deploy_s03", "title": "Deploy y preview", "prompt": "Indica pasos para conectar repo y dominios en Vercel. Describe cómo revisar previews y logs." }
-              ]
-            }
-          ]
-        },
-        { "id": "ps_03_dataset", "title": "Diseñar dataset y plantillas programáticas", "points": 15, "badge": "Data",
-          "subtasks": [
-            { "id": "ps_03_01_esquema", "title": "Definir esquema de entidades/atributos", "points": 5,
-              "steps": [
-                { "id": "ps_03_01_esquema_s01", "title": "Entidades y atributos", "prompt": "Diseña entidades (Producto, Categoría, Comparativa, Guía) y atributos mínimos para generación programática." },
-                { "id": "ps_03_01_esquema_s02", "title": "Normalización", "prompt": "Propón normalización/validación de datos (rangos, tipos, formatos). Incluye ejemplo JSON." }
-              ]
-            },
-            { "id": "ps_03_02_prompts", "title": "Crear prompts y plantilla HTML", "points": 5,
-              "steps": [
-                { "id": "ps_03_02_prompts_s01", "title": "Prompt ficha", "prompt": "Escribe prompt detallado para ficha de producto con H1/H2, pros/cons, especificaciones, CTA y disclaimer." },
-                { "id": "ps_03_02_prompts_s02", "title": "Prompt comparativa", "prompt": "Escribe prompt para comparativa de 5 productos con tabla, criterios y conclusiones accionables." },
-                { "id": "ps_03_02_prompts_s03", "title": "Plantilla HTML", "prompt": "Define plantilla HTML semántica (schema, breadcrumbs, meta) compatible con SEO programático." }
-              ]
-            },
-            { "id": "ps_03_03_interlink", "title": "Plan interlinking automático", "points": 5,
-              "steps": [
-                { "id": "ps_03_03_interlink_s01", "title": "Reglas de enlaces", "prompt": "Diseña reglas para enlazar fichas↔comparativas↔guías basadas en categoría e intención." },
-                { "id": "ps_03_03_interlink_s02", "title": "Mapa de enlaces", "prompt": "Genera un mapa de enlaces para 30 páginas iniciales y explica criterios de priorización." }
-              ]
-            }
-          ]
-        },
-        { "id": "ps_04_generacion", "title": "Generar 50–100 páginas con IA", "points": 20, "badge": "Gen",
-          "subtasks": [
-            { "id": "ps_04_01_batch", "title": "Generación batch con QA", "points": 10,
-              "steps": [
-                { "id": "ps_04_01_batch_s01", "title": "Ejecutar pipeline de generación", "prompt": "Indica parámetros de ejecución (tamaño lote, temperatura, fuentes). Devuelve checklist de preparación y comandos." },
-                { "id": "ps_04_01_batch_s02", "title": "Validación factual/estilo", "prompt": "Proporciona criterios de QA (factualidad, consistencia, tono). Incluye prompts de revisión automatizada." },
-                { "id": "ps_04_01_batch_s03", "title": "Publicar lote inicial", "prompt": "Define proceso de publicación (paths, sitemap update, ping Search Console). Checklist final." }
-              ]
-            },
-            { "id": "ps_04_02_mejora", "title": "Optimizar títulos/meta/CTAs", "points": 10,
-              "steps": [
-                { "id": "ps_04_02_mejora_s01", "title": "Variantes de title/meta", "prompt": "Genera 3 variantes de title/meta por página max 60/160 chars con keywords y alto CTR." },
-                { "id": "ps_04_02_mejora_s02", "title": "CTAs y placements", "prompt": "Propón CTAs y su placement (above the fold, mid, end) con copy orientado a clicks." }
-              ]
-            }
-          ]
-        },
-        { "id": "ps_05_seo", "title": "SEO técnico y rendimiento", "points": 15, "badge": "SEO",
-          "subtasks": [
-            { "id": "ps_05_01_sitemap", "title": "Sitemap/robots/canonical", "points": 5,
-              "steps": [
-                { "id": "ps_05_01_sitemap_s01", "title": "Generar sitemaps", "prompt": "Especifica generación de sitemap index + secciones (fichas, comparativas, guías) y robots.txt." },
-                { "id": "ps_05_01_sitemap_s02", "title": "Canonicals", "prompt": "Define reglas de canonical y noindex para páginas duplicadas o filtros." }
-              ]
-            },
-            { "id": "ps_05_02_schema", "title": "Añadir schema y validarlo", "points": 5,
-              "steps": [
-                { "id": "ps_05_02_schema_s01", "title": "Schema por plantilla", "prompt": "Entrega JSON‑LD para Product, ItemList, Article y BreadcrumbList con ejemplos." },
-                { "id": "ps_05_02_schema_s02", "title": "Validación", "prompt": "Lista herramientas y pasos de validación (Rich Results, Search Console). Checklist de errores comunes." }
-              ]
-            },
-            { "id": "ps_05_03_cwv", "title": "Core Web Vitals optimizados", "points": 5,
-              "steps": [
-                { "id": "ps_05_03_cwv_s01", "title": "Optimización rendimiento", "prompt": "Recomienda optimizaciones para LCP/CLS/INP en sitio estático (images, fonts, caching)." },
-                { "id": "ps_05_03_cwv_s02", "title": "Medición y umbrales", "prompt": "Define medición con Lighthouse/Pagespeed y umbrales de aprobación." }
-              ]
-            }
-          ]
-        },
-        { "id": "ps_06_monetizacion", "title": "Monetizar y escalar", "points": 20, "badge": "Scale",
-          "subtasks": [
-            { "id": "ps_06_01_afiliados", "title": "Integrar afiliados/Adsense", "points": 10,
-              "steps": [
-                { "id": "ps_06_01_afiliados_s01", "title": "Redes y requisitos", "prompt": "Lista redes de afiliación relevantes y requisitos de integración (incluye Amazon si aplica)." },
-                { "id": "ps_06_01_afiliados_s02", "title": "Política de enlaces", "prompt": "Define política de enlaces y disclosure para cumplimiento." }
-              ]
-            },
-            { "id": "ps_06_02_tracking", "title": "Configurar tracking y reporting", "points": 5,
-              "steps": [
-                { "id": "ps_06_02_tracking_s01", "title": "Eventos y UTM", "prompt": "Especifica eventos GA4 y esquema UTM para medir clicks y conversiones." },
-                { "id": "ps_06_02_tracking_s02", "title": "Dashboards", "prompt": "Diseña reporte semanal con KPIs (CTR, RPM, ingresos) y alertas." }
-              ]
-            },
-            { "id": "ps_06_03_escalar", "title": "Plan de 2 nuevos subnichos", "points": 5,
-              "steps": [
-                { "id": "ps_06_03_escalar_s01", "title": "Selección subnichos", "prompt": "Propón 2 subnichos con criterios de tráfico orgánico y monetización." },
-                { "id": "ps_06_03_escalar_s02", "title": "Plan de duplicación", "prompt": "Define cómo duplicar dataset/plantillas y ajustar interlinking." }
-              ]
-            }
-          ]
-        }
+        { "id": "ps_01_nicho", "title": "Estrategia", "points": 10, "badge": "Plan", "description": "Planificación.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "ps_01_01_investigacion", "title": "Keywords", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "ps_01_01_investigacion_s01", "title": "Lista", "guide": "### 🔍 Research\nBusca patrones repetibles." },
+                { "id": "ps_01_01_investigacion_s02", "title": "Intención", "guide": "### 🧠 Clasificar\nAsegura intención uniforme." },
+                { "id": "ps_01_01_investigacion_s03", "title": "Elegir", "guide": "### 🎯 Nicho\nSelecciona el mejor." }
+            ]},
+            { "id": "ps_01_02_objetivos", "title": "KPIs", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "ps_01_02_objetivos_s01", "title": "Metas", "guide": "### 📊 Objetivos\nDefine tráfico esperado." },
+                { "id": "ps_01_02_objetivos_s02", "title": "Dash", "guide": "### 📈 Tracking\nPrepara hoja de seguimiento." }
+            ]}
+        ]},
+        { "id": "ps_02_tech", "title": "Setup Técnico", "points": 15, "badge": "Tech", "description": "Infraestructura.", "time": "2 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "ps_02_01_framework", "title": "Framework", "points": 5, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "ps_02_01_framework_s01", "title": "Instalar", "guide": "### 🚀 Astro/Hugo\nInicia el proyecto." }
+            ]},
+            { "id": "ps_02_02_git", "title": "Git", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "ps_02_02_git_s01", "title": "Repo", "guide": "### 🐙 GitHub\nSube el código." }
+            ]}
+        ]},
+        { "id": "ps_03_dataset", "title": "Dataset", "points": 15, "badge": "Data", "description": "Base de datos.", "time": "3 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "ps_03_01_esquema", "title": "Esquema", "points": 5, "time": "1 hora", "difficulty": "Difícil", "steps": [
+                { "id": "ps_03_01_esquema_s01", "title": "Campos", "guide": "### 🗃️ Columnas\nDefine la estructura de datos." },
+                { "id": "ps_03_01_esquema_s02", "title": "Limpiar", "guide": "### 🧹 Normalizar\nEstandariza los valores." }
+            ]},
+            { "id": "ps_03_02_prompts", "title": "Prompts", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "ps_03_02_prompts_s01", "title": "Textos", "guide": "### 📝 Plantilla\nCrea el prompt generador." },
+                { "id": "ps_03_02_prompts_s02", "title": "Comparativa", "guide": "### 🆚 VS\nPrompt para comparar items." },
+                { "id": "ps_03_02_prompts_s03", "title": "HTML", "guide": "### 📄 Web\nDefine la estructura HTML." }
+            ]}
+        ]},
+        { "id": "ps_04_generacion", "title": "Generar", "points": 20, "badge": "Gen", "description": "Producción.", "time": "4 horas", "difficulty": "Media", "subtasks": [
+            { "id": "ps_04_01_batch", "title": "Batch", "points": 10, "time": "3 horas", "difficulty": "Media", "steps": [
+                { "id": "ps_04_01_batch_s01", "title": "Run", "guide": "### 🚀 Ejecutar\nLanza el script." },
+                { "id": "ps_04_01_batch_s02", "title": "QA", "guide": "### 🕵️‍♂️ Check\nRevisa muestras." },
+                { "id": "ps_04_01_batch_s03", "title": "Deploy", "guide": "### 🌐 Publicar\nSube a Vercel/Netlify." }
+            ]}
+        ]},
+        { "id": "ps_05_seo_tech", "title": "SEO Onpage", "points": 15, "badge": "SEO", "description": "Optimización.", "time": "2 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "ps_05_01_sitemap", "title": "Sitemap", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "ps_05_01_sitemap_s01", "title": "XML", "guide": "### 🗺️ Index\nGenera sitemap para Google." }
+            ]},
+            { "id": "ps_05_02_schema", "title": "Schema", "points": 5, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "ps_05_02_schema_s01", "title": "JSON-LD", "guide": "### 🤖 Datos\nImplementa datos estructurados." }
+            ]}
+        ]},
+        { "id": "ps_06_monetization", "title": "Monetización", "points": 10, "badge": "Money", "description": "Ganar dinero.", "time": "1 hora", "difficulty": "Media", "subtasks": [
+            { "id": "ps_06_01_ads", "title": "Ads", "points": 5, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "ps_06_01_ads_s01", "title": "Setup", "guide": "### 💰 Banners\nColoca los espacios publicitarios." }
+            ]}
+        ]}
       ]
     },
     {
       "key": "music_arbitrage",
-      "name": "IA Música (Covers/Originales/Servicios)",
+      "name": "IA Música",
       "tasks": [
-        { "id": "music_01_objetivo", "title": "Definir modelo: covers/licencia, originales o servicios", "points": 10, "badge": "Plan",
-          "subtasks": [
-            { "id": "music_01_01_decidir", "title": "Elegir modelo principal", "points": 5,
-              "steps": [
-                { "id": "music_01_01_decidir_s01", "title": "Evaluar covers/originales/servicios" },
-                { "id": "music_01_01_decidir_s02", "title": "Seleccionar enfoque inicial" },
-                { "id": "music_01_01_decidir_s03", "title": "Definir objetivo 30 días" }
-              ]
-            },
-            { "id": "music_01_02_kpis", "title": "KPIs (streams/ventas/CTR)", "points": 5,
-              "steps": [
-                { "id": "music_01_02_kpis_s01", "title": "Establecer métricas clave" },
-                { "id": "music_01_02_kpis_s02", "title": "Crear hoja de seguimiento" },
-                { "id": "music_01_02_kpis_s03", "title": "Revisión semanal" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_02_stack", "title": "Configurar stack gratuito (Demucs, MusicGen, RVC)", "points": 15, "badge": "Stack",
-          "subtasks": [
-            { "id": "music_02_01_demucs", "title": "Instalar Demucs/UVR", "points": 5,
-              "steps": [
-                { "id": "music_02_01_demucs_s01", "title": "Instalar UVR/Demucs" },
-                { "id": "music_02_01_demucs_s02", "title": "Separar stems de prueba" },
-                { "id": "music_02_01_demucs_s03", "title": "Verificar calidad stems" }
-              ]
-            },
-            { "id": "music_02_02_musicgen", "title": "MusicGen local listo", "points": 5,
-              "steps": [
-                { "id": "music_02_02_musicgen_s01", "title": "Instalar MusicGen" },
-                { "id": "music_02_02_musicgen_s02", "title": "Generar 2 bases de prueba" },
-                { "id": "music_02_02_musicgen_s03", "title": "Ajustar prompts/tempo" }
-              ]
-            },
-            { "id": "music_02_03_rvc", "title": "RVC/So‑VITS para voz genérica", "points": 5,
-              "steps": [
-                { "id": "music_02_03_rvc_s01", "title": "Instalar RVC/So‑VITS" },
-                { "id": "music_02_03_rvc_s02", "title": "Crear voz genérica" },
-                { "id": "music_02_03_rvc_s03", "title": "Probar conversión de timbre" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_03_trend", "title": "Detectar 3 tendencias musicales (TikTok/Shorts)", "points": 10, "badge": "Trend",
-          "subtasks": [
-            { "id": "music_03_01_scan", "title": "Escaneo y selección de 3 trends", "points": 10,
-              "steps": [
-                { "id": "music_03_01_scan_s01", "title": "Revisar trends en TT/Shorts" },
-                { "id": "music_03_01_scan_s02", "title": "Guardar 10 audios candidatos" },
-                { "id": "music_03_01_scan_s03", "title": "Seleccionar 3 finales" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_04_base", "title": "Generar 3 bases con Suno/Udio/MusicGen", "points": 20, "badge": "Gen",
-          "subtasks": [
-            { "id": "music_04_01_suno", "title": "Generar base 1 (Suno/Udio)", "points": 7,
-              "steps": [
-                { "id": "music_04_01_suno_s01", "title": "Escribir prompt de estilo" },
-                { "id": "music_04_01_suno_s02", "title": "Generar 3 tomas" },
-                { "id": "music_04_01_suno_s03", "title": "Elegir mejor toma" }
-              ]
-            },
-            { "id": "music_04_02_musicgen", "title": "Generar base 2 (MusicGen)", "points": 7,
-              "steps": [
-                { "id": "music_04_02_musicgen_s01", "title": "Definir tempo/clave" },
-                { "id": "music_04_02_musicgen_s02", "title": "Generar 3 tomas" },
-                { "id": "music_04_02_musicgen_s03", "title": "Seleccionar mejor base" }
-              ]
-            },
-            { "id": "music_04_03_select", "title": "Seleccionar mejores tomas", "points": 6,
-              "steps": [
-                { "id": "music_04_03_select_s01", "title": "Comparar tomas" },
-                { "id": "music_04_03_select_s02", "title": "Elegir 3 finales" },
-                { "id": "music_04_03_select_s03", "title": "Exportar WAV" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_05_voz", "title": "Grabar/convertir voz genérica (RVC, no imitativa)", "points": 20, "badge": "Vocal",
-          "subtasks": [
-            { "id": "music_05_01_letra", "title": "Escribir/ajustar letra genérica", "points": 6,
-              "steps": [
-                { "id": "music_05_01_letra_s01", "title": "Escribir letra de 2 versos" },
-                { "id": "music_05_01_letra_s02", "title": "Ajustar métrica/ritmo" },
-                { "id": "music_05_01_letra_s03", "title": "Validar no imitativa" }
-              ]
-            },
-            { "id": "music_05_02_grabar", "title": "Grabar voz base", "points": 7,
-              "steps": [
-                { "id": "music_05_02_grabar_s01", "title": "Preparar micro y DAW" },
-                { "id": "music_05_02_grabar_s02", "title": "Grabar 3 tomas" },
-                { "id": "music_05_02_grabar_s03", "title": "Elegir mejor toma" }
-              ]
-            },
-            { "id": "music_05_03_convertir", "title": "Convertir timbre genérico (RVC)", "points": 7,
-              "steps": [
-                { "id": "music_05_03_convertir_s01", "title": "Convertir con RVC" },
-                { "id": "music_05_03_convertir_s02", "title": "Suavizar artefactos" },
-                { "id": "music_05_03_convertir_s03", "title": "Exportar pista vocal" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_06_mix", "title": "Mezcla/master suave (‑14 LUFS)", "points": 15, "badge": "Mix",
-          "subtasks": [
-            { "id": "music_06_01_mix", "title": "Balance y EQ", "points": 7,
-              "steps": [
-                { "id": "music_06_01_mix_s01", "title": "Balancear stems" },
-                { "id": "music_06_01_mix_s02", "title": "EQ y compresión ligera" },
-                { "id": "music_06_01_mix_s03", "title": "Revisión en audífonos/altavoces" }
-              ]
-            },
-            { "id": "music_06_02_master", "title": "Master a ‑14 LUFS", "points": 8,
-              "steps": [
-                { "id": "music_06_02_master_s01", "title": "Limitar a ‑1 dB" },
-                { "id": "music_06_02_master_s02", "title": "Ajustar LUFS a ‑14" },
-                { "id": "music_06_02_master_s03", "title": "Exportar máster final" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_07_licencia", "title": "Tramitar licencia mecánica para 1 cover", "points": 25, "badge": "Legal",
-          "subtasks": [
-            { "id": "music_07_01_plataforma", "title": "Elegir distribuidor (Cover)", "points": 10,
-              "steps": [
-                { "id": "music_07_01_plataforma_s01", "title": "Comparar servicios de licencia" },
-                { "id": "music_07_01_plataforma_s02", "title": "Elegir plataforma" },
-                { "id": "music_07_01_plataforma_s03", "title": "Crear cuenta" }
-              ]
-            },
-            { "id": "music_07_02_formal", "title": "Trámite licencia y metadata", "points": 15,
-              "steps": [
-                { "id": "music_07_02_formal_s01", "title": "Completar solicitud de licencia" },
-                { "id": "music_07_02_formal_s02", "title": "Preparar metadata correcta" },
-                { "id": "music_07_02_formal_s03", "title": "Confirmar estado/licencia" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_08_publicar", "title": "Publicar en YouTube/Shorts y 1 DSP (si licenciado)", "points": 15, "badge": "Publish",
-          "subtasks": [
-            { "id": "music_08_01_youtube", "title": "Subir a YouTube/Shorts", "points": 8,
-              "steps": [
-                { "id": "music_08_01_youtube_s01", "title": "Crear vídeo/visualizador" },
-                { "id": "music_08_01_youtube_s02", "title": "Título/descripcion/hashtags" },
-                { "id": "music_08_01_youtube_s03", "title": "Publicar y optimizar" }
-              ]
-            },
-            { "id": "music_08_02_dsp", "title": "Enviar a DSP (si aplica)", "points": 7,
-              "steps": [
-                { "id": "music_08_02_dsp_s01", "title": "Subir a distribuidor" },
-                { "id": "music_08_02_dsp_s02", "title": "Verificar metadata/ISRC" },
-                { "id": "music_08_02_dsp_s03", "title": "Confirmar fecha de salida" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_09_packs", "title": "Crear 1 pack de loops/backing (sin melodías protegidas)", "points": 20, "badge": "Pack",
-          "subtasks": [
-            { "id": "music_09_01_crear", "title": "Crear 10 loops/backing", "points": 10,
-              "steps": [
-                { "id": "music_09_01_crear_s01", "title": "Diseñar 10 loops" },
-                { "id": "music_09_01_crear_s02", "title": "Organizar por tempo/clave" },
-                { "id": "music_09_01_crear_s03", "title": "Exportar WAV/MP3" }
-              ]
-            },
-            { "id": "music_09_02_gumroad", "title": "Publicar en Gumroad", "points": 10,
-              "steps": [
-                { "id": "music_09_02_gumroad_s01", "title": "Crear página del producto" },
-                { "id": "music_09_02_gumroad_s02", "title": "Subir archivos" },
-                { "id": "music_09_02_gumroad_s03", "title": "Configurar precio/CTA" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_10_freelance", "title": "Abrir 2 gigs (karaoke/tema para canal)", "points": 15, "badge": "Service",
-          "subtasks": [
-            { "id": "music_10_01_gig1", "title": "Gig karaoke/backing", "points": 8,
-              "steps": [
-                { "id": "music_10_01_gig1_s01", "title": "Definir oferta y precios" },
-                { "id": "music_10_01_gig1_s02", "title": "Crear demos" },
-                { "id": "music_10_01_gig1_s03", "title": "Publicar gig" }
-              ]
-            },
-            { "id": "music_10_02_gig2", "title": "Gig tema para canal", "points": 7,
-              "steps": [
-                { "id": "music_10_02_gig2_s01", "title": "Definir estilo para canales" },
-                { "id": "music_10_02_gig2_s02", "title": "Crear 2 demos" },
-                { "id": "music_10_02_gig2_s03", "title": "Publicar gig" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_11_patreon", "title": "Crear Patreon/Gumroad y ofrecer descargas", "points": 10, "badge": "Monetize",
-          "subtasks": [
-            { "id": "music_11_01_patreon", "title": "Crear niveles Patreon", "points": 5,
-              "steps": [
-                { "id": "music_11_01_patreon_s01", "title": "Crear niveles y precios" },
-                { "id": "music_11_01_patreon_s02", "title": "Configurar contenidos" },
-                { "id": "music_11_01_patreon_s03", "title": "Publicar página" }
-              ]
-            },
-            { "id": "music_11_02_beneficios", "title": "Beneficios/descargas", "points": 5,
-              "steps": [
-                { "id": "music_11_02_beneficios_s01", "title": "Definir beneficios" },
-                { "id": "music_11_02_beneficios_s02", "title": "Configurar descargas" },
-                { "id": "music_11_02_beneficios_s03", "title": "Comunicar a seguidores" }
-              ]
-            }
-          ]
-        },
-        { "id": "music_12_iterar", "title": "Iterar según métricas (CTR/streams/ventas)", "points": 15, "badge": "Optimize",
-          "subtasks": [
-            { "id": "music_12_01_metrics", "title": "Analizar métricas clave", "points": 8,
-              "steps": [
-                { "id": "music_12_01_metrics_s01", "title": "Recolectar métricas semana" },
-                { "id": "music_12_01_metrics_s02", "title": "Analizar CTR/retención" },
-                { "id": "music_12_01_metrics_s03", "title": "Detectar mejoras" }
-              ]
-            },
-            { "id": "music_12_02_mejorar", "title": "Mejorar género/tempo/CTA", "points": 7,
-              "steps": [
-                { "id": "music_12_02_mejorar_s01", "title": "Probar variaciones de género" },
-                { "id": "music_12_02_mejorar_s02", "title": "Ajustar tempo/duración" },
-                { "id": "music_12_02_mejorar_s03", "title": "Optimizar CTA visual y texto" }
-              ]
-            }
-          ]
-        }
+        { "id": "music_01_objetivo", "title": "Definir modelo", "points": 10, "badge": "Plan", "description": "Estrategia.", "time": "1 hora", "difficulty": "Fácil", "subtasks": [
+            { "id": "music_01_01_decidir", "title": "Elegir", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_01_01_decidir_s01", "title": "Opciones", "guide": "### 🤔 Modelos\nCovers, Originales o Servicios." },
+                { "id": "music_01_01_decidir_s02", "title": "Decisión", "guide": "### 🎯 Foco\nElige uno para empezar." },
+                { "id": "music_01_01_decidir_s03", "title": "Objetivo", "guide": "### 📅 Meta\nDefine éxito a 30 días." }
+            ]}
+        ]},
+        { "id": "music_02_stack", "title": "Setup Tools", "points": 15, "badge": "Stack", "description": "Herramientas.", "time": "1.5 horas", "difficulty": "Media", "subtasks": [
+            { "id": "music_02_01_rvc", "title": "RVC", "points": 5, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "music_02_01_rvc_s01", "title": "Instalar", "guide": "### 🎤 Applio\nConfigura clonación de voz." }
+            ]},
+            { "id": "music_02_02_daw", "title": "DAW", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_02_02_daw_s01", "title": "Reaper", "guide": "### 🎚️ Software\nInstala un editor de audio." }
+            ]}
+        ]},
+        { "id": "music_03_trend", "title": "Tendencias", "points": 10, "badge": "Trend", "description": "Investigación.", "time": "1 hora", "difficulty": "Media", "subtasks": [
+            { "id": "music_03_01_tiktok", "title": "Charts", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_03_01_tiktok_s01", "title": "Viral", "guide": "### 📈 TikTok\nBusca qué suena." }
+            ]}
+        ]},
+        { "id": "music_04_base", "title": "Generar Bases", "points": 20, "badge": "Gen", "description": "Producción.", "time": "2 horas", "difficulty": "Media", "subtasks": [
+            { "id": "music_04_01_suno", "title": "Suno/Udio", "points": 7, "time": "45 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_04_01_suno_s01", "title": "Prompt", "guide": "### 🎵 Estilo\nDefine género y mood." },
+                { "id": "music_04_01_suno_s02", "title": "Generar", "guide": "### 🎹 Create\nHaz varias tomas." },
+                { "id": "music_04_01_suno_s03", "title": "Elegir", "guide": "### 🎧 Select\nQuédate la mejor." }
+            ]},
+            { "id": "music_04_03_select", "title": "Exportar", "points": 6, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_04_03_select_s01", "title": "Check", "guide": "### 🆚 Listen\nEscucha crítica." },
+                { "id": "music_04_03_select_s02", "title": "Final", "guide": "### 🌟 Winner\nSelecciona el hit." },
+                { "id": "music_04_03_select_s03", "title": "WAV", "guide": "### 💾 Save\nDescarga alta calidad." }
+            ]}
+        ]},
+        { "id": "music_05_voice", "title": "Voz IA", "points": 20, "badge": "Voice", "description": "Voces sintéticas.", "time": "2 horas", "difficulty": "Difícil", "subtasks": [
+            { "id": "music_05_01_dataset", "title": "Dataset", "points": 10, "time": "1 hora", "difficulty": "Media", "steps": [
+                { "id": "music_05_01_dataset_s01", "title": "Grabar", "guide": "### 🎙️ Audio\nGraba muestras de voz." }
+            ]},
+            { "id": "music_05_02_train", "title": "Entrenar", "points": 10, "time": "1 hora", "difficulty": "Difícil", "steps": [
+                { "id": "music_05_02_train_s01", "title": "RVC", "guide": "### 🏋️ Train\nEntrena el modelo." }
+            ]}
+        ]},
+        { "id": "music_06_mix", "title": "Mezcla", "points": 15, "badge": "Mix", "description": "Post-producción.", "time": "1.5 horas", "difficulty": "Media", "subtasks": [
+            { "id": "music_06_01_eq", "title": "EQ", "points": 7, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "music_06_01_eq_s01", "title": "Limpiar", "guide": "### 🎛️ Equalizar\nMejora el sonido." }
+            ]},
+            { "id": "music_06_02_master", "title": "Master", "points": 8, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_06_02_master_s01", "title": "AI Master", "guide": "### 🔊 Finalizar\nMaximiza volumen." }
+            ]}
+        ]},
+        { "id": "music_08_publicar", "title": "Publicar", "points": 15, "badge": "Publish", "description": "Lanzamiento.", "time": "1.5 horas", "difficulty": "Media", "subtasks": [
+            { "id": "music_08_01_youtube", "title": "YouTube", "points": 8, "time": "1 hora", "difficulty": "Fácil", "steps": [
+                { "id": "music_08_01_youtube_s01", "title": "Video", "guide": "### 🎬 Visual\nCrea algo visual." },
+                { "id": "music_08_01_youtube_s02", "title": "SEO", "guide": "### 📝 Tags\nOptimiza para búsqueda." },
+                { "id": "music_08_01_youtube_s03", "title": "Subir", "guide": "### 🚀 Upload\nPublica." }
+            ]},
+            { "id": "music_08_02_dsp", "title": "Spotify", "points": 7, "time": "30 min", "difficulty": "Media", "steps": [
+                { "id": "music_08_02_dsp_s01", "title": "Distro", "guide": "### ☁️ DistroKid\nEnvía a tiendas." },
+                { "id": "music_08_02_dsp_s02", "title": "Meta", "guide": "### 📋 Datos\nRevisa créditos." },
+                { "id": "music_08_02_dsp_s03", "title": "Fecha", "guide": "### 📅 Release\nPrograma salida." }
+            ]}
+        ]},
+        { "id": "music_10_freelance", "title": "Freelance", "points": 15, "badge": "Service", "description": "Vender servicios.", "time": "1 hora", "difficulty": "Fácil", "subtasks": [
+            { "id": "music_10_01_fiverr", "title": "Fiverr", "points": 8, "time": "45 min", "difficulty": "Media", "steps": [
+                { "id": "music_10_01_fiverr_s01", "title": "Gig", "guide": "### 💼 Oferta\nCrea tu anuncio." }
+            ]}
+        ]},
+        { "id": "music_11_patreon", "title": "Fans", "points": 10, "badge": "Fans", "description": "Comunidad.", "time": "1 hora", "difficulty": "Fácil", "subtasks": [
+            { "id": "music_11_01_tiers", "title": "Niveles", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_11_01_tiers_s01", "title": "Rewards", "guide": "### 🎁 Premios\nDefine qué das a cambio." }
+            ]}
+        ]},
+        { "id": "music_12_iterar", "title": "Iterar", "points": 10, "badge": "Growth", "description": "Mejora continua.", "time": "1 hora", "difficulty": "Media", "subtasks": [
+            { "id": "music_12_01_stats", "title": "Métricas", "points": 5, "time": "30 min", "difficulty": "Fácil", "steps": [
+                { "id": "music_12_01_stats_s01", "title": "Analizar", "guide": "### 📊 Data\nRevisa qué funciona." }
+            ]}
+        ]}
       ]
     }
   ]
