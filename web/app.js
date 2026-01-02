@@ -2,7 +2,7 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20251239"; // Incremented to force update
+const dataVersion = "20251240"; // Incremented to force update
 const storeKey = "orquestador_progress_v1";
 
 const elTabs = document.getElementById("businessTabs");
@@ -326,6 +326,8 @@ function updateGlobalStats() {
 // --- Markdown Parser Simple ---
 function parseMarkdown(text) {
   if (!text) return "";
+  // Normalize common mojibake
+  text = normalizeText(text);
   let html = text
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
@@ -334,6 +336,16 @@ function parseMarkdown(text) {
       .replace(/\*(.*)\*/gim, '<em>$1</em>')
       .replace(/\n/gim, '<br>');
   return html;
+}
+
+function normalizeText(s) {
+  if (!s) return s;
+  return s
+    .replace(/ðŸ’¡/g, "💡")
+    .replace(/TÃ³mate/g, "Tómate")
+    .replace(/documentaciÃ³n/g, "documentación")
+    .replace(/GuÃ­a/g, "Guía")
+    .replace(/Ã¡/g, "á").replace(/Ã©/g, "é").replace(/Ã­/g, "í").replace(/Ã³/g, "ó").replace(/Ãº/g, "ú").replace(/Ã±/g, "ñ");
 }
 
 // --- Prompt/Tips Helpers ---
@@ -444,19 +456,27 @@ function showDetail(item) {
   }
 
   const bizKey = getBusinessKeyForItemId(item.id);
-  const promptText = item.prompt || generatePrompt(item.title, bizKey);
+  let promptText = item.prompt;
+  const isGeneric = (p) => {
+    if (!p) return true;
+    const trimmed = p.trim();
+    return trimmed.length < 25 || /(\.\.\.|^Genera|^Listar|^Crear)/i.test(trimmed);
+  };
+  if (isGeneric(promptText)) {
+    promptText = generatePrompt(item.title, bizKey);
+  }
   if (promptText) {
       content += `<h3>📋 Prompt</h3><pre><code>${promptText}</code></pre>`;
   }
 
   if (item.guide) {
-      let guideText = item.guide;
-      if (!/💡 Tips/.test(guideText)) {
+      let guideText = normalizeText(item.guide);
+      const hasTips = /💡 Tips/.test(guideText) || /Tips/.test(guideText);
+      if (!hasTips) {
           guideText += "\n\n" + getTips(bizKey);
       }
       content += `<h3>📘 Guía</h3><div>${parseMarkdown(guideText)}</div>`;
-  }
-  else {
+  } else {
       const tips = getTips(bizKey);
       content += `<h3>📘 Guía</h3><div>${parseMarkdown(tips)}</div>`;
   }
