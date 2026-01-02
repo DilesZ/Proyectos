@@ -2,7 +2,7 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20251238"; // Incremented to force update
+const dataVersion = "20251239"; // Incremented to force update
 const storeKey = "orquestador_progress_v1";
 
 const elTabs = document.getElementById("businessTabs");
@@ -336,6 +336,80 @@ function parseMarkdown(text) {
   return html;
 }
 
+// --- Prompt/Tips Helpers ---
+function getBusinessKeyForItemId(id) {
+  for (const b of state.tasks.businesses) {
+    for (const t of b.tasks) {
+      if (t.id === id) return b.key;
+      const subs = t.subtasks || [];
+      for (const s of subs) {
+        if (s.id === id) return b.key;
+        const steps = s.steps || [];
+        for (const st of steps) {
+          if (st.id === id) return b.key;
+        }
+      }
+    }
+  }
+  return null;
+}
+
+function generatePrompt(title, businessKey) {
+  if (!title) return "Describe claramente el objetivo y genera el resultado esperado.";
+  const clean = title.replace(/^\s*\d+\s*/, "").trim();
+  const t = clean.toLowerCase();
+  switch (businessKey) {
+    case "influencer_agency":
+      if (t.match(/nicho/)) return "Genera 3 nichos para el arquetipo definido. Explica público objetivo y monetización.";
+      if (t.match(/arquetipo|persona/)) return "Redacta una ficha de personaje con rasgos físicos, estilo, tono y valores.";
+      if (t.match(/caption|copy/)) return "Escribe 10 captions cortos en tono atractivo, con CTA y hashtags relevantes.";
+      if (t.match(/calendario|contenido/)) return "Genera un calendario de contenidos semanal con ideas y formatos.";
+      return "Propón contenido y hooks alineados al arquetipo seleccionado.";
+    case "amazon_affiliates":
+      if (t.match(/nicho|producto/)) return "Lista 10 productos con BSR < 50k y margen alto. Incluye razones y links.";
+      if (t.match(/bsr|ranking/)) return "Analiza BSR y estacionalidad de los 10 mejores productos del nicho.";
+      if (t.match(/articul|post|reseña/)) return "Genera un esquema SEO para una reseña comparativa con sección de pros/cons.";
+      if (t.match(/keywords|palabras/)) return "Obtén 30 keywords long-tail con intención de compra y volumen estimado.";
+      return "Sugiere contenido afiliado con enfoque en conversión y SEO.";
+    case "kdp_publishing":
+      if (t.match(/keywords|palabras/)) return "Crea 40 keywords KDP (inglés/español) para baja competencia y alto volumen.";
+      if (t.match(/título|subtítulo/)) return "Propón 10 títulos y subtítulos con beneficios claros y keywords.";
+      if (t.match(/portada|cover/)) return "Genera prompt para portada en estilo minimalista, tipografía legible y colores.";
+      if (t.match(/índice|outline/)) return "Esquematiza capítulos con objetivos y bullets por cada sección.";
+      return "Sugiere posicionamiento y categoría óptima para el libro.";
+    case "seoprogrammatic":
+      if (t.match(/plantilla|template/)) return "Define plantilla de artículo con placeholders: {ciudad}, {servicio}, {precio}.";
+      if (t.match(/entidad|schema|estructura/)) return "Extrae entidades clave y crea JSON-LD para Schema.org apropiado.";
+      if (t.match(/keyword/)) return "Genera 100 keywords locales combinando {servicio}+{ciudad}+intención de compra.";
+      return "Diseña prompts para generar páginas a escala con calidad mínima viable.";
+    case "ia_music":
+      if (t.match(/género|estilo/)) return "Elige 3 géneros y describe su estética sonora y referencias.";
+      if (t.match(/letra/)) return "Escribe letra en español con métrica clara, rima asonante y estribillo.";
+      if (t.match(/arreglo|mezcla/)) return "Define estructura (Intro, Verso, Pre, Estribillo, Puente) y capas de instrumentos.";
+      return "Genera conceptos musicales y visuales coherentes con el proyecto.";
+    default:
+      if (t.match(/listar|elegir|definir|crear|escribir|generar|configurar|analizar/)) return clean + "...";
+      return "Genera un resultado para: " + clean;
+  }
+}
+
+function getTips(businessKey) {
+  switch (businessKey) {
+    case "influencer_agency":
+      return "### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.";
+    case "amazon_affiliates":
+      return "### 💡 Tips\n* Prioriza intención de compra y BSR estable.\n* Estructura reseñas con pros/cons y comparativas.";
+    case "kdp_publishing":
+      return "### 💡 Tips\n* Título claro, portada legible y categoría precisa.\n* Mantén ritmo y valor por capítulo.";
+    case "seoprogrammatic":
+      return "### 💡 Tips\n* Plantillas limpias y variables bien nombradas.\n* Evita contenido duplicado; cuida interlinking.";
+    case "ia_music":
+      return "### 💡 Tips\n* Referencias claras antes de producir.\n* Deja espacio para la voz; evita saturar mezcla.";
+    default:
+      return "### 💡 Tips\n* Tómate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentación oficial o usa IA para generar ideas.";
+  }
+}
+
 // --- Detail View Logic ---
 function showDetail(item) {
   elDetailTitle.textContent = item.title;
@@ -369,12 +443,22 @@ function showDetail(item) {
       content += `<div class="section">${parseMarkdown(item.description)}</div>`;
   }
 
-  if (item.prompt) {
-      content += `<h3>📋 Prompt</h3><pre><code>${item.prompt}</code></pre>`;
+  const bizKey = getBusinessKeyForItemId(item.id);
+  const promptText = item.prompt || generatePrompt(item.title, bizKey);
+  if (promptText) {
+      content += `<h3>📋 Prompt</h3><pre><code>${promptText}</code></pre>`;
   }
 
   if (item.guide) {
-      content += `<h3>📘 Guía</h3><div>${parseMarkdown(item.guide)}</div>`;
+      let guideText = item.guide;
+      if (!/💡 Tips/.test(guideText)) {
+          guideText += "\n\n" + getTips(bizKey);
+      }
+      content += `<h3>📘 Guía</h3><div>${parseMarkdown(guideText)}</div>`;
+  }
+  else {
+      const tips = getTips(bizKey);
+      content += `<h3>📘 Guía</h3><div>${parseMarkdown(tips)}</div>`;
   }
 
   // Fallback if empty
