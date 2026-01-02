@@ -134,7 +134,7 @@ foreach ($business in $content.businesses) {
         $tDiff = if ($task.difficulty) { $task.difficulty } else { "Media" }
         $task.title = Fix-Text $task.title
         if ($task.description) { $task.description = Fix-Text $task.description }
-        if (-not $task.PSObject.Properties.Match('prompt').Count) {
+        if (-not $task.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($task.prompt)) {
             $task | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $task.title $business.key)
             $missingPrompts++
         }
@@ -149,7 +149,7 @@ foreach ($business in $content.businesses) {
             if (-not $subtask.PSObject.Properties.Match('time').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "time" -Value $sTime }
             if (-not $subtask.PSObject.Properties.Match('difficulty').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "difficulty" -Value $sDiff }
             if (-not $subtask.PSObject.Properties.Match('description').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "description" -Value $subtask.title }
-            if (-not $subtask.PSObject.Properties.Match('prompt').Count) {
+            if (-not $subtask.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($subtask.prompt)) {
                 $subtask | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $subtask.title $business.key)
                 $missingPrompts++
             }
@@ -166,7 +166,7 @@ foreach ($business in $content.businesses) {
                 $step.title = Fix-Text $step.title
                 if ($step.guide) { $step.guide = Fix-Text $step.guide }
                 if ($step.description) { $step.description = Fix-Text $step.description }
-                if (-not $step.PSObject.Properties.Match('prompt').Count) {
+                if (-not $step.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($step.prompt)) {
                     $step | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $step.title $business.key)
                     $missingPrompts++
                 }
@@ -174,8 +174,12 @@ foreach ($business in $content.businesses) {
                 if ($step.id -eq "fanvue_03_02_caption_s01") {
                     $step.guide = $guideEsquema
                 }
-                elseif ($step.guide.Length -lt 150 -and $step.guide -match "###" -and ($step.guide -notmatch "💡 Tips")) {
-                    $step.guide += (Get-Tips $business.key)
+                else {
+                    if ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
+                        $step.guide += (Get-Tips $business.key)
+                    } elseif (-not $step.guide) {
+                        $step.guide = (Get-Tips $business.key)
+                    }
                 }
             }
         }
