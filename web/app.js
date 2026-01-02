@@ -2,7 +2,7 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20251243"; // Incremented to force update
+const dataVersion = "20260102"; // Incremented to force update
 const storeKey = "orquestador_progress_v1";
 
 const elTabs = document.getElementById("businessTabs");

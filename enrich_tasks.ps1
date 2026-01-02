@@ -225,7 +225,18 @@ Define claramente el resultado de este paso. Documenta en una nota qué esperas 
 function Get-DefaultStepTitles {
     param([string]$businessKey)
     switch ($businessKey) {
-        "influencer_agency" { return @("Definir objetivo", "Consistencia del personaje", "Estructurar hooks y CTA", "Variaciones A/B", "Medición esperada", "Entregables") }
+        "influencer_agency" { return @(
+            "Definir objetivo",
+            "Consistencia del personaje",
+            "Estructurar hooks y CTA",
+            "Variaciones A/B",
+            "Medición esperada",
+            "Entregables",
+            "Fanvue publicación programada",
+            "Fanvue marketing segmentado",
+            "Fanvue engagement boost",
+            "Fanvue contenido exclusivo"
+        ) }
         "amazon_affiliates" { return @("Objetivo y conversión", "Seleccionar nichos/productos", "Analizar BSR", "Enlaces y disclaimers", "Comparativas", "Checklist SEO") }
         "kdp_publishing"    { return @("Objetivo y público", "Keywords y capítulos", "Maquetación", "Portada", "Metadata", "Checklist calidad") }
         "seoprogrammatic"   { return @("Objetivo y variables", "Plantilla con placeholders", "Fuente de datos", "Generación a escala", "JSON-LD", "Validación") }
@@ -234,10 +245,143 @@ function Get-DefaultStepTitles {
     }
 }
 
+function Ensure-FanvueTasks {
+    param($contentRef)
+    $biz = $contentRef.businesses | Where-Object { $_.key -eq "influencer_agency" }
+    if (-not $biz) { return }
+    $existingIds = @()
+    foreach ($t in $biz.tasks) { $existingIds += $t.id }
+    if ($existingIds -notcontains "fanvue_05_publicacion") {
+        $pubTask = [pscustomobject]@{
+            id = "fanvue_05_publicacion"
+            title = "Publicación Fanvue"
+            points = 12
+            badge = "Publishing"
+            description = "Configura y publica contenido en Fanvue con estructura clara."
+            time = "4 horas"
+            difficulty = "Media"
+            subtasks = @(
+                [pscustomobject]@{
+                    id = "fanvue_05_01_cuenta"; title = "Configurar cuenta y verificación"
+                    points = 3; time = "45 min"; difficulty = "Fácil"
+                    steps = @(
+                        [pscustomobject]@{ id="fanvue_05_01_s01"; title="Registro y perfil"; guide=Build-Guide -businessKey "influencer_agency" -title "Registro y perfil" },
+                        [pscustomobject]@{ id="fanvue_05_01_s02"; title="Verificación identidad y fiscalidad"; guide=Build-Guide -businessKey "influencer_agency" -title "Verificación identidad y fiscalidad" },
+                        [pscustomobject]@{ id="fanvue_05_01_s03"; title="Configurar payout (Stripe/Bank)"; guide=Build-Guide -businessKey "influencer_agency" -title "Configurar payout" },
+                        [pscustomobject]@{ id="fanvue_05_01_s04"; title="Seguridad (2FA, accesos)"; guide=Build-Guide -businessKey "influencer_agency" -title "Seguridad 2FA" }
+                    )
+                },
+                [pscustomobject]@{
+                    id = "fanvue_05_02_producto"; title = "Definir tiers, bundles y PPV"
+                    points = 3; time = "1 hora"; difficulty = "Media"
+                    steps = @(
+                        [pscustomobject]@{ id="fanvue_05_02_s01"; title="Niveles y beneficios"; guide=Build-Guide -businessKey "influencer_agency" -title "Niveles y beneficios" },
+                        [pscustomobject]@{ id="fanvue_05_02_s02"; title="Precios y promociones"; guide=Build-Guide -businessKey "influencer_agency" -title "Precios y promociones" },
+                        [pscustomobject]@{ id="fanvue_05_02_s03"; title="Contenido PPV y paywalls"; guide=Build-Guide -businessKey "influencer_agency" -title "PPV y paywalls" },
+                        [pscustomobject]@{ id="fanvue_05_02_s04"; title="Políticas y normas"; guide=Build-Guide -businessKey "influencer_agency" -title "Políticas y normas" }
+                    )
+                },
+                [pscustomobject]@{
+                    id = "fanvue_05_03_calendario"; title = "Plan y calendario de publicación"
+                    points = 3; time = "1 hora"; difficulty = "Media"
+                    steps = @(
+                        [pscustomobject]@{ id="fanvue_05_03_s01"; title="Calendario semanal (free/paid)"; guide=Build-Guide -businessKey "influencer_agency" -title "Calendario semanal" },
+                        [pscustomobject]@{ id="fanvue_05_03_s02"; title="Guiones y assets"; guide=Build-Guide -businessKey "influencer_agency" -title "Guiones y assets" },
+                        [pscustomobject]@{ id="fanvue_05_03_s03"; title="Series y continuidad"; guide=Build-Guide -businessKey "influencer_agency" -title "Series y continuidad" },
+                        [pscustomobject]@{ id="fanvue_05_03_s04"; title="Checklist de publicación"; guide=Build-Guide -businessKey "influencer_agency" -title "Checklist de publicación" }
+                    )
+                },
+                [pscustomobject]@{
+                    id = "fanvue_05_04_lanzamiento"; title = "Lanzamiento: semana 1"
+                    points = 3; time = "1 hora"; difficulty = "Media"
+                    steps = @(
+                        [pscustomobject]@{ id="fanvue_05_04_s01"; title="Programar 7 posts y 3 PPV"; guide=Build-Guide -businessKey "influencer_agency" -title "Programación inicial" },
+                        [pscustomobject]@{ id="fanvue_05_04_s02"; title="Copys y CTA específicos Fanvue"; guide=Build-Guide -businessKey "influencer_agency" -title "Copys y CTA" },
+                        [pscustomobject]@{ id="fanvue_05_04_s03"; title="Stories y etiquetado"; guide=Build-Guide -businessKey "influencer_agency" -title "Stories y etiquetado" },
+                        [pscustomobject]@{ id="fanvue_05_04_s04"; title="Revisión métricas diarias"; guide=Build-Guide -businessKey "influencer_agency" -title "Revisión métricas" }
+                    )
+                },
+                [pscustomobject]@{
+                    id = "fanvue_05_05_automatizaciones"; title = "Automatizaciones y retención"
+                    points = 3; time = "45 min"; difficulty = "Media"
+                    steps = @(
+                        [pscustomobject]@{ id="fanvue_05_05_s01"; title="Mensaje bienvenida y upsell"; guide=Build-Guide -businessKey "influencer_agency" -title "Bienvenida y upsell" },
+                        [pscustomobject]@{ id="fanvue_05_05_s02"; title="DM templates y triggers"; guide=Build-Guide -businessKey "influencer_agency" -title "DM templates" },
+                        [pscustomobject]@{ id="fanvue_05_05_s03"; title="Reactivación y ofertas"; guide=Build-Guide -businessKey "influencer_agency" -title "Reactivación y ofertas" },
+                        [pscustomobject]@{ id="fanvue_05_05_s04"; title="Churn y fidelización"; guide=Build-Guide -businessKey "influencer_agency" -title "Churn y fidelización" }
+                    )
+                }
+            )
+        }
+        $biz.tasks += $pubTask
+    }
+    if ($existingIds -notcontains "fanvue_06_marketing") {
+        $mktTask = [pscustomobject]@{
+            id = "fanvue_06_marketing"
+            title = "Marketing Fanvue"
+            points = 12
+            badge = "Growth"
+            description = "Estrategias de adquisición, retención y monetización en Fanvue."
+            time = "4 horas"
+            difficulty = "Media"
+            subtasks = @(
+                [pscustomobject]@{
+                    id="fanvue_06_01_perfil"; title="Optimización perfil y SEO interno"
+                    points=3; time="45 min"; difficulty="Fácil"
+                    steps=@(
+                        [pscustomobject]@{ id="fanvue_06_01_s01"; title="Bio, keywords y portada"; guide=Build-Guide -businessKey "influencer_agency" -title "Bio y keywords" },
+                        [pscustomobject]@{ id="fanvue_06_01_s02"; title="Link-in-bio y banner"; guide=Build-Guide -businessKey "influencer_agency" -title "Link-in-bio y banner" },
+                        [pscustomobject]@{ id="fanvue_06_01_s03"; title="Tracking y UTMs"; guide=Build-Guide -businessKey "influencer_agency" -title "Tracking y UTMs" }
+                    )
+                },
+                [pscustomobject]@{
+                    id="fanvue_06_02_social"; title="Adquisición social (TikTok/IG/Twitter)"
+                    points=3; time="1 hora"; difficulty="Media"
+                    steps=@(
+                        [pscustomobject]@{ id="fanvue_06_02_s01"; title="Hook bank y formatos"; guide=Build-Guide -businessKey "influencer_agency" -title "Hook bank y formatos" },
+                        [pscustomobject]@{ id="fanvue_06_02_s02"; title="Hashtags y pauta básica"; guide=Build-Guide -businessKey "influencer_agency" -title "Hashtags y pauta" },
+                        [pscustomobject]@{ id="fanvue_06_02_s03"; title="Cross-post y timing"; guide=Build-Guide -businessKey "influencer_agency" -title "Cross-post y timing" }
+                    )
+                },
+                [pscustomobject]@{
+                    id="fanvue_06_03_colab"; title="Colaboraciones y cross-promo"
+                    points=3; time="1 hora"; difficulty="Media"
+                    steps=@(
+                        [pscustomobject]@{ id="fanvue_06_03_s01"; title="Listado y outreach"; guide=Build-Guide -businessKey "influencer_agency" -title "Listado y outreach" },
+                        [pscustomobject]@{ id="fanvue_06_03_s02"; title="Acuerdos y contenido conjunto"; guide=Build-Guide -businessKey "influencer_agency" -title "Acuerdos y contenido conjunto" },
+                        [pscustomobject]@{ id="fanvue_06_03_s03"; title="Medición y seguimiento"; guide=Build-Guide -businessKey "influencer_agency" -title "Medición y seguimiento" }
+                    )
+                },
+                [pscustomobject]@{
+                    id="fanvue_06_04_embudos"; title="Embudos: landing, lead magnet y DM/email"
+                    points=3; time="1 hora"; difficulty="Media"
+                    steps=@(
+                        [pscustomobject]@{ id="fanvue_06_04_s01"; title="Landing y oferta"; guide=Build-Guide -businessKey "influencer_agency" -title "Landing y oferta" },
+                        [pscustomobject]@{ id="fanvue_06_04_s02"; title="Lead magnet y captura"; guide=Build-Guide -businessKey "influencer_agency" -title "Lead magnet y captura" },
+                        [pscustomobject]@{ id="fanvue_06_04_s03"; title="Secuencia DM/email"; guide=Build-Guide -businessKey "influencer_agency" -title "Secuencia DM/email" }
+                    )
+                },
+                [pscustomobject]@{
+                    id="fanvue_06_05_metricas"; title="Métricas: CVR, AOV, churn, LTV"
+                    points=3; time="45 min"; difficulty="Media"
+                    steps=@(
+                        [pscustomobject]@{ id="fanvue_06_05_s01"; title="Dashboard y KPIs"; guide=Build-Guide -businessKey "influencer_agency" -title "Dashboard y KPIs" },
+                        [pscustomobject]@{ id="fanvue_06_05_s02"; title="Insights y iteración"; guide=Build-Guide -businessKey "influencer_agency" -title "Insights e iteración" },
+                        [pscustomobject]@{ id="fanvue_06_05_s03"; title="Acciones de mejora"; guide=Build-Guide -businessKey "influencer_agency" -title "Acciones de mejora" }
+                    )
+                }
+            )
+        }
+        $biz.tasks += $mktTask
+    }
+}
+
 $totalTasks = 0
 $totalSubtasks = 0
 $totalSteps = 0
 $missingPrompts = 0
+
+Ensure-FanvueTasks -contentRef $content
 
 foreach ($business in $content.businesses) {
     foreach ($task in $business.tasks) {
