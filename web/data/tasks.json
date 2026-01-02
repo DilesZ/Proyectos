@@ -5,12 +5,27 @@
       "name": "Influencer IA (Fanvue)",
       "tasks": [
         { "id": "fanvue_01_arquetipo", "title": "Definir arquetipo y branding", "points": 10, "badge": "Setup",
+          "description": "Fase inicial crítica para definir la identidad del negocio. Aquí decidiremos quién es nuestra influencer, a quién se dirige y cómo se presentará al mundo.",
+          "time": "2 horas",
+          "difficulty": "Media",
           "subtasks": [
             { "id": "fanvue_01_01_arquetipo", "title": "Elegir arquetipo (fit/gamer/elegante)", "points": 2,
+              "description": "Selección del nicho de mercado. Un buen arquetipo debe ser rentable, sostenible y tener una audiencia clara.",
+              "time": "45 min",
+              "difficulty": "Fácil",
               "steps": [
-                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos", "prompt": "Genera 3 nichos/arquetipos (fit/gamer/elegante/otro) con descripción breve, audiencia objetivo y ejemplos de creadores. Incluye riesgos y oportunidades." },
-                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia y hashtags", "prompt": "Para cada nicho, lista 20 hashtags de IG/TikTok, tipo de contenido que mejor funciona y ejemplos de captions con alto CTR." },
-                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar arquetipo final", "prompt": "Elige el arquetipo óptimo justificando por potencial de ingresos, facilidad de producción con IA y cumplimiento de políticas." }
+                { "id": "fanvue_01_01_arquetipo_s01", "title": "Listar 3 nichos candidatos", 
+                  "prompt": "Genera 3 nichos/arquetipos (fit/gamer/elegante/otro) con descripción breve, audiencia objetivo y ejemplos de creadores. Incluye riesgos y oportunidades.",
+                  "guide": "### 🎯 Objetivo\nIdentificar 3 posibles caminos para nuestra influencer.\n\n### 📝 Instrucciones\n1. Abre **NotebookLM** o **ChatGPT**.\n2. Usa el prompt proporcionado.\n3. Analiza las opciones basándote en:\n   - **Rentabilidad**: ¿Pagan los usuarios en este nicho?\n   - **Saturación**: ¿Hay demasiada competencia?\n   - **Facilidad**: ¿Podemos generar contenido constante?\n\n### 💡 Consejo Pro\nEl nicho 'Gamer' suele tener alta retención, mientras que 'Fitness' tiene mayor alcance viral." 
+                },
+                { "id": "fanvue_01_01_arquetipo_s02", "title": "Analizar audiencia y hashtags", 
+                  "prompt": "Para cada nicho, lista 20 hashtags de IG/TikTok, tipo de contenido que mejor funciona y ejemplos de captions con alto CTR.",
+                  "guide": "### 📊 Análisis de Mercado\nUna vez tengas los nichos, valídalos en Instagram y TikTok.\n\n1. Busca los hashtags sugeridos.\n2. Observa qué reels tienen más de 100k vistas.\n3. Anota los 'hooks' (ganchos) visuales que usan."
+                },
+                { "id": "fanvue_01_01_arquetipo_s03", "title": "Seleccionar arquetipo final", 
+                  "prompt": "Elige el arquetipo óptimo justificando por potencial de ingresos, facilidad de producción con IA y cumplimiento de políticas.",
+                  "guide": "### 🏆 Decisión Final\nEs hora de elegir. No busques la perfección, busca la viabilidad.\n\n**Criterios de desempate:**\n- ¿Qué dataset de LoRA es más fácil de conseguir?\n- ¿Qué contenido te divierte más 'producir'?"
+                }
               ]
             },
             { "id": "fanvue_01_02_nombre", "title": "Nombre/handle y bio convincente", "points": 2,
