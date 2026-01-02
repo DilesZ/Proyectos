@@ -40,6 +40,7 @@ function loadProgress() {
 
 function saveProgress() {
   localStorage.setItem(storeKey, JSON.stringify(state.progress));
+  saveProgressToDB(state.progress);
 }
 
 function computeStats(all) {
@@ -389,6 +390,43 @@ function hideDetail() {
   elDetailView.classList.add("hidden");
 }
 
+// --- API Helpers ---
+function getUserId() {
+    let uid = localStorage.getItem("app_user_id");
+    if (!uid) {
+        uid = "user_" + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem("app_user_id", uid);
+    }
+    return uid;
+}
+
+async function loadProgressFromDB() {
+    try {
+        const userId = getUserId();
+        const res = await fetch(`/api/progress?userId=${userId}`);
+        if (res.ok) {
+            const data = await res.json();
+            return data; // Can be null if new user
+        }
+    } catch (e) {
+        console.error("Error loading from DB:", e);
+    }
+    return null;
+}
+
+async function saveProgressToDB(state) {
+    try {
+        const userId = getUserId();
+        await fetch(`/api/progress?userId=${userId}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(state)
+        });
+    } catch (e) {
+        console.error("Error saving to DB:", e);
+    }
+}
+
 // --- Init ---
 async function getTasks() {
   try {
@@ -422,7 +460,15 @@ async function init() {
       state.tasks = t;
   }
   
-  state.progress = loadProgress();
+  // Load Progress (DB -> Local -> Sync)
+  let saved = await loadProgressFromDB();
+  if (!saved) {
+      saved = loadProgress();
+      if (Object.keys(saved).length > 0) {
+          saveProgressToDB(saved);
+      }
+  }
+  state.progress = saved || {};
   
   if (document.getElementById("appVersion")) {
       document.getElementById("appVersion").textContent = `v${dataVersion}`;
