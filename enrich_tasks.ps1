@@ -222,6 +222,18 @@ Define claramente el resultado de este paso. Documenta en una nota qué esperas 
     return ($commonTop + "`n" + $spec + "`n" + (Get-Tips $businessKey) + "`n" + $commonBottom)
 }
 
+function Get-DefaultStepTitles {
+    param([string]$businessKey)
+    switch ($businessKey) {
+        "influencer_agency" { return @("Definir objetivo", "Consistencia del personaje", "Estructurar hooks y CTA", "Variaciones A/B", "Medición esperada", "Entregables") }
+        "amazon_affiliates" { return @("Objetivo y conversión", "Seleccionar nichos/productos", "Analizar BSR", "Enlaces y disclaimers", "Comparativas", "Checklist SEO") }
+        "kdp_publishing"    { return @("Objetivo y público", "Keywords y capítulos", "Maquetación", "Portada", "Metadata", "Checklist calidad") }
+        "seoprogrammatic"   { return @("Objetivo y variables", "Plantilla con placeholders", "Fuente de datos", "Generación a escala", "JSON-LD", "Validación") }
+        "ia_music"          { return @("Objetivo y referencia", "Estructura musical", "Arreglos", "Producción", "Mastering", "Publicación") }
+        default             { return @("Definir objetivo", "Prerrequisitos", "Ejecución", "Validación", "Entregables", "Cierre") }
+    }
+}
+
 $totalTasks = 0
 $totalSubtasks = 0
 $totalSteps = 0
@@ -280,6 +292,29 @@ foreach ($business in $content.businesses) {
                     } elseif ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
                         $step.guide += (Get-Tips $business.key)
                     } 
+                }
+            }
+            # Ensure minimum granularity: at least 3 steps per subtask
+            if (-not $subtask.steps) { $subtask.steps = @() }
+            $existingCount = ($subtask.steps | Measure-Object).Count
+            $need = 3 - $existingCount
+            if ($need -gt 0) {
+                $titles = Get-DefaultStepTitles $business.key
+                for ($i = 0; $i -lt $need; $i++) {
+                    $stTitle = $titles[$i]
+                    $suffix = "{0:d2}" -f ($existingCount + $i + 1)
+                    $newId = $subtask.id + "_az" + $suffix
+                    $newStep = [pscustomobject]@{
+                        id = $newId
+                        title = $stTitle
+                        description = "Paso clave para completar: " + $subtask.title
+                        time = $sTime
+                        difficulty = $sDiff
+                        prompt = (Generate-Prompt $stTitle $business.key)
+                        guide = Build-Guide -businessKey $business.key -title $stTitle
+                    }
+                    $subtask.steps += $newStep
+                    $totalSteps++
                 }
             }
         }

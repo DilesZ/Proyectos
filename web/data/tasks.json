@@ -863,6 +863,15 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Mapping",
                                                                                     "prompt":  "Genera un resultado para: Formato"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_02_02_match_az03",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Mapping",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Mapping",
@@ -904,6 +913,15 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Dominio",
                                                                                     "prompt":  "Genera un resultado para: DNS"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_03_01_dominio_az03",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Dominio",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Dominio",
@@ -924,6 +942,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: CMS",
                                                                                     "prompt":  "Genera un resultado para: Elección"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_03_02_cms_az02",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: CMS",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_03_02_cms_az03",
+                                                                                    "title":  "Seleccionar nichos/productos",
+                                                                                    "description":  "Paso clave para completar: CMS",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Lista 10 productos con BSR \u003c 50k y margen alto. Incluye razones y links.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Seleccionar nichos/productos y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "CMS",
@@ -944,6 +980,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Vercel",
                                                                                     "prompt":  "Genera un resultado para: Deploy"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_03_03_deploy_az02",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Vercel",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_03_03_deploy_az03",
+                                                                                    "title":  "Seleccionar nichos/productos",
+                                                                                    "description":  "Paso clave para completar: Vercel",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Lista 10 productos con BSR \u003c 50k y margen alto. Incluye razones y links.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Seleccionar nichos/productos y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Vercel",
@@ -985,6 +1039,15 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Ficha Producto",
                                                                                     "prompt":  "Genera un resultado para: Schema"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_04_01_ficha_az03",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Ficha Producto",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Ficha Producto",
@@ -1005,6 +1068,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Comparativa",
                                                                                     "prompt":  "Genera un resultado para: Tabla"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_04_02_comparativa_az02",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Comparativa",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_04_02_comparativa_az03",
+                                                                                    "title":  "Seleccionar nichos/productos",
+                                                                                    "description":  "Paso clave para completar: Comparativa",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Lista 10 productos con BSR \u003c 50k y margen alto. Incluye razones y links.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Seleccionar nichos/productos y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Comparativa",
@@ -1025,6 +1106,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Blog Post",
                                                                                     "prompt":  "Genera un resultado para: Estructura"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_04_03_guia_az02",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Blog Post",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_04_03_guia_az03",
+                                                                                    "title":  "Seleccionar nichos/productos",
+                                                                                    "description":  "Paso clave para completar: Blog Post",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Lista 10 productos con BSR \u003c 50k y margen alto. Incluye razones y links.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Seleccionar nichos/productos y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Blog Post",
@@ -1057,6 +1156,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Prompts",
                                                                                     "prompt":  "Genera un resultado para: Templates"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_05_01_prompts_az02",
+                                                                                    "title":  "Objetivo y conversiÃ³n",
+                                                                                    "description":  "Paso clave para completar: Prompts",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugiere contenido afiliado con enfoque en conversiÃ³n y SEO.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y conversiÃ³n y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "aa_05_01_prompts_az03",
+                                                                                    "title":  "Seleccionar nichos/productos",
+                                                                                    "description":  "Paso clave para completar: Prompts",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Lista 10 productos con BSR \u003c 50k y margen alto. Incluye razones y links.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Seleccionar nichos/productos y cÃ³mo impacta la conversiÃ³n.\n2. Identifica productos/nichos con BSR estable y margen.\n3. Crea esquema de contenido orientado a compra.\n4. AÃ±ade enlaces de afiliado y disclaimers.\n5. Prepara comparativas y pros/cons claros.\n6. Valida con una checklist SEO bÃ¡sica y publicaciÃ³n.\n### ðŸ’¡ Tips\n* Prioriza intenciÃ³n de compra y BSR estable.\n* Estructura reseÃ±as con pros/cons y comparativas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Prompts",
@@ -1268,6 +1385,15 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Configurar doc",
                                                                                     "prompt":  "Genera un resultado para: Márgenes"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_02_01_setup_az03",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Configurar doc",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Configurar doc",
@@ -1297,6 +1423,15 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Maquetar",
                                                                                     "prompt":  "Genera un resultado para: PDF"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_02_02_layout_az03",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Maquetar",
+                                                                                    "time":  "1.5 horas",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Maquetar",
@@ -1455,6 +1590,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Online",
                                                                                     "prompt":  "Genera un resultado para: Previewer"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_04_01_preview_az02",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Online",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_04_01_preview_az03",
+                                                                                    "title":  "Keywords y capÃ­tulos",
+                                                                                    "description":  "Paso clave para completar: Online",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Crea 40 keywords KDP (inglÃ©s/espaÃ±ol) para baja competencia y alto volumen.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Keywords y capÃ­tulos y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Online",
@@ -1475,6 +1628,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Físico",
                                                                                     "prompt":  "Genera un resultado para: Pedir copia"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_04_02_proof_az02",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Físico",
+                                                                                    "time":  "10 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_04_02_proof_az03",
+                                                                                    "title":  "Keywords y capÃ­tulos",
+                                                                                    "description":  "Paso clave para completar: Físico",
+                                                                                    "time":  "10 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Crea 40 keywords KDP (inglÃ©s/espaÃ±ol) para baja competencia y alto volumen.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Keywords y capÃ­tulos y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Físico",
@@ -1604,6 +1775,15 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Contenido A+",
                                                                                     "prompt":  "Genera un resultado para: Subir"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_07_01_aplus_az03",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Contenido A+",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Contenido A+",
@@ -1624,6 +1804,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Ads",
                                                                                     "prompt":  "Genera un resultado para: Auto"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_07_02_ads_az02",
+                                                                                    "title":  "Objetivo y pÃºblico",
+                                                                                    "description":  "Paso clave para completar: Ads",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Sugerir posicionamiento y categorÃ­a Ã³ptima para el libro.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Objetivo y pÃºblico y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "kdp_07_02_ads_az03",
+                                                                                    "title":  "Keywords y capÃ­tulos",
+                                                                                    "description":  "Paso clave para completar: Ads",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Crea 40 keywords KDP (inglÃ©s/espaÃ±ol) para baja competencia y alto volumen.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n### ðŸ”§ Instrucciones (Aâ€“Z)\n1. Define objetivo del paso: Keywords y capÃ­tulos y pÃºblico objetivo.\n2. Prepara keywords y estructura de capÃ­tulos.\n3. Redacta/maqueta con formato consistente.\n4. DiseÃ±a portada (legibilidad, estilo, tamaÃ±o).\n5. Configura metadata (categorÃ­as, pricing).\n6. Revisa muestra y checklist de calidad antes de publicar.\n### ðŸ’¡ Tips\n* TÃ­tulo claro, portada legible y categorÃ­a precisa.\n* MantÃ©n ritmo y valor por capÃ­tulo.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Ads",
@@ -1797,6 +1995,15 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: KPIs",
                                                                                     "prompt":  "Genera un resultado para: Dash"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_01_02_objetivos_az03",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: KPIs",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "KPIs",
@@ -1829,6 +2036,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Framework",
                                                                                     "prompt":  "Genera un resultado para: Instalar"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_02_01_framework_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Framework",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_02_01_framework_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Framework",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Framework",
@@ -1849,6 +2074,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Git",
                                                                                     "prompt":  "Genera un resultado para: Repo"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_02_02_git_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Git",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_02_02_git_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Git",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Git",
@@ -1890,6 +2133,15 @@
                                                                                     "difficulty":  "Difícil",
                                                                                     "description":  "Paso clave para completar: Esquema",
                                                                                     "prompt":  "Genera un resultado para: Limpiar"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_03_01_esquema_az03",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Esquema",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Difícil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Esquema",
@@ -2010,6 +2262,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Sitemap",
                                                                                     "prompt":  "Genera un resultado para: XML"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_05_01_sitemap_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Sitemap",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_05_01_sitemap_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Sitemap",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Sitemap",
@@ -2030,6 +2300,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Schema",
                                                                                     "prompt":  "Genera un resultado para: JSON-LD"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_05_02_schema_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Schema",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_05_02_schema_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Schema",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Schema",
@@ -2062,6 +2350,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Ads",
                                                                                     "prompt":  "Genera un resultado para: Setup"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_06_01_ads_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Ads",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ps_06_01_ads_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Ads",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Ads",
@@ -2150,6 +2456,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: RVC",
                                                                                     "prompt":  "Genera un resultado para: Instalar"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_02_01_rvc_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: RVC",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_02_01_rvc_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: RVC",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "RVC",
@@ -2170,6 +2494,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: DAW",
                                                                                     "prompt":  "Genera un resultado para: Reaper"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_02_02_daw_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: DAW",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_02_02_daw_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: DAW",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "DAW",
@@ -2202,6 +2544,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Charts",
                                                                                     "prompt":  "Genera un resultado para: Viral"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_03_01_tiktok_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Charts",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_03_01_tiktok_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Charts",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Charts",
@@ -2322,6 +2682,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Dataset",
                                                                                     "prompt":  "Grabar..."
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_05_01_dataset_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Dataset",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_05_01_dataset_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Dataset",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Dataset",
@@ -2342,6 +2720,24 @@
                                                                                     "difficulty":  "Difícil",
                                                                                     "description":  "Paso clave para completar: Entrenar",
                                                                                     "prompt":  "Genera un resultado para: RVC"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_05_02_train_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Entrenar",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Difícil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_05_02_train_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Entrenar",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Difícil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Entrenar",
@@ -2374,6 +2770,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: EQ",
                                                                                     "prompt":  "Genera un resultado para: Limpiar"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_06_01_eq_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: EQ",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_06_01_eq_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: EQ",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "EQ",
@@ -2394,6 +2808,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Master",
                                                                                     "prompt":  "Genera un resultado para: AI Master"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_06_02_master_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Master",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_06_02_master_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Master",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Master",
@@ -2514,6 +2946,24 @@
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Fiverr",
                                                                                     "prompt":  "Genera un resultado para: Gig"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_10_01_fiverr_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Fiverr",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_10_01_fiverr_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Fiverr",
+                                                                                    "time":  "45 min",
+                                                                                    "difficulty":  "Media",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Fiverr",
@@ -2546,6 +2996,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Niveles",
                                                                                     "prompt":  "Genera un resultado para: Rewards"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_11_01_tiers_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Niveles",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_11_01_tiers_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Niveles",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Niveles",
@@ -2578,6 +3046,24 @@
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Métricas",
                                                                                     "prompt":  "Analizar..."
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_12_01_stats_az02",
+                                                                                    "title":  "Definir objetivo",
+                                                                                    "description":  "Paso clave para completar: Métricas",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Definir objetivo...",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "music_12_01_stats_az03",
+                                                                                    "title":  "Prerrequisitos",
+                                                                                    "description":  "Paso clave para completar: Métricas",
+                                                                                    "time":  "30 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un resultado para: Prerrequisitos",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n\n### ðŸ’¡ Tips\n* TÃ³mate tu tiempo para revisar los detalles.\n* Si tienes dudas, consulta la documentaciÃ³n oficial o usa IA para generar ideas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 }
                                                                             ],
                                                                   "description":  "Métricas",
