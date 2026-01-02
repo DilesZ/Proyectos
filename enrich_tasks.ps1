@@ -122,6 +122,106 @@ function Get-Tips {
     }
 }
 
+function Build-Guide {
+    param([string]$businessKey, [string]$title)
+    $commonTop = @'
+### 🎯 Objetivo
+Define claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.
+
+### ✅ Prerrequisitos
+- Acceso al proyecto y recursos necesarios
+- Datos base preparados y organizados
+- Tiempo reservado sin interrupciones
+
+### 🛠️ Herramientas
+- Navegador y hojas de cálculo
+- Editor/IA para generación de contenido
+- Gestor de tareas para seguimiento
+'@
+    $commonBottom = @'
+### ✅ Validación
+- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).
+- Revisa coherencia, formato y calidad mínima aceptable.
+
+### 📦 Entregables
+- Documento/archivo con el resultado del paso
+- Breve resumen de decisiones y próximos pasos
+
+### ⚠️ Errores comunes
+- Saltar prerrequisitos o no medir resultados
+- Inconsistencia en nomenclaturas y formatos
+- No guardar evidencias
+'@
+    switch ($businessKey) {
+        "influencer_agency" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y relación con el arquetipo.
+2. Revisa consistencia del personaje (rasgos, tono, estilo).
+3. Genera ideas iniciales y selecciona las mejores.
+4. Estructura contenido con hooks, valor y CTA.
+5. Prepara variaciones para test A/B.
+6. Documenta resultados esperados y cómo medirlos.
+"@
+        }
+        "amazon_affiliates" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y cómo impacta la conversión.
+2. Identifica productos/nichos con BSR estable y margen.
+3. Crea esquema de contenido orientado a compra.
+4. Añade enlaces de afiliado y disclaimers.
+5. Prepara comparativas y pros/cons claros.
+6. Valida con una checklist SEO básica y publicación.
+"@
+        }
+        "kdp_publishing" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y público objetivo.
+2. Prepara keywords y estructura de capítulos.
+3. Redacta/maqueta con formato consistente.
+4. Diseña portada (legibilidad, estilo, tamaño).
+5. Configura metadata (categorías, pricing).
+6. Revisa muestra y checklist de calidad antes de publicar.
+"@
+        }
+        "seoprogrammatic" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y variables necesarias.
+2. Diseña plantilla con placeholders claros.
+3. Prepara fuente de datos (CSV/DB/API).
+4. Genera páginas a escala controlando calidad mínima.
+5. Inserta JSON-LD adecuado y enlazado interno básico.
+6. Valida indexación y rendimiento.
+"@
+        }
+        "ia_music" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y referencia sonora.
+2. Prepara letra/estructura (Intro, Verso, Pre, Estribillo, Puente).
+3. Selecciona instrumentos y arreglos principales.
+4. Graba/produce y cuida dinámica/mezcla.
+5. Haz mastering ligero y exporta formatos necesarios.
+6. Documenta decisiones y prepara publicación/distribución.
+"
+        }
+        default {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title.
+2. Lista prerrequisitos y recursos.
+3. Ejecuta tareas en orden lógico con evidencias.
+4. Revisa calidad y consistencia.
+5. Documenta y comunica resultados.
+"@
+        }
+    }
+    return ($commonTop + "`n" + $spec + "`n" + (Get-Tips $businessKey) + "`n" + $commonBottom)
+}
+
 $totalTasks = 0
 $totalSubtasks = 0
 $totalSteps = 0
@@ -175,11 +275,11 @@ foreach ($business in $content.businesses) {
                     $step.guide = $guideEsquema
                 }
                 else {
-                    if ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
+                    if (-not $step.guide -or $step.guide.Length -lt 300) {
+                        $step.guide = Build-Guide -businessKey $business.key -title $step.title
+                    } elseif ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
                         $step.guide += (Get-Tips $business.key)
-                    } elseif (-not $step.guide) {
-                        $step.guide = (Get-Tips $business.key)
-                    }
+                    } 
                 }
             }
         }
