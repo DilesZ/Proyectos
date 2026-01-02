@@ -2,7 +2,7 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20251235"; // Incremented
+const dataVersion = "20251236"; // Incremented to force update
 const storeKey = "orquestador_progress_v1";
 
 const elTabs = document.getElementById("businessTabs");
@@ -392,11 +392,22 @@ function hideDetail() {
 // --- Init ---
 async function getTasks() {
   try {
-      const r = await fetch(`./data/tasks.json?v=${dataVersion}`, { cache: "no-store" });
+      // Add timestamp to force cache bypass
+      const ts = new Date().getTime();
+      const r = await fetch(`./data/tasks.json?v=${dataVersion}&t=${ts}`, { cache: "no-store" });
       if (r.ok) return await r.json();
-  } catch (e) {}
+  } catch (e) {
+      console.error("Error fetching tasks:", e);
+  }
   
-  // Fallback logic omitted for brevity in this update, assuming local file works
+  // Try fallback without params if first attempt fails
+  try {
+      const r = await fetch(`./data/tasks.json`);
+      if (r.ok) return await r.json();
+  } catch (e) {
+      console.error("Error fetching fallback:", e);
+  }
+
   return { businesses: [] }; 
 }
 
