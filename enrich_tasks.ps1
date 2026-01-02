@@ -294,10 +294,11 @@ foreach ($business in $content.businesses) {
                     } 
                 }
             }
-            # Ensure minimum granularity: at least 3 steps per subtask
+            # Ensure minimum granularity: at least 5 steps per subtask
             if (-not $subtask.steps) { $subtask.steps = @() }
             $existingCount = ($subtask.steps | Measure-Object).Count
-            $need = 3 - $existingCount
+            $minSteps = 5
+            $need = $minSteps - $existingCount
             if ($need -gt 0) {
                 $titles = Get-DefaultStepTitles $business.key
                 for ($i = 0; $i -lt $need; $i++) {
