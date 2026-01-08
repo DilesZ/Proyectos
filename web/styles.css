@@ -204,6 +204,22 @@ body {
   color: var(--text-primary);
 }
 
+.btn-icon {
+    padding: 4px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-icon:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
 .scroll-area {
   flex: 1;
   overflow-y: auto;
@@ -254,6 +270,7 @@ body {
   align-items: flex-start;
   gap: 1rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .task-checkbox {
@@ -329,19 +346,51 @@ body {
 
 .subtask-item {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 .subtask-item:last-child {
   border-bottom: none;
+}
+
+.subtask-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .subtask-title {
   font-size: 0.875rem;
   color: var(--text-secondary);
+  flex: 1;
+  cursor: pointer;
+}
+.subtask-title:hover {
+    color: var(--text-primary);
+}
+
+/* Steps (Level 3) */
+.steps-container {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+.steps-container.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+.step-item:hover {
+    color: var(--text-secondary);
 }
 
 /* Detail View (Slide-over) */

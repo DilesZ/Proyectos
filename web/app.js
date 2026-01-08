@@ -19,8 +19,6 @@ const elDetailOverlay = document.getElementById("detailOverlay");
 const elDetailTitle = document.getElementById("detailTitle");
 const elDetailBody = document.getElementById("detailBody");
 const elDetailBadge = document.getElementById("detailBadge");
-const elDetailTime = document.getElementById("detailTime");
-const elDetailDiff = document.getElementById("detailDiff");
 const btnCloseDetail = document.getElementById("closeDetail");
 
 document.getElementById("resetProgress").addEventListener("click", () => {
@@ -44,17 +42,12 @@ function loadProgress() {
 
 function saveProgress() {
   localStorage.setItem(storeKey, JSON.stringify(state.progress));
-  // saveProgressToDB(state.progress); // Optional backend sync
 }
 
 function computeStats(all) {
   let total = 0, completed = 0, points = 0;
   
-  // Helper to check task/subtask status recursively
-  const checkStatus = (item) => {
-      // If item is in progress map as true, it counts
-      return state.progress[item.id] === true;
-  };
+  const checkStatus = (item) => state.progress[item.id] === true;
 
   for (const b of all) {
       for (const t of b.tasks) {
@@ -66,21 +59,16 @@ function computeStats(all) {
                   points += t.points || 0;
               }
           } else {
-              // Task has subtasks
               for (const s of subt) {
                   const steps = s.steps || [];
                   if (steps.length > 0) {
                       total += steps.length;
-                      let stepCompletedCount = 0;
+                      let stepDone = 0;
                       for (const st of steps) {
-                          if (checkStatus(st)) stepCompletedCount++;
+                          if (checkStatus(st)) stepDone++;
                       }
-                      completed += stepCompletedCount;
-                      
-                      // Points only if all steps done
-                      if (stepCompletedCount === steps.length) {
-                          points += s.points || 0;
-                      }
+                      completed += stepDone;
+                      if (stepDone === steps.length) points += s.points || 0;
                   } else {
                       total++;
                       if (checkStatus(s)) {
@@ -116,7 +104,6 @@ function renderTabs(all) {
       });
       elTabs.appendChild(tab);
   });
-  // Initial render
   if(all.length > 0) renderBusiness(all[0]);
 }
 
@@ -127,33 +114,23 @@ function renderBusiness(b) {
   const container = document.createElement("div");
   container.className = "project-container";
 
-  // Calculate stats for this business
-  let total = 0, done = 0, points = 0;
-  // Reuse compute logic locally or simplify
-  // For UI progress bar
-  // We'll just iterate quickly to get local stats
-  // (Simplified for brevity, similar to computeStats but scoped)
-  // ... implementation of local stats calculation ...
-  
-  // Let's implement a quick traversal for local stats
+  // Calculate local stats
+  let total = 0, done = 0;
   const traverse = (items) => {
       items.forEach(t => {
           if (t.subtasks && t.subtasks.length > 0) {
               t.subtasks.forEach(s => {
                   if (s.steps && s.steps.length > 0) {
                       total += s.steps.length;
-                      s.steps.forEach(st => {
-                          if(state.progress[st.id]) done++;
-                      });
-                      if(s.steps.every(st => state.progress[st.id])) points += s.points || 0;
+                      s.steps.forEach(st => { if(state.progress[st.id]) done++; });
                   } else {
                       total++;
-                      if(state.progress[s.id]) { done++; points += s.points || 0; }
+                      if(state.progress[s.id]) done++;
                   }
               });
           } else {
               total++;
-              if(state.progress[t.id]) { done++; points += t.points || 0; }
+              if(state.progress[t.id]) done++;
           }
       });
   };
@@ -168,7 +145,7 @@ function renderBusiness(b) {
           </div>
           <div class="stat-row">
               <span>Progreso del Proyecto</span>
-              <span class="stat-value">${pct}% (${done}/${total} pasos)</span>
+              <span class="stat-value">${pct}% (${done}/${total} items)</span>
           </div>
       </div>
       <div class="task-list"></div>
@@ -180,12 +157,11 @@ function renderBusiness(b) {
   b.tasks.forEach(t => {
       const hasSub = (t.subtasks && t.subtasks.length > 0);
       
-      // Check completion status for styling
+      // Determine task "checked" state (visual only if it has subtasks)
       let isDone = false;
       if (!hasSub) {
           isDone = state.progress[t.id] === true;
       } else {
-          // Complex check
           isDone = t.subtasks.every(s => {
               const steps = s.steps || [];
               return steps.length > 0 ? steps.every(st => state.progress[st.id] === true) : state.progress[s.id] === true;
@@ -195,102 +171,154 @@ function renderBusiness(b) {
       const card = document.createElement("div");
       card.className = "task-card";
       
-      const checked = isDone ? "checked" : "";
-      
-      // Card Header
       const header = document.createElement("div");
       header.className = "task-header";
       
-      // Main checkbox logic (only for tasks without subtasks, or visual for parents)
-      // For parent tasks, clicking checkbox should arguably toggle all subtasks?
-      // For now, let's keep it simple: Parent checkbox reflects state, maybe read-only or toggle all.
-      // Let's make it toggle all for convenience.
-      
+      // Checkbox: If has subtasks, it acts as "select all" or just visual indicator
+      // Let's make it actionable: clicking it toggles all children
       header.innerHTML = `
-          <input type="checkbox" class="task-checkbox" ${checked} data-id="${t.id}" data-has-sub="${hasSub}">
+          <input type="checkbox" class="task-checkbox" ${isDone ? "checked" : ""} data-id="${t.id}">
           <div class="task-info">
               <div class="task-title">${t.title}</div>
               <div class="task-meta">
-                  ${hasSub ? `<span>${t.subtasks.length} subtareas</span>` : ""}
+                  ${hasSub ? `<span>${t.subtasks.length} grupos</span>` : ""}
                   ${t.points ? `<span class="badge points">+${t.points} pts</span>` : ""}
                   ${t.badge ? `<span class="badge">${t.badge}</span>` : ""}
               </div>
           </div>
+          <button class="btn-icon info-btn" title="Ver detalles">ℹ</button>
       `;
-      
-      // Click on title/info opens details
-      header.querySelector(".task-info").addEventListener("click", (e) => {
+
+      // Event: Toggle Details
+      header.querySelector(".info-btn").addEventListener("click", (e) => {
           e.stopPropagation();
           showDetail(t);
       });
 
-      // Click on header (background) could toggle subtasks visibility if present
+      // Event: Expand/Collapse Subtasks (Clicking header body)
       if (hasSub) {
           header.addEventListener("click", (e) => {
-             // If clicked on checkbox, don't toggle view
-             if(e.target.classList.contains("task-checkbox")) return;
-             
-             const subEl = card.querySelector(".subtasks");
-             if(subEl) subEl.classList.toggle("open");
+              if(e.target.type === "checkbox" || e.target.closest(".info-btn")) return;
+              const subEl = card.querySelector(".subtasks");
+              if(subEl) subEl.classList.toggle("open");
           });
       }
 
-      // Checkbox handler
+      // Event: Checkbox
       const cb = header.querySelector(".task-checkbox");
       cb.addEventListener("change", (e) => {
           const newVal = e.target.checked;
           updateTaskStatus(t, newVal);
           saveProgress();
-          updateGlobalStats([b]); // Inefficient but simple
-          renderBusiness(b); // Re-render to update UI state
+          // Update global stats
+          // We need to re-read 'allBusinesses' from state.tasks to update global
+          // But 'b' is a reference, so it should be fine? 
+          // Actually updateGlobalStats needs the full array.
+          // For now, re-render current view is enough for feedback
+          renderBusiness(b);
       });
 
       card.appendChild(header);
 
-      // Subtasks Render
+      // Subtasks Rendering
       if (hasSub) {
           const subList = document.createElement("div");
           subList.className = "subtasks";
           
           t.subtasks.forEach(s => {
-              const sHasSteps = (s.steps && s.steps.length > 0);
+              const hasSteps = (s.steps && s.steps.length > 0);
               const sItem = document.createElement("div");
               sItem.className = "subtask-item";
               
               let sDone = false;
-              if (sHasSteps) {
+              if (hasSteps) {
                   sDone = s.steps.every(st => state.progress[st.id]);
               } else {
                   sDone = state.progress[s.id];
               }
 
-              sItem.innerHTML = `
+              const sHeader = document.createElement("div");
+              sHeader.className = "subtask-header";
+              sHeader.innerHTML = `
                   <input type="checkbox" class="task-checkbox" ${sDone ? "checked" : ""} data-id="${s.id}">
-                  <div class="subtask-title" style="flex:1; cursor:pointer;">${s.title}</div>
+                  <div class="subtask-title">${s.title} ${hasSteps ? `<small>(${s.steps.length} pasos)</small>` : ""}</div>
                   ${s.points ? `<span class="badge points">+${s.points}</span>` : ""}
+                  <button class="btn-icon info-btn-s" title="Detalles">ℹ</button>
               `;
 
-              // Detail click
-              sItem.querySelector(".subtask-title").addEventListener("click", () => showDetail(s));
+              // Subtask Info
+              sHeader.querySelector(".info-btn-s").addEventListener("click", (e) => {
+                  e.stopPropagation();
+                  showDetail(s);
+              });
 
-              // Checkbox click
-              const sCb = sItem.querySelector("input");
+              // Subtask Expand Steps
+              if (hasSteps) {
+                  sHeader.querySelector(".subtask-title").addEventListener("click", () => {
+                      const stCont = sItem.querySelector(".steps-container");
+                      if(stCont) stCont.classList.toggle("open");
+                  });
+              }
+
+              // Subtask Checkbox
+              const sCb = sHeader.querySelector("input");
               sCb.addEventListener("change", (e) => {
                   const val = e.target.checked;
-                  if(sHasSteps) {
+                  if (hasSteps) {
                       s.steps.forEach(st => state.progress[st.id] = val);
                   } else {
                       state.progress[s.id] = val;
                   }
                   saveProgress();
-                  renderBusiness(b); // Re-render parent to update progress
+                  renderBusiness(b);
               });
+
+              sItem.appendChild(sHeader);
+
+              // Steps Rendering (Level 3)
+              if (hasSteps) {
+                  const stepsCont = document.createElement("div");
+                  stepsCont.className = "steps-container";
+                  
+                  s.steps.forEach(st => {
+                      const stItem = document.createElement("div");
+                      stItem.className = "step-item";
+                      const stDone = state.progress[st.id] === true;
+                      
+                      stItem.innerHTML = `
+                          <input type="checkbox" class="task-checkbox" ${stDone ? "checked" : ""} data-id="${st.id}">
+                          <span style="flex:1; cursor:pointer">${st.title}</span>
+                          <button class="btn-icon info-btn-st" style="font-size:0.8em">ℹ</button>
+                      `;
+                      
+                      // Step Info
+                      stItem.querySelector(".info-btn-st").addEventListener("click", (e) => {
+                          e.stopPropagation();
+                          showDetail(st);
+                      });
+                      
+                      // Step click text -> toggle checkbox
+                      stItem.querySelector("span").addEventListener("click", () => {
+                          stItem.querySelector("input").click();
+                      });
+
+                      // Step Checkbox
+                      const stCb = stItem.querySelector("input");
+                      stCb.addEventListener("change", (e) => {
+                          state.progress[st.id] = e.target.checked;
+                          saveProgress();
+                          renderBusiness(b);
+                      });
+                      
+                      stepsCont.appendChild(stItem);
+                  });
+                  sItem.appendChild(stepsCont);
+              }
 
               subList.appendChild(sItem);
           });
           card.appendChild(subList);
       }
-
       list.appendChild(card);
   });
 }
@@ -307,8 +335,6 @@ function updateTaskStatus(t, val) {
 
 function showDetail(item) {
   elDetailTitle.textContent = item.title;
-  
-  // Convert markdown-ish to HTML (simple)
   let desc = item.guide || item.description || "Sin descripción detallada.";
   
   // Basic Markdown replacement
@@ -320,7 +346,6 @@ function showDetail(item) {
 
   elDetailBody.innerHTML = desc;
   
-  // Badges
   if(item.badge) {
       elDetailBadge.textContent = item.badge;
       elDetailBadge.classList.remove("hidden");
@@ -347,7 +372,6 @@ fetch('data/tasks.json?v=' + dataVersion)
       state.tasks = data;
       state.progress = loadProgress();
       
-      // Handle different data structures (Array, Object with businesses key, or Object map)
       let allBusinesses = [];
       if (Array.isArray(data)) {
           allBusinesses = data;
