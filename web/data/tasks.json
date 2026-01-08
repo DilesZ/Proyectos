@@ -139,7 +139,7 @@
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Estética y Vestuario",
-                                                                                    "prompt":  "Genera un resultado para: Paleta color"
+                                                                                    "prompt":  "Genera una paleta de colores de 5 tonos con códigos HEX para un influencer IA de arquetipo {{arquetipo}} con estilo {{estilo}}. Explica el uso de cada color (principal, secundario, acento) y la psicología detrás."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_03_paleta_s02",
@@ -148,7 +148,7 @@
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Estética y Vestuario",
-                                                                                    "prompt":  "Genera un resultado para: Moodboard"
+                                                                                    "prompt":  "Describe 5 imágenes clave para un moodboard de un influencer {{arquetipo}}. Incluye referencias de iluminación, poses, entorno y estilo de edición."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_03_paleta_s03",
@@ -157,7 +157,7 @@
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Estética y Vestuario",
-                                                                                    "prompt":  "Genera un resultado para: Prendas clave"
+                                                                                    "prompt":  "Lista 10 prendas clave y accesorios para un armario cápsula de un influencer {{arquetipo}}. Incluye descripciones visuales detalladas para usar en prompts de generación de imagen."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_03_paleta_az04",
@@ -195,7 +195,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Compliance",
-                                                                                    "prompt":  "Genera un resultado para: Leer normas"
+                                                                                    "prompt":  "Resume las políticas de contenido prohibido de Instagram, TikTok y Fanvue en una lista de verificación de 10 puntos clave para evitar baneos."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_04_riesgo_s02",
@@ -204,7 +204,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Compliance",
-                                                                                    "prompt":  "Genera un resultado para: Límites"
+                                                                                    "prompt":  "Redacta una lista de 'Límites Hard' y 'Límites Soft' para el contenido de un influencer IA, definiendo qué se mostrará y qué no (ej. desnudez explícita vs sugerente)."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_04_riesgo_s03",
@@ -213,7 +213,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Fácil",
                                                                                     "description":  "Paso clave para completar: Compliance",
-                                                                                    "prompt":  "Genera un resultado para: Checklist"
+                                                                                    "prompt":  "Genera una checklist de validación de contenido de 5 puntos para asegurar que cada imagen cumpla con las normas de las plataformas antes de publicar."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_04_riesgo_az04",
@@ -251,7 +251,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Copywriting",
-                                                                                    "prompt":  "Genera un resultado para: CTAs"
+                                                                                    "prompt":  "Escribe 10 Call-to-Actions (CTAs) persuasivos para historias de Instagram, enfocados en redirigir tráfico al enlace en bio (Fanvue/Patreon)."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_05_copy_s02",
@@ -260,7 +260,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Copywriting",
-                                                                                    "prompt":  "Genera un resultado para: Tono"
+                                                                                    "prompt":  "Define la 'Voz y Tono' del personaje con ejemplos de respuestas a comentarios: uno coqueto, uno divertido y uno agradecido. Usa emojis acorde al arquetipo {{arquetipo}}."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_05_copy_s03",
@@ -269,7 +269,7 @@
                                                                                     "time":  "30 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Copywriting",
-                                                                                    "prompt":  "Genera un resultado para: CTA Default"
+                                                                                    "prompt":  "Redacta un mensaje de bienvenida automático (DM) para nuevos seguidores que incentive la interacción sin parecer spam."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_01_05_copy_az04",
@@ -2225,7 +2225,7 @@
                                                                                     "time":  "1 hora",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Prompts",
-                                                                                    "prompt":  "Genera un resultado para: Templates"
+                                                                                    "prompt":  "Crea una estructura de artículo para reseña de producto Amazon con: Título SEO, Intro (problema/solución), Tabla comparativa, Análisis profundo, Pros/Cons, y Conclusión con CTA."
                                                                                 },
                                                                                 {
                                                                                     "id":  "aa_05_01_prompts_az02",
@@ -2281,7 +2281,7 @@
                                                                                     "time":  "3 horas",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Producción",
-                                                                                    "prompt":  "Generar..."
+                                                                                    "prompt":  "Escribe una reseña completa de 1000 palabras para el producto {{producto}} enfocada en {{keyword}}. Incluye apartados de 'Mejor para...', 'Características clave' y 'Veredicto final'."
                                                                                 },
                                                                                 {
                                                                                     "id":  "aa_05_02_batch_s02",
@@ -2290,7 +2290,7 @@
                                                                                     "time":  "3 horas",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Producción",
-                                                                                    "prompt":  "Genera un resultado para: QA"
+                                                                                    "prompt":  "Revisa este texto buscando: exceso de adjetivos, falta de datos técnicos, tono demasiado vendedor. Mejóralo para que suene neutral y experto."
                                                                                 },
                                                                                 {
                                                                                     "id":  "aa_05_02_batch_s03",
@@ -2299,7 +2299,7 @@
                                                                                     "time":  "3 horas",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Producción",
-                                                                                    "prompt":  "Genera un resultado para: Publicar"
+                                                                                    "prompt":  "Genera el slug, meta description y alt text para las imágenes del artículo sobre {{producto}}."
                                                                                 },
                                                                                 {
                                                                                     "id":  "aa_05_02_batch_az04",
