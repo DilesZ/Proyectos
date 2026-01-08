@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Orquestador • Panel Gamificado</title>
-<link rel="stylesheet" href="styles.css?v=20251236">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orquestador • Panel Gamificado</title>
+  <link rel="stylesheet" href="styles.css?v=3.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-<h1>Orquestador • Panel Gamificado <span id="appVersion" class="badge"></span></h1>
-<div class="totals">
-<div class="total-item"><span id="totalPoints">0</span> puntos</div>
-<div class="total-item"><span id="totalCompleted">0</span>/<span id="totalTasks">0</span> tareas</div>
-<button id="resetProgress">Reiniciar progreso</button>
-</div>
-</header>
-<nav id="businessTabs" class="tabs"></nav>
-<main id="content" class="content"></main>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">O</div>
+        <div class="brand-text">
+          <h1>Orquestador</h1>
+          <span>v2.0 Project Manager</span>
+        </div>
+      </div>
+      
+      <div class="nav-menu" id="businessTabs">
+        <!-- Navigation items will be injected here -->
+      </div>
 
-<div id="detailView" class="detail-view hidden">
-  <header class="detail-header">
-    <button id="closeDetail" class="back-btn">← Volver</button>
-    <h2 id="detailTitle">Detalle</h2>
-  </header>
-  <div class="detail-scroll">
-    <div class="detail-meta-container">
-        <span id="detailBadge" class="badge-lg hidden"></span>
-        <span id="detailTime" class="pill hidden"></span>
-        <span id="detailDiff" class="pill hidden"></span>
-    </div>
-    <div id="detailBody" class="detail-body"></div>
+      <div class="user-stats">
+        <div class="stat-row">
+          <span>Puntos Totales</span>
+          <span class="stat-value" id="totalPoints">0</span>
+        </div>
+        <div class="stat-row">
+          <span>Progreso</span>
+          <span class="stat-value"><span id="totalCompleted">0</span>/<span id="totalTasks">0</span></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="top-bar">
+        <h2 class="page-title" id="currentViewTitle">Dashboard</h2>
+        <div class="actions">
+          <button id="resetProgress" class="btn btn-secondary">
+            <span>↺</span> Reiniciar
+          </button>
+        </div>
+      </header>
+
+      <div class="scroll-area" id="content">
+        <!-- Content will be injected here -->
+      </div>
+    </main>
   </div>
-</div>
 
-<script src="app.js?v=db_integrated_v1"></script>
+  <!-- Detail View Slide-over -->
+  <div id="detailOverlay" class="detail-overlay"></div>
+  <div id="detailView" class="detail-panel">
+    <header class="detail-header">
+      <h2 id="detailTitle" style="margin:0; font-size:1.25rem;">Detalle</h2>
+      <button id="closeDetail" class="btn btn-secondary" style="padding:0.25rem 0.5rem;">✕</button>
+    </header>
+    <div class="detail-content">
+      <div class="detail-meta-container" style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+          <span id="detailBadge" class="badge hidden"></span>
+          <span id="detailTime" class="badge hidden"></span>
+          <span id="detailDiff" class="badge hidden"></span>
+      </div>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js?v=3.0"></script>
 </body>
 </html>
