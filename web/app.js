@@ -2,8 +2,18 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20260108"; 
+const dataVersion = "20260108-2"; 
 const storeKey = "orquestador_progress_v2";
+// Simple userId generation/retrieval for demo purposes
+function getUserId() {
+    let uid = localStorage.getItem("orquestador_uid");
+    if (!uid) {
+        uid = 'user_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem("orquestador_uid", uid);
+    }
+    return uid;
+}
+const userId = getUserId();
 
 // Elements
 const elTabs = document.getElementById("businessTabs");
@@ -31,17 +41,46 @@ document.getElementById("resetProgress").addEventListener("click", () => {
 btnCloseDetail.addEventListener("click", hideDetail);
 elDetailOverlay.addEventListener("click", hideDetail);
 
-function loadProgress() {
+async function loadProgress() {
+  // First try local storage for immediate render
+  let localData = {};
   try {
       const raw = localStorage.getItem(storeKey);
-      return raw ? JSON.parse(raw) : {};
+      if (raw) localData = JSON.parse(raw);
+  } catch (e) { console.warn("Local load error", e); }
+
+  // Then try to fetch from API
+  try {
+      const res = await fetch(`/api/progress?userId=${userId}`);
+      if (res.ok) {
+          const cloudData = await res.json();
+          if (cloudData) {
+              console.log("Cloud data loaded", cloudData);
+              // Merge or prefer cloud? For now, prefer cloud if exists
+              return cloudData;
+          }
+      }
   } catch (e) {
-      return {};
+      console.warn("API load error", e);
   }
+  
+  return localData;
 }
 
-function saveProgress() {
+async function saveProgress() {
+  // Save local
   localStorage.setItem(storeKey, JSON.stringify(state.progress));
+  
+  // Save cloud
+  try {
+      await fetch(`/api/progress?userId=${userId}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(state.progress)
+      });
+  } catch (e) {
+      console.error("API save error", e);
+  }
 }
 
 function computeStats(all) {
@@ -368,9 +407,9 @@ fetch('data/tasks.json?v=' + dataVersion)
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
   })
-  .then(data => {
+  .then(async data => {
       state.tasks = data;
-      state.progress = loadProgress();
+      state.progress = await loadProgress();
       
       let allBusinesses = [];
       if (Array.isArray(data)) {
