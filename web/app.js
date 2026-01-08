@@ -339,16 +339,28 @@ function hideDetail() {
 
 // Init
 fetch('data/tasks.json?v=' + dataVersion)
-  .then(r => r.json())
+  .then(r => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+  })
   .then(data => {
       state.tasks = data;
       state.progress = loadProgress();
       
-      const allBusinesses = Object.values(data);
+      // Handle different data structures (Array, Object with businesses key, or Object map)
+      let allBusinesses = [];
+      if (Array.isArray(data)) {
+          allBusinesses = data;
+      } else if (data.businesses && Array.isArray(data.businesses)) {
+          allBusinesses = data.businesses;
+      } else {
+          allBusinesses = Object.values(data);
+      }
+      
       updateGlobalStats(allBusinesses);
       renderTabs(allBusinesses);
   })
   .catch(e => {
       console.error("Error loading tasks", e);
-      elContent.innerHTML = "<div style='padding:2rem; color:red'>Error cargando datos. Revisa la consola.</div>";
+      elContent.innerHTML = "<div style='padding:2rem; color:red'>Error cargando datos. Revisa la consola.<br><small>" + e.message + "</small></div>";
   });
