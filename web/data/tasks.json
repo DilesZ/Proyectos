@@ -1,4 +1,4 @@
-{
+﻿{
     "businesses":  [
                        {
                            "key":  "influencer_agency",
@@ -6,25 +6,29 @@
                            "tasks":  [
                                          {
                                              "id":  "fanvue_01_arquetipo",
-                                             "title":  "Definir arquetipo y branding",
-                                             "points":  10,
-                                             "badge":  "Setup",
-                                             "description":  "Fase inicial crítica para definir la identidad del negocio.",
+                                            "title":  "Crear tu Personaje y Marca",
+                                            "points":  10,
+                                            "badge":  "Setup",
+                                            "description":  "Define quién es tu Influencer IA y cómo se verá. Es la base de todo.",
                                              "time":  "2 horas",
                                              "difficulty":  "Media",
                                              "subtasks":  [
                                                               {
                                                                   "id":  "fanvue_01_01_arquetipo",
-                                                                  "title":  "Elegir arquetipo (fit/gamer/elegante)",
-                                                                  "points":  2,
-                                                                  "description":  "Selección del nicho de mercado.",
+                                                                 "title":  "Elegir Personalidad (Nicho)",
+                                                                 "points":  2,
+                                                                 "description":  "Elige qué tipo de influencer será (Gamer, Fitness, Cosplayer, etc).",
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Fácil",
                                                                   "steps":  [
                                                                                 {
                                                                                     "id":  "fanvue_01_01_arquetipo_s01",
                                                                                     "title":  "Listar 3 nichos candidatos",
-                                                                                    "prompt":  "Genera 3 nichos...",
+                                                                                    "prompt":  "Genera 3 nichos rentables para una Influencer IA en 2024. Para cada uno, dime: Edad objetivo, Intereses principales, y Estilo visual.",
+                                                                                    "tools": [
+                                                                                        {"name": "ChatGPT", "url": "https://chatgpt.com/"},
+                                                                                        {"name": "Claude", "url": "https://claude.ai/"}
+                                                                                    ],
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Listar 3 nichos candidatos y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Fácil",
@@ -298,16 +302,16 @@
                                          },
                                          {
                                              "id":  "fanvue_02_imagen_maestra",
-                                             "title":  "Generar Imagen Maestra",
+                                             "title":  "Generar tu Primera Foto (Anchor)",
                                              "points":  20,
                                              "badge":  "Anchor",
-                                             "description":  "Creación de la imagen base de referencia.",
+                                             "description":  "Crea la imagen definitiva de tu influencer. Esta será la 'cara' de tu negocio.",
                                              "time":  "3 horas",
-                                             "difficulty":  "Difícil",
+                                             "difficulty":  "Media",
                                              "subtasks":  [
                                                               {
                                                                   "id":  "fanvue_02_01_prompt",
-                                                                  "title":  "Prompt Anchor",
+                                                                  "title":  "Diseñar el Prompt",
                                                                   "points":  5,
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Media",
@@ -315,11 +319,15 @@
                                                                                 {
                                                                                     "id":  "fanvue_02_01_prompt_s01",
                                                                                     "title":  "Prompt base",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Prompt base y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
+                                                                                    "guide":  "### 🎯 Objetivo\nObtener un prompt detallado que describa físicamente a tu influencer.\n\n### 🛠️ Herramientas\n- ChatGPT/Claude\n- Traductor (si la IA de imagen requiere inglés)\n\n### 🔧 Instrucciones\n1. Pide a la IA que describa a tu personaje visualmente.\n2. Incluye detalles: color de ojos, pelo, cuerpo, ropa típica, iluminación.\n3. Traduce el resultado al inglés si usas SeaArt o Tensor.",
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Media",
                                                                                     "description":  "Paso clave para completar: Prompt Anchor",
-                                                                                    "prompt":  "Genera un resultado para: Prompt base"
+                                                                                    "prompt":  "Crea un prompt detallado para generación de imágenes (Stable Diffusion) de una chica de 20 años, {{arquetipo}}, {{estilo}}, con iluminación cinemática, 8k, ultra realista.",
+                                                                                    "tools": [
+                                                                                        {"name": "ChatGPT", "url": "https://chatgpt.com/"},
+                                                                                        {"name": "DeepL", "url": "https://www.deepl.com/"}
+                                                                                    ]
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_02_01_prompt_s02",
@@ -363,37 +371,46 @@
                                                               },
                                                               {
                                                                   "id":  "fanvue_02_02_generar",
-                                                                  "title":  "Generar y elegir",
+                                                                  "title":  "Sesión de Fotos IA",
                                                                   "points":  5,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
                                                                                     "id":  "fanvue_02_02_generar_s01",
-                                                                                    "title":  "Batch",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Batch y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
+                                                                                    "title":  "Generar Tanda Inicial",
+                                                                                    "guide":  "### 🎯 Objetivo\nGenerar al menos 20 imágenes usando el prompt base.\n\n### 🛠️ Herramientas\n- SeaArt/Tensor.art (Gratis)\n- Leonardo.ai (Freemium)\n\n### 🔧 Instrucciones\n1. Copia tu prompt base en la herramienta.\n2. Genera lotes de 4 en 4.\n3. No te preocupes por pequeños fallos ahora, buscamos una cara bonita y coherente.",
                                                                                     "time":  "1 hora",
-                                                                                    "difficulty":  "Media",
-                                                                                    "description":  "Paso clave para completar: Generar y elegir",
-                                                                                    "prompt":  "Genera un resultado para: Batch"
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "description":  "Paso clave para completar: Sesión de Fotos IA",
+                                                                                    "prompt":  "Usa este checklist para configurar la generación: Model: RealVisXL / JuggernautXL, Sampling: DPM++ 2M Karras, Steps: 30-40, CFG: 7.",
+                                                                                    "tools": [
+                                                                                        {"name": "SeaArt (Gratis)", "url": "https://www.seaart.ai/"},
+                                                                                        {"name": "Tensor.art (Gratis)", "url": "https://tensor.art/"},
+                                                                                        {"name": "Leonardo (Freemium)", "url": "https://leonardo.ai/"}
+                                                                                    ]
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_02_02_generar_s02",
-                                                                                    "title":  "Filtrar",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Filtrar y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
-                                                                                    "time":  "1 hora",
-                                                                                    "difficulty":  "Media",
-                                                                                    "description":  "Paso clave para completar: Generar y elegir",
-                                                                                    "prompt":  "Genera un resultado para: Filtrar"
+                                                                                    "title":  "Seleccionar la Mejor",
+                                                                                    "guide":  "### 🎯 Objetivo\nElegir 1 sola imagen que sea perfecta.\n\n### 🔧 Instrucciones\n1. Revisa las manos (que tengan 5 dedos).\n2. Revisa los ojos (simétricos).\n3. Descarta si hay deformidades obvias.",
+                                                                                    "time":  "15 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "description":  "Paso clave para completar: Sesión de Fotos IA",
+                                                                                    "prompt":  "Criterios de selección: 1. Rostro simétrico. 2. Mirada a cámara. 3. Iluminación favorecedora. 4. Fondo no distractivo."
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_02_02_generar_s03",
-                                                                                    "title":  "Finalista",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Finalista y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
-                                                                                    "time":  "1 hora",
-                                                                                    "difficulty":  "Media",
-                                                                                    "description":  "Paso clave para completar: Generar y elegir",
-                                                                                    "prompt":  "Genera un resultado para: Finalista"
+                                                                                    "title":  "Guardar y Escalar",
+                                                                                    "guide":  "### 🎯 Objetivo\nTener la imagen en alta resolución para usarla en perfiles.\n\n### 🛠️ Herramientas\n- Upscalers gratuitos\n\n### 🔧 Instrucciones\n1. Sube tu imagen elegida a un upscaler.\n2. Aumenta x2 o x4.\n3. Guárdala como 'Foto_Perfil_Master.png'.",
+                                                                                    "time":  "15 min",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "description":  "Paso clave para completar: Sesión de Fotos IA",
+                                                                                    "prompt":  "Usa una herramienta de Upscale para mejorar la nitidez. No cambies la cara, solo mejora la calidad.",
+                                                                                    "tools": [
+                                                                                        {"name": "Upscale.media", "url": "https://www.upscale.media/"},
+                                                                                        {"name": "Img2Go", "url": "https://www.img2go.com/upscale-image"}
+                                                                                    ]
                                                                                 },
                                                                                 {
                                                                                     "id":  "fanvue_02_02_generar_az04",
@@ -1005,7 +1022,48 @@
                                              "prompt":  "Genera un resultado para: Pack SFW Inicial"
                                          },
                                          {
-                                             "id":  "fanvue_05_publicacion",
+                                             "id": "fanvue_05_fast_traffic",
+                                             "title": "Tráfico Rápido (Reels/TikTok)",
+                                             "points": 10,
+                                             "badge": "Traffic",
+                                             "description": "Estrategia para conseguir visitas desde el día 1 sin gastar dinero.",
+                                             "time": "2 horas",
+                                             "difficulty": "Fácil",
+                                             "subtasks": [
+                                                 {
+                                                     "id": "fanvue_05_01_remix",
+                                                     "title": "Remix Viral",
+                                                     "points": 3,
+                                                     "time": "45 min",
+                                                     "difficulty": "Fácil",
+                                                     "prompt": "Busca 5 videos virales de chicas IA en TikTok y describe cómo hacer un Remix/Dúo reaccionando.",
+                                                     "tools": [{"name": "TikTok", "url": "https://www.tiktok.com/"}],
+                                                     "guide": "### 🎯 Objetivo\nGenerar visitas rápidas aprovechando contenido viral existente.\n\n### 🛠️ Herramientas\n- TikTok\n- CapCut (para editar si es necesario)\n\n### 🔧 Instrucciones\n1. Busca hashtags como #AIgirl #Fanvue #VirtualInfluencer.\n2. Encuentra videos con +100k vistas.\n3. Haz un 'Remix' o 'Dúo' reaccionando (aunque sea solo visualmente).\n4. Usa el mismo audio viral.\n5. En la descripción pon algo intrigante y tu link en bio (si tienes)."
+                                                 },
+                                                 {
+                                                     "id": "fanvue_05_02_twitter",
+                                                     "title": "Twitter/X Reply (Parasite SEO)",
+                                                     "points": 3,
+                                                     "time": "45 min",
+                                                     "difficulty": "Fácil",
+                                                     "prompt": "Identifica 5 cuentas grandes (+100k) de tu nicho y escribe 3 respuestas aportando valor/humor.",
+                                                     "tools": [{"name": "Twitter/X", "url": "https://twitter.com/"}],
+                                                     "guide": "### 🎯 Objetivo\nRobar tráfico de cuentas grandes comentando temprano.\n\n### 🔧 Instrucciones\n1. Activa notificaciones de cuentas top en tu nicho.\n2. Cuando publiquen, comenta en los primeros 5 minutos.\n3. No hagas spam ('sígueme'). Aporta valor, un meme o una opinión polémica (pero alineada).\n4. Tu perfil debe estar optimizado para que quien haga click se quede."
+                                                 },
+                                                 {
+                                                     "id": "fanvue_05_03_reddit",
+                                                     "title": "Reddit Seeding",
+                                                     "points": 4,
+                                                     "time": "30 min",
+                                                     "difficulty": "Media",
+                                                     "prompt": "Encuentra 3 subreddits de tu nicho y redacta un post de 'Presentación' sin vender nada.",
+                                                     "tools": [{"name": "Reddit", "url": "https://www.reddit.com/"}],
+                                                     "guide": "### 🎯 Objetivo\nSembrar tu presencia en comunidades sin ser baneado.\n\n### 🔧 Instrucciones\n1. Busca subreddits relacionados (ej. r/DigitalArt, r/AIModels, o nichos específicos).\n2. Lee las reglas (importante: Self-Promo).\n3. Publica una foto tuya (SFW) diciendo 'Hola, soy nueva en esto, ¿qué opinan?'.\n4. Interactúa con los comentarios. No pongas links a menos que te pregunten."
+                                                 }
+                                             ]
+                                         },
+                                         {
+                                             "id":  "fanvue_06_publicacion",
                                              "title":  "Publicación Fanvue",
                                              "points":  12,
                                              "badge":  "Publishing",
@@ -1014,41 +1072,44 @@
                                              "difficulty":  "Media",
                                              "subtasks":  [
                                                               {
-                                                                  "id":  "fanvue_05_01_cuenta",
+                                                                  "id":  "fanvue_06_01_cuenta",
                                                                   "title":  "Configurar cuenta y verificación",
                                                                   "points":  3,
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Fácil",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_05_01_s01",
+                                                                                    "id":  "fanvue_06_01_s01",
                                                                                     "title":  "Registro y perfil",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Registro y perfil y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
+                                                                                    "guide":  "### 🎯 Objetivo\nCrear una BIO irresistible y configurar tu perfil para convertir visitas en fans.\n\n### 🛠️ Herramientas\n- ChatGPT/Claude (para textos)\n- Canva (para banner/foto)\n\n### 🔧 Instrucciones\n1. Sube tu Foto de Perfil (Close-up, sonriendo/seductora según arquetipo).\n2. Sube tu Banner (Paisaje, habitación, algo que de contexto).\n3. Rellena la BIO usando el prompt.\n4. Configura el precio de suscripción (Recomendado: $5-10 para empezar o Free con PPV).",
                                                                                     "time":  "45 min",
                                                                                     "difficulty":  "Fácil",
-                                                                                    "description":  "Paso clave para completar: Configurar cuenta y verificación",
-                                                                                    "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
+                                                                                    "description":  "Configura la cara visible de tu negocio.",
+                                                                                    "prompt":  "Actúa como experta en marketing de OnlyFans/Fanvue. Redacta 3 opciones de BIO para mi perfil (max 150 caracteres). Mi arquetipo es: {{arquetipo}}. Mi estilo es: {{estilo}}. Incluye emojis, un hook picante pero seguro, y un CTA claro.",
+                                                                                    "tools": [{"name": "ChatGPT", "url": "https://chat.openai.com/"}]
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_01_s02",
-                                                                                    "title":  "Verificación identidad y fiscalidad",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Verificación identidad y fiscalidad y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
-                                                                                    "time":  "45 min",
+                                                                                    "id":  "fanvue_06_01_s02",
+                                                                                    "title":  "Verificación identidad",
+                                                                                    "guide":  "### 🎯 Objetivo\nVerificar tu identidad para poder cobrar (KYC).\n\n### 🔧 Instrucciones\n1. Ten a mano tu DNI/Pasaporte y buena luz.\n2. Completa el proceso de verificación de Fanvue/OnlyFans.\n3. Si eres agencia/tienes modelo: Asegúrate de tener el contrato de cesión de derechos de imagen firmado.\n4. Si eres 100% IA (sin modelo real): Necesitas una persona real (tú o un socio) que ponga su identidad legal.",
+                                                                                    "time":  "30 min",
                                                                                     "difficulty":  "Fácil",
-                                                                                    "description":  "Paso clave para completar: Configurar cuenta y verificación",
-                                                                                    "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
+                                                                                    "description":  "Completa el proceso KYC obligatorio.",
+                                                                                    "prompt":  "Explícame los requisitos de verificación de identidad para creadores en Fanvue. ¿Qué documentos necesito si soy una agencia gestionando una modelo?",
+                                                                                    "tools": [{"name": "Fanvue Help", "url": "https://www.fanvue.com/"}]
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_01_s03",
-                                                                                    "title":  "Configurar payout (Stripe/Bank)",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Configurar payout y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
-                                                                                    "time":  "45 min",
+                                                                                    "id":  "fanvue_06_01_s03",
+                                                                                    "title":  "Métodos de cobro (Payout)",
+                                                                                    "guide":  "### 🎯 Objetivo\nConfigurar cómo vas a recibir el dinero.\n\n### 🔧 Instrucciones\n1. Fanvue paga a través de transferencia bancaria (IBAN) o métodos alternativos (Paxum/Cosmo) según país.\n2. Si estás en Latam, revisa si necesitas un intermediario como Paxum.\n3. Si estás en Europa/USA, cuenta bancaria directa.\n4. Rellena el formulario fiscal (W-8BEN si no eres de USA).",
+                                                                                    "time":  "30 min",
                                                                                     "difficulty":  "Fácil",
-                                                                                    "description":  "Paso clave para completar: Configurar cuenta y verificación",
-                                                                                    "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
+                                                                                    "description":  "Configura tu cuenta bancaria y fiscalidad.",
+                                                                                    "prompt":  "Explícame cómo rellenar el formulario W-8BEN para recibir pagos de plataformas de USA siendo de fuera. Dame los pasos clave.",
+                                                                                    "tools": [{"name": "IRS Instructions", "url": "https://www.irs.gov/"}]
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_01_s04",
+                                                                                    "id":  "fanvue_06_01_s04",
                                                                                     "title":  "Seguridad (2FA, accesos)",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Seguridad 2FA y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1057,7 +1118,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_01_cuenta_az05",
+                                                                                    "id":  "fanvue_06_01_cuenta_az05",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Configurar cuenta y verificación",
                                                                                     "time":  "45 min",
@@ -1070,23 +1131,24 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_05_02_producto",
+                                                                  "id":  "fanvue_06_02_producto",
                                                                   "title":  "Definir tiers, bundles y PPV",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_05_02_s01",
+                                                                                    "id":  "fanvue_06_02_s01",
                                                                                     "title":  "Niveles y beneficios",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Niveles y beneficios y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
+                                                                                    "guide":  "### 🎯 Objetivo\nDefinir cuánto vas a cobrar y qué vas a dar a cambio.\n\n### 🔧 Instrucciones\n1. Decide tu modelo: \n   - **Suscripción de Pago ($5-$15):** Menos fans, más calidad, contenido explícito incluido.\n   - **Cuenta Gratuita (Free):** Muchos fans, dinero viene de vender fotos sueltas (PPV).\n2. Configura tu 'Mensaje de Bienvenida' automático (con una foto de regalo o descuento).\n3. Define precios de tus 'Packs' (3 fotos, 1 video, etc).",
                                                                                     "time":  "1 hora",
                                                                                     "difficulty":  "Media",
-                                                                                    "description":  "Paso clave para completar: Definir tiers, bundles y PPV",
-                                                                                    "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
+                                                                                    "description":  "Define tu estrategia de monetización.",
+                                                                                    "prompt":  "Ayúdame a definir mi lista de precios (Menu). Soy una influencer IA nicho {{arquetipo}}. Sugiere precios para: 1. Suscripción mensual. 2. Pack de 3 fotos exclusivas. 3. Video saludo personalizado. 4. Sexting (10 min). Dame precios en USD competitivos para empezar.",
+                                                                                    "tools": [{"name": "ChatGPT", "url": "https://chat.openai.com/"}]
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_02_s02",
+                                                                                    "id":  "fanvue_06_02_s02",
                                                                                     "title":  "Precios y promociones",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Precios y promociones y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1095,7 +1157,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_02_s03",
+                                                                                    "id":  "fanvue_06_02_s03",
                                                                                     "title":  "Contenido PPV y paywalls",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: PPV y paywalls y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1104,7 +1166,7 @@
                                                                                     "prompt":  "Genera un calendario de contenidos semanal con ideas y formatos."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_02_s04",
+                                                                                    "id":  "fanvue_06_02_s04",
                                                                                     "title":  "Políticas y normas",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Políticas y normas y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1113,7 +1175,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_02_producto_az05",
+                                                                                    "id":  "fanvue_06_02_producto_az05",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Definir tiers, bundles y PPV",
                                                                                     "time":  "1 hora",
@@ -1126,14 +1188,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_05_03_calendario",
+                                                                  "id":  "fanvue_06_03_calendario",
                                                                   "title":  "Plan y calendario de publicación",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_05_03_s01",
+                                                                                    "id":  "fanvue_06_03_s01",
                                                                                     "title":  "Calendario semanal (free/paid)",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Calendario semanal y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1142,7 +1204,7 @@
                                                                                     "prompt":  "Genera un calendario de contenidos semanal con ideas y formatos."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_03_s02",
+                                                                                    "id":  "fanvue_06_03_s02",
                                                                                     "title":  "Guiones y assets",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Guiones y assets y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1151,7 +1213,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_03_s03",
+                                                                                    "id":  "fanvue_06_03_s03",
                                                                                     "title":  "Series y continuidad",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Series y continuidad y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1160,7 +1222,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_03_s04",
+                                                                                    "id":  "fanvue_06_03_s04",
                                                                                     "title":  "Checklist de publicación",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Checklist de publicación y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1169,7 +1231,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_03_calendario_az05",
+                                                                                    "id":  "fanvue_06_03_calendario_az05",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Plan y calendario de publicación",
                                                                                     "time":  "1 hora",
@@ -1182,14 +1244,14 @@
                                                                   "prompt":  "Genera un calendario de contenidos semanal con ideas y formatos."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_05_04_lanzamiento",
+                                                                  "id":  "fanvue_06_04_lanzamiento",
                                                                   "title":  "Lanzamiento: semana 1",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_05_04_s01",
+                                                                                    "id":  "fanvue_06_04_s01",
                                                                                     "title":  "Programar 7 posts y 3 PPV",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Programación inicial y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1198,7 +1260,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_04_s02",
+                                                                                    "id":  "fanvue_06_04_s02",
                                                                                     "title":  "Copys y CTA específicos Fanvue",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Copys y CTA y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1207,7 +1269,7 @@
                                                                                     "prompt":  "Escribe 10 captions cortos en tono atractivo, con CTA y hashtags relevantes."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_04_s03",
+                                                                                    "id":  "fanvue_06_04_s03",
                                                                                     "title":  "Stories y etiquetado",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Stories y etiquetado y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1216,7 +1278,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_04_s04",
+                                                                                    "id":  "fanvue_06_04_s04",
                                                                                     "title":  "Revisión métricas diarias",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Revisión métricas y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1225,7 +1287,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_04_lanzamiento_az05",
+                                                                                    "id":  "fanvue_06_04_lanzamiento_az05",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Lanzamiento: semana 1",
                                                                                     "time":  "1 hora",
@@ -1238,14 +1300,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_05_05_automatizaciones",
+                                                                  "id":  "fanvue_06_05_automatizaciones",
                                                                   "title":  "Automatizaciones y retención",
                                                                   "points":  3,
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_05_05_s01",
+                                                                                    "id":  "fanvue_06_05_s01",
                                                                                     "title":  "Mensaje bienvenida y upsell",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Bienvenida y upsell y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1254,7 +1316,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_05_s02",
+                                                                                    "id":  "fanvue_06_05_s02",
                                                                                     "title":  "DM templates y triggers",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: DM templates y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1263,7 +1325,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_05_s03",
+                                                                                    "id":  "fanvue_06_05_s03",
                                                                                     "title":  "Reactivación y ofertas",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Reactivación y ofertas y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1272,7 +1334,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_05_s04",
+                                                                                    "id":  "fanvue_06_05_s04",
                                                                                     "title":  "Churn y fidelización",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Churn y fidelización y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1281,7 +1343,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_05_05_automatizaciones_az05",
+                                                                                    "id":  "fanvue_06_05_automatizaciones_az05",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Automatizaciones y retención",
                                                                                     "time":  "45 min",
@@ -1297,7 +1359,7 @@
                                              "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                          },
                                          {
-                                             "id":  "fanvue_06_marketing",
+                                             "id":  "fanvue_07_marketing",
                                              "title":  "Marketing Fanvue",
                                              "points":  12,
                                              "badge":  "Growth",
@@ -1306,14 +1368,14 @@
                                              "difficulty":  "Media",
                                              "subtasks":  [
                                                               {
-                                                                  "id":  "fanvue_06_01_perfil",
+                                                                  "id":  "fanvue_07_01_perfil",
                                                                   "title":  "Optimización perfil y SEO interno",
                                                                   "points":  3,
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Fácil",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_06_01_s01",
+                                                                                    "id":  "fanvue_07_01_s01",
                                                                                     "title":  "Bio, keywords y portada",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Bio y keywords y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1322,7 +1384,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_01_s02",
+                                                                                    "id":  "fanvue_07_01_s02",
                                                                                     "title":  "Link-in-bio y banner",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Link-in-bio y banner y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1331,7 +1393,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_01_s03",
+                                                                                    "id":  "fanvue_07_01_s03",
                                                                                     "title":  "Tracking y UTMs",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Tracking y UTMs y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1340,7 +1402,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_01_perfil_az04",
+                                                                                    "id":  "fanvue_07_01_perfil_az04",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Optimización perfil y SEO interno",
                                                                                     "time":  "45 min",
@@ -1349,7 +1411,7 @@
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Definir objetivo y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_01_perfil_az05",
+                                                                                    "id":  "fanvue_07_01_perfil_az05",
                                                                                     "title":  "Consistencia del personaje",
                                                                                     "description":  "Paso clave para completar: Optimización perfil y SEO interno",
                                                                                     "time":  "45 min",
@@ -1362,14 +1424,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_06_02_social",
+                                                                  "id":  "fanvue_07_02_social",
                                                                   "title":  "Adquisición social (TikTok/IG/Twitter)",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_06_02_s01",
+                                                                                    "id":  "fanvue_07_02_s01",
                                                                                     "title":  "Hook bank y formatos",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Hook bank y formatos y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1378,7 +1440,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_02_s02",
+                                                                                    "id":  "fanvue_07_02_s02",
                                                                                     "title":  "Hashtags y pauta básica",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Hashtags y pauta y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1387,7 +1449,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_02_s03",
+                                                                                    "id":  "fanvue_07_02_s03",
                                                                                     "title":  "Cross-post y timing",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Cross-post y timing y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1396,7 +1458,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_02_social_az04",
+                                                                                    "id":  "fanvue_07_02_social_az04",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Adquisición social (TikTok/IG/Twitter)",
                                                                                     "time":  "1 hora",
@@ -1405,7 +1467,7 @@
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Definir objetivo y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_02_social_az05",
+                                                                                    "id":  "fanvue_07_02_social_az05",
                                                                                     "title":  "Consistencia del personaje",
                                                                                     "description":  "Paso clave para completar: Adquisición social (TikTok/IG/Twitter)",
                                                                                     "time":  "1 hora",
@@ -1418,14 +1480,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_06_03_colab",
+                                                                  "id":  "fanvue_07_03_colab",
                                                                   "title":  "Colaboraciones y cross-promo",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_06_03_s01",
+                                                                                    "id":  "fanvue_07_03_s01",
                                                                                     "title":  "Listado y outreach",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Listado y outreach y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1434,7 +1496,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_03_s02",
+                                                                                    "id":  "fanvue_07_03_s02",
                                                                                     "title":  "Acuerdos y contenido conjunto",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Acuerdos y contenido conjunto y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1443,7 +1505,7 @@
                                                                                     "prompt":  "Genera un calendario de contenidos semanal con ideas y formatos."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_03_s03",
+                                                                                    "id":  "fanvue_07_03_s03",
                                                                                     "title":  "Medición y seguimiento",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Medición y seguimiento y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1452,7 +1514,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_03_colab_az04",
+                                                                                    "id":  "fanvue_07_03_colab_az04",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Colaboraciones y cross-promo",
                                                                                     "time":  "1 hora",
@@ -1461,7 +1523,7 @@
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Definir objetivo y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_03_colab_az05",
+                                                                                    "id":  "fanvue_07_03_colab_az05",
                                                                                     "title":  "Consistencia del personaje",
                                                                                     "description":  "Paso clave para completar: Colaboraciones y cross-promo",
                                                                                     "time":  "1 hora",
@@ -1474,14 +1536,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_06_04_embudos",
+                                                                  "id":  "fanvue_07_04_embudos",
                                                                   "title":  "Embudos: landing, lead magnet y DM/email",
                                                                   "points":  3,
                                                                   "time":  "1 hora",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_06_04_s01",
+                                                                                    "id":  "fanvue_07_04_s01",
                                                                                     "title":  "Landing y oferta",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Landing y oferta y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1490,7 +1552,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_04_s02",
+                                                                                    "id":  "fanvue_07_04_s02",
                                                                                     "title":  "Lead magnet y captura",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Lead magnet y captura y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1499,7 +1561,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_04_s03",
+                                                                                    "id":  "fanvue_07_04_s03",
                                                                                     "title":  "Secuencia DM/email",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Secuencia DM/email y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "1 hora",
@@ -1508,7 +1570,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_04_embudos_az04",
+                                                                                    "id":  "fanvue_07_04_embudos_az04",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Embudos: landing, lead magnet y DM/email",
                                                                                     "time":  "1 hora",
@@ -1517,7 +1579,7 @@
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Definir objetivo y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_04_embudos_az05",
+                                                                                    "id":  "fanvue_07_04_embudos_az05",
                                                                                     "title":  "Consistencia del personaje",
                                                                                     "description":  "Paso clave para completar: Embudos: landing, lead magnet y DM/email",
                                                                                     "time":  "1 hora",
@@ -1530,14 +1592,14 @@
                                                                   "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                               },
                                                               {
-                                                                  "id":  "fanvue_06_05_metricas",
+                                                                  "id":  "fanvue_07_05_metricas",
                                                                   "title":  "Métricas: CVR, AOV, churn, LTV",
                                                                   "points":  3,
                                                                   "time":  "45 min",
                                                                   "difficulty":  "Media",
                                                                   "steps":  [
                                                                                 {
-                                                                                    "id":  "fanvue_06_05_s01",
+                                                                                    "id":  "fanvue_07_05_s01",
                                                                                     "title":  "Dashboard y KPIs",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Dashboard y KPIs y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1546,7 +1608,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_05_s02",
+                                                                                    "id":  "fanvue_07_05_s02",
                                                                                     "title":  "Insights y iteración",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Insights e iteración y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1555,7 +1617,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_05_s03",
+                                                                                    "id":  "fanvue_07_05_s03",
                                                                                     "title":  "Acciones de mejora",
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Acciones de mejora y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias",
                                                                                     "time":  "45 min",
@@ -1564,7 +1626,7 @@
                                                                                     "prompt":  "Propón contenido y hooks alineados al arquetipo seleccionado."
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_05_metricas_az04",
+                                                                                    "id":  "fanvue_07_05_metricas_az04",
                                                                                     "title":  "Definir objetivo",
                                                                                     "description":  "Paso clave para completar: Métricas: CVR, AOV, churn, LTV",
                                                                                     "time":  "45 min",
@@ -1573,7 +1635,7 @@
                                                                                     "guide":  "### 🎯 Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.\n\n### ✅ Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### 🛠️ Herramientas\n- Navegador y hojas de cálculo\n- Editor/IA para generación de contenido\n- Gestor de tareas para seguimiento\n### 🔧 Instrucciones (A–Z)\n1. Define objetivo del paso: Definir objetivo y relación con el arquetipo.\n2. Revisa consistencia del personaje (rasgos, tono, estilo).\n3. Genera ideas iniciales y selecciona las mejores.\n4. Estructura contenido con hooks, valor y CTA.\n5. Prepara variaciones para test A/B.\n6. Documenta resultados esperados y cómo medirlos.\n### 💡 Tips\n* Mantén consistencia del personaje en todas las piezas.\n* Usa hooks fuertes y CTA claros.\n### ✅ Validación\n- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mínima aceptable.\n\n### 📦 Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y próximos pasos\n\n### ⚠️ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
                                                                                 },
                                                                                 {
-                                                                                    "id":  "fanvue_06_05_metricas_az05",
+                                                                                    "id":  "fanvue_07_05_metricas_az05",
                                                                                     "title":  "Consistencia del personaje",
                                                                                     "description":  "Paso clave para completar: Métricas: CVR, AOV, churn, LTV",
                                                                                     "time":  "45 min",

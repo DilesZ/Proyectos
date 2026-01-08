@@ -384,6 +384,34 @@ function showDetail(item) {
       .replace(/\n/g, '<br>');
 
   elDetailBody.innerHTML = desc;
+
+  // Render Tools
+  if (item.tools && Array.isArray(item.tools) && item.tools.length > 0) {
+      const toolsHtml = `
+          <div class="tools-section" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+              <h3 style="margin-bottom: 10px;">🛠️ Herramientas Directas</h3>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  ${item.tools.map(tool => `
+                      <a href="${tool.url}" target="_blank" class="btn-tool" style="
+                          background: #0070f3; 
+                          color: white; 
+                          padding: 8px 16px; 
+                          border-radius: 6px; 
+                          text-decoration: none;
+                          display: inline-flex;
+                          align-items: center;
+                          gap: 6px;
+                          font-size: 0.9em;
+                          transition: background 0.2s;
+                      " onmouseover="this.style.background='#0051a2'" onmouseout="this.style.background='#0070f3'">
+                          🚀 ${tool.name}
+                      </a>
+                  `).join('')}
+              </div>
+          </div>
+      `;
+      elDetailBody.innerHTML += toolsHtml;
+  }
   
   if(item.badge) {
       elDetailBadge.textContent = item.badge;
