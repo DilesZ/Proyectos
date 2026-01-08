@@ -341,11 +341,11 @@ function parseMarkdown(text) {
 function normalizeText(s) {
   if (!s) return s;
   return s
-    .replace(/ðŸ’¡/g, "💡")
-    .replace(/TÃ³mate/g, "Tómate")
-    .replace(/documentaciÃ³n/g, "documentación")
-    .replace(/GuÃ­a/g, "Guía")
-    .replace(/Ã¡/g, "á").replace(/Ã©/g, "é").replace(/Ã­/g, "í").replace(/Ã³/g, "ó").replace(/Ãº/g, "ú").replace(/Ã±/g, "ñ");
+    .replace(/💡/g, "💡")
+    .replace(/Tómate/g, "Tómate")
+    .replace(/documentación/g, "documentación")
+    .replace(/Guía/g, "Guía")
+    .replace(/á/g, "á").replace(/é/g, "é").replace(/í/g, "í").replace(/ó/g, "ó").replace(/Ãº/g, "ú").replace(/ñ/g, "ñ");
 }
 
 // --- Prompt/Tips Helpers ---

@@ -492,5 +492,8 @@ foreach ($business in $content.businesses) {
     }
 }
 
-$content | ConvertTo-Json -Depth 10 | Set-Content -Path $jsonPath -Encoding utf8
+# Guardar con UTF-8 sin BOM para mejor compatibilidad web
+$jsonString = $content | ConvertTo-Json -Depth 10
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($jsonPath, $jsonString, $utf8NoBom)
 Write-Host ("JSON enriched successfully. Tasks: {0}, Subtasks: {1}, Steps: {2}, New prompts: {3}" -f $totalTasks, $totalSubtasks, $totalSteps, $missingPrompts)
