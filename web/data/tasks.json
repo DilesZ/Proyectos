@@ -4917,6 +4917,80 @@
                                              "prompt":  "Genera un resultado para: Iterar"
                                          }
                                      ]
+                       },
+                       {
+                           "key":  "dieta_personalizada",
+                           "name":  "Dieta Personalizada Saludable",
+                           "tasks":  [
+                                         {
+                                             "id":  "dieta_01_inicial",
+                                             "title":  "Configuración Inicial del Cliente",
+                                             "points":  10,
+                                             "badge":  "Setup",
+                                             "description":  "Establecer las bases para crear un plan de dieta personalizado y efectivo.",
+                                             "time":  "2 horas",
+                                             "difficulty":  "Fácil",
+                                             "subtasks":  [
+                                                              {
+                                                                  "id":  "dieta_01_01_perfil",
+                                                                  "title":  "Crear Perfil del Cliente",
+                                                                  "points":  5,
+                                                                  "description":  "Recopilar toda la información relevante del cliente.",
+                                                                  "time":  "1 hora",
+                                                                  "difficulty":  "Fácil",
+                                                                  "steps":  [
+                                                                                {
+                                                                                    "id":  "dieta_01_01_perfil_az01",
+                                                                                    "title":  "Perfil del cliente",
+                                                                                    "description":  "Paso clave para completar: Crear Perfil del Cliente",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Crea un perfil de cliente detallado, incluyendo objetivos, restricciones y preferencias.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n### ðŸ’¡ Tips\n* Basa el plan en datos objetivos y feedback del cliente.\n* Fomenta hÃ¡bitos sostenibles en lugar de restricciones extremas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dieta_01_01_perfil_az02",
+                                                                                    "title":  "RecopilaciÃ³n de datos",
+                                                                                    "description":  "Paso clave para completar: Crear Perfil del Cliente",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Sugiere estrategias de motivaciÃ³n y ajuste del plan basadas en el feedback del cliente.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n### ðŸ’¡ Tips\n* Basa el plan en datos objetivos y feedback del cliente.\n* Fomenta hÃ¡bitos sostenibles en lugar de restricciones extremas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dieta_01_01_perfil_az03",
+                                                                                    "title":  "DiseÃ±o del plan",
+                                                                                    "description":  "Paso clave para completar: Crear Perfil del Cliente",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un plan de comidas semanal equilibrado y variado segÃºn el perfil del cliente.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n### ðŸ’¡ Tips\n* Basa el plan en datos objetivos y feedback del cliente.\n* Fomenta hÃ¡bitos sostenibles en lugar de restricciones extremas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dieta_01_01_perfil_az04",
+                                                                                    "title":  "MenÃº y recetas",
+                                                                                    "description":  "Paso clave para completar: Crear Perfil del Cliente",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Genera un plan de comidas semanal equilibrado y variado segÃºn el perfil del cliente.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n### ðŸ’¡ Tips\n* Basa el plan en datos objetivos y feedback del cliente.\n* Fomenta hÃ¡bitos sostenibles en lugar de restricciones extremas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dieta_01_01_perfil_az05",
+                                                                                    "title":  "Seguimiento",
+                                                                                    "description":  "Paso clave para completar: Crear Perfil del Cliente",
+                                                                                    "time":  "1 hora",
+                                                                                    "difficulty":  "Fácil",
+                                                                                    "prompt":  "Establece un sistema de seguimiento de progreso con mÃ©tricas clave y puntos de control.",
+                                                                                    "guide":  "### ðŸŽ¯ Objetivo\nDefine claramente el resultado de este paso. Documenta en una nota quÃ© esperas conseguir.\n\n### âœ… Prerrequisitos\n- Acceso al proyecto y recursos necesarios\n- Datos base preparados y organizados\n- Tiempo reservado sin interrupciones\n\n### ðŸ› ï¸ Herramientas\n- Navegador y hojas de cÃ¡lculo\n- Editor/IA para generaciÃ³n de contenido\n- Gestor de tareas para seguimiento\n\n### ðŸ’¡ Tips\n* Basa el plan en datos objetivos y feedback del cliente.\n* Fomenta hÃ¡bitos sostenibles en lugar de restricciones extremas.\n### âœ… ValidaciÃ³n\n- Verifica que cada subpaso estÃ© completado con evidencias (capturas, enlaces, archivos).\n- Revisa coherencia, formato y calidad mÃ­nima aceptable.\n\n### ðŸ“¦ Entregables\n- Documento/archivo con el resultado del paso\n- Breve resumen de decisiones y prÃ³ximos pasos\n\n### âš ï¸ Errores comunes\n- Saltar prerrequisitos o no medir resultados\n- Inconsistencia en nomenclaturas y formatos\n- No guardar evidencias"
+                                                                                }
+                                                                            ],
+                                                                  "prompt":  "Crea un perfil de cliente detallado, incluyendo objetivos, restricciones y preferencias."
+                                                              }
+                                                          ],
+                                             "prompt":  "Crea un perfil de cliente detallado, incluyendo objetivos, restricciones y preferencias."
+                                         }
+                                     ]
                        }
                    ]
 }

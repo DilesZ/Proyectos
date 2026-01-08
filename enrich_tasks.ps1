@@ -58,6 +58,13 @@ function Generate-Prompt {
             if ($t -match "arreglo|mezcla") { return "Define estructura (Intro, Verso, Pre, Estribillo, Puente) y capas de instrumentos." }
             return "Genera conceptos musicales y visuales coherentes con el proyecto."
         }
+        "dieta_personalizada" {
+            if ($t -match "perfil|cliente") { return "Crea un perfil de cliente detallado, incluyendo objetivos, restricciones y preferencias." }
+            if ($t -match "plan|menú") { return "Genera un plan de comidas semanal equilibrado y variado según el perfil del cliente." }
+            if ($t -match "recetas") { return "Desarrolla 5 recetas saludables, fáciles y rápidas, con información nutricional." }
+            if ($t -match "seguimiento|progreso") { return "Establece un sistema de seguimiento de progreso con métricas clave y puntos de control." }
+            return "Sugiere estrategias de motivación y ajuste del plan basadas en el feedback del cliente."
+        }
         default {
             if ($t -match "listar|elegir|definir|crear|escribir|generar|configurar|analizar") { return "$clean..." }
             return "Genera un resultado para: $clean"
@@ -110,6 +117,12 @@ $tipsMusic = @"
 * Deja espacio para la voz; evita saturar mezcla.
 "@
 
+$tipsDieta = @"
+### 💡 Tips
+* Basa el plan en datos objetivos y feedback del cliente.
+* Fomenta hábitos sostenibles en lugar de restricciones extremas.
+"@
+
 function Get-Tips {
     param([string]$businessKey)
     switch ($businessKey) {
@@ -118,6 +131,7 @@ function Get-Tips {
         "kdp_publishing"    { return $tipsKdp }
         "seoprogrammatic"   { return $tipsSeo }
         "ia_music"          { return $tipsMusic }
+        "dieta_personalizada" { return $tipsDieta }
         default             { return $guideTips }
     }
 }
@@ -208,6 +222,17 @@ Define claramente el resultado de este paso. Documenta en una nota qué esperas 
 6. Documenta decisiones y prepara publicación/distribución.
 "
         }
+        "dieta_personalizada" {
+            $spec = @"
+### 🔧 Instrucciones (A–Z)
+1. Define objetivo del paso: $title y perfil del cliente.
+2. Recopila datos: mediciones, analíticas, cuestionarios.
+3. Diseña el plan nutricional con macros y micros.
+4. Crea un menú semanal con recetas y lista de la compra.
+5. Establece un calendario de seguimiento y ajuste.
+6. Documenta el progreso y redefine objetivos.
+"
+        }
         default {
             $spec = @"
 ### 🔧 Instrucciones (A–Z)
@@ -241,6 +266,7 @@ function Get-DefaultStepTitles {
         "kdp_publishing"    { return @("Objetivo y público", "Keywords y capítulos", "Maquetación", "Portada", "Metadata", "Checklist calidad") }
         "seoprogrammatic"   { return @("Objetivo y variables", "Plantilla con placeholders", "Fuente de datos", "Generación a escala", "JSON-LD", "Validación") }
         "ia_music"          { return @("Objetivo y referencia", "Estructura musical", "Arreglos", "Producción", "Mastering", "Publicación") }
+        "dieta_personalizada" { return @("Perfil del cliente", "Recopilación de datos", "Diseño del plan", "Menú y recetas", "Seguimiento", "Ajuste de objetivos") }
         default             { return @("Definir objetivo", "Prerrequisitos", "Ejecución", "Validación", "Entregables", "Cierre") }
     }
 }
