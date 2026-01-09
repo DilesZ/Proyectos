@@ -158,6 +158,32 @@
                                                                                                   "difficulty":  "Media"
                                                                                               }
                                                                                           ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p1_04_lora",
+                                                                                "title":  "Entrenamiento de Modelo (Flux LoRA) [Nivel Pro]",
+                                                                                "description":  "Crea un clon digital perfecto que nunca falla.",
+                                                                                "points":  10,
+                                                                                "time":  "45 min",
+                                                                                "difficulty":  "Difícil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p1_04_s01_dataset",
+                                                                                                  "title":  "Preparar Dataset",
+                                                                                                  "description":  "El alimento de la IA.",
+                                                                                                  "guide":  "1. Genera 20-30 imágenes de PRIMER PLANO de tu personaje (Fase 1.3) con fondos variados.\n2. Asegúrate de que la cara sea consistente (usa Face Swap si es necesario en algunas).\n3. Renombra los archivos: `tuchica (1).jpg`, `tuchica (2).jpg`...\n4. Comprímelas en un ZIP.",
+                                                                                                  "time":  "30 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p1_04_s02_train",
+                                                                                                  "title":  "Entrenar LoRA en la Nube",
+                                                                                                  "description":  "Crea el archivo .safetensors",
+                                                                                                  "guide":  "Opción A (Fácil): Usa **Replicate** o **Fal.ai** (buscando 'Flux LoRA Trainer'). Sube el ZIP, pon el 'Trigger Word' (ej: OhWx Woman) y espera.\nOpción B (Gratis): Busca un Colab de 'Kohya_ss Flux' o 'Ai-Toolkit'.\n\n**Parámetros Clave:**\n- Steps: 2000-2500.\n- Learning Rate: 4e-4.\n- Rank: 32.\n\nCuando termine, descarga el archivo `.safetensors`. ¡Esa es el alma de tu IA!",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "Difícil"
+                                                                                              }
+                                                                                          ]
                                                                             }
                                                                         ]
                                                        },
@@ -232,19 +258,27 @@
                                                                             },
                                                                             {
                                                                                 "id":  "p2_03_video",
-                                                                                "title":  "Crear 1 VÃ­deo Viral",
-                                                                                "description":  "Para TikTok/Reels.",
-                                                                                "points":  5,
-                                                                                "time":  "15 min",
-                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "title":  "Producción de Vídeo (Wan 2.1) [Nivel Pro]",
+                                                                                "description":  "Crea vídeos ultra-realistas (Image-to-Video).",
+                                                                                "points":  10,
+                                                                                "time":  "20 min",
+                                                                                "difficulty":  "Media",
                                                                                 "steps":  [
                                                                                               {
-                                                                                                  "id":  "p2_03_s01_wan_anim",
-                                                                                                  "title":  "Animar en Wan AI",
-                                                                                                  "description":  "Dale vida a una foto.",
-                                                                                                  "guide":  "1. Sube una foto bonita a Wan AI.\n2. Prompt: `subtle smile, blinking eyes, wind blowing hair`.\n3. Descarga el vÃ­deo.",
-                                                                                                  "time":  "15 min",
+                                                                                                  "id":  "p2_03_s01_flux_master",
+                                                                                                  "title":  "1. Generar Imagen Maestra",
+                                                                                                  "description":  "La base debe ser perfecta.",
+                                                                                                  "guide":  "Usa Flux (con tu LoRA si lo tienes) para generar una imagen 4K. La cara debe estar perfecta. Si usas Face Swap, asegúrate de que no haya bordes raros.",
+                                                                                                  "time":  "5 min",
                                                                                                   "difficulty":  "FÃ¡cil"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p2_03_s02_wan_i2v",
+                                                                                                  "title":  "2. Animación en Wan 2.1 (I2V)",
+                                                                                                  "description":  "Usa Image-to-Video, no Text-to-Video.",
+                                                                                                  "guide":  "1. Ve a Wan AI (o Fal.ai/Wavespeed).\n2. Selecciona **Image-to-Video** (I2V).\n3. Sube tu Imagen Maestra.\n4. **Prompt:** Describe SOLO el movimiento. Ej: `woman smiling, wind blowing hair, subtle breathing motion, high quality`.\n5. **Negative Prompt:** `morphing face, distorted hands, extra limbs, blur`.\n6. **Motion Strength:** 120-140 (para movimiento notable pero estable).",
+                                                                                                  "time":  "10 min",
+                                                                                                  "difficulty":  "Media"
                                                                                               }
                                                                                           ]
                                                                             }
@@ -347,6 +381,32 @@
                                                                                                   "guide":  "Pon tu enlace de Fanvue (o Linktree) en la Bio de Instagram.",
                                                                                                   "time":  "5 min",
                                                                                                   "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p4_04_automation",
+                                                                                "title":  "Automatización de Distribución (n8n) [Nivel Pro]",
+                                                                                "description":  "Para que tu agencia funcione mientras duermes.",
+                                                                                "points":  20,
+                                                                                "time":  "2 horas",
+                                                                                "difficulty":  "Difícil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p4_04_s01_n8n_setup",
+                                                                                                  "title":  "Configurar n8n",
+                                                                                                  "description":  "El cerebro de la operación.",
+                                                                                                  "guide":  "1. Crea cuenta en **n8n.io** (Cloud o Self-hosted).\n2. Conecta tus cuentas: Fanvue (API si tienes, o simulador), Instagram (Graph API), y OpenAI/Gemini.\n3. Crea un workflow simple: `Cron (8:00 AM) -> Generar Texto (Gemini) -> Generar Imagen (Flux API) -> Enviar a Instagram`.",
+                                                                                                  "time":  "1 hora",
+                                                                                                  "difficulty":  "Difícil"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p4_04_s02_goodmorning",
+                                                                                                  "title":  "Bot de Buenos Días",
+                                                                                                  "description":  "Fidelización automática.",
+                                                                                                  "guide":  "Programa un bot que publique una foto de 'Buenos días' todos los días. Usa un prompt variable: `girl in pajamas, drinking coffee, [weather description based on location], morning light`.",
+                                                                                                  "time":  "1 hora",
+                                                                                                  "difficulty":  "Difícil"
                                                                                               }
                                                                                           ]
                                                                             }
