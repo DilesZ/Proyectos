@@ -457,7 +457,7 @@ foreach ($business in $content.businesses) {
                     $step.guide = $guideEsquema
                 }
                 else {
-                    if (-not $step.guide -or $step.guide.Length -lt 300) {
+                    if (-not $step.guide -or $step.guide.Length -lt 10) {
                         $step.guide = Build-Guide -businessKey $business.key -title $step.title
                     } elseif ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
                         $step.guide += (Get-Tips $business.key)
