@@ -33,6 +33,43 @@ function Generate-Prompt {
             if ($t -match "prompt") { return "Escribe un prompt SDXL/Tensor/SeaArt para Elena (24, española, fitness girl-next-door) y un negative prompt. Devuelve también parámetros recomendados: resolución vertical, steps, CFG, sampler." }
             if ($t -match "caption|copy|cta") { return "Escribe 10 CTAs para story IG que empujen al link. Reglas: curiosidad + urgencia, 90 caracteres máximo, 0 lenguaje explícito." }
             if ($t -match "calendario|contenido") { return "Crea un calendario semanal fijo para Elena: 7 posts IG, 7 stories IG, 3 tweets al día, 3 mensajes Fanvue. Devuelve en tabla día/acción." }
+            if ($t -match "bienvenida|welcome") { return "Escribe el script exacto de bienvenida para Fanvue (mensaje automático) que incluya un upsell de foto." }
+            if ($t -match "ppv|paywall") {
+                return @"
+### 🔧 Instrucciones (modo receta)
+1. **Estrategia:** El dinero real está en los mensajes privados (PPV).
+2. Copia estos 3 guiones probados y guárdalos en tus notas:
+
+   **GUIÓN 1: El "Descuido" (Precio: $15)**
+   - *Mensaje:* "Ups, iba a subir esto a mi historia pero es demasiado... ¿quieres verla tú?"
+   - *Contenido:* Foto en espejo, se ve un poco de lencería.
+   
+   **GUIÓN 2: La Pregunta (Precio: $25)**
+   - *Mensaje:* "Me he comprado este conjunto rojo y este negro... ¿cuál me queda mejor? Te paso fotos de los dos."
+   - *Contenido:* 2 fotos (una con cada conjunto).
+   
+   **GUIÓN 3: El Vídeo (Precio: $45)**
+   - *Mensaje:* "Me aburría sola en casa y he grabado un vídeo cortito... 🙈 Solo para ti."
+   - *Contenido:* Vídeo de 5 segundos tirando un beso o bailando (SFW pero sexy).
+
+3. Configura el Guión 1 como tu primer mensaje masivo del día.
+4. **Resultado final:** Los 3 guiones guardados y listos para enviar.
+"@
+            }
+            if ($t -match "video|reels|tiktok") {
+                return @"
+### 🔧 Instrucciones (modo receta)
+1. **Objetivo:** Crear un vídeo viral de 5 segundos sin grabar nada.
+2. Ve a **Haiper.ai** (gratis) o **RunwayML**.
+3. Sube tu mejor foto (primer plano, mirando a cámara).
+4. En el prompt de movimiento escribe: "slow zoom in, gentle smile, blinking, wind in hair".
+5. Genera el vídeo.
+6. Descárgalo y pásalo al móvil.
+7. Abre TikTok/Reels, ponle una canción que sea Top 1 Viral.
+8. Añade texto: "Pov: Tu vecina te saluda así".
+9. **Resultado final:** Vídeo publicado.
+"@
+            }
             return "Para Elena (24, española, fitness girl-next-door), genera el entregable exacto para el paso: '" + $clean + "'. Devuelve un único resultado final listo para copiar y una checklist de validación."
         }
         "amazon_affiliates" {
@@ -186,45 +223,73 @@ Completar este paso sin decisiones abiertas ni ambigüedad.
    - Si ninguno está libre: añade `official` al final y repite.
 "@
                 }
-                "espiar a la competencia|competencia" {
+                "registro y perfil" {
 @"
 ### 🔧 Instrucciones (modo receta)
-1. Abre Instagram y busca exactamente estos hashtags:
-   - #fitnessgirl
-   - #gymgirl
-   - #fitspo
-2. Abre 10 perfiles (los que tengan más interacción: comentarios/likes).
-3. Para cada perfil, copia en tus notas SOLO esto (plantilla fija):
-   - Tipo de foto que más repiten (selfie espejo / gym / cocina)
-   - 3 hooks que usan en texto (frases cortas)
-   - 3 CTAs que usan (\"link in bio\", \"my private\", etc.)
-4. Resultado final obligatorio: una lista de 10 hooks + 10 CTAs copiados.
+1. Ve a [Fanvue.com](https://www.fanvue.com) y regístrate como Creador.
+2. Sube tu **Foto de Perfil** (Elena sonriendo, plano medio, ropa casual pero ajustada).
+3. Sube tu **Banner** (Elena en el gimnasio o playa, formato horizontal 16:9).
+4. Rellena el campo **Bio** con esto:
+   "24 🇪🇸 | Fitness Lover 🏋️‍♀️
+   Aquí comparto lo que Instagram me borra 😈
+   Contesta a mis DMs, ¡soy yo de verdad!"
+5. Configura tu URL personalizada con el handle que elegiste (ej: fanvue.com/elena.fitdiary).
+6. **Resultado final:** Captura de pantalla de tu perfil vacío pero configurado.
 "@
                 }
-                "verificar disponibilidad|disponibilidad" {
+                "verificación identidad y fiscalidad" {
 @"
 ### 🔧 Instrucciones (modo receta)
-1. Abre https://namechk.com/
-2. Pega tu handle final (el que elegiste en el paso anterior).
-3. Validación obligatoria:
-   - Debe estar libre en Instagram y TikTok (mínimo).
-   - Si está ocupado en una de las dos: vuelve al paso de “Nombre de Usuario (Handle)” y aplica la siguiente variante de la escalera.
-4. Resultado final obligatorio:
-   - Un handle único que exista igual en: Instagram, TikTok, Twitter/X.
-   - Escríbelo en tus notas como: `HANDLE_FINAL = ...`
+1. **IMPORTANTE:** Fanvue requiere una persona REAL detrás de la cuenta.
+2. Usa TU documento de identidad real (DNI/Pasaporte) y TU cara para el selfie de verificación. Tú eres el "manager" legal de Elena.
+3. No intentes usar una foto generada por IA para la verificación; te banearán al instante.
+4. Rellena los datos fiscales con tu información real.
+5. **Resultado final:** Email de confirmación de "Cuenta Verificada".
 "@
                 }
-                "decisión final" {
+                "configurar payout" {
 @"
 ### 🔧 Instrucciones (modo receta)
-1. No elijas nada: la decisión ya está tomada para minimizar errores.
-2. Copia y pega esto como “Biblia del personaje” en tus notas:
-   - Nombre: Elena
-   - Edad: 24
-   - Arquetipo: Girl Next Door + Fitness
-   - Rasgos: pelo castaño miel ondulado, ojos avellana/verdosos, pecas sutiles, hoyuelos, piel natural
-   - Tono: dulce + traviesa en privado, emojis moderados
-3. Regla: a partir de ahora, cualquier texto/imagen debe respetar esta biblia.
+1. Ve a Settings > Payouts.
+2. Si tienes cuenta bancaria en zona SEPA/USA compatible, añádela directamente.
+3. Si no, regístrate en **CosmoPayment** o **Paxum** (comunes en la industria para adultos/creadores).
+4. **Resultado final:** Método de pago en estado "Pending" o "Active".
+"@
+                }
+                "niveles y beneficios|precios y promociones" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. **Precio de Suscripción:** Ponlo a **$9.99** (psicológico, menos de 10).
+2. **Promoción de Lanzamiento:** Crea un cupón de "50% OFF first month" (para captar los primeros 10 fans rápido).
+3. **Bundles (Paquetes):**
+   - 3 meses: 15% descuento.
+   - 6 meses: 25% descuento.
+4. **Resultado final:** Captura de la pantalla de precios configurada.
+"@
+                }
+                "ppv y paywalls" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. **Estrategia:** El dinero real está en los mensajes privados de pago (PPV).
+2. Prepara tu primer contenido PPV:
+   - **Foto:** Elena en lencería frente al espejo (sin desnudo explícito todavía).
+   - **Precio:** $15.
+   - **Texto del mensaje:** "Me acabo de comprar esto... ¿te gusta cómo me queda? 🙈 Solo para tus ojos."
+3. Configura este mensaje como una plantilla guardada.
+4. **Resultado final:** Plantilla de mensaje PPV creada en Fanvue.
+"@
+                }
+                "bienvenida y upsell" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Ve a Settings > Auto-Message (Mensaje de Bienvenida).
+2. Activa "Send to new subscribers".
+3. **Script (Copia y pega):**
+   "¡Hola amor! Gracias por unirte a mi mundo privado ❤️
+   Soy un poco tímida en redes, pero aquí me suelto más...
+   ¿Qué te gustaría ver primero? 👇"
+4. **Adjunta:** Una foto "gratis" que sea muy bonita (ej: primer plano de cara guiñando un ojo).
+5. **Resultado final:** Auto-mensaje activado.
 "@
                 }
                 "nombre de usuario|handle" {
@@ -244,39 +309,16 @@ Completar este paso sin decisiones abiertas ni ambigüedad.
 4. Resultado final obligatorio: guarda el handle final en tus notas.
 "@
                 }
-                "biograf|bio" {
+                "biograf|bio|bio y keywords" {
 @"
 ### 🔧 Instrucciones (modo receta)
 1. Copia y pega esta bio (solo cambia la ciudad si quieres, nada más):
    **BIO**
    24 🇪🇸 | Fitness girl-next-door 🏋️‍♀️
    Diario real (y mi lado privado) 👇
-2. Añade tu link (Linktree o Fanvue) como el enlace de la bio.
+   [Tu enlace de Fanvue aquí]
+2. Añade tu link (Linktree o Fanvue directo) como el enlace de la bio.
 3. Resultado final obligatorio: captura de pantalla de tu bio ya puesta.
-"@
-                }
-                "colores|vibe|paleta" {
-@"
-### 🔧 Instrucciones (modo receta)
-1. Usa esta paleta (NO inventes):
-   - Principal: #F7A8B8 (rosa suave)
-   - Secundario: #111827 (negro azulado)
-   - Fondo: #FFFFFF (blanco)
-   - Acento: #22C55E (verde “fitness”)
-   - Texto suave: #6B7280 (gris)
-2. Resultado final obligatorio: escribe la paleta en tus notas y úsala en highlights/plantillas.
-"@
-                }
-                "lo prohibido|compliance|antes de publicar" {
-@"
-### 🔧 Instrucciones (modo receta)
-1. Instagram/TikTok: SOLO SFW (sin pezones, sin genitales, sin sexo explícito).
-2. Antes de publicar, checklist obligatorio (si 1 falla, NO publicas):
-   - Cara sin deformidades
-   - Manos con 5 dedos
-   - Nada explícito en reflejos (espejos/ventanas)
-   - Fondo no tiene logos raros o texto extraño
-3. Resultado final obligatorio: marca la checklist como OK en tus notas.
 "@
                 }
                 "prompt base|diseñar el prompt|prompt anchor" {
@@ -289,16 +331,42 @@ Completar este paso sin decisiones abiertas ni ambigüedad.
 3. Resultado final obligatorio: 3 imágenes + prompt guardado en un .txt.
 "@
                 }
+                "hook bank|hook" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Abre tus notas y crea una lista llamada "Banco de Ganchos".
+2. Copia estos 5 ganchos virales (funcionan siempre):
+   - "Lo que nadie te cuenta de ser una chica fitness..."
+   - "POV: Tu novia te manda esto después de entrenar..."
+   - "3 cosas que odio del gimnasio (la 2 te sorprenderá)..."
+   - "Me dijeron que no debería subir esto..."
+   - "¿Crees que este conjunto es demasiado para salir?"
+3. Úsalos como texto sobre tus videos de TikTok/Reels.
+4. **Resultado final:** Lista de hooks guardada.
+"@
+                }
+                "hashtags y pauta" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Crea 3 grupos de hashtags en tus notas:
+   - **Grupo A (Grandes):** #fitnessgirl #gymmotivation #spanishgirl
+   - **Grupo B (Medianos):** #chicafitness #entrenamientofemenino #vidanaudable
+   - **Grupo C (Específicos):** #elena #ticiudad #miercoles
+2. Regla de publicación: Usa 3 del A, 3 del B y 2 del C. Total 8 hashtags.
+3. No uses más de 10.
+4. **Resultado final:** Los 3 grupos guardados en tus notas.
+"@
+                }
                 default {
 @"
 ### 🔧 Instrucciones (modo receta)
 1. Abre ChatGPT y pega este prompt (cópialo tal cual):
    **PROMPT**
-   Eres un operador de una agencia de influencer IA. Nuestro personaje es Elena (24, española, fitness girl-next-door). Necesito completar el paso: "$title".
+   Eres un experto manager de OnlyFans/Fanvue. Nuestro personaje es Elena (24, española, fitness). Necesito completar el paso: "$title".
    Devuélveme EXACTAMENTE:
-   1) Lista de acciones (máximo 7 pasos), sin opciones.
-   2) Texto final listo para copiar y pegar (si aplica).
-   3) Checklist de 5 puntos para validar que está bien.
+   1) Una instrucción paso a paso (sin opciones, dime qué hacer).
+   2) El texto/script exacto si hace falta.
+   3) Una checklist de validación.
 2. Ejecuta SOLO esas acciones en orden.
 3. Resultado final obligatorio: un texto/asset listo para pegar, guardado en tus notas.
 "@

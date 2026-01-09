@@ -103,6 +103,25 @@ El dinero real no está en la suscripción de $10, está en los **Mensajes Direc
 
 ---
 
+## 🎥 PASO EXTRA: Creando Vídeos (Nivel Avanzado)
+Los vídeos en TikTok y Reels son la forma más rápida de crecer. No necesitas grabar nada.
+
+### Opción A: "Living Portraits" (La foto que se mueve)
+1.  Ve a **Runway Gen-2** o **Haiper AI** (tienen pruebas gratis).
+2.  Sube una de tus fotos generadas en el PASO 2.
+3.  No escribas nada, solo dale a "Generate". La IA hará que parpadee y se mueva ligeramente.
+4.  **Resultado:** Un vídeo de 4 segundos que parece que ella te está mirando.
+5.  Ponle música viral en TikTok y un texto encima: *"Cuando me mira así..."*
+
+### Opción B: Vídeo Real con "Face Swap" (Deepfake Ético)
+1.  Descarga un vídeo de stock gratuito de una chica fitness haciendo ejercicio (Pexels o Pixabay).
+2.  Usa una herramienta de "Face Swap" (como **Remaker AI** o bots de Discord).
+3.  Sube el vídeo y sube la foto de la cara de tu influencer.
+4.  La IA pondrá la cara de tu influencer en el cuerpo de la chica del vídeo.
+5.  *Nota:* Esto a veces se ve raro, úsalo con cuidado.
+
+---
+
 ## 📅 Tu Rutina Diaria (Checklist)
 Para ganar dinero, tienes que ser constante. Dedica 1 hora al día:
 
