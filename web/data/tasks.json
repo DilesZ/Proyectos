@@ -3,203 +3,359 @@
                        {
                            "key":  "influencer_agency",
                            "name":  "Influencer IA (Fanvue)",
-                           "tasks":  [
-                                         {
-                                             "id":  "phase_0_tools",
-                                             "title":  "Fase 0: Arsenal y Herramientas",
-                                             "points":  5,
-                                             "badge":  "Setup",
-                                             "description":  "Prepara todas las cuentas y herramientas necesarias antes de empezar.",
-                                             "time":  "30 min",
-                                             "difficulty":  "Fácil",
-                                             "subtasks":  [
-                                                              {
-                                                                  "id":  "p0_01_registros",
-                                                                  "title":  "Registro en Herramientas",
-                                                                  "description":  "Crea cuentas en las plataformas esenciales.",
-                                                                  "points":  2,
-                                                                  "time":  "15 min",
-                                                                  "difficulty":  "Fácil",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p0_01_s01_tensor",
-                                                                                    "title":  "Registro en Tensor.art / SeaArt",
-                                                                                    "description":  "Plataforma para generar imágenes gratis diariamente.",
-                                                                                    "guide":  "### 🎯 Objetivo\nTener acceso a generación de imágenes de alta calidad.\n\n### 🔧 Instrucciones\n1. Ve a [Tensor.art](https://tensor.art/) o [SeaArt.ai](https://www.seaart.ai/).\n2. Regístrate con Google.\n3. Verifica tu correo.\n4. Guarda la página en favoritos.",
-                                                                                    "time":  "5 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                },
-                                                                                {
-                                                                                    "id":  "p0_01_s02_wan",
-                                                                                    "title":  "Registro en Wan AI",
-                                                                                    "description":  "Herramienta para animar fotos (video).",
-                                                                                    "guide":  "### 🎯 Objetivo\nTener acceso a la mejor IA de video actual.\n\n### 🔧 Instrucciones\n1. Ve a [Wan AI](https://www.wan-ai.co/).\n2. Crea una cuenta gratuita.\n3. Familiarízate con la interfaz \u0027Image to Video\u0027.",
-                                                                                    "time":  "5 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                },
-                                                                                {
-                                                                                    "id":  "p0_01_s03_fanvue",
-                                                                                    "title":  "Registro en Fanvue",
-                                                                                    "description":  "Donde ganarás el dinero.",
-                                                                                    "guide":  "### 🎯 Objetivo\nCrear tu cuenta de Creador.\n\n### 🔧 Instrucciones\n1. Ve a [Fanvue.com](https://www.fanvue.com/).\n2. Regístrate como **CREADOR** (no como fan).\n3. Inicia el proceso de verificación (necesitarás tu ID real, esto es privado y seguro).",
-                                                                                    "time":  "5 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                }
-                                                                            ]
-                                                              }
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "phase_1_identity",
-                                             "title":  "Fase 1: Diseño del Producto",
-                                             "points":  10,
-                                             "badge":  "Creatividad",
-                                             "description":  "Define quién es tu influencer y crea su cara maestra.",
-                                             "time":  "1 hora",
-                                             "difficulty":  "Media",
-                                             "subtasks":  [
-                                                              {
-                                                                  "id":  "p1_01_archetype",
-                                                                  "title":  "Elección de Arquetipo",
-                                                                  "description":  "Elige uno de los 3 perfiles ganadores.",
-                                                                  "points":  5,
-                                                                  "time":  "15 min",
-                                                                  "difficulty":  "Fácil",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p1_01_s01_select",
-                                                                                    "title":  "Seleccionar Nicho",
-                                                                                    "description":  "No inventes, elige lo que funciona.",
-                                                                                    "guide":  "### 🎯 Objetivo\nDefinir tu producto.\n\n### 🔧 Instrucciones\nElige UNO:\n1. **Gamer E-Girl:** Auriculares, luces LED, tímida.\n2. **Gym Bunny:** Fitness, leggings, sudor, sana.\n3. **Girl Next Door:** Vecina, ropa casual, sonriente.\n\nEscribe tu elección en un Bloc de Notas. Define: Nombre, Edad (19-25), Nacionalidad.",
-                                                                                    "time":  "5 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                },
-                                                                                {
-                                                                                    "id":  "p1_01_s02_bio",
-                                                                                    "title":  "Generar Bio con IA",
-                                                                                    "description":  "Crea la descripción perfecta.",
-                                                                                    "prompt":  "Actúa como un experto en marketing de influencers. He elegido el arquetipo [TU ARQUETIPO: Gamer/Fitness/Vecina] para mi influencer IA llamada [NOMBRE]. Escribe:\n1. Una Bio de Instagram atractiva con emojis.\n2. Una Bio de Fanvue sugerente (sin ser explícita).\n3. 5 Ideas de Username disponibles.",
-                                                                                    "guide":  "Usa ChatGPT con el prompt proporcionado para generar tus textos de perfil.",
-                                                                                    "time":  "10 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                }
-                                                                            ]
-                                                              },
-                                                              {
-                                                                  "id":  "p1_02_face",
-                                                                  "title":  "Crear la Cara Maestra",
-                                                                  "description":  "La imagen base que usarás para todo.",
-                                                                  "points":  5,
-                                                                  "time":  "45 min",
-                                                                  "difficulty":  "Media",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p1_02_s01_generate",
-                                                                                    "title":  "Generar Retrato Base",
-                                                                                    "description":  "Crea la cara perfecta en Tensor/SeaArt.",
-                                                                                    "guide":  "### 🔧 Instrucciones\n1. Ve a Tensor.art.\n2. Usa el modelo **Juggernaut XL** o **RealVisXL**.\n3. Prompt: `portrait of a beautiful [nacionalidad] woman, 20 years old, [color pelo], [color ojos], looking at camera, soft lighting, hyperrealistic, 8k`.\n4. Genera hasta que una te encante.\n5. **GUARDA ESA FOTO**. Esa es tu \u0027Cara Maestra\u0027.",
-                                                                                    "time":  "20 min",
-                                                                                    "difficulty":  "Media"
-                                                                                }
-                                                                            ]
-                                                              }
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "phase_2_content",
-                                             "title":  "Fase 2: Fábrica de Contenido",
-                                             "points":  15,
-                                             "badge":  "Producción",
-                                             "description":  "Crea tu stock inicial de fotos y videos.",
-                                             "time":  "2 horas",
-                                             "difficulty":  "Media",
-                                             "subtasks":  [
-                                                              {
-                                                                  "id":  "p2_01_photos",
-                                                                  "title":  "Generar 20 Fotos",
-                                                                  "description":  "Crea contenido para 2 semanas.",
-                                                                  "points":  10,
-                                                                  "time":  "1.5 horas",
-                                                                  "difficulty":  "Media",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p2_01_s01_prompts",
-                                                                                    "title":  "Aplicar Prompts Maestros",
-                                                                                    "description":  "Usa los prompts de la guía.",
-                                                                                    "guide":  "### 🔧 Instrucciones\n1. Usa los prompts de la **Fase 2.1** de la Guía Maestra (Selfie, Café, Gym).\n2. Si la cara no se parece, usa la herramienta **Face Swap** de Tensor/SeaArt usando tu \u0027Cara Maestra\u0027 como referencia.\n3. Guarda al menos 20 fotos variadas.",
-                                                                                    "time":  "1 hora",
-                                                                                    "difficulty":  "Media"
-                                                                                }
-                                                                            ]
-                                                              },
-                                                              {
-                                                                  "id":  "p2_02_video",
-                                                                  "title":  "Crear 1 Vídeo Viral",
-                                                                  "description":  "Usa Wan AI para dar vida.",
-                                                                  "points":  5,
-                                                                  "time":  "30 min",
-                                                                  "difficulty":  "Fácil",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p2_02_s01_wan",
-                                                                                    "title":  "Animar con Wan AI",
-                                                                                    "description":  "Da movimiento a una foto.",
-                                                                                    "guide":  "### 🔧 Instrucciones\n1. Sube una foto bonita a Wan AI.\n2. Usa \u0027Motion Brush\u0027 en el pelo o ropa.\n3. Genera el vídeo (5 seg).\n4. Descárgalo para Reels/TikTok.",
-                                                                                    "time":  "15 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                }
-                                                                            ]
-                                                              }
-                                                          ]
-                                         },
-                                         {
-                                             "id":  "phase_3_launch",
-                                             "title":  "Fase 3: Lanzamiento y Tráfico",
-                                             "points":  10,
-                                             "badge":  "Marketing",
-                                             "description":  "Configura redes y Fanvue.",
-                                             "time":  "1 hora",
-                                             "difficulty":  "Fácil",
-                                             "subtasks":  [
-                                                              {
-                                                                  "id":  "p3_01_social",
-                                                                  "title":  "Setup Redes Sociales",
-                                                                  "description":  "Instagram, Twitter, TikTok.",
-                                                                  "points":  5,
-                                                                  "time":  "30 min",
-                                                                  "difficulty":  "Fácil",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p3_01_s01_setup",
-                                                                                    "title":  "Crear Perfiles",
-                                                                                    "description":  "Usa el nombre y bio generados.",
-                                                                                    "guide":  "1. Crea las cuentas con el email dedicado.\n2. Pon la foto de perfil (Cara Maestra).\n3. Pon la Bio.\n4. Sube 3 fotos de golpe para que no parezca vacío.",
-                                                                                    "time":  "20 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                }
-                                                                            ]
-                                                              },
-                                                              {
-                                                                  "id":  "p3_02_fanvue",
-                                                                  "title":  "Setup Fanvue",
-                                                                  "description":  "Configura el cobro.",
-                                                                  "points":  5,
-                                                                  "time":  "30 min",
-                                                                  "difficulty":  "Media",
-                                                                  "steps":  [
-                                                                                {
-                                                                                    "id":  "p3_02_s01_pricing",
-                                                                                    "title":  "Fijar Precios",
-                                                                                    "description":  "Suscripción y Mensaje de Bienvenida.",
-                                                                                    "guide":  "1. Pon precio: **$9.99**.\n2. Oferta: **50% OFF** primer mes.\n3. Mensaje Bienvenida Auto: \u0027Hola guapo, gracias por unirte... ¿quieres ver lo que no subo a Instagram?\u0027 (Adjunta foto con candado a $15).",
-                                                                                    "time":  "15 min",
-                                                                                    "difficulty":  "Fácil"
-                                                                                }
-                                                                            ]
-                                                              }
-                                                          ]
-                                         }
-                                     ]
+                           "tasks":  {
+                                         "value":  [
+                                                       {
+                                                           "id":  "phase_0_arsenal",
+                                                           "title":  "Fase 0: El Arsenal (Setup)",
+                                                           "points":  5,
+                                                           "badge":  "Setup",
+                                                           "description":  "Prepara las herramientas bÃ¡sicas antes de empezar.",
+                                                           "time":  "45 min",
+                                                           "difficulty":  "FÃ¡cil",
+                                                           "subtasks":  [
+                                                                            {
+                                                                                "id":  "p0_01_email",
+                                                                                "title":  "Crear Email de Agencia",
+                                                                                "description":  "Separa tu vida personal del negocio.",
+                                                                                "points":  1,
+                                                                                "time":  "5 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p0_01_s01_gmail",
+                                                                                                  "title":  "Nuevo Gmail/Proton",
+                                                                                                  "description":  "Crea una cuenta nueva (ej: agencia.top.ia@gmail.com).",
+                                                                                                  "guide":  "No uses tu correo personal. Necesitas uno exclusivo para registros en herramientas y redes sociales.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p0_02_generators",
+                                                                                "title":  "Registro en Generadores de Imagen",
+                                                                                "description":  "Tus \u0027cÃ¡maras\u0027 fotogrÃ¡ficas.",
+                                                                                "points":  2,
+                                                                                "time":  "10 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p0_02_s01_tensor",
+                                                                                                  "title":  "Cuenta en Tensor.art",
+                                                                                                  "description":  "Te da 100 crÃ©ditos gratis al dÃ­a.",
+                                                                                                  "guide":  "1. Ve a [Tensor.art](https://tensor.art/).\n2. RegÃ­strate con tu nuevo email.\n3. Confirma el correo.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p0_02_s02_seaart",
+                                                                                                  "title":  "Cuenta en SeaArt.ai",
+                                                                                                  "description":  "Backup por si te quedas sin crÃ©ditos.",
+                                                                                                  "guide":  "1. Ve a [SeaArt.ai](https://www.seaart.ai/).\n2. RegÃ­strate.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p0_03_video",
+                                                                                "title":  "Registro en IA de VÃ­deo",
+                                                                                "description":  "Para animar tus fotos.",
+                                                                                "points":  1,
+                                                                                "time":  "5 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p0_03_s01_wan",
+                                                                                                  "title":  "Cuenta en Wan AI",
+                                                                                                  "description":  "La mejor calidad actual.",
+                                                                                                  "guide":  "Ve a [Wan AI](https://www.wan-ai.co/) y crea tu cuenta gratuita.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p0_04_bank",
+                                                                                "title":  "Registro en Fanvue (El Banco)",
+                                                                                "description":  "Donde cobrarÃ¡s.",
+                                                                                "points":  1,
+                                                                                "time":  "15 min",
+                                                                                "difficulty":  "Media",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p0_04_s01_fanvue",
+                                                                                                  "title":  "Crear cuenta de Creador",
+                                                                                                  "description":  "IMPORTANTE: Elige \u0027Become a Creator\u0027.",
+                                                                                                  "guide":  "1. Ve a [Fanvue.com](https://www.fanvue.com/).\n2. RegÃ­strate como CREADOR.\n3. Completa la verificaciÃ³n de identidad (DNI/Pasaporte). Es seguro y privado.",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              }
+                                                                                          ]
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "id":  "phase_1_identity",
+                                                           "title":  "Fase 1: La Identidad (Producto)",
+                                                           "points":  10,
+                                                           "badge":  "Creatividad",
+                                                           "description":  "DiseÃ±a a tu influencer perfecta.",
+                                                           "time":  "1 hora",
+                                                           "difficulty":  "Media",
+                                                           "subtasks":  [
+                                                                            {
+                                                                                "id":  "p1_01_archetype",
+                                                                                "title":  "Definir Arquetipo",
+                                                                                "description":  "Elige tu nicho de mercado.",
+                                                                                "points":  2,
+                                                                                "time":  "10 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p1_01_s01_select",
+                                                                                                  "title":  "Seleccionar Perfil",
+                                                                                                  "description":  "Elige uno de la lista.",
+                                                                                                  "guide":  "Opciones:\n1. **Gamer E-Girl** (PÃºblico fiel, nicho videojuegos).\n2. **Gym Bunny** (Fitness, motivaciÃ³n, leggings).\n3. **Girl Next Door** (Vecina, casual, la que mejor convierte).\n\nDecide Nombre, Edad (19-25) y Nacionalidad.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p1_02_texts",
+                                                                                "title":  "Generar Textos con IA",
+                                                                                "description":  "Bio, Username y Hooks.",
+                                                                                "points":  3,
+                                                                                "time":  "15 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p1_02_s01_chatgpt",
+                                                                                                  "title":  "Prompt para ChatGPT",
+                                                                                                  "description":  "Copia y pega esto en ChatGPT.",
+                                                                                                  "prompt":  "ActÃºa como un experto manager de influencers. Voy a crear una Influencer IA.\nDatos:\n- Nombre: [TU NOMBRE]\n- Edad: [EDAD]\n- Arquetipo: [TU ARQUETIPO]\n- Objetivo: Atraer seguidores en Instagram y llevarlos a Fanvue.\n\nNecesito:\n1. Un Handle (nombre de usuario) disponible y corto. Dame 10 opciones.\n2. Una Bio de Instagram (con emojis, misteriosa, que invite a hacer clic en el link).\n3. Una Bio de Fanvue (mÃ¡s picante, sugiriendo que contesto mensajes privados).",
+                                                                                                  "guide":  "Usa el resultado para configurar tus perfiles.",
+                                                                                                  "time":  "10 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p1_03_face",
+                                                                                "title":  "Crear la Cara Maestra",
+                                                                                "description":  "La imagen base de todo tu negocio.",
+                                                                                "points":  5,
+                                                                                "time":  "30 min",
+                                                                                "difficulty":  "Media",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p1_03_s01_tensor_gen",
+                                                                                                  "title":  "Generar en Tensor.art",
+                                                                                                  "description":  "Consigue la foto perfecta.",
+                                                                                                  "guide":  "1. Modelo: **Juggernaut XL**.\n2. Ratio: **2:3**.\n3. Prompt Positivo: `(masterpiece, best quality, 8k, photorealistic:1.3), raw photo, portrait of a beautiful [NACIONALIDAD] woman, [EDAD] years old, [COLOR PELO], [COLOR OJOS], natural skin texture, imperfections, soft lighting, looking at camera, wearing [TIPO DE ROPA], blurred background, shot on 35mm lens`.\n4. Prompt Negativo: `(worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), open mouth, toothy smile, bad hands, bad fingers, extra limbs, ugly, deformed`.\n5. **GUARDA LA FOTO** como `CARA_MAESTRA.png`.",
+                                                                                                  "time":  "20 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              }
+                                                                                          ]
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "id":  "phase_2_factory",
+                                                           "title":  "Fase 2: La FÃ¡brica (ProducciÃ³n)",
+                                                           "points":  15,
+                                                           "badge":  "ProducciÃ³n",
+                                                           "description":  "Crea contenido masivo consistente.",
+                                                           "time":  "2 horas",
+                                                           "difficulty":  "Media",
+                                                           "subtasks":  [
+                                                                            {
+                                                                                "id":  "p2_01_faceswap",
+                                                                                "title":  "Dominar Face Swap",
+                                                                                "description":  "Aprende a poner tu cara en cualquier cuerpo.",
+                                                                                "points":  5,
+                                                                                "time":  "15 min",
+                                                                                "difficulty":  "Media",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p2_01_s01_technique",
+                                                                                                  "title":  "Proceso de Cambio de Cara",
+                                                                                                  "description":  "Usa Tensor (ADetailer) o Remaker AI.",
+                                                                                                  "guide":  "1. **Source Face:** Tu `CARA_MAESTRA.png`.\n2. **Target Face:** Cualquier foto de una modelo generada.\n3. Genera/Swap.\n\nPrueba con 3 fotos distintas hasta que salga perfecto.",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p2_02_stock",
+                                                                                "title":  "Crear Pack de Inicio (20 Fotos)",
+                                                                                "description":  "Necesitas contenido para 2 semanas.",
+                                                                                "points":  5,
+                                                                                "time":  "1.5 horas",
+                                                                                "difficulty":  "Media",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p2_02_s01_selfie",
+                                                                                                  "title":  "5x Selfies Espejo",
+                                                                                                  "description":  "Prompt: `mirror selfie, holding iphone 15, bedroom background, messy hair`.",
+                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "time":  "20 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p2_02_s02_coffee",
+                                                                                                  "title":  "5x Lifestyle CafÃ©",
+                                                                                                  "description":  "Prompt: `sitting at starbucks, holding coffee cup, cafe window background, sunlight`.",
+                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "time":  "20 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p2_02_s03_body",
+                                                                                                  "title":  "5x Cuerpo Entero",
+                                                                                                  "description":  "Prompt: `full body shot, standing in street, wearing [ROPA], fashion photography`.",
+                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "time":  "20 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p2_02_s04_bed",
+                                                                                                  "title":  "5x Relax/Cama (Sugerente)",
+                                                                                                  "description":  "Prompt: `lying on bed, pajamas, cozy atmosphere, pov shot`.",
+                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap. Estas son para \u0027vender\u0027 o Stories picantes.",
+                                                                                                  "time":  "20 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p2_03_video",
+                                                                                "title":  "Crear 1 VÃ­deo Viral",
+                                                                                "description":  "Para TikTok/Reels.",
+                                                                                "points":  5,
+                                                                                "time":  "15 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p2_03_s01_wan_anim",
+                                                                                                  "title":  "Animar en Wan AI",
+                                                                                                  "description":  "Dale vida a una foto.",
+                                                                                                  "guide":  "1. Sube una foto bonita a Wan AI.\n2. Prompt: `subtle smile, blinking eyes, wind blowing hair`.\n3. Descarga el vÃ­deo.",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "id":  "phase_3_showcase",
+                                                           "title":  "Fase 3: El Escaparate (Redes)",
+                                                           "points":  10,
+                                                           "badge":  "Marketing",
+                                                           "description":  "Lanza tus perfiles al mundo.",
+                                                           "time":  "1 hora",
+                                                           "difficulty":  "FÃ¡cil",
+                                                           "subtasks":  [
+                                                                            {
+                                                                                "id":  "p3_01_insta",
+                                                                                "title":  "Setup Instagram",
+                                                                                "description":  "Tu escaparate principal.",
+                                                                                "points":  5,
+                                                                                "time":  "30 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p3_01_s01_profile",
+                                                                                                  "title":  "Configurar Perfil",
+                                                                                                  "description":  "Foto, Bio y Link.",
+                                                                                                  "guide":  "1. Foto Perfil: Primer plano de Cara Maestra.\n2. Bio: La que te dio ChatGPT.\n3. Link: TodavÃ­a no lo pongas (espera a tener Fanvue listo).",
+                                                                                                  "time":  "10 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              },
+                                                                                              {
+                                                                                                  "id":  "p3_01_s02_first_posts",
+                                                                                                  "title":  "Subir 3 Posts",
+                                                                                                  "description":  "El \u0027Grid\u0027 no puede estar vacÃ­o.",
+                                                                                                  "guide":  "Sube 3 de tus mejores fotos de golpe. Usa hashtags como #aiart #virtualgirl #[tu_nicho].",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            }
+                                                                        ]
+                                                       },
+                                                       {
+                                                           "id":  "phase_4_money",
+                                                           "title":  "Fase 4: La Caja Registradora (Fanvue)",
+                                                           "points":  20,
+                                                           "badge":  "Dinero",
+                                                           "description":  "Configura el cobro y empieza a facturar.",
+                                                           "time":  "1 hora",
+                                                           "difficulty":  "Media",
+                                                           "subtasks":  [
+                                                                            {
+                                                                                "id":  "p4_01_pricing",
+                                                                                "title":  "Estrategia de Precios",
+                                                                                "description":  "PsicologÃ­a de precios para empezar.",
+                                                                                "points":  5,
+                                                                                "time":  "10 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p4_01_s01_sub",
+                                                                                                  "title":  "Fijar SuscripciÃ³n",
+                                                                                                  "description":  "$9.99 + Descuento.",
+                                                                                                  "guide":  "1. Settings \u003e Creator.\n2. Precio: **$9.99**.\n3. Promo: **50% OFF** (limitado a 20 personas).",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p4_02_welcome",
+                                                                                "title":  "Mensaje de Bienvenida ($$$)",
+                                                                                "description":  "Automatiza tus ingresos.",
+                                                                                "points":  10,
+                                                                                "time":  "20 min",
+                                                                                "difficulty":  "Media",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p4_02_s01_setup_msg",
+                                                                                                  "title":  "Configurar Auto-Message",
+                                                                                                  "description":  "El mensaje que llega al suscribirse.",
+                                                                                                  "guide":  "1. Settings \u003e Automated Messages.\n2. Texto: \u0027Â¡Hola amor! ðŸ˜ Gracias por unirte... Â¿Quieres ver lo que llevo debajo? ðŸ‘‡\u0027\n3. **ADJUNTA FOTO** (una de las \u0027sugerentes\u0027 de la Fase 2).\n4. Ponle precio de desbloqueo: **$15**.",
+                                                                                                  "time":  "15 min",
+                                                                                                  "difficulty":  "Media"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                                            {
+                                                                                "id":  "p4_03_link",
+                                                                                "title":  "Conectar Todo",
+                                                                                "description":  "Pon el link en tu Bio.",
+                                                                                "points":  5,
+                                                                                "time":  "5 min",
+                                                                                "difficulty":  "FÃ¡cil",
+                                                                                "steps":  [
+                                                                                              {
+                                                                                                  "id":  "p4_03_s01_bio_link",
+                                                                                                  "title":  "Actualizar Instagram",
+                                                                                                  "description":  "Dirige el trÃ¡fico.",
+                                                                                                  "guide":  "Pon tu enlace de Fanvue (o Linktree) en la Bio de Instagram.",
+                                                                                                  "time":  "5 min",
+                                                                                                  "difficulty":  "FÃ¡cil"
+                                                                                              }
+                                                                                          ]
+                                                                            }
+                                                                        ]
+                                                       }
+                                                   ],
+                                         "Count":  5
+                                     }
                        },
                        {
                            "key":  "amazon_affiliates",
