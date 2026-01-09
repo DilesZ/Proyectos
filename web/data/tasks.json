@@ -3,8 +3,7 @@
                        {
                            "key":  "influencer_agency",
                            "name":  "Influencer IA (Fanvue)",
-                           "tasks":  {
-                                         "value":  [
+                           "tasks":  [
                                                        {
                                                            "id":  "phase_0_arsenal",
                                                            "title":  "Fase 0: El Arsenal (Setup)",
@@ -353,9 +352,7 @@
                                                                             }
                                                                         ]
                                                        }
-                                                   ],
-                                         "Count":  5
-                                     }
+                                                   ]
                        },
                        {
                            "key":  "amazon_affiliates",
