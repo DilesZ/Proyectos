@@ -2,7 +2,7 @@ const state = {
   tasks: {},
   progress: {}
 };
-const dataVersion = "20260108-2"; 
+const dataVersion = "20260109";
 const storeKey = "orquestador_progress_v2";
 // Simple userId generation/retrieval for demo purposes
 function getUserId() {
