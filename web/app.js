@@ -336,9 +336,9 @@ function renderBusiness(b) {
                           showDetail(st);
                       });
                       
-                      // Step click text -> toggle checkbox
+                      // Step click text -> open info
                       stItem.querySelector("span").addEventListener("click", () => {
-                          stItem.querySelector("input").click();
+                          showDetail(st);
                       });
 
                       // Step Checkbox
