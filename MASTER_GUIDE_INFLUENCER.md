@@ -35,10 +35,10 @@ Estas son las "cámaras" de fotos de tu modelo.
     *   Ve a [SeaArt.ai](https://www.seaart.ai/).
     *   Regístrate.
     *   *Por qué:* Otra opción potente si te quedas sin créditos en Tensor.
-3.  **Wan AI (Vídeo):**
-    *   Ve a [Wan AI](https://www.wan-ai.co/).
-    *   Regístrate.
-    *   *Por qué:* Es la mejor IA actual para convertir fotos estáticas en vídeos realistas.
+3.  **Estrategia Pro: Wan 2.2 + Post-Producción:**
+    *   **Wan 2.2** ([wan-ai.co](https://www.wan-ai.co/)) - Para videos de máxima calidad (ropa puesta)
+    *   **Stable Diffusion + Inpaint** - Para edición avanzada y desvestir digitalmente
+    *   **CapCut/Adobe Premiere** - Para edición final y efectos profesionales
 
 ### PASO 0.3: Tu Centro de Operaciones (Fanvue)
 Aquí es donde recibirás los pagos.
@@ -136,14 +136,38 @@ Necesitas llenar tus redes antes de lanzar. Genera estas situaciones:
 
 > **Truco:** Genera primero la imagen de la chica genérica, y luego hazle Face Swap con tu Cara Maestra.
 
-### PASO 2.3: Vídeo Viral con Wan AI
-Las fotos dan likes, los vídeos dan seguidores.
-1.  Coge una de tus mejores fotos (ej. la del café).
-2.  Ve a **Wan AI** -> Image to Video.
-3.  Sube la foto.
-4.  En el prompt escribe: `subtle smile, blinking eyes, wind blowing hair, drinking coffee`.
-5.  Genera. Descarga el vídeo.
-6.  *Opcional:* Usa CapCut (app móvil) para ponerle música de tendencia.
+### PASO 2.3: Flujo Pro - Vídeos con Wan 2.2 + Edición Avanzada
+
+**FASE 1: Creación del Vídeo Base (Ropa Puesta)**
+1.  **Wan 2.2 para Calidad Máxima:**
+    *   Ve a [Wan AI](https://www.wan-ai.co/) y selecciona Image-to-Video
+    *   Sube tu mejor foto (con ropa normal)
+    *   **Prompt de Movimiento:** `subtle smile, blinking eyes, wind blowing hair, natural body movement`
+    *   **Configuración:** Usa la máxima calidad disponible
+    *   Descarga el vídeo en la mejor resolución posible
+
+**FASE 2: Post-Producción Avanzada (Opcional Pro)**
+2.  **Stable Diffusion + Inpaint para Edición:**
+    *   **Tensor.art/SeaArt:** Busca el modelo "Inpainting" o "Outpainting"
+    *   Sube frames clave del vídeo de Wan
+    *   **Técnica de Desvestido Digital:**
+        ```
+        Prompt: beautiful naked woman, natural body, perfect anatomy, artistic nude, soft lighting
+        Negative: clothes, bra, underwear, swimsuit, deformed, bad anatomy
+        Mask: Selecciona solo la zona de la ropa
+        ```
+    *   Genera y descarga los frames editados
+
+3.  **Ensamblaje Final con CapCut/Premiere:**
+    *   Importa el vídeo original de Wan
+    *   Reemplaza los frames editados en los momentos clave
+    *   Añade transiciones suaves y efectos de luz
+    *   **Música:** Usa tendencias de TikTok/Instagram Reels
+
+**⚠️ IMPORTANTE LEGAL:**
+- Solo para contenido artístico/erótico permitido en Fanvue
+- Verifica siempre los TOS de cada plataforma
+- Mantén la consistencia anatómica realista
 
 ---
 
