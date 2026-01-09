@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía Maestra: Influencer IA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #0f1115;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -18,25 +20,32 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: #161b22;
+            background: #0d1117;
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
         h1, h2, h3 {
-            color: #fff;
+            color: #ffffff;
             margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
         }
         h1 {
             font-size: 2.5rem;
-            border-bottom: 2px solid #333;
-            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 0;
             color: #58a6ff;
         }
         h2 {
-            font-size: 1.8rem;
-            border-bottom: 1px solid #333;
-            padding-bottom: 0.3rem;
-            margin-top: 2rem;
+            font-size: 1.75rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            color: #79c0ff;
         }
         a {
             color: #58a6ff;
@@ -45,161 +54,295 @@
         a:hover {
             text-decoration: underline;
         }
+        p {
+            margin-bottom: 16px;
+        }
+        ul, ol {
+            padding-left: 2em;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 0.25em;
+        }
+        li > ul, li > ol {
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
         code {
-            background: #2d333b;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #f0f6fc;
+            background-color: rgba(110,118,129,0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 85%;
         }
         pre {
-            background: #2d333b;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
+            background-color: #161b22;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            font-size: 100%;
         }
         blockquote {
-            border-left: 4px solid #58a6ff;
-            margin: 0;
-            padding-left: 15px;
+            margin: 0 0 16px;
+            padding: 0 1em;
             color: #8b949e;
-            background: #1f242c;
-            padding: 10px 15px;
-            border-radius: 0 4px 4px 0;
+            border-left: 0.25em solid #30363d;
+        }
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #30363d;
+            border: 0;
         }
         .btn-action {
             display: inline-block;
             background: #238636;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.2s;
         }
         .btn-action:hover {
             background: #2ea043;
             text-decoration: none;
         }
-        ul {
-            padding-left: 20px;
+        .warning-box {
+            background-color: rgba(187, 128, 9, 0.15);
+            border: 1px solid rgba(187, 128, 9, 0.4);
+            padding: 16px;
+            border-radius: 6px;
+            margin: 16px 0;
         }
-        li {
-            margin-bottom: 8px;
+        .checklist-item {
+            list-style-type: none;
+            margin-left: -1.5em;
         }
-        .step-badge {
-            background: #1f6feb;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        .warning {
-            background: #3e1f1f;
-            border: 1px solid #ff6b6b;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
+        .checklist-item input[type="checkbox"] {
+            margin-right: 0.5em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>💰 GUÍA MAESTRA: Tu Negocio de Influencer IA</h1>
+        <h1>💰 GUÍA MAESTRA: Tu Negocio de Influencer IA desde Cero</h1>
         <blockquote>
-            <strong>Objetivo:</strong> Generar ingresos mensuales ($500 - $5,000+) creando una influencer virtual, sin necesidad de ser experto en tecnología.
+            <p><strong>Objetivo:</strong> Generar ingresos mensuales ($500 - $5,000+) creando una influencer virtual, sin necesidad de ser experto en tecnología, sin mostrar tu cara y con herramientas gratuitas o de bajo coste.</p>
         </blockquote>
+        <p>Esta guía está diseñada para que <strong>CUALQUIER PERSONA</strong> pueda seguirla paso a paso. No asumas nada, solo sigue las instrucciones.</p>
+        
+        <hr>
 
         <h2>📋 ¿Qué necesitas antes de empezar?</h2>
         <p>Solo necesitas 3 cosas:</p>
         <ol>
             <li><strong>Un Ordenador</strong> (Windows o Mac) con acceso a internet.</li>
             <li><strong>Tiempo:</strong> 1-2 horas al día al principio.</li>
-            <li><strong>Ganas de aprender:</strong> Usaremos herramientas de IA fáciles de usar.</li>
+            <li><strong>Ganas de aprender:</strong> Usaremos herramientas de Inteligencia Artificial (IA) que son fáciles de usar si sigues los pasos.</li>
         </ol>
 
         <h3>🛠️ Herramientas Esenciales (Guárdalas en Favoritos)</h3>
         <ul>
-            <li>🎨 <strong>Imágenes (Fácil):</strong> <a href="https://www.freepik.com/pikaso" target="_blank">Freepik Pikaso</a> o <a href="https://www.seaart.ai/" target="_blank">SeaArt.ai</a> (Gratis/Freemium).</li>
-            <li>🚀 <strong>Imágenes (Pro):</strong> <a href="https://tensor.art/" target="_blank">Tensor.art</a>.</li>
-            <li>✍️ <strong>Textos:</strong> <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.</li>
-            <li>💵 <strong>Cobrar:</strong> <a href="https://www.fanvue.com/" target="_blank">Fanvue</a> (Donde ganarás el dinero).</li>
+            <li><strong>Para crear imágenes (Fácil):</strong> <a href="https://www.freepik.com/pikaso" target="_blank">Freepik Pikaso</a> o <a href="https://www.seaart.ai/" target="_blank">SeaArt.ai</a> (Gratis/Freemium).</li>
+            <li><strong>Para crear imágenes (Pro/Sin Censura):</strong> <a href="https://tensor.art/" target="_blank">Tensor.art</a> o instalar <strong>Stable Diffusion</strong> (más avanzado, lo veremos luego).</li>
+            <li><strong>Para textos e ideas:</strong> <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> (Gratis).</li>
+            <li><strong>Para cobrar:</strong> <a href="https://www.fanvue.com/" target="_blank">Fanvue</a> (Donde ganarás el dinero).</li>
+            <li><strong>Para redes sociales:</strong> Cuentas nuevas de Instagram, TikTok y Twitter (X).</li>
         </ul>
 
-        <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0;">
+        <hr>
 
         <h2>🚀 PASO 1: Diseña tu "Producto" (Tu Influencer)</h2>
-        <p>No empieces a crear imágenes a lo loco. Elige un nicho:</p>
+        <p>No empieces a crear imágenes a lo loco. Necesitas un plan. Tu influencer es un personaje ficticio que debe gustar a un público específico.</p>
+
+        <h3>1.1 Elige tu Nicho (¿Quién es ella?)</h3>
+        <p>Elige UNO de estos tres perfiles probados que funcionan:</p>
         <ul>
-            <li>🎮 <strong>La Gamer:</strong> Auriculares, luces LED, cosplay. <em>(Público: Geeks)</em></li>
-            <li>💪 <strong>La Fitness:</strong> Ropa gym, sudor, vida sana. <em>(Público: Admiradores del físico)</em></li>
-            <li>🥰 <strong>La "Girlfriend Experience":</strong> Dulce, casera, "vecina de al lado". <em>(Público: Busca conexión)</em></li>
+            <li><strong>La Gamer:</strong> Juega videojuegos, usa auriculares, luces LED, ropa cómoda o cosplay. <em>Público: Hombres jóvenes, geeks.</em></li>
+            <li><strong>La Fitness:</strong> Ropa de gimnasio, sudor, vida sana, leggings. <em>Público: Hombres que admiran el físico.</em></li>
+            <li><strong>La "Girlfriend Experience" (La chica de al lado):</strong> Dulce, casera, sonriente, ropa normal, parece que podría ser tu vecina. <em>Público: Hombres que buscan conexión emocional.</em></li>
         </ul>
-        <p><strong>Tarea:</strong> Abre un bloc de notas y define: Nombre, Edad (19-25), Nacionalidad y Personalidad.</p>
+
+        <h3>1.2 Crea su Identidad (La Biblia)</h3>
+        <p>Abre un bloc de notas y escribe esto (usa ChatGPT si te bloqueas):</p>
+        <ul>
+            <li><strong>Nombre:</strong> (Ej: Elena Fit, Sarah Gamer). Que sea fácil de pronunciar.</li>
+            <li><strong>Edad:</strong> (Entre 19 y 25 años suele funcionar mejor).</li>
+            <li><strong>Nacionalidad:</strong> (Ej: Española, Latina, Americana).</li>
+            <li><strong>Personalidad:</strong> (Ej: Tímida pero traviesa, o Dominante y segura).</li>
+            <li><strong>Cuerpo:</strong> Define color de pelo, ojos y tipo de cuerpo. <strong>IMPORTANTE:</strong> Debe ser SIEMPRE igual.</li>
+        </ul>
+
+        <hr>
 
         <h2>🎨 PASO 2: Creando a tu Influencer (Imágenes)</h2>
-        <h3>Método Fácil (Tensor.art / SeaArt)</h3>
+        <p>Aquí es donde ocurre la magia. Tienes dos caminos.</p>
+
+        <h3>CAMINO A: El Método Fácil (Gratis/Rápido)</h3>
+        <p>Usaremos <strong>Tensor.art</strong> o <strong>SeaArt.ai</strong> porque permiten generar imágenes consistentes (siempre la misma cara) gratis cada día.</p>
         <ol>
-            <li>Regístrate en <a href="https://tensor.art/" target="_blank">Tensor.art</a>.</li>
-            <li>Busca un modelo "Realism" o "ChilloutMix".</li>
-            <li><strong>CLAVE:</strong> Usa un "LoRA" de una cara específica para mantener la consistencia.</li>
-            <li><strong>Prompt (Ejemplo):</strong><br>
-                <code>photo of a beautiful 20yo spanish woman, long brown hair, fitness body, wearing gym shark leggings, in a gym, sweat, cinematic lighting, 8k, realistic.</code>
+            <li><strong>Regístrate</strong> en <a href="https://tensor.art/" target="_blank">Tensor.art</a>.</li>
+            <li>Busca un "Modelo" (Checkpoint) realista. Busca "Realism" o "ChilloutMix".</li>
+            <li><strong>Lo más importante: La Cara (LoRA).</strong>
+                <ul>
+                    <li>En la barra de búsqueda, busca "LoRA" de alguna celebridad o cara específica (o usa una mezcla).</li>
+                    <li><em>Truco:</em> Si usas siempre el mismo LoRA con el mismo "peso" (ej: 0.8), la cara será siempre igual.</li>
+                </ul>
+            </li>
+            <li><strong>Escribe tu Prompt (La orden):</strong>
+                <ul>
+                    <li>Usa inglés (usa el Traductor de Google).</li>
+                    <li>Estructura: <code>[Foto de mujer joven], [Descripción física], [Ropa], [Lugar], [Iluminación], [Calidad]</code>.</li>
+                    <li><em>Ejemplo:</em> <code>photo of a beautiful 20yo spanish woman, long brown hair, fitness body, wearing gym shark leggings and sports bra, in a gym, sweat, cinematic lighting, 8k, realistic.</code></li>
+                </ul>
+            </li>
+            <li><strong>Genera</strong> muchas imágenes. Guarda las mejores.</li>
+        </ol>
+
+        <h3>CAMINO B: El Método Pro (Stable Diffusion Local)</h3>
+        <p>Si tienes un PC potente (Tarjeta gráfica NVIDIA), instala <strong>Stability Matrix</strong> (es un programa que instala todo por ti).</p>
+        <ul>
+            <li>Te da control total y <strong>cero censura</strong>.</li>
+            <li><em>Recomendado solo si el Camino A se te queda corto.</em></li>
+        </ul>
+
+        <hr>
+
+        <h2>📱 PASO 3: Redes Sociales (El Escaparate)</h2>
+        <p>Nadie te pagará si no te conocen. Necesitas tráfico.</p>
+
+        <h3>3.1 Instagram (La Carta de Presentación)</h3>
+        <ul>
+            <li>Crea una cuenta nueva con el nombre de tu influencer.</li>
+            <li><strong>Bio:</strong> "📍 Madrid | Fitness Lover 🏋️‍♀️ | 👇 Mis secretos aquí 👇 [Link]"</li>
+            <li><strong>Contenido:</strong> Sube 1 foto al día.
+                <ul>
+                    <li><em>Stories:</em> Sube fotos "casuales" (comida, espejo, paisaje) para parecer real.</li>
+                    <li><em>Reels:</em> Usa herramientas como <strong>Haiper</strong> o <strong>Runway</strong> para dar un poco de movimiento a tus fotos (parpadeos, pelo moviéndose).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>3.2 Twitter / X (Sin Censura)</h3>
+        <ul>
+            <li>Aquí puedes ser más picante.</li>
+            <li>Usa hashtags como <code>#aiart #aiinfluencer #fanvue</code>.</li>
+            <li>Interactúa con otras cuentas de IA para ganar seguidores.</li>
+        </ul>
+
+        <h3>3.3 TikTok (Viralidad)</h3>
+        <ul>
+            <li>Crea vídeos cortos con música viral.</li>
+            <li>Pon tu foto de IA y usa efectos de "Zoom" o "Movimiento 3D" (CapCut tiene plantillas 3D Zoom).</li>
+        </ul>
+
+        <hr>
+
+        <h2>💰 PASO 4: Monetización (Cobra por ver)</h2>
+        <p>Aquí es donde convertimos likes en dólares.</p>
+        <ol>
+            <li>Regístrate en <strong>Fanvue</strong> (es como OnlyFans pero amigable con IA).</li>
+            <li><strong>Verifica tu cuenta:</strong> Te pedirán DNI (usa el tuyo real, eres el "manager").</li>
+            <li><strong>Configura el precio:</strong> Empieza bajo ($5 - $10 al mes).</li>
+            <li><strong>Sube contenido:</strong>
+                <ul>
+                    <li>Sube 10-15 fotos "exclusivas" (un poco más subidas de tono que en Instagram) para que el perfil no se vea vacío.</li>
+                    <li>Crea un "Tier" o niveles de suscripción.</li>
+                </ul>
             </li>
         </ol>
 
-        <h2>📱 PASO 3: Redes Sociales (El Escaparate)</h2>
-        <h3>Instagram</h3>
-        <ul>
-            <li>Bio clara: "📍 Madrid | Fitness Lover 🏋️‍♀️ | 👇 Mis secretos aquí 👇 [Link]"</li>
-            <li>Sube 1 foto al día + Stories "casuales" (comida, espejo).</li>
-        </ul>
-        <h3>TikTok (Viralidad)</h3>
-        <ul>
-            <li>Usa música viral.</li>
-            <li>Pon tu foto con efectos de "Zoom 3D" (CapCut).</li>
-        </ul>
-
-        <h2>💰 PASO 4: Monetización (Cobra por ver)</h2>
-        <ol>
-            <li>Regístrate en <strong>Fanvue</strong>.</li>
-            <li>Verifica tu cuenta con tu DNI real (tú eres el manager).</li>
-            <li>Pon precio bajo ($5 - $10).</li>
-        </ol>
-        
-        <div class="warning">
-            <h3>💎 El Secreto: "The Boyfriend Experience"</h3>
-            <p>El dinero real está en los <strong>Mensajes Directos (DM)</strong>.</p>
+        <div class="warning-box">
+            <h3>💎 El Secreto de los Ingresos: "The Boyfriend Experience"</h3>
+            <p>El dinero real no está en la suscripción de $10, está en los <strong>Mensajes Directos (DM)</strong>.</p>
             <ul>
-                <li>Cuando se suscriban, envía mensaje de bienvenida gratis.</li>
-                <li>Luego, envía foto "privada" bloqueada por precio ($15).</li>
-                <li>Script: <em>"Hola guapo, he hecho esta foto solo para ti... ¿quieres verla?"</em></li>
+                <li>Cuando alguien se suscriba, envíale un mensaje automático de bienvenida (gratis).</li>
+                <li>Luego, envíale una foto "privada" bloqueada por precio (ej: $15).</li>
+                <li>Dile: <em>"Hola guapo, gracias por unirte. He hecho esta foto solo para ti... ¿quieres verla?"</em></li>
+                <li>Muchos pagarán.</li>
             </ul>
         </div>
 
-        <h2>🎥 PASO EXTRA: Vídeos (Nivel Avanzado)</h2>
-        <p><strong>Opción A: Living Portraits</strong></p>
+        <hr>
+
+        <h2>🎥 PASO EXTRA: Creando Vídeos (Nivel Avanzado)</h2>
+        <p>Los vídeos en TikTok y Reels son la forma más rápida de crecer. No necesitas grabar nada.</p>
+
+        <h3>Opción A: "Living Portraits" (La foto que se mueve)</h3>
         <ol>
-            <li>Ve a <a href="https://haiper.ai/" target="_blank">Haiper.ai</a>.</li>
-            <li>Sube tu foto y dale a "Generate".</li>
-            <li>Resultado: Tu foto parpadea y respira. Súbela a TikTok con música.</li>
+            <li>Ve a <strong>Runway Gen-2</strong> o <strong>Haiper AI</strong> (tienen pruebas gratis).</li>
+            <li>Sube una de tus fotos generadas en el PASO 2.</li>
+            <li>No escribas nada, solo dale a "Generate". La IA hará que parpadee y se mueva ligeramente.</li>
+            <li><strong>Resultado:</strong> Un vídeo de 4 segundos que parece que ella te está mirando.</li>
+            <li>Ponle música viral en TikTok y un texto encima: <em>"Cuando me mira así..."</em></li>
         </ol>
 
-        <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0;">
+        <h3>Opción B: Vídeo Real con "Face Swap" (Deepfake Ético)</h3>
+        <ol>
+            <li>Descarga un vídeo de stock gratuito de una chica fitness haciendo ejercicio (Pexels o Pixabay).</li>
+            <li>Usa una herramienta de "Face Swap" (como <strong>Remaker AI</strong> o bots de Discord).</li>
+            <li>Sube el vídeo y sube la foto de la cara de tu influencer.</li>
+            <li>La IA pondrá la cara de tu influencer en el cuerpo de la chica del vídeo.</li>
+            <li><em>Nota:</em> Esto a veces se ve raro, úsalo con cuidado.</li>
+        </ol>
 
-        <h2>📅 Tu Rutina Diaria</h2>
+        <hr>
+
+        <h2>📅 Tu Rutina Diaria (Checklist)</h2>
+        <p>Para ganar dinero, tienes que ser constante. Dedica 1 hora al día:</p>
         <ul>
-            <li>✅ <strong>15 min:</strong> Generar 3-5 fotos nuevas.</li>
-            <li>✅ <strong>10 min:</strong> Publicar en Instagram (Post + Story).</li>
-            <li>✅ <strong>10 min:</strong> Publicar en Twitter/X.</li>
-            <li>✅ <strong>20 min:</strong> Responder mensajes en Fanvue ($$$).</li>
+            <li class="checklist-item"><input type="checkbox"> <strong>15 min:</strong> Generar 3-5 fotos nuevas (una para Instagram, una para Twitter, una para Fanvue).</li>
+            <li class="checklist-item"><input type="checkbox"> <strong>10 min:</strong> Publicar en Instagram (Post + Story).</li>
+            <li class="checklist-item"><input type="checkbox"> <strong>10 min:</strong> Publicar en Twitter.</li>
+            <li class="checklist-item"><input type="checkbox"> <strong>20 min:</strong> Responder mensajes en Fanvue (o configurar mensajes automáticos).</li>
+            <li class="checklist-item"><input type="checkbox"> <strong>5 min:</strong> Buscar nuevas ideas/poses en la competencia.</li>
         </ul>
 
+        <hr>
+
+        <h2>🛠️ Caja de Herramientas (Enlaces Directos)</h2>
+        
+        <h3>Generación de Imágenes</h3>
+        <ul>
+            <li><a href="https://tensor.art/" target="_blank">Tensor.art</a> (Gratis diario, modelos SDXL)</li>
+            <li><a href="https://www.seaart.ai/" target="_blank">SeaArt.ai</a> (Muy fácil de usar)</li>
+            <li><a href="https://civitai.com/" target="_blank">Civitai</a> (Para descargar modelos y ver prompts de otros)</li>
+        </ul>
+
+        <h3>Edición y Mejora</h3>
+        <ul>
+            <li><a href="https://www.upscale.media/" target="_blank">Upscale.media</a> (Para mejorar la calidad de las fotos gratis)</li>
+            <li><a href="https://cleanup.pictures/" target="_blank">Cleanup.pictures</a> (Para borrar cosas que sobran de la foto)</li>
+        </ul>
+
+        <h3>Gestión</h3>
+        <ul>
+            <li><a href="https://linktr.ee/" target="_blank">Linktree</a> (Para poner todos tus links en la bio de Instagram)</li>
+            <li><a href="https://trello.com/" target="_blank">Trello</a> (Para organizar tus ideas)</li>
+        </ul>
+
+        <hr>
+
+        <h2>🆘 ¿Te has atascado?</h2>
+        <ul>
+            <li><strong>"Las caras me salen raras"</strong>: Usa la opción "ADetailer" en Tensor/SeaArt, o genera la imagen de lejos y luego usa "Inpaint" solo en la cara.</li>
+            <li><strong>"No tengo seguidores"</strong>: Sé constante. Los primeros 100 son los más difíciles. Comenta en fotos de otros.</li>
+            <li><strong>"No sé qué prompt usar"</strong>: Ve a Civitai.com, busca una foto que te guste, copia su prompt y cámbialo un poco.</li>
+        </ul>
+
+        <p style="text-align: center; margin-top: 40px; font-size: 1.2em;"><strong>¡Empieza HOY! No necesitas que sea perfecto, necesitas que exista.</strong></p>
+
         <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            <p><em>Sigue las tareas en el panel principal para ejecutar esto paso a paso.</em></p>
-            <button onclick="window.close()" class="btn-action" style="background: #333;">Cerrar Guía</button>
+            <button onclick="window.close()" class="btn-action" style="background: #30363d; margin-right: 10px;">Cerrar Pestaña</button>
+            <button onclick="window.print()" class="btn-action">🖨️ Imprimir / Guardar PDF</button>
         </div>
     </div>
 </body>
