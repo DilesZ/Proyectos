@@ -375,7 +375,7 @@
                 }
               ],
               "description": "Prompt Anchor",
-              "prompt": "Escribe un prompt SDXL/Tensor/SeaArt para Elena (24, española, fitness girl-next-door) y un negative prompt. Devuelve también parámetros recomendados: resolución vertical, steps, CFG, sampler."
+              "prompt": "Escribe un prompt semántico para Nano Banana Pro (Higgsfield) para Elena (24, española, fitness girl-next-door). Devuelve también parámetros recomendados: Negative prompt mínimo, CFG scale 3.0-5.0, steps 25-30."
             },
             {
               "id": "fanvue_02_02_generar",
@@ -394,8 +394,8 @@
                   "prompt": "Para Elena (24, española, fitness girl-next-door), genera el entregable exacto para el paso: 'Generar Tanda Inicial'. Devuelve un único resultado final listo para copiar y una checklist de validación.",
                   "tools": [
                     {
-                      "name": "SeaArt (Gratis)",
-                      "url": "https://www.seaart.ai/"
+                      "name": "Higgsfield (Nano Banana Pro)",
+                      "url": "https://higgsfield.ai/"
                     },
                     {
                       "name": "Tensor.art (Gratis)",

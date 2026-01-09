@@ -30,7 +30,7 @@ function Generate-Prompt {
             if ($t -match "nombre de usuario|handle") { return "Genera 10 handles basados en 'elena' y 'fitdiary'. Reglas: sin caracteres raros, 12-15 caracteres, devuélvelos numerados 1-10." }
             if ($t -match "disponibilidad") { return "Dame un procedimiento exacto (sin opciones) para validar disponibilidad del handle en IG/TikTok/X con Namechk y qué hacer si está ocupado." }
             if ($t -match "bio|biograf") { return "Escribe una bio EXACTA para Elena: 2 líneas + CTA al link. Sin alternativas. Incluye 2 emojis máximo." }
-            if ($t -match "prompt") { return "Escribe un prompt SDXL/Tensor/SeaArt para Elena (24, española, fitness girl-next-door) y un negative prompt. Devuelve también parámetros recomendados: resolución vertical, steps, CFG, sampler." }
+            if ($t -match "prompt") { return "Escribe un prompt semántico para Nano Banana Pro (Higgsfield) para Elena (24, española, fitness girl-next-door). Devuelve también parámetros recomendados: Negative prompt mínimo, CFG scale 3.0-5.0, steps 25-30." }
             if ($t -match "caption|copy|cta") { return "Escribe 10 CTAs para story IG que empujen al link. Reglas: curiosidad + urgencia, 90 caracteres máximo, 0 lenguaje explícito." }
             if ($t -match "calendario|contenido") { return "Crea un calendario semanal fijo para Elena: 7 posts IG, 7 stories IG, 3 tweets al día, 3 mensajes Fanvue. Devuelve en tabla día/acción." }
             if ($t -match "bienvenida|welcome") { return "Escribe el script exacto de bienvenida para Fanvue (mensaje automático) que incluya un upsell de foto." }
@@ -59,15 +59,15 @@ function Generate-Prompt {
             if ($t -match "video|reels|tiktok") {
                 return @"
 ### 🔧 Instrucciones (modo receta)
-1. **Objetivo:** Crear un vídeo viral de 5 segundos sin grabar nada.
-2. Ve a **Haiper.ai** (gratis) o **RunwayML**.
-3. Sube tu mejor foto (primer plano, mirando a cámara).
-4. En el prompt de movimiento escribe: "slow zoom in, gentle smile, blinking, wind in hair".
-5. Genera el vídeo.
+1. **Objetivo:** Crear un vídeo viral de 5-10 segundos con movimiento realista.
+2. Ve a **Wan AI** (wanx.ai) o usa **ComfyUI con Wan-Move** (GOD TIER).
+3. Sube tu mejor foto (generada con Nano Banana Pro).
+4. **Motion Brush/Arrows:** Dibuja flechas en el pelo (viento) y en la mano (saludo).
+5. Genera el vídeo (1080p si es posible).
 6. Descárgalo y pásalo al móvil.
 7. Abre TikTok/Reels, ponle una canción que sea Top 1 Viral.
 8. Añade texto: "Pov: Tu vecina te saluda así".
-9. **Resultado final:** Vídeo publicado.
+9. **Resultado final:** Vídeo publicado con movimiento coherente.
 "@
             }
             return "Para Elena (24, española, fitness girl-next-door), genera el entregable exacto para el paso: '" + $clean + "'. Devuelve un único resultado final listo para copiar y una checklist de validación."
