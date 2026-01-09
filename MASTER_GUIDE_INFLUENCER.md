@@ -1,145 +1,174 @@
-# 💰 GUÍA MAESTRA: Tu Negocio de Influencer IA desde Cero (Edición 2026)
-> **Objetivo:** Generar ingresos mensuales ($500 - $5,000+) creando una influencer virtual, sin necesidad de ser experto en tecnología, sin mostrar tu cara y con las herramientas más punteras de 2026.
+# 💰 GUÍA MAESTRA: Tu Imperio de Influencer IA desde Cero (Edición 2026)
 
-Esta guía está diseñada para que **CUALQUIER PERSONA** pueda seguirla paso a paso. No asumas nada, solo sigue las instrucciones.
-
----
-
-## 📋 ¿Qué necesitas antes de empezar?
-Solo necesitas 3 cosas:
-1. **Un Ordenador** (Windows o Mac) con acceso a internet.
-2. **Tiempo**: 1-2 horas al día al principio.
-3. **Ganas de aprender**: Usaremos la nueva generación de IA (Wan AI, Nano Banana Pro) que facilita mucho el trabajo.
-
-### 🛠️ Herramientas Esenciales (Guárdalas en Favoritos)
-*   **Para crear imágenes (GOD TIER):** [Higgsfield AI](https://higgsfield.ai/) (Usando el modelo **Nano Banana Pro**).
-*   **Para crear imágenes (Gratis/Alternativa):** [Tensor.art](https://tensor.art/) o [SeaArt.ai](https://www.seaart.ai/).
-*   **Para crear vídeo (NUEVO ESTÁNDAR):** [Wan AI](https://www.wan-ai.co/) (Modelos Wan 2.6 con Motion Control).
-*   **Para textos e ideas:** [ChatGPT](https://chat.openai.com/) (Gratis).
-*   **Para cobrar:** [Fanvue](https://www.fanvue.com/) (La plataforma líder para creadores IA en 2026).
-*   **Para redes sociales:** Cuentas nuevas de Instagram, TikTok y Twitter (X).
+> **Tu Hoja de Ruta Definitiva:** De 0 a $5,000/mes creando una estrella digital. Sin mostrar tu cara. Sin conocimientos técnicos previos. Solo disciplina y estrategia.
 
 ---
 
-## 🚀 PASO 1: Diseña tu "Producto" (Tu Influencer)
-No empieces a crear imágenes a lo loco. Necesitas un plan. Tu influencer es un personaje ficticio que debe gustar a un público específico.
+## 🚨 LEER ANTES DE EMPEZAR: La Realidad
+Esto no es un botón mágico de dinero. Es un **NEGOCIO DIGITAL**.
+*   **Lo fácil:** Crear imágenes bonitas (cualquiera puede hacerlo en 2026).
+*   **Lo difícil:** La consistencia y la venta psicológica.
+*   **La oportunidad:** Fanvue es la plataforma de mayor crecimiento para IA. A diferencia de OnlyFans, **Fanvue APOYA a los creadores IA** y te da herramientas para ello.
 
-### 1.1 Elige tu Nicho (¿Quién es ella?)
-Elige UNO de estos tres perfiles probados que funcionan hoy:
-*   **La Gamer:** Juega videojuegos, usa auriculares, luces LED, ropa cómoda o cosplay. *Público: Hombres jóvenes, geeks.*
-*   **La Fitness:** Ropa de gimnasio, sudor, vida sana, leggings. *Público: Hombres que admiran el físico.*
-*   **La "Girlfriend Experience" (La chica de al lado):** Dulce, casera, sonriente, ropa normal, parece que podría ser tu vecina. *Público: Hombres que buscan conexión emocional.*
-
-### 1.2 Crea su Identidad (La Biblia)
-Abre un bloc de notas y escribe esto (usa ChatGPT si te bloqueas):
-*   **Nombre:** (Ej: Elena Fit, Sarah Gamer). Que sea fácil de pronunciar.
-*   **Edad:** (Entre 19 y 25 años suele funcionar mejor).
-*   **Nacionalidad:** (Ej: Española, Latina, Americana).
-*   **Personalidad:** (Ej: Tímida pero traviesa, o Dominante y segura).
-*   **Cuerpo:** Define color de pelo, ojos y tipo de cuerpo. **IMPORTANTE:** Debe ser SIEMPRE igual.
+Esta guía es **TU BIBLIA**. Sigue cada paso. No te saltes nada.
 
 ---
 
-## 🎨 PASO 2: Creando a tu Influencer (Imágenes)
-Aquí es donde ocurre la magia. En 2026, la tecnología ha dado un salto gigante.
+## 🎒 FASE 0: El Arsenal (Herramientas)
+No necesitas gastar cientos de dólares. Empieza con lo básico y escala.
 
-### CAMINO S: El Método GOD TIER (Nano Banana Pro)
-Este es el método recomendado hoy. Usaremos **Nano Banana Pro** en Higgsfield porque tiene "razonamiento semántico". A diferencia de las IAs antiguas que alucinaban, esta entiende la lógica de tus peticiones.
+### 🎨 Generación de Imágenes (Tu Cámara)
+*   **OPCIÓN FÁCIL (Recomendada para empezar):** [Tensor.art](https://tensor.art/) o [SeaArt.ai](https://www.seaart.ai/).
+    *   *Por qué:* Tienen modelos potentes (FLUX, Pony, SDXL) gratis a diario y permiten usar LoRAs (caras de personajes) sin instalar nada.
+*   **OPCIÓN PRO (Calidad de Cine):** [Higgsfield AI](https://higgsfield.ai/) (Modelo Nano Banana Pro).
+    *   *Por qué:* Entiende instrucciones complejas mejor que nadie.
+*   **OPCIÓN EXPERTA (Control Total):** **ComfyUI** (Instalado en tu PC o en la nube con RunPod).
+    *   *Por qué:* Es lo que usan las agencias que facturan $50k/mes.
 
-1.  **Regístrate** en [Higgsfield.ai](https://higgsfield.ai/).
-2.  Selecciona el modelo **"Nano Banana Pro"**.
-3.  **Prompting de Alto Control:**
-    *   Esta IA sigue las instrucciones al pie de la letra.
-    *   *Ejemplo:* `Hyper-realistic photo of Elena, a 22yo spanish woman, sitting in a modern coffee shop, holding a ceramic cup with both hands, soft sunlight hitting her face from the left, wearing a beige knitted sweater, shot on Sony A7R IV, 85mm lens, depth of field.`
-4.  **Consistencia:** Al usar el mismo nombre y descripción base, Nano Banana Pro mantiene la cara mucho mejor que los modelos antiguos.
+### 🎥 Generación de Vídeo (Tu Vida)
+*   **Líder Indiscutible:** [Wan AI](https://www.wan-ai.co/) (Wan 2.6).
+    *   *Función:* "Motion Control". Puedes decir "mueve la mano así" y lo hace.
+*   **Alternativa Cinemática:** [Higgsfield AI](https://higgsfield.ai/).
+    *   *Función:* Zooms, paneos y movimientos de cámara de película.
 
-### CAMINO A: El Método Clásico (Tensor.art / SeaArt)
-Si prefieres las herramientas clásicas o buscas opciones gratuitas diarias masivas.
-
-1.  **Regístrate** en [Tensor.art](https://tensor.art/).
-2.  Busca un "Modelo" (Checkpoint) realista como **Juggernaut XL** o **RealVisXL**.
-3.  **Lo más importante: La Cara (LoRA).**
-    *   Busca un LoRA de una cara específica y úsalo siempre con el mismo peso (0.7 - 0.8).
-4.  **Genera** muchas imágenes y filtra.
-
----
-
-## 📱 PASO 3: Redes Sociales (El Escaparate)
-En 2026, la gente está cansada de los bots. Necesitas **Storytelling** (contar una historia).
-
-### 3.1 Instagram (Lifestyle y Reels)
-*   **Bio:** "📍 Madrid | Fitness Lover 🏋️‍♀️ | 👇 Charla conmigo aquí 👇 [Link]"
-*   **Estrategia:** No subas solo fotos posando. Sube fotos "haciendo cosas": cocinando, paseando, comprando.
-*   **Reels:** Son OBLIGATORIOS. Usaremos Wan AI (ver paso extra) para animar tus fotos.
-
-### 3.2 Twitter / X (El Embudo)
-*   Aquí está tu público más "caliente".
-*   Usa hashtags: `#aiart #aiinfluencer #fanvue #virtualgirl`.
-*   Sube "teasers" (vistas previas) de lo que hay en tu Fanvue.
-
-### 3.3 TikTok (Viralidad Masiva)
-*   Sube los vídeos generados con Wan AI.
-*   Usa audios virales de chicas reales haciendo lip-sync (sincronización labial) si usas herramientas de Face Swap.
+### 💸 El Banco (Monetización)
+*   **Fanvue:** [Registrarse en Fanvue](https://www.fanvue.com/). Tu centro de operaciones.
+*   **Linktree:** Para poner en tus bios de redes sociales.
 
 ---
 
-## 💰 PASO 4: Monetización (Fanvue 2026)
-La competencia ha subido, pero el dinero también. Los creadores IA top ganan entre **$10k y $60k al mes**.
+## � FASE 1: Diseño del Producto (La "Chica")
+El error #1 es crear una chica distinta cada día. **NECESITAS CONSISTENCIA**. Tu influencer debe ser reconocible.
 
-### La Estrategia Ganadora: "Conexión Real"
-Ya no basta con enseñar piel. Los usuarios buscan una "novia virtual".
-1.  **El Gancho:** Suscripción barata ($5 - $8) o Gratuita para entrar.
-2.  **La Retención:** Chat diario. Pregúntales cómo les fue el día.
-3.  **El High-Ticket (PPV):**
-    *   El dinero real está en los mensajes privados (PPV).
-    *   Vende "Sets de fotos exclusivos" o "Vídeos personalizados" por $15, $20 o $50.
-    *   *Script de Venta:* "Me he comprado este conjunto de lencería... me da vergüenza subirlo al muro, ¿te lo paso por aquí?" -> **CANDADO $15**.
+### 1.1 Elige el Arquetipo Ganador
+No inventes la rueda. Elige uno de estos 3 perfiles que VENDEN:
+1.  **La "Gamer E-Girl":** Auriculares, luces moradas/rosas, ropa cómoda/anime, tímida. *Público: Muy fiel, gasta mucho en conexión.*
+2.  **La "Gym Bunny" (Fitness):** Leggings, espejos de gimnasio, vida sana, sudor (brillo en la piel). *Público: Masivo, admira el físico.*
+3.  **La "Girl Next Door" (Vecina):** Ropa casual (jeans, camisetas), sonriente, poco maquillaje, escenarios caseros (cocina, sofá). *Público: Busca una novia, no una actriz porno.*
 
----
+### 1.2 La Receta de la Consistencia (El Secreto)
+Para que siempre salga la misma cara, usaremos **LoRAs** (pequeños archivos que "enseñan" una cara a la IA) o **Face Swap** de alta calidad.
 
-## 🎥 PASO EXTRA: Vídeo Profesional con Wan AI (Motion Control)
-Olvídate de los vídeos deformes de 2024. **Wan 2.6** ha cambiado el juego con su "Motion Control".
+#### Método A: Usar una "Celebridad" IA Pública (Fácil)
+En Tensor.art o SeaArt, busca LoRAs de personajes ficticios realistas (no uses famosas reales por temas legales).
+*   *Ejemplo:* Busca "Realistic Korean Girl" o "Insta Baddie LoRA".
+*   **REGLA DE ORO:** Usa SIEMPRE el mismo LoRA con el mismo "peso" (ej: 0.8).
 
-### Flujo de Trabajo (Wan-Move)
-1.  Ve a **Wan AI** (o úsalo vía ComfyUI si eres avanzado).
-2.  **Sube tu imagen** (generada en el Paso 2).
-3.  **Dibuja la Trayectoria (Motion Brush/Arrows):**
-    *   Dibuja una flecha sobre su mano para que salude.
-    *   Dibuja una flecha en el pelo para que lo mueva el viento.
-    *   Dibuja una flecha en la cámara para hacer un "Zoom In".
-4.  **Genera:** En unos segundos tendrás un vídeo de 5-10 segundos en 720p/1080p super realista.
-5.  **Resultado:** Un vídeo cinemático donde TÚ controlas el movimiento, no la IA al azar.
+#### Método B: Face Swap (Intermedio - Recomendado)
+1.  Genera una cara que te encante (Primer plano, buena luz). **GUÁRDALA**. Esta es tu "Cara Maestra".
+2.  Genera tus fotos de cuerpo/situación con cualquier cara.
+3.  Usa una herramienta de Face Swap (como *InsightFace* en Discord o la función "Face Swap" de SeaArt/Tensor) para poner tu "Cara Maestra" en las fotos nuevas.
 
 ---
 
-## 📅 Tu Rutina Diaria (Checklist 2026)
-*   [ ] **20 min:** Generar 3 imágenes "de historia" (ej: desayunando) con Nano Banana Pro.
-*   [ ] **15 min:** Crear 1 vídeo corto con Wan AI (movimiento sutil) para Reels/TikTok.
-*   [ ] **10 min:** Publicar en redes con textos preguntas ("¿Café o té?", "¿Vamos al gym?").
-*   [ ] **30 min:** Responder DMs en Fanvue. **Prioridad absoluta**. Aquí está el dinero.
-*   [ ] **5 min:** Revisar tendencias en Fanvue (Top Creators).
+## 📸 FASE 2: La Fábrica de Contenido
+Necesitas un "Banco de Imágenes" antes de lanzar. Crea al menos **20-30 fotos** de alta calidad.
+
+### 2.1 Los Prompts Maestros (Copia y Pega)
+Estos prompts funcionan en modelos realistas (Juggernaut XL, RealVis, FLUX).
+
+**📝 Prompt Estilo "Selfie Espejo" (Muy viral):**
+> `(best quality, 4k, photorealistic:1.3), smartphone photo, mirror selfie, beautiful woman, [TU DESCRIPCIÓN FÍSICA AQUÍ], wearing [ROPA], messy bedroom background, soft morning light, natural skin texture, imperfections, mole, freckles, amateur shot, shot on iPhone 15`
+
+**📝 Prompt Estilo "Cita en Café" (Lifestyle):**
+> `(masterpiece:1.2), candid shot of a woman sitting across the table at a starbucks, holding a coffee cup, laughing, eye contact, [TU DESCRIPCIÓN], blurred busy coffee shop background, bokeh, sunlight from window, casual outfit, high detail skin`
+
+**📝 Prompt Estilo "Gimnasio" (Cuerpo):**
+> `medium shot, fitness woman, sweaty skin, ponytail, wearing tight yoga pants and sports bra, drinking water, gym background with weights, gym mirrors, harsh overhead lighting, canon eos r5, 85mm`
+
+### 2.2 Vídeo que Engancha (Wan 2.6)
+Las fotos estáticas aburren. Necesitas movimiento.
+1.  Sube tu mejor foto a **Wan AI**.
+2.  Usa el "Motion Brush" (Pincel de movimiento).
+3.  Pinta sobre el pelo y selecciona "Wind" (Viento).
+4.  Pinta sobre el pecho/hombros y selecciona "Breathing" (Respiración suave).
+5.  **Resultado:** Un "Living Portrait" que parece vivo. Sube esto a Reels/TikTok.
 
 ---
 
-## 🛠️ Caja de Herramientas (Enlaces Actualizados)
+## � FASE 3: Tráfico (El Embudo)
+Fanvue no te trae gente (al principio). Tú tienes que traerla.
 
-### Generación de Imágenes (Top)
-*   [Higgsfield AI](https://higgsfield.ai/) (Nano Banana Pro)
-*   [Tensor.art](https://tensor.art/) (Alternativa sólida)
+### Estrategia Instagram (El Escaparate)
+*   **Bio:** "🤖 AI | 19 🇪🇸 | Tu novia virtual favorita 💖 | 👇 Chat exclusivo 👇 [Linktree]"
+*   **Stories:** Sube 3-5 al día. Usa encuestas. "¿Me queda mejor el rojo o el azul?". *Haz que sientan que opinan.*
+*   **Reels:** Usa audios virales. Pon tu vídeo generado con Wan AI. Texto en pantalla: "Cuando me dicen que no soy real..." (Genera debate).
 
-### Generación de Vídeo (Top)
-*   [Wan AI](https://www.wan-ai.co/) (Líder en Motion Control)
-*   [Runway Gen-3](https://runwayml.com/) (Alternativa cara)
+### Estrategia Twitter/X (Sin Censura - NSFW)
+*   Aquí puedes ser más picante.
+*   Usa hashtags: `#aiart #fanvue #virtualgirl #egirl`.
+*   Participa en hilos de otros creadores ("Thread de chicas lindas").
 
-### Gestión y Finanzas
-*   [Fanvue](https://www.fanvue.com/) (Plataforma de monetización)
-*   [Linktree](https://linktr.ee/) (Gestión de enlaces)
+### Estrategia TikTok (Viralidad)
+*   **CUIDADO:** TikTok banea rápido. Sé "Sugerente" no "Explícito".
+*   Usa el filtro "AI Manga" a veces para jugar con "Real vs Anime".
+*   Haz Lip-Sync (Sincronización labial) usando apps como **Hedra** o **Hallo** (busca "Hallo AI video").
 
 ---
 
-## 🆘 Consejos Finales
-*   **Transparencia:** En 2026, es mejor poner "AI Influencer" en la bio. A la gente no le importa que sea IA, le importa que la *historia* sea buena. No engañes, seduce.
-*   **Calidad > Cantidad:** Mejor 1 foto increíble con Nano Banana Pro que 10 mediocres.
-*   **El Chat es Rey:** Si contestas rápido y con cariño, tendrás suscriptores fieles por meses.
+## 💰 FASE 4: Fanvue y Monetización (El Dinero)
+Aquí es donde cobras. Configura tu perfil para el éxito.
 
-¡A trabajar! El mercado sigue creciendo y tú estás a tiempo.
+### 4.1 Configuración Ganadora
+*   **Precio de Suscripción:** $8.99 - $12.99 (Un precio de entrada bajo para atraer volumen).
+*   **Oferta de Bienvenida:** 50% de descuento el primer mes (Atrapa al usuario).
+*   **Bio:** "Soy tu sueño hecho realidad. Contesto a TODOS los mensajes. 💋"
+
+### 4.2 La Mina de Oro: El Chat y PPV (Pay-Per-View)
+El 80% de tus ingresos vendrá de vender contenido extra por mensaje privado.
+**El Ciclo de Venta:**
+1.  **Saludo (Gratis/Auto):** "¡Hola guapo! Gracias por suscribirte. ¿Qué te trae por aquí? 😘"
+2.  **Conversación (Calentamiento):** Habla un poco. Pregúntale qué le gusta.
+3.  **La Oferta (El Gancho):** "Justo acabo de salir de la ducha y me he hecho unas fotos que no puedo subir al muro... 🙈 ¿Te las paso?"
+4.  **El Cierre (PPV):** Envía el mensaje con un **CANDADO de precio ($15 - $25)**.
+    *   *Contenido:* 3-4 fotos más explícitas o un vídeo corto de 10 segundos.
+
+### 4.3 Niveles de Precios PPV
+*   **Nivel Bronce ($5 - $10):** Un set de 5 fotos en lencería.
+*   **Nivel Plata ($15 - $30):** Topless o desnudo artístico (si tu nicho lo permite) + Audio de voz personalizado.
+*   **Nivel Oro ($50+):** Vídeo personalizado (Face Swap en vídeo porno soft o muy sugerente) saludándole por su nombre.
+
+---
+
+## 📅 TU RUTINA DIARIA DE JEFE (1-2 Horas)
+
+1.  **Mañana (30 min):**
+    *   Revisar Fanvue. Responder mensajes VIP (los que pagan).
+    *   Generar 5 imágenes nuevas del día (ej: "Buenos días", "Desayunando").
+    *   Publicar "Buenos días" en Instagram Story y Twitter.
+2.  **Tarde (30 min):**
+    *   Crear 1 Reel/TikTok con Wan AI o un vídeo simple.
+    *   Publicar en el muro de Fanvue (foto "Safe" pero bonita).
+3.  **Noche (30 min - 1 hora):**
+    *   **HORA PUNTA DE VENTAS.** Manda un mensaje masivo a todos tus suscriptores en Fanvue con un PPV nuevo ($10-$15). *Ej: "Me aburro en la cama... ¿me haces compañía? 🔓"*
+    *   Publicar foto nocturna en redes sociales.
+
+---
+
+## 🛠️ CAJA DE HERRAMIENTAS MAESTRA (Links Directos)
+
+### Generación de Imágenes
+*   [Tensor.art](https://tensor.art/) (Mejor opción gratuita/freemium)
+*   [SeaArt.ai](https://www.seaart.ai/) (Potente y fácil)
+*   [Civitai](https://civitai.com/) (Para descargar LoRAs y ver prompts de ejemplo)
+
+### Generación de Vídeo
+*   [Wan AI](https://www.wan-ai.co/) (El rey del movimiento actual)
+*   [Runway Gen-3](https://runwayml.com/) (Alternativa de alta gama)
+*   [Kling AI](https://kling.kuaishou.com/) (Increíble realismo de vídeo)
+
+### Voz y Audio
+*   [ElevenLabs](https://elevenlabs.io/) (Para crear la voz de tu influencer y mandar notas de voz). **CLAVE para cobrar más.**
+
+### Gestión
+*   [Fanvue](https://www.fanvue.com/)
+*   [Linktree](https://linktr.ee/)
+
+---
+
+## 💡 CONSEJOS FINALES DE ORO
+*   **No te rindas en la semana 1.** Los algoritmos tardan en encontrarte.
+*   **Analiza a la competencia.** Entra en Fanvue, busca las "Top Creators" IA y mira qué suben. Cópialas (la estrategia, no el contenido).
+*   **Ética:** Etiqueta siempre tu contenido como #AI. Hay gente que prefiere la IA, no necesitas engañar.
+
+¡El mercado es tuyo! Empieza HOY.
