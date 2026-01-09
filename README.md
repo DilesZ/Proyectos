@@ -1,5 +1,9 @@
 # 🏭 ORQUESTADOR - Multi-Agent Business Factory v2.0
 
+> **🚀 NUEVO: Guía para Principiantes**
+> ¿Quieres generar ingresos con una Influencer IA pero no sabes por dónde empezar?
+> 👉 **[LEE LA GUÍA MAESTRA AQUÍ](MASTER_GUIDE_INFLUENCER.md)** (Paso a paso, herramientas gratis, cero experiencia requerida).
+
 ## 🎯 Objetivo del Proyecto
 Sistema automatizado para crear y gestionar negocios digitales utilizando una arquitectura de agentes especializados e Inteligencia Artificial de vanguardia.
 

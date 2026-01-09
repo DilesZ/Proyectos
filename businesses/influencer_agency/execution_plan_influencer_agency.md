@@ -1,5 +1,7 @@
 # Execution Plan: Agencia de Influencers de IA
 
+> **🔰 ¿Eres nuevo?** Si buscas una guía paso a paso desde cero para generar tus primeros ingresos sin conocimientos técnicos, empieza por aquí: [**GUÍA MAESTRA: Tu Negocio de Influencer IA desde Cero**](../../MASTER_GUIDE_INFLUENCER.md)
+
 ## 1. Key Milestones
 - **Phase 1: Identity Genesis (Week 1)**
     - Creation of the "Master Image" (Face Reference).
