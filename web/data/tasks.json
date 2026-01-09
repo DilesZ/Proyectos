@@ -114,9 +114,9 @@
                                                                                 "steps":  [
                                                                                               {
                                                                                                   "id":  "p1_01_s01_select",
-                                                                                                  "title":  "Seleccionar Perfil",
-                                                                                                  "description":  "Elige uno de la lista.",
-                                                                                                  "guide":  "Opciones:\n1. **Gamer E-Girl** (PÃºblico fiel, nicho videojuegos).\n2. **Gym Bunny** (Fitness, motivaciÃ³n, leggings).\n3. **Girl Next Door** (Vecina, casual, la que mejor convierte).\n\nDecide Nombre, Edad (19-25) y Nacionalidad.",
+                                                                                                  "title":  "Investigación de Mercado y Nicho",
+                                                                                                  "description":  "Usa IA para encontrar dónde está el dinero real.",
+                                                                                                  "guide":  "### 🕵️‍♀️ Paso 1: Investigación de Nichos Rentables\nNo elijas al azar. Copia y pega este prompt en ChatGPT para analizar qué está funcionando ahora mismo en Fanvue/OnlyFans.\n\n**Prompt de Investigación:**\n```text\nActúa como un experto en marketing de influencers para adultos y Fanvue con acceso a tendencias de 2025.\nAnaliza los 5 arquetipos visuales y de personalidad que generan más ingresos actualmente (High Ticket).\nPara cada uno, explica:\n1. Psicología del Donante: ¿Qué carencia emocional cubre? (Ej: soledad, necesidad de dominación, fantasía de vecina).\n2. Estética Visual: ¿Qué tipo de fotos/iluminación requiere?\n3. Nivel de Saturación: ¿Está muy lleno el mercado?\n\nFinalmente, dame 3 propuestas de perfiles concretos \"Blue Ocean\" (baja competencia, alta demanda) que mezclen estos rasgos.\nPara cada propuesta incluye:\n- Nombre sugerido.\n- Nacionalidad.\n- Edad aparente.\n- \"X-Factor\": ¿Qué la hace única?\n```\n\n### 🎯 Paso 2: Selección\nLee la respuesta de la IA. Elige la propuesta que más te resuene o mezcla dos de ellas.\n**Tu decisión final debe tener:** Nombre, Edad (19-25), Nacionalidad y Arquetipo Principal.",
                                                                                                   "time":  "5 min",
                                                                                                   "difficulty":  "FÃ¡cil"
                                                                                               }
@@ -132,10 +132,10 @@
                                                                                 "steps":  [
                                                                                               {
                                                                                                   "id":  "p1_02_s01_chatgpt",
-                                                                                                  "title":  "Prompt para ChatGPT",
-                                                                                                  "description":  "Copia y pega esto en ChatGPT.",
-                                                                                                  "prompt":  "ActÃºa como un experto manager de influencers. Voy a crear una Influencer IA.\nDatos:\n- Nombre: [TU NOMBRE]\n- Edad: [EDAD]\n- Arquetipo: [TU ARQUETIPO]\n- Objetivo: Atraer seguidores en Instagram y llevarlos a Fanvue.\n\nNecesito:\n1. Un Handle (nombre de usuario) disponible y corto. Dame 10 opciones.\n2. Una Bio de Instagram (con emojis, misteriosa, que invite a hacer clic en el link).\n3. Una Bio de Fanvue (mÃ¡s picante, sugiriendo que contesto mensajes privados).",
-                                                                                                  "guide":  "Usa el resultado para configurar tus perfiles.",
+                                                                                                  "title":  "Generar la Biblia del Personaje",
+                                                                                                  "description":  "Crea una personalidad profunda, no solo un nombre.",
+                                                                                                  "prompt":  "Perfecto, me quedo con la opción: [INSERTA AQUÍ LA OPCIÓN QUE ELEGISTE, EJ: LA LATINA GAMER TÍMIDA].\n\nAhora, actúa como un guionista de cine y experto en branding personal. Desarrolla la \"Biblia del Personaje\" completa para ella. Necesito:\n\n1. **Datos Biográficos:**\n   - Nombre completo y Apodo.\n   - Fecha de nacimiento y Signo Zodiacal (a los usuarios les encanta).\n   - Ciudad de residencia actual (ficticia pero realista).\n\n2. **Apariencia Física Detallada (para Generación de Imagen):**\n   - Descripción precisa de rasgos faciales (color ojos, forma labios, nariz).\n   - Tipo de cuerpo (fitness, curvy, petite) con medidas aproximadas.\n   - Estilo de ropa (casual, lencería específica, colores favoritos).\n   - Signos distintivos (tatuajes, lunares, gafas).\n\n3. **Personalidad y Voz:**\n   - 3 Rasgos de personalidad principales (Ej: Dulce pero torpe, Intelectual pero pervertida).\n   - ¿Cómo escribe en redes? (Usa muchos emojis, escribe en minúsculas, es sarcástica).\n   - Frase de gancho (\"Catchphrase\") recurrente.\n\n4. **Bio Optimizada para Conversión:**\n   - **Instagram Bio:** (Misteriosa, sin links explícitos, emojis, llamada a la acción sutil).\n   - **Fanvue/Twitter Bio:** (Explícita, directa, orientada a venta de contenido +18).",
+                                                                                                  "guide":  "Usa el resultado de la investigación anterior para alimentar este segundo prompt.",
                                                                                                   "time":  "10 min",
                                                                                                   "difficulty":  "FÃ¡cil"
                                                                                               }
@@ -151,9 +151,9 @@
                                                                                 "steps":  [
                                                                                               {
                                                                                                   "id":  "p1_03_s01_tensor_gen",
-                                                                                                  "title":  "Generar en Tensor.art",
-                                                                                                  "description":  "Consigue la foto perfecta.",
-                                                                                                  "guide":  "1. Modelo: **Juggernaut XL**.\n2. Ratio: **2:3**.\n3. Prompt Positivo: `(masterpiece, best quality, 8k, photorealistic:1.3), raw photo, portrait of a beautiful [NACIONALIDAD] woman, [EDAD] years old, [COLOR PELO], [COLOR OJOS], natural skin texture, imperfections, soft lighting, looking at camera, wearing [TIPO DE ROPA], blurred background, shot on 35mm lens`.\n4. Prompt Negativo: `(worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), open mouth, toothy smile, bad hands, bad fingers, extra limbs, ugly, deformed`.\n5. **GUARDA LA FOTO** como `CARA_MAESTRA.png`.",
+                                                                                                  "title":  "Ingeniería de Prompt Visual",
+                                                                                                  "description":  "Traduce tu personaje a un Prompt Maestro.",
+                                                                                                  "guide":  "Usa la descripción física que te dio ChatGPT en el paso anterior para rellenar este template.\nCuanto más específico seas con la cámara y la iluminación, más real parecerá.\n\n**Template del Prompt (Copia y Rellena):**\n```text\n(masterpiece, best quality, 8k, photorealistic:1.3), raw photo, portrait of [NOMBRE], a beautiful [NACIONALIDAD] woman, [EDAD] years old.\n[DETALLES FÍSICOS DE CHATGPT: color de pelo, peinado, ojos, cuerpo].\n[ROPA: wearing oversized gaming hoodie, off-shoulder].\n[FONDO: bedroom background, led lights, messy room].\n[CÁMARA: shot on Sony A7R IV, 85mm lens, f/1.8, soft cinematic lighting, bokeh].\nnatural skin texture, imperfections, moles, freckles, looking at camera with a [EXPRESIÓN: shy smile / seductive gaze].\n```\n\n**Configuración en Tensor.art / SeaArt:**\n- **Modelo:** Juggernaut XL (o RealVisXL).\n- **Sampling Method:** DPM++ 2M Karras.\n- **Steps:** 30-40.\n- **CFG Scale:** 5-7.\n- **Negative Prompt:** `(worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), open mouth, toothy smile, bad hands, bad fingers, extra limbs, ugly, deformed, watermark, text`.",
                                                                                                   "time":  "20 min",
                                                                                                   "difficulty":  "Media"
                                                                                               }
@@ -198,33 +198,33 @@
                                                                                 "steps":  [
                                                                                               {
                                                                                                   "id":  "p2_02_s01_selfie",
-                                                                                                  "title":  "5x Selfies Espejo",
-                                                                                                  "description":  "Prompt: `mirror selfie, holding iphone 15, bedroom background, messy hair`.",
-                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "title":  "5x Selfies Espejo (Súper Realistas)",
+                                                                                                  "description":  "La foto que más vende: simple, casera y creíble.",
+                                                                                                  "guide":  "### 📸 Prompt de Selfie Espejo\nCopia este prompt y sustituye los corchetes con tu 'Biblia del Personaje'.\n\n**Prompt:**\n```text\n(best quality, 8k, photorealistic:1.3), raw photo, mirror selfie of [TU_NOMBRE], holding iphone 15 pro max covering face slightly, [TU_DESCRIPCION_FISICA], wearing [ROPA_CASUAL_O_GYM], standing in a messy bedroom, unmade bed in background, warm lamp lighting, amateur phone photography style, slight motion blur, flash on mirror reflection.\n```\n\n**Tip Pro:** Genera 10, borra 8, quédate con las 2 que parezcan 'accidentales' o 'robadas'.",
                                                                                                   "time":  "20 min",
                                                                                                   "difficulty":  "Media"
                                                                                               },
                                                                                               {
                                                                                                   "id":  "p2_02_s02_coffee",
-                                                                                                  "title":  "5x Lifestyle CafÃ©",
-                                                                                                  "description":  "Prompt: `sitting at starbucks, holding coffee cup, cafe window background, sunlight`.",
-                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "title":  "5x Lifestyle Café/Calle",
+                                                                                                  "description":  "Demuestra que 'existe' en el mundo real.",
+                                                                                                  "guide":  "### ☕ Prompt Social\nPara que la gente crea que es real, tiene que salir de casa.\n\n**Prompt:**\n```text\n(best quality, 8k), medium shot of [TU_NOMBRE] sitting at a starbucks table, holding a coffee cup with both hands, looking out the window, [TU_DESCRIPCION_FISICA], wearing [ROPA_DE_CALLE_MODERNA], rainy city street visible through window, soft daylight, depth of field, shot on 35mm lens.\n```",
                                                                                                   "time":  "20 min",
                                                                                                   "difficulty":  "Media"
                                                                                               },
                                                                                               {
                                                                                                   "id":  "p2_02_s03_body",
-                                                                                                  "title":  "5x Cuerpo Entero",
-                                                                                                  "description":  "Prompt: `full body shot, standing in street, wearing [ROPA], fashion photography`.",
-                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap.",
+                                                                                                  "title":  "5x Cuerpo Entero (El Gancho)",
+                                                                                                  "description":  "Para mostrar el físico y atraer miradas.",
+                                                                                                  "guide":  "### 💃 Prompt de Cuerpo Entero\nEste es el que usaremos para atraer tráfico.\n\n**Prompt:**\n```text\n(best quality, 8k), full body shot of [TU_NOMBRE] walking towards camera on a busy street, confident walk, [TU_DESCRIPCION_FISICA], wearing [LEGGINGS_O_VESTIDO_AJUSTADO], golden hour lighting, urban background, blurred people in background, high fashion photography style.\n```",
                                                                                                   "time":  "20 min",
                                                                                                   "difficulty":  "Media"
                                                                                               },
                                                                                               {
                                                                                                   "id":  "p2_02_s04_bed",
-                                                                                                  "title":  "5x Relax/Cama (Sugerente)",
-                                                                                                  "description":  "Prompt: `lying on bed, pajamas, cozy atmosphere, pov shot`.",
-                                                                                                  "guide":  "Genera 5 variantes y haz Face Swap. Estas son para \u0027vender\u0027 o Stories picantes.",
+                                                                                                  "title":  "5x Relax/Cama (El Dinero)",
+                                                                                                  "description":  "Contenido 'Bait' para vender en PPV.",
+                                                                                                  "guide":  "### 🛏️ Prompt Sugerente (Sin Desnudos)\nEstas fotos son las que 'insinúan' lo que hay en Fanvue.\n\n**Prompt:**\n```text\n(best quality, 8k), pov shot looking down at [TU_NOMBRE] lying on bed, messy hair, wearing oversized t-shirt and panties, [TU_DESCRIPCION_FISICA], cozy bedroom atmosphere, soft morning light, looking up at camera with biting lip, seductive but cute, shot on iphone.\n```",
                                                                                                   "time":  "20 min",
                                                                                                   "difficulty":  "Media"
                                                                                               }
