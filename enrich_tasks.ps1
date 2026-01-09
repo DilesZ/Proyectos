@@ -26,11 +26,14 @@ function Generate-Prompt {
     $t = $clean.ToLower()
     switch ($businessKey) {
         "influencer_agency" {
-            if ($t -match "nicho") { return "Genera 3 nichos para el arquetipo definido. Explica público objetivo y monetización." }
-            if ($t -match "arquetipo|persona") { return "Redacta una ficha de personaje con rasgos físicos, estilo, tono y valores." }
-            if ($t -match "caption|copy") { return "Escribe 10 captions cortos en tono atractivo, con CTA y hashtags relevantes." }
-            if ($t -match "calendario|contenido") { return "Genera un calendario de contenidos semanal con ideas y formatos." }
-            return "Propón contenido y hooks alineados al arquetipo seleccionado."
+            if ($t -match "lluvia|nicho|arquetipo|personalidad") { return "Usa el personaje fijo Elena (24, española, fitness girl-next-door). Devuelve: 1) handle recomendado (1 solo), 2) bio lista para copiar, 3) 10 hooks IG, 4) 10 CTAs, 5) checklist anti-baneo IG/TikTok." }
+            if ($t -match "nombre de usuario|handle") { return "Genera 10 handles basados en 'elena' y 'fitdiary'. Reglas: sin caracteres raros, 12-15 caracteres, devuélvelos numerados 1-10." }
+            if ($t -match "disponibilidad") { return "Dame un procedimiento exacto (sin opciones) para validar disponibilidad del handle en IG/TikTok/X con Namechk y qué hacer si está ocupado." }
+            if ($t -match "bio|biograf") { return "Escribe una bio EXACTA para Elena: 2 líneas + CTA al link. Sin alternativas. Incluye 2 emojis máximo." }
+            if ($t -match "prompt") { return "Escribe un prompt SDXL/Tensor/SeaArt para Elena (24, española, fitness girl-next-door) y un negative prompt. Devuelve también parámetros recomendados: resolución vertical, steps, CFG, sampler." }
+            if ($t -match "caption|copy|cta") { return "Escribe 10 CTAs para story IG que empujen al link. Reglas: curiosidad + urgencia, 90 caracteres máximo, 0 lenguaje explícito." }
+            if ($t -match "calendario|contenido") { return "Crea un calendario semanal fijo para Elena: 7 posts IG, 7 stories IG, 3 tweets al día, 3 mensajes Fanvue. Devuelve en tabla día/acción." }
+            return "Para Elena (24, española, fitness girl-next-door), genera el entregable exacto para el paso: '" + $clean + "'. Devuelve un único resultado final listo para copiar y una checklist de validación."
         }
         "amazon_affiliates" {
             if ($t -match "nicho|producto") { return "Lista 10 productos con BSR < 50k y margen alto. Incluye razones y links." }
@@ -140,43 +143,167 @@ function Build-Guide {
     param([string]$businessKey, [string]$title)
     $commonTop = @'
 ### 🎯 Objetivo
-Define claramente el resultado de este paso. Documenta en una nota qué esperas conseguir.
+Completar este paso sin decisiones abiertas ni ambigüedad.
 
-### ✅ Prerrequisitos
-- Acceso al proyecto y recursos necesarios
-- Datos base preparados y organizados
-- Tiempo reservado sin interrupciones
+### ✅ Resultado exacto (al terminar)
+- Tienes un único output concreto (texto/archivo/enlace) listo para usar.
 
-### 🛠️ Herramientas
-- Navegador y hojas de cálculo
-- Editor/IA para generación de contenido
-- Gestor de tareas para seguimiento
+### 🛠️ Herramientas directas
+- Navegador
+- ChatGPT: https://chatgpt.com/
+- Notas (Bloc de notas o Google Docs)
 '@
     $commonBottom = @'
-### ✅ Validación
-- Verifica que cada subpaso esté completado con evidencias (capturas, enlaces, archivos).
-- Revisa coherencia, formato y calidad mínima aceptable.
+### ✅ Validación (si falla, repite el paso)
+- El resultado es específico, usable y copiables en 1 minuto.
+- No hay “elige lo que te guste”: hay una sola opción final.
 
-### 📦 Entregables
-- Documento/archivo con el resultado del paso
-- Breve resumen de decisiones y próximos pasos
-
-### ⚠️ Errores comunes
-- Saltar prerrequisitos o no medir resultados
-- Inconsistencia en nomenclaturas y formatos
-- No guardar evidencias
+### ⚠️ Errores que NO puedes cometer
+- Cambiar el personaje a mitad del proceso.
+- Publicar contenido NSFW en Instagram/TikTok.
+- No guardar prompts/archivos (pierdes consistencia y dinero).
 '@
     switch ($businessKey) {
         "influencer_agency" {
-            $spec = @"
-### 🔧 Instrucciones (A–Z)
-1. Define objetivo del paso: $title y relación con el arquetipo.
-2. Revisa consistencia del personaje (rasgos, tono, estilo).
-3. Genera ideas iniciales y selecciona las mejores.
-4. Estructura contenido con hooks, valor y CTA.
-5. Prepara variaciones para test A/B.
-6. Documenta resultados esperados y cómo medirlos.
+            $t = (($title | ForEach-Object { $_ }) -as [string]).ToLower()
+            $spec = switch -Regex ($t) {
+                "lluvia de ideas|nichos|elegir personalidad|arquetipo" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Copia y pega este texto en tus notas (NO lo cambies):
+   - Personaje: **Elena**
+   - Arquetipo: **Girl Next Door + Fitness**
+   - Edad: **24**
+   - País: **España**
+   - Objetivo: **vender suscripción + PPV en Fanvue**
+2. Abre ChatGPT y pega este prompt (cópialo tal cual):
+   **PROMPT**
+   Genera 10 nombres de usuario para Instagram/TikTok/Twitter para una influencer IA llamada Elena (24, española, fitness girl-next-door). Requisitos: sin caracteres raros, fácil de leer, máximo 12-15 caracteres si es posible. Devuélvelos en lista numerada del 1 al 10.
+3. Regla anti-errores: vas a usar este algoritmo (sin “gustos”):
+   - Abre https://namechk.com/
+   - Prueba del #1 al #10 en orden.
+   - Elige el PRIMER nombre que esté libre en Instagram y TikTok.
+   - Si ninguno está libre: añade `official` al final y repite.
 "@
+                }
+                "espiar a la competencia|competencia" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Abre Instagram y busca exactamente estos hashtags:
+   - #fitnessgirl
+   - #gymgirl
+   - #fitspo
+2. Abre 10 perfiles (los que tengan más interacción: comentarios/likes).
+3. Para cada perfil, copia en tus notas SOLO esto (plantilla fija):
+   - Tipo de foto que más repiten (selfie espejo / gym / cocina)
+   - 3 hooks que usan en texto (frases cortas)
+   - 3 CTAs que usan (\"link in bio\", \"my private\", etc.)
+4. Resultado final obligatorio: una lista de 10 hooks + 10 CTAs copiados.
+"@
+                }
+                "verificar disponibilidad|disponibilidad" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Abre https://namechk.com/
+2. Pega tu handle final (el que elegiste en el paso anterior).
+3. Validación obligatoria:
+   - Debe estar libre en Instagram y TikTok (mínimo).
+   - Si está ocupado en una de las dos: vuelve al paso de “Nombre de Usuario (Handle)” y aplica la siguiente variante de la escalera.
+4. Resultado final obligatorio:
+   - Un handle único que exista igual en: Instagram, TikTok, Twitter/X.
+   - Escríbelo en tus notas como: `HANDLE_FINAL = ...`
+"@
+                }
+                "decisión final" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. No elijas nada: la decisión ya está tomada para minimizar errores.
+2. Copia y pega esto como “Biblia del personaje” en tus notas:
+   - Nombre: Elena
+   - Edad: 24
+   - Arquetipo: Girl Next Door + Fitness
+   - Rasgos: pelo castaño miel ondulado, ojos avellana/verdosos, pecas sutiles, hoyuelos, piel natural
+   - Tono: dulce + traviesa en privado, emojis moderados
+3. Regla: a partir de ahora, cualquier texto/imagen debe respetar esta biblia.
+"@
+                }
+                "nombre de usuario|handle" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Usa el nombre base: **elena.fitdiary**
+2. Verifica disponibilidad:
+   - Instagram: busca el nombre en la app.
+   - TikTok: busca el nombre en la app.
+   - Twitter/X: busca el nombre en la app.
+3. Si está ocupado, aplica esta escalera (en este orden) hasta que funcione:
+   1) elena_fitdiary
+   2) elena.fit.diary
+   3) elena.fitdiary24
+   4) elena_fitdiary24
+   5) elena.fitdiary_official
+4. Resultado final obligatorio: guarda el handle final en tus notas.
+"@
+                }
+                "biograf|bio" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Copia y pega esta bio (solo cambia la ciudad si quieres, nada más):
+   **BIO**
+   24 🇪🇸 | Fitness girl-next-door 🏋️‍♀️
+   Diario real (y mi lado privado) 👇
+2. Añade tu link (Linktree o Fanvue) como el enlace de la bio.
+3. Resultado final obligatorio: captura de pantalla de tu bio ya puesta.
+"@
+                }
+                "colores|vibe|paleta" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Usa esta paleta (NO inventes):
+   - Principal: #F7A8B8 (rosa suave)
+   - Secundario: #111827 (negro azulado)
+   - Fondo: #FFFFFF (blanco)
+   - Acento: #22C55E (verde “fitness”)
+   - Texto suave: #6B7280 (gris)
+2. Resultado final obligatorio: escribe la paleta en tus notas y úsala en highlights/plantillas.
+"@
+                }
+                "lo prohibido|compliance|antes de publicar" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Instagram/TikTok: SOLO SFW (sin pezones, sin genitales, sin sexo explícito).
+2. Antes de publicar, checklist obligatorio (si 1 falla, NO publicas):
+   - Cara sin deformidades
+   - Manos con 5 dedos
+   - Nada explícito en reflejos (espejos/ventanas)
+   - Fondo no tiene logos raros o texto extraño
+3. Resultado final obligatorio: marca la checklist como OK en tus notas.
+"@
+                }
+                "prompt base|diseñar el prompt|prompt anchor" {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Copia este prompt base (NO lo cambies todavía):
+   **PROMPT (SDXL/Tensor/SeaArt)**
+   photo of Elena, 24yo spanish woman, honey brown wavy hair, hazel green eyes, subtle freckles on nose, dimples, athletic feminine body, natural skin texture, wearing gym leggings and sports bra, looking at camera, soft natural daylight, shot on iPhone, realistic, 8k, high detail
+2. Genera 12 imágenes y guarda las 3 mejores.
+3. Resultado final obligatorio: 3 imágenes + prompt guardado en un .txt.
+"@
+                }
+                default {
+@"
+### 🔧 Instrucciones (modo receta)
+1. Abre ChatGPT y pega este prompt (cópialo tal cual):
+   **PROMPT**
+   Eres un operador de una agencia de influencer IA. Nuestro personaje es Elena (24, española, fitness girl-next-door). Necesito completar el paso: "$title".
+   Devuélveme EXACTAMENTE:
+   1) Lista de acciones (máximo 7 pasos), sin opciones.
+   2) Texto final listo para copiar y pegar (si aplica).
+   3) Checklist de 5 puntos para validar que está bien.
+2. Ejecuta SOLO esas acciones en orden.
+3. Resultado final obligatorio: un texto/asset listo para pegar, guardado en tus notas.
+"@
+                }
+            }
         }
         "amazon_affiliates" {
             $spec = @"
@@ -416,8 +543,13 @@ foreach ($business in $content.businesses) {
         $tDiff = if ($task.difficulty) { $task.difficulty } else { "Media" }
         $task.title = Fix-Text $task.title
         if ($task.description) { $task.description = Fix-Text $task.description }
-        if (-not $task.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($task.prompt)) {
-            $task | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $task.title $business.key)
+        if ($business.key -eq "influencer_agency") {
+            $value = (Generate-Prompt $task.title $business.key)
+            if ($task.PSObject.Properties.Match('prompt').Count) { $task.prompt = $value } else { $task | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
+        }
+        elseif (-not $task.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($task.prompt)) {
+            $value = (Generate-Prompt $task.title $business.key)
+            if ($task.PSObject.Properties.Match('prompt').Count) { $task.prompt = $value } else { $task | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
             $missingPrompts++
         }
 
@@ -431,8 +563,13 @@ foreach ($business in $content.businesses) {
             if (-not $subtask.PSObject.Properties.Match('time').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "time" -Value $sTime }
             if (-not $subtask.PSObject.Properties.Match('difficulty').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "difficulty" -Value $sDiff }
             if (-not $subtask.PSObject.Properties.Match('description').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "description" -Value $subtask.title }
-            if (-not $subtask.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($subtask.prompt)) {
-                $subtask | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $subtask.title $business.key)
+            if ($business.key -eq "influencer_agency") {
+                $value = (Generate-Prompt $subtask.title $business.key)
+                if ($subtask.PSObject.Properties.Match('prompt').Count) { $subtask.prompt = $value } else { $subtask | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
+            }
+            elseif (-not $subtask.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($subtask.prompt)) {
+                $value = (Generate-Prompt $subtask.title $business.key)
+                if ($subtask.PSObject.Properties.Match('prompt').Count) { $subtask.prompt = $value } else { $subtask | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
                 $missingPrompts++
             }
 
@@ -448,8 +585,13 @@ foreach ($business in $content.businesses) {
                 $step.title = Fix-Text $step.title
                 if ($step.guide) { $step.guide = Fix-Text $step.guide }
                 if ($step.description) { $step.description = Fix-Text $step.description }
-                if (-not $step.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($step.prompt)) {
-                    $step | Add-Member -MemberType NoteProperty -Name "prompt" -Value (Generate-Prompt $step.title $business.key)
+                if ($business.key -eq "influencer_agency") {
+                    $value = (Generate-Prompt $step.title $business.key)
+                    if ($step.PSObject.Properties.Match('prompt').Count) { $step.prompt = $value } else { $step | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
+                }
+                elseif (-not $step.PSObject.Properties.Match('prompt').Count -or [string]::IsNullOrWhiteSpace($step.prompt)) {
+                    $value = (Generate-Prompt $step.title $business.key)
+                    if ($step.PSObject.Properties.Match('prompt').Count) { $step.prompt = $value } else { $step | Add-Member -MemberType NoteProperty -Name "prompt" -Value $value }
                     $missingPrompts++
                 }
 
@@ -457,14 +599,20 @@ foreach ($business in $content.businesses) {
                     $step.guide = $guideEsquema
                 }
                 else {
-                    if (-not $step.guide -or $step.guide.Length -lt 10) {
+                    if ($business.key -eq "influencer_agency") {
                         $step.guide = Build-Guide -businessKey $business.key -title $step.title
-                    } elseif ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
-                        $step.guide += (Get-Tips $business.key)
-                    } 
+                    }
+                    else {
+                        if (-not $step.guide -or $step.guide.Length -lt 10) {
+                            $step.guide = Build-Guide -businessKey $business.key -title $step.title
+                        } elseif ($step.guide -and ($step.guide -notmatch "💡 Tips")) {
+                            $step.guide += (Get-Tips $business.key)
+                        }
+                    }
                 }
             }
             # Ensure minimum granularity: at least 5 steps per subtask
+            if (-not $subtask.PSObject.Properties.Match('steps').Count) { $subtask | Add-Member -MemberType NoteProperty -Name "steps" -Value @() }
             if (-not $subtask.steps) { $subtask.steps = @() }
             $existingCount = ($subtask.steps | Measure-Object).Count
             $minSteps = 5
