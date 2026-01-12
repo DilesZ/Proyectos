@@ -23,23 +23,12 @@ const elTotalCompleted = document.getElementById("totalCompleted");
 const elTotalTasks = document.getElementById("totalTasks");
 const elCurrentViewTitle = document.getElementById("currentViewTitle");
 
-// Detail View Elements
-const elDetailView = document.getElementById("detailView");
-const elDetailOverlay = document.getElementById("detailOverlay");
-const elDetailTitle = document.getElementById("detailTitle");
-const elDetailBody = document.getElementById("detailBody");
-const elDetailBadge = document.getElementById("detailBadge");
-const btnCloseDetail = document.getElementById("closeDetail");
-
 document.getElementById("resetProgress").addEventListener("click", () => {
   if (confirm("¿Estás seguro de reiniciar todo el progreso?")) {
       localStorage.removeItem(storeKey);
       location.reload();
   }
 });
-
-btnCloseDetail.addEventListener("click", hideDetail);
-elDetailOverlay.addEventListener("click", hideDetail);
 
 async function loadProgress() {
   // First try local storage for immediate render
@@ -373,60 +362,222 @@ function updateTaskStatus(t, val) {
 }
 
 function showDetail(item) {
-  elDetailTitle.textContent = item.title;
+  // Crear ventana emergente completa
+  const modal = document.createElement('div');
+  modal.className = 'task-modal';
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  `;
+
+  const modalContent = document.createElement('div');
+  modalContent.className = 'task-modal-content';
+  modalContent.style.cssText = `
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  `;
+
+  // Header con título y botón de cerrar
+  const modalHeader = document.createElement('div');
+  modalHeader.style.cssText = `
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+  `;
+
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = item.title;
+  titleElement.style.cssText = `
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+  `;
+
+  const closeButton = document.createElement('button');
+  closeButton.innerHTML = '×';
+  closeButton.style.cssText = `
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  `;
+  closeButton.onmouseover = () => closeButton.style.background = '#cc0000';
+  closeButton.onmouseout = () => closeButton.style.background = '#ff4444';
+  closeButton.onclick = () => document.body.removeChild(modal);
+
+  modalHeader.appendChild(titleElement);
+  modalHeader.appendChild(closeButton);
+
+  // Badge si existe
+  if (item.badge) {
+    const badgeElement = document.createElement('div');
+    badgeElement.textContent = item.badge;
+    badgeElement.style.cssText = `
+      background: linear-gradient(135deg, #0070f3, #0051a2);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-top: 10px;
+      display: inline-block;
+    `;
+    modalHeader.appendChild(badgeElement);
+  }
+
+  // Contenido principal
+  const contentElement = document.createElement('div');
+  contentElement.className = 'task-modal-body';
+  contentElement.style.cssText = `
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1.1em;
+  `;
+
   let desc = item.guide || item.description || "Sin descripción detallada.";
   
-  // Basic Markdown replacement
+  // Mejor procesamiento de Markdown
   desc = desc
-      .replace(/### (.*)/g, '<h3>$1</h3>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/- (.*)/g, '<li>$1</li>')
+      .replace(/### 🎯 (.*)/g, '<h3 style="color: #0070f3; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🎯 $1</h3>')
+      .replace(/### ✅ (.*)/g, '<h3 style="color: #00cc66; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">✅ $1</h3>')
+      .replace(/### 🛠️ (.*)/g, '<h3 style="color: #ff9900; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🛠️ $1</h3>')
+      .replace(/### 📋 (.*)/g, '<h3 style="color: #9966cc; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">📋 $1</h3>')
+      .replace(/### 💡 (.*)/g, '<h3 style="color: #ffcc00; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">💡 $1</h3>')
+      .replace(/### ✅ (.*)/g, '<h3 style="color: #00cc66; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">✅ $1</h3>')
+      .replace(/### 📦 (.*)/g, '<h3 style="color: #ff6699; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">📦 $1</h3>')
+      .replace(/### ⚠️ (.*)/g, '<h3 style="color: #ff4444; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">⚠️ $1</h3>')
+      .replace(/### 🚀 (.*)/g, '<h3 style="color: #00ccff; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🚀 $1</h3>')
+      .replace(/### (.*)/g, '<h3 style="color: #fff; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">$1</h3>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong style="color: #fff;">$1</strong>')
+      .replace(/```([\s\S]*?)```/g, '<div style="background: #2a2a2a; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #0070f3; font-family: monospace; white-space: pre-wrap;">$1</div>')
+      .replace(/- (.*)/g, '<li style="margin: 8px 0; padding-left: 5px;">• $1</li>')
+      .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>');
 
-  elDetailBody.innerHTML = desc;
+  contentElement.innerHTML = desc;
 
-  // Render Tools
+  // Render Tools mejorado
   if (item.tools && Array.isArray(item.tools) && item.tools.length > 0) {
       const toolsHtml = `
-          <div class="tools-section" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
-              <h3 style="margin-bottom: 10px;">🛠️ Herramientas Directas</h3>
-              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #333;">
+              <h3 style="color: #ff9900; margin-bottom: 15px; font-size: 1.2em;">🛠️ Herramientas Directas</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
                   ${item.tools.map(tool => `
-                      <a href="${tool.url}" target="_blank" class="btn-tool" style="
-                          background: #0070f3; 
+                      <a href="${tool.url}" target="_blank" style="
+                          background: linear-gradient(135deg, #0070f3, #0051a2);
                           color: white; 
-                          padding: 8px 16px; 
-                          border-radius: 6px; 
+                          padding: 12px 20px; 
+                          border-radius: 8px; 
                           text-decoration: none;
-                          display: inline-flex;
+                          display: flex;
                           align-items: center;
-                          gap: 6px;
-                          font-size: 0.9em;
-                          transition: background 0.2s;
-                      " onmouseover="this.style.background='#0051a2'" onmouseout="this.style.background='#0070f3'">
+                          gap: 8px;
+                          font-size: 1em;
+                          font-weight: 500;
+                          transition: transform 0.2s, box-shadow 0.2s;
+                          text-align: center;
+                      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0, 112, 243, 0.3)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
                           🚀 ${tool.name}
                       </a>
                   `).join('')}
               </div>
           </div>
       `;
-      elDetailBody.innerHTML += toolsHtml;
+      contentElement.innerHTML += toolsHtml;
   }
-  
-  if(item.badge) {
-      elDetailBadge.textContent = item.badge;
-      elDetailBadge.classList.remove("hidden");
-  } else {
-      elDetailBadge.classList.add("hidden");
-  }
-  
-  elDetailOverlay.classList.add("open");
-  elDetailView.classList.add("open");
-}
 
-function hideDetail() {
-  elDetailOverlay.classList.remove("open");
-  elDetailView.classList.remove("open");
+  // Botones de acción
+  const actionButtons = document.createElement('div');
+  actionButtons.style.cssText = `
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #333;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  `;
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = 'Cerrar';
+  closeBtn.style.cssText = `
+    background: #666;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background 0.2s;
+  `;
+  closeBtn.onmouseover = () => closeBtn.style.background = '#555';
+  closeBtn.onmouseout = () => closeBtn.style.background = '#666';
+  closeBtn.onclick = () => document.body.removeChild(modal);
+
+  actionButtons.appendChild(closeBtn);
+
+  // Ensamblar modal
+  modalContent.appendChild(modalHeader);
+  modalContent.appendChild(contentElement);
+  modalContent.appendChild(actionButtons);
+  modal.appendChild(modalContent);
+
+  // Añadir al documento
+  document.body.appendChild(modal);
+
+  // Animación de entrada
+  setTimeout(() => {
+    modal.style.opacity = '1';
+    modalContent.style.transform = 'translateY(0)';
+  }, 10);
+
+  // Cerrar con ESC
+  const handleEscape = (e) => {
+    if (e.key === 'Escape') {
+      document.body.removeChild(modal);
+      document.removeEventListener('keydown', handleEscape);
+    }
+  };
+  document.addEventListener('keydown', handleEscape);
+
+  // Cerrar al hacer clic fuera
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      document.body.removeChild(modal);
+      document.removeEventListener('keydown', handleEscape);
+    }
+  };
 }
 
 // Init - Carga de datos con soporte para file:// y http://
