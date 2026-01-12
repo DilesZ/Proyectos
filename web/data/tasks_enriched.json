@@ -1,0 +1,51 @@
+{
+    "businesses": [
+        {
+            "key": "influencer_agency",
+            "name": "Influencer IA (Fanvue)",
+            "tasks": [
+                {
+                    "id": "fanvue_01_arquetipo",
+                    "title": "Definir arquetipo y branding",
+                    "points": 10,
+                    "badge": "Setup",
+                    "description": "Fase inicial crítica para definir la identidad del negocio. Esta fase determinará el éxito o fracaso de tu IA Influencer en Fanvue.",
+                    "time": "2 horas",
+                    "difficulty": "Media",
+                    "subtasks": [
+                        {
+                            "id": "fanvue_01_01_arquetipo",
+                            "title": "Investigación de mercado en Fanvue",
+                            "points": 5,
+                            "description": "Análisis exhaustivo del mercado para identificar los nichos más rentables.",
+                            "time": "1 hora 30 min",
+                            "difficulty": "Media",
+                            "steps": [
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s01",
+                                    "title": "Investigación exhaustiva de mercado en Fanvue",
+                                    "prompt": "INVESTIGACIÓN FANVUE - COPY PASTE ESTE PROMPT:\n\nActúa como experto en marketing de contenido para adultos y analista de plataformas como Fanvue. Necesito que investigues y analices EXHAUSTIVAMENTE los arquetipos de chicas que más dinero generan en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **Investiga Top 50 creadoras** en Fanvue (fanvue.com/explore)\n2. **Analiza métricas clave**: subscribers count, engagement rate, PPV prices, post frequency\n3. **Categoriza por arquetipos**: fit/athlete, gamer/geek, elegant/sophisticated, alternative/alt, cosplay, etc.\n4. **Identifica patrones de éxito**: qué tipo de contenido vende más, pricing strategies, posting schedules\n5. **Calcula ingresos estimados** basado en subscribers y PPV sales\n6. **Documenta ejemplos concretos** con screenshots y links\n\n**ENTREGABLES REQUERIDOS:**\n- Ranking de top 10 arquetipos por profitability\n- Análisis detallado de cada arquetipo (pros/cons, inversión requerida, potencial de ingresos)\n- Ejemplos reales de creadoras exitosas en cada categoría\n- Estrategias de pricing optimizadas para cada arquetipo\n- Plan de contenido recomendado para maximizar earnings\n\n**HERRAMIENTAS:** Usa Excel/Sheets para organizar datos, toma screenshots como evidencia, y documenta todo en un reporte completo.",
+                                    "guide": "### 🎯 OBJETIVO ESTRATÉGICO\nIdentificar los 3 nichos de alto potencial en Fanvue basado en data real de ingresos, engagement y tendencias del mercado. Este análisis determinará el futuro de tu negocio de IA Influencer.\n\n### ✅ PRERREQUISITOS CRÍTICOS\n- 📊 **Excel/Google Sheets** abierto para organizar datos\n- 🌐 **Navegador** con pestañas de Fanvue/OnlyFans/competidores\n- 📷 **Herramienta de screenshots** (Lightshot, Snipping Tool)\n- ⏰ **2-3 horas sin interrupciones** para investigación profunda\n- 💰 **Calculadora** para estimaciones de ingresos\n\n### 🛠️ HERRAMIENTAS PROFESIONALES\n- **Fanvue Explorer**: https://fanvue.com/explore\n- **Social Blade** (para analytics): https://socialblade.com/\n- **Excel/Sheets Template**: https://docs.google.com/spreadsheets/d/1Fc6oYV8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8\n- **Lightshot** (screenshots): https://app.prntscr.com/\n- **Currency Converter**: https://www.xe.com/\n\n### 📋 INSTRUCCIONES PASO A PASO (A-Z)\n\n**1. 📊 INVESTIGACIÓN TOP 50 CREADORAS**\n- Abre Fanvue Explorer y filtra por \"Most Popular\"\n- Revisa LAS 50 PRIMERAS creadoras sistemáticamente\n- **Copia y pega este script de análisis**:\n```\nPara cada creadora, documenta:\n1. 🆔 @username\n2. 👥 Número de subscribers (estimado)\n3. 💵 Precio mensual subscription\n4. 🎬 Precio promedio PPV\n5. 📅 Frecuencia de posting\n6. ❤️ Engagement rate (likes/comments ratio)\n7. 🏷️ Arquetipo principal (fit/gamer/elegante/alt/cosplay)\n8. 🎯 Tipo de contenido principal (photos/videos/audios)\n9. ⭐ Características únicas/diferenciales\n10. 💰 Estimated monthly earnings\n```\n\n**2. 📈 ANÁLISIS POR ARQUETIPOS**\n- Agrupa todas las creadoras por categoría\n- Calcula metrics promedios para cada arquetipo:\n  - 💰 Ingresos promedio mensual\n  - 📊 Tasa de conversión (subscribers/followers)\n  - 🎯 Engagement rate promedio\n  - 💵 ROI potencial (inversión vs ganancias)\n\n**3. 🏆 RANKING DE POTENCIAL**\nCrea ranking basado en:\n1. 💵 Profitability (ganancias potenciales)\n2. 📈 Scalability (facilidad de crecimiento)\n3. ⚡ Production cost (tiempo/recursos requeridos)\n4. 🎯 Audience size (mercado disponible)\n5. 🔄 Content longevity (sostenibilidad)\n\n**4. 📝 DOCUMENTACIÓN PROFESIONAL**\n- **Screenshots** de top 10 perfiles de cada categoría\n- **Spreadsheet** con análisis completo de datos\n- **Reporte ejecutivo** con conclusions y recomendaciones\n\n### 💡 TIPS PRO\n- 🎯 **Enfócate en micro-nichos** dentro de cada arquetipo\n- 📊 **Usa data real** no suposiciones - números > opiniones\n- 🔍 **Busca gaps en el mercado** - qué falta que la audiencia quiere?\n- 💰 **Analiza pricing strategies** - precios altos ≠ más ganancias\n\n### ✅ VALIDACIÓN Y CONTROL DE CALIDAD\n- **✓ Mínimo 50 creadoras analizadas**\n- **✓ Datos numéricos documentados** (no estimaciones vagas)\n- **✓ Screenshots como evidencia**\n- **✓ Análisis comparativo entre arquetipos**\n- **✓ Conclusiones basadas en data**\n\n### 📦 ENTREGABLES FINALES\n1. **Reporte Excel** con análisis completo de 50+ creadoras\n2. **Documento estratégico** con top 3 nichos recomendados\n3. **Carpeta de screenshots** organizada por arquetipo\n4. **Presentación ejecutiva** con findings clave\n\n### ⚠️ ERRORES COMUNES A EVITAR\n- ❌ Analizar menos de 50 creadoras\n- ❌ Basarse en opiniones en lugar de data\n- ❌ No documentar screenshots/evidencia\n- ❌ Ignorar metrics de engagement\n- ❌ Copiar exactamente lo que ya existe\n\n### 🚀 NEXT STEPS\nUna vez completado, usa estos insights para:\n1. Elegir tu arquetipo principal\n2. Definir tu pricing strategy\n3. Planear tu content calendar\n4. Establecer metas de ingresos realistas",
+                                    "time": "1 hora",
+                                    "difficulty": "Media",
+                                    "description": "Paso crítico: Investigación de mercado exhaustiva en Fanvue para identificar nichos rentables"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s02",
+                                    "title": "Analizar audiencia y competencia",
+                                    "prompt": "ANÁLISIS AUDIENCIA - COPY PASTE ESTE PROMPT:\n\nActúa como analista de mercado especializado en contenido adulto. Necesito que analices EXHAUSTIVAMENTE la audiencia objetivo y competencia para los 3 nichos identificados.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **Analiza demographics**: edad, género, ubicación, intereses\n2. **Investiga pain points**: qué problemas/necesidades tienen\n3. **Identifica spending habits**: cuánto están dispuestos a pagar\n4. **Mapea competencia directa**: quiénes son, qué ofrecen, pricing\n5. **Encuentra gaps en el mercado**: oportunidades no explotadas\n6. **Documenta insights clave** con data concreta\n\n**ENTREGABLES REQUERIDOS:**\n- Perfil detallado de audiencia para cada nicho\n- Análisis competitivo completo\n- Matriz SWOT para cada oportunidad\n- Recomendaciones estratégicas basadas en gaps\n- Pricing analysis comparativo\n\n**HERRAMIENTAS:** Usa Google Trends, Social Blade, analytics tools, y documenta todo con screenshots.",
+                                    "guide": "### 🎯 OBJETIVO ESTRATÉGICO\nAnalizar profundamente la audiencia objetivo y competencia para validar el potencial real de cada nicho identificado.\n\n### ✅ PRERREQUISITOS CRÍTICOS\n- 📊 **Data de investigación** del paso anterior completa\n- 🌐 **Herramientas de analytics** configuradas\n- ⏰ **1-2 horas** de análisis profundo\n- 📝 **Plantilla de análisis** preparada\n\n### 🛠️ HERRAMIENTAS PROFESIONALES\n- **Google Trends**: https://trends.google.com/\n- **Social Blade**: https://socialblade.com/\n- **SparkToro** (audience insights): https://sparktoro.com/\n- **SimilarWeb**: https://www.similarweb.com/\n- **Excel/Sheets** para análisis comparativo\n\n### 📋 INSTRUCCIONES PASO A PASO\n\n**1. 📊 ANÁLISIS DEMOGRÁFICO**\n- Investiga edad, género, ubicación de cada audiencia\n- Identifica intereses y comportamientos específicos\n- Documenta insights con data concreta\n\n**2. 🔍 COMPETITIVE ANALYSIS**\n- Analiza top 10 competidores en cada nicho\n- Compara pricing, contenido, engagement\n- Identifica strengths/weaknesses de cada uno\n\n**3. 💡 GAP ANALYSIS**\n- Encuentra oportunidades no explotadas\n- Identifica necesidades no satisfechas\n- Documenta gaps específicos del mercado\n\n**4. 📈 RECOMENDACIONES ESTRATÉGICAS**\n- Basado en el análisis, recomienda el mejor nicho\n- Justifica con data concreta y métricas\n- Propón estrategia diferenciadora\n\n### 📦 ENTREGABLES\n- Reporte completo de análisis de audiencia\n- Matriz competitiva detallada\n- Recomendaciones estratégicas basadas en data\n- Screenshots y evidencia de investigación\n\n### ⚠️ ERRORES COMUNES\n- ❌ Basarse en suposiciones sin data\n- ❌ Ignorar análisis competitivo\n- ❌ No documentar evidencia concreta\n- ❌ Saltar el gap analysis\n- ❌ No considerar pricing competitivo",
+                                    "time": "30 min",
+                                    "difficulty": "Media",
+                                    "description": "Análisis profundo de audiencia y competencia para validar nichos"
+                                }
+                            ],
+                            "prompt": "Investigación de mercado exhaustiva en Fanvue para identificar nichos rentables"
+                        }
+                    ],
+                    "prompt": "Definición completa de arquetipo y branding para IA Influencer"
+                }
+            ]
+        }
+    ]
+}
