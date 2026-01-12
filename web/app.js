@@ -429,29 +429,63 @@ function hideDetail() {
   elDetailView.classList.remove("open");
 }
 
-// Init
-fetch('data/tasks.json?v=' + dataVersion)
-  .then(r => {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-  })
-  .then(async data => {
-      state.tasks = data;
-      state.progress = await loadProgress();
-      
-      let allBusinesses = [];
-      if (Array.isArray(data)) {
-          allBusinesses = data;
-      } else if (data.businesses && Array.isArray(data.businesses)) {
-          allBusinesses = data.businesses;
-      } else {
-          allBusinesses = Object.values(data);
-      }
-      
-      updateGlobalStats(allBusinesses);
-      renderTabs(allBusinesses);
-  })
-  .catch(e => {
-      console.error("Error loading tasks", e);
-      elContent.innerHTML = "<div style='padding:2rem; color:red'>Error cargando datos. Revisa la consola.<br><small>" + e.message + "</small></div>";
-  });
+// Init - Carga de datos con soporte para file:// y http://
+function loadTasksData() {
+    try {
+        // Intento 1: Si estamos en servidor HTTP, usar fetch
+        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+            return fetch('data/tasks.json?v=' + dataVersion)
+                .then(r => {
+                    if (!r.ok) throw new Error("HTTP " + r.status);
+                    return r.json();
+                });
+        }
+        
+        // Intento 2: Si estamos en file://, usar XMLHttpRequest sincrónico
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'data/tasks.json?v=' + dataVersion, false); // Sincrónico
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    try {
+                        resolve(JSON.parse(xhr.responseText));
+                    } catch (e) {
+                        reject(new Error('Error parsing JSON: ' + e.message));
+                    }
+                } else {
+                    reject(new Error('HTTP ' + xhr.status));
+                }
+            };
+            xhr.onerror = function() {
+                reject(new Error('Network error'));
+            };
+            xhr.send(null);
+        });
+        
+    } catch (e) {
+        return Promise.reject(e);
+    }
+}
+
+// Cargar datos y inicializar
+loadTasksData()
+    .then(async data => {
+        state.tasks = data;
+        state.progress = await loadProgress();
+        
+        let allBusinesses = [];
+        if (Array.isArray(data)) {
+            allBusinesses = data;
+        } else if (data.businesses && Array.isArray(data.businesses)) {
+            allBusinesses = data.businesses;
+        } else {
+            allBusinesses = Object.values(data);
+        }
+        
+        updateGlobalStats(allBusinesses);
+        renderTabs(allBusinesses);
+    })
+    .catch(e => {
+        console.error("Error loading tasks", e);
+        elContent.innerHTML = "<div style='padding:2rem; color:red'>Error cargando datos. Revisa la consola.<br><small>" + e.message + "</small><br><br>Para solucionar:<br>1. Usa el archivo start-server.bat<br>2. O abre Chrome con: --allow-file-access-from-files</div>";
+    });
