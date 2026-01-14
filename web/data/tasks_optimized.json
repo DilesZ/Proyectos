@@ -1,0 +1,237 @@
+{
+    "businesses": [
+        {
+            "key": "influencer_agency",
+            "name": "Influencer IA (Fanvue)",
+            "tasks": [
+                {
+                    "id": "fanvue_01_arquetipo",
+                    "title": "Definir arquetipo y branding",
+                    "points": 10,
+                    "badge": "Setup",
+                    "description": "Fase inicial crítica para definir la identidad del negocio. Esta fase determinará el éxito o fracaso de tu IA Influencer en Fanvue.",
+                    "time": "2 horas",
+                    "difficulty": "Media",
+                    "subtasks": [
+                        {
+                            "id": "fanvue_01_01_arquetipo",
+                            "title": "Investigación de mercado en Fanvue",
+                            "points": 5,
+                            "description": "Análisis exhaustivo del mercado para identificar los nichos más rentables.",
+                            "time": "1 hora 30 min",
+                            "difficulty": "Media",
+                            "steps": [
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s01",
+                                    "title": "Investigación exhaustiva de mercado en Fanvue",
+                                    "prompt": "INVESTIGACIÓN FANVUE - COPY PASTE ESTE PROMPT:\n\nActúa como experto en marketing de contenido para adultos y analista de plataformas como Fanvue. Necesito que investigues y analices EXHAUSTIVAMENTE los arquetipos de chicas que más dinero generan en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **Investiga Top 50 creadoras** en Fanvue (fanvue.com/explore)\n2. **Analiza métricas clave**: subscribers count, engagement rate, PPV prices, post frequency\n3. **Categoriza por arquetipos**: fit/athlete, gamer/geek, elegant/sophisticated, alternative/alt, cosplay, etc.\n4. **Identifica patrones de éxito**: qué tipo de contenido vende más, pricing strategies, posting schedules\n5. **Calcula ingresos estimados** basado en subscribers y PPV sales\n6. **Documenta ejemplos concretos** con screenshots y links\n\n**ENTREGABLES REQUERIDOS:**\n- Ranking de top 10 arquetipos por profitability\n- Análisis detallado de cada arquetipo (pros/cons, inversión requerida, potencial de ingresos)\n- Ejemplos reales de creadoras exitosas en cada categoría\n- Estrategias de pricing optimizadas para cada arquetipo\n- Plan de contenido recomendado para maximizar earnings\n\n**HERRAMIENTAS:** Usa Excel/Sheets para organizar datos, toma screenshots como evidencia, y documenta todo en un reporte completo.",
+                                    "guide": "### 🎯 OBJETIVO ESTRATÉGICO\nIdentificar los 3 nichos de alto potencial en Fanvue basado en data real de ingresos, engagement y tendencias del mercado. Este análisis determinará el futuro de tu negocio de IA Influencer.\n\n### ✅ PRERREQUISITOS CRÍTICOS\n- 📊 **Excel/Google Sheets** abierto para organizar datos\n- 🌐 **Navegador** con pestañas de Fanvue/OnlyFans/competidores\n- 📷 **Herramienta de screenshots** (Lightshot, Snipping Tool)\n- ⏰ **2-3 horas sin interrupciones** para investigación profunda\n- 💰 **Calculadora** para estimaciones de ingresos\n\n### 🛠️ HERRAMIENTAS PROFESIONALES\n- **Fanvue Explorer**: https://fanvue.com/explore\n- **Social Blade** (para analytics): https://socialblade.com/\n- **Excel/Sheets Template**: https://docs.google.com/spreadsheets/d/1Fc6oYV8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8Z7Z8\n- **Lightshot** (screenshots): https://app.prntscr.com/\n- **Currency Converter**: https://www.xe.com/\n\n### 📋 INSTRUCCIONES PASO A PASO (A-Z)\n\n**1. 📊 INVESTIGACIÓN TOP 50 CREADORAS**\n- Abre Fanvue Explorer y filtra por \"Most Popular\"\n- Revisa LAS 50 PRIMERAS creadoras sistemáticamente\n- **Copia y pega este script de análisis**:\n```\nPara cada creadora, documenta:\n1. 🆔 @username\n2. 👥 Número de subscribers (estimado)\n3. 💵 Precio mensual subscription\n4. 🎬 Precio promedio PPV\n5. 📅 Frecuencia de posting\n6. ❤️ Engagement rate (likes/comments ratio)\n7. 🏷️ Arquetipo principal (fit/gamer/elegante/alt/cosplay)\n8. 🎯 Tipo de contenido principal (photos/videos/audios)\n9. ⭐ Características únicas/diferenciales\n10. 💰 Estimated monthly earnings\n```\n\n**2. 📈 ANÁLISIS POR ARQUETIPOS**\n- Agrupa todas las creadoras por categoría\n- Calcula metrics promedios para cada arquetipo:\n  - 💰 Ingresos promedio mensual\n  - 📊 Tasa de conversión (subscribers/followers)\n  - 🎯 Engagement rate promedio\n  - 💵 ROI potencial (inversión vs ganancias)\n\n**3. 🏆 RANKING DE POTENCIAL**\nCrea ranking basado en:\n1. 💵 Profitability (ingresos potenciales)\n2. 🎯 Market demand (tamaño de audiencia)\n3. ⚡ Competition level (saturación del mercado)\n4. 📈 Growth potential (tendencia de crecimiento)\n5. 💰 Investment required (recursos necesarios)\n\n**4. 📊 DATA VALIDATION**\n- **Cruza datos** con otras plataformas (OnlyFans, LoyalFans)\n- **Verifica consistencia** entre diferentes métricas\n- **Identifica outliers** y anomalías en los datos\n- **Documenta evidencias** con screenshots timestamped\n\n### ⏰ TIMELINE REALISTA\n- **0-45 min**: Investigación de top 50 creadoras\n- **45-90 min**: Análisis por categorías y métricas\n- **90-120 min**: Ranking y validación de datos\n- **120-150 min**: Documentación final y conclusiones\n\n### 🎯 DELIVERABLES FINALES\n- 📋 Excel/Sheets con data completa de 50+ creadoras\n- 📊 Ranking de top 10 arquetipos por profitability\n- 🎯 Análisis detallado de 3 nichos finalistas\n- 💰 Proyección de ingresos para cada nicho\n- 📸 Screenshots de evidencia de investigación\n- 📝 Reporte ejecutivo con conclusiones estratégicas\n\n### 💡 PRO TIPS\n- 🎯 **Enfócate en métricas reales**, no en percepciones\n- 📊 **Usa múltiples fuentes** para validar datos\n- ⏰ **Dedica tiempo suficiente** - esta investigación es crítica\n- 📸 **Documenta todo** con screenshots timestamped\n- 💰 **Calcula ingresos conservadores**, no optimistas",
+                                    "time": "1 hora",
+                                    "difficulty": "Media",
+                                    "description": "Paso crítico: Investigación de mercado exhaustiva en Fanvue para identificar nichos rentables"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s02",
+                                    "title": "Análisis profundo de audiencia, competencia y gaps de mercado",
+                                    "prompt": "ANÁLISIS ESTRATÉGICO COMPLETO - COPY PASTE ESTE PROMPT:\n\nActúa como analista senior de mercado especializado en plataformas de contenido adulto premium. Necesito que realices un análisis ESTRATÉGICO COMPLETO de audiencia, competencia y gaps de mercado para los 3 nichos identificados en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🧑‍💻 ANÁLISIS DEMOGRÁFICO PROFUNDO**: Edad exacta, género, ubicación geográfica, nivel de ingresos, profesiones, patrones de consumo\n2. **🎯 PSYCHOGRÁFICO COMPLETO**: Valores, creencias, motivaciones, pain points específicos, aspiraciones, frustraciones\n3. **💰 SPENDING ANALYSIS**: Cuánto gastan mensualmente, en qué, frecuencia de compras, sensitivity al precio\n4. **🔍 COMPETITIVE INTELLIGENCE**: Top 10 competidores por nicho, pricing strategies, content gaps, engagement patterns\n5. **📊 MARKET GAP ANALYSIS**: Oportunidades no explotadas, necesidades no satisfechas, white spaces en el mercado\n6. **🎯 TARGETING STRATEGY**: Buyer personas detalladas, customer journey mapping, touchpoints optimization\n\n**ENTREGABLES REQUERIDOS:**\n- 📋 3 Buyer Personas completas con datos demográficos y psicográficos\n- 📊 Matriz competitiva detallada (features, pricing, engagement, content gaps)\n- 🎯 Análisis SWOT para cada oportunidad de mercado\n- 💰 Pricing analysis comparativo y recomendaciones estratégicas\n- 📈 Market sizing y potential revenue estimation\n- 🎯 Customer journey maps para cada persona\n- 🔍 Gap analysis con oportunidades concretas de diferenciación\n\n**HERRAMIENTAS:** Google Trends, SparkToro, SimilarWeb, Social Blade, Excel/Sheets, y documentación completa con screenshots y data exportada.",
+                                    "time": "2 horas",
+                                    "difficulty": "Alta",
+                                    "description": "Análisis estratégico completo de audiencia, competencia y gaps de mercado para validación científica del nicho"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s03",
+                                    "title": "Selección estratégica del nicho final con matriz de decisión",
+                                    "prompt": "SELECCIÓN ESTRATÉGICA DE NICHO - COPY PASTE ESTE PROMPT:\n\nActúa como director estratégico especializado en toma de decisiones de negocio para plataformas de contenido premium. Necesito que realices una SELECCIÓN ESTRATÉGICA DEL NICHO FINAL basado en análisis cuantitativo y cualitativo completo.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **📊 MATRIZ DE DECISIÓN CUANTITATIVA**: Crea scoring system con pesos para profitability, scalability, competition, production cost, audience size\n2. **🎯 ANÁLISIS CUALITATIVO PROFUNDO**: Alineación con tus skills, recursos disponibles, personal fit, long-term sustainability\n3. **💰 PROYECCIÓN FINANCIERA**: Modelo de ingresos detallado, ROI calculation, break-even analysis, growth projections\n4. **⚡ RISK ASSESSMENT**: Análisis de riesgos por nicho, mitigation strategies, contingency plans\n5. **🚀 COMPETITIVE ADVANTAGE**: Identifica tu ventaja competitiva única para cada opción\n6. **🎯 DECISION MATRIX FINAL**: Scoring final con recomendación estratégica basada en data\n\n**ENTREGABLES REQUERIDOS:**\n- 📋 Matriz de decisión completa con scoring cuantitativo (0-10 scale)\n- 📊 Análisis cualitativo detallado para cada nicho\n- 💰 Proyección financiera de 12 meses para cada opción\n- ⚡ Risk assessment matrix con mitigation strategies\n- 🎯 Recomendación final con justificación estratégica\n- 📈 Action plan inmediato para implementación\n\n**HERRAMIENTAS:** Excel/Sheets para modelos financieros, decision matrix templates, risk assessment frameworks, y documentación completa.",
+                                    "time": "1 hora 30 min",
+                                    "difficulty": "Alta",
+                                    "description": "Selección estratégica del nicho final basada en análisis cuantitativo y cualitativo completo con matriz de decisión"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s04",
+                                    "title": "Creación de naming estratégico y storytelling auténtico",
+                                    "prompt": "CREACIÓN DE NAMING Y STORYTELLING - COPY PASTE ESTE PROMPT:\n\nActúa como director creativo especializado en desarrollo de marca para plataformas de contenido premium. Necesito que desarrolles un NAMING ESTRATÉGICO y STORYTELLING AUTÉNTICO para el nicho seleccionado en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🎯 NAMING STRATÉGICO**: Desarrolla 10+ opciones de nombres que reflejen el arquetipo, sean memorables, y tengan disponibilidad en redes\n2. **📖 STORYTELLING AUTÉNTICO**: Crea una narrativa coherente y atractiva que conecte emocionalmente con la audiencia objetivo\n3. **🌟 BRAND PERSONALITY**: Define la personalidad de marca completa (valores, voz, tono, atributos)\n4. **🔍 DOMAIN & SOCIAL VALIDATION**: Verifica disponibilidad de dominios y handles en todas las plataformas relevantes\n5. **📊 TESTING CONCEPTUAL**: Desarrolla métodos para validar el naming y storytelling con la audiencia objetivo\n6. **🎯 FINAL SELECTION**: Proceso de selección final basado en criterios estratégicos y disponibilidad\n\n**ENTREGABLES REQUERIDOS:**\n- 🎯 10+ opciones de naming estratégico con rationale\n- 📖 Storytelling completo y coherente\n- 🌟 Brand personality framework\n- 🔍 Availability check en dominios y redes sociales\n- 📊 Conceptual testing methodology\n- 🎯 Recomendación final con justificación\n- 📋 Brand guidelines iniciales\n\n**HERRAMIENTAS:** Name generators, domain checkers, social media handle checkers, storytelling frameworks, y documentación completa.",
+                                    "time": "1 hora 30 min",
+                                    "difficulty": "Media",
+                                    "description": "Desarrollo de naming estratégico y storytelling auténtico para conexión emocional con la audiencia"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s05",
+                                    "title": "Diseño de assets visuales profesionales y coherentes",
+                                    "prompt": "DISEÑO DE ASSETS VISUALES - COPY PASTE ESTE PROMPT:\n\nActúa como director de arte especializado en identidad visual para marcas de contenido premium. Necesito que desarrolles los ASSETS VISUALES PROFESIONALES y COHERENTES para la identidad de marca en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🎨 LOGO DESIGN**: Crea 3+ concepts de logo que reflejen la personalidad de marca y sean escalables\n2. **🌈 COLOR PALETTE**: Desarrolla paleta de colores profesional con significados estratégicos\n3. **🔤 TYPOGRAPHY SYSTEM**: Sistema tipográfico coherente para todos los touchpoints\n4. **📸 VISUAL STYLE GUIDE**: Guía completa de estilo visual (fotografía, ilustración, gráficos)\n5. **🖼️ TEMPLATE CREATION**: Templates profesionales para redes sociales, banners, thumbnails\n6. **🎯 BRAND CONSISTENCY**: Sistema para mantener consistencia visual across all platforms\n\n**ENTREGABLES REQUERIDOS:**\n- 🎯 3+ logo concepts profesionales\n- 🌈 Complete color palette with hex codes\n- 🔤 Typography system with font pairing\n- 📸 Visual style guide document\n- 🖼️ Social media templates (Instagram, Twitter, Fanvue)\n- 🎯 Brand consistency checklist\n- 📋 Asset library organization\n\n**HERRAMIENTAS:** Adobe Creative Suite, Figma, Canva, color palette generators, font pairing tools, y documentación completa.",
+                                    "time": "2 horas 30 min",
+                                    "difficulty": "Alta",
+                                    "description": "Diseño de assets visuales profesionales y coherentes para identidad de marca en Fanvue"
+                                },
+                                {
+                                    "id": "fanvue_01_01_arquetipo_s06",
+                                    "title": "Setup técnico y branding implementation en plataformas",
+                                    "prompt": "SETUP TÉCNICO Y BRANDING - COPY PASTE ESTE PROMPT:\n\nActúa como técnico especialista en implementación de branding para plataformas de contenido premium. Necesito que realices el SETUP TÉCNICO COMPLETO y IMPLEMENTACIÓN DE BRANDING en todas las plataformas relevantes para el nicho seleccionado en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🌐 PLATFORM SETUP COMPLETO**: Configuración técnica profesional de Fanvue, Instagram, Twitter, Telegram y otras plataformas relevantes\n2. **🎨 BRANDING IMPLEMENTATION**: Implementación consistente de todos los assets visuales en cada plataforma\n3. **📱 OPTIMIZACIÓN TÉCNICA**: SEO optimization, meta tags, alt texts, y technical setup para máximo discoverability\n4. **🔗 CROSS-PLATFORM INTEGRATION**: Sistema de integración coherente entre todas las plataformas\n5. **📊 ANALYTICS SETUP**: Configuración de tracking, analytics y measurement systems\n6. **🎯 USER EXPERIENCE OPTIMIZATION**: Optimización de flujos de usuario y conversión en todas las plataformas\n\n**ENTREGABLES REQUERIDOS:**\n- 🌐 Platform setup completo en Fanvue + 3 redes principales\n- 🎨 Branding implementation consistente across all platforms\n- 📱 Technical optimization completo (SEO, meta tags, etc)\n- 🔗 Cross-platform integration system\n- 📊 Analytics y tracking setup\n- 🎯 UX optimization report y recommendations\n- 📋 Checklist de verificación de implementación\n\n**HERRAMIENTAS:** Platform admin panels, SEO tools, analytics platforms, screenshot tools, y documentación completa.",
+                                    "time": "3 horas",
+                                    "difficulty": "Media-Alta",
+                                    "description": "Setup técnico completo e implementación de branding en todas las plataformas relevantes"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "fanvue_02_content_strategy",
+                    "title": "Estrategia de contenido y calendario editorial",
+                    "points": 15,
+                    "badge": "Content",
+                    "description": "Desarrollo de estrategia de contenido profesional y calendario editorial para maximizar engagement y conversiones en Fanvue.",
+                    "time": "4 horas",
+                    "difficulty": "Alta",
+                    "subtasks": [
+                        {
+                            "id": "fanvue_02_01_content_strategy",
+                            "title": "Planificación estratégica de contenido",
+                            "points": 8,
+                            "description": "Desarrollo de estrategia de contenido completa y calendario editorial profesional.",
+                            "time": "2 horas 30 min",
+                            "difficulty": "Alta",
+                            "steps": [
+                                {
+                                    "id": "fanvue_02_01_content_strategy_s01",
+                                    "title": "Desarrollo de pillars de contenido y content mix estratégico",
+                                    "prompt": "CONTENT STRATEGY PILLARS - COPY PASTE ESTE PROMPT:\n\nActúa como estratega senior de contenido para plataformas de suscripción premium. Necesito que desarrolles los PILLARS DE CONTENIDO ESTRATÉGICO y CONTENT MIX OPTIMIZADO para maximizar engagement y conversiones en Fanvue.\n\n**INSTRUCCIONES DETALLADES:**\n1. **📊 CONTENT AUDIT ANALYSIS**: Analiza el contenido de top 20 competidores en tu nicho\n2. **🎯 CONTENT PILLARS DEVELOPMENT**: Define 3-5 pillars principales que reflejen tu arquetipo\n3. **🌈 CONTENT MIX OPTIMIZATION**: Balance estratégico entre free/paid content, photos/videos/audios\n4. **💰 MONETIZATION STRATEGY**: Estrategia de pricing para PPV, tips, customs, bundles\n5. **📈 ENGAGEMENT OPTIMIZATION**: Tácticas para maximizar comments, likes, shares, retention\n6. **🎯 CONVERSION FUNNEL**: Content journey desde free follower hasta high-paying subscriber\n\n**ENTREGABLES REQUERIDOS:**\n- 📊 Competitive content analysis completo\n- 🎯 3-5 content pillars estratégicos con descripciones\n- 🌈 Content mix optimization matrix\n- 💰 Monetization strategy detallada\n- 📈 Engagement optimization plan\n- 🎯 Conversion funnel mapping completo\n- 📋 Content strategy document profesional\n\n**HERRAMIENTAS:** Excel/Sheets, content analysis templates, monetization calculators, engagement analytics tools.",
+                                    "time": "2 horas",
+                                    "difficulty": "Alta",
+                                    "description": "Desarrollo de pillars de contenido estratégico y content mix optimizado para maximizar engagement"
+                                },
+                                {
+                                    "id": "fanvue_02_01_content_strategy_s02",
+                                    "title": "Creación de calendario editorial profesional y scheduling",
+                                    "prompt": "CALENDARIO EDITORIAL PROFESIONAL - COPY PASTE ESTE PROMPT:\n\nActúa como editor senior y planificador de contenido para plataformas premium. Necesito que crees un CALENDARIO EDITORIAL PROFESIONAL COMPLETO y SCHEDULING OPTIMIZADO para los próximos 30-90 días en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **📅 CONTENT CALENDAR DEVELOPMENT**: Crea calendario detallado para 30-90 días con todos los content pillars\n2. **⏰ SCHEDULING OPTIMIZATION**: Optimiza posting times basado en analytics de audiencia\n3. **🎯 CONTENT BATCHING**: Planifica content batching sessions para eficiencia\n4. **🔄 CONTENT REPURPOSING**: Estrategia para repurposing across platforms\n5. **📊 PERFORMANCE TRACKING**: Sistema para tracking de metrics y KPIs\n6. **🔄 ITERATIVE OPTIMIZATION**: Proceso para continuous improvement basado en data\n\n**ENTREGABLES REQUERIDOS:**\n- 📅 Content calendar completo 30-90 días\n- ⏰ Optimized posting schedule\n- 🎯 Content batching plan\n- 🔄 Repurposing strategy matrix\n- 📊 Performance tracking system\n- 🔄 Iterative optimization process\n- 📋 Editorial guidelines document\n\n**HERRAMIENTAS:** Google Calendar, Excel/Sheets, scheduling tools, analytics platforms, content management systems.",
+                                    "time": "2 horas 30 min",
+                                    "difficulty": "Media-Alta",
+                                    "description": "Creación de calendario editorial profesional y sistema de scheduling optimizado"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "fanvue_03_production",
+                    "title": "Producción de contenido profesional",
+                    "points": 20,
+                    "badge": "Production",
+                    "description": "Setup de equipo profesional, técnicas de producción y edición de contenido de alta calidad para Fanvue.",
+                    "time": "6 horas",
+                    "difficulty": "Alta",
+                    "subtasks": [
+                        {
+                            "id": "fanvue_03_01_production",
+                            "title": "Setup de equipo y técnicas de producción",
+                            "points": 12,
+                            "description": "Configuración de equipo profesional y aprendizaje de técnicas de producción de contenido.",
+                            "time": "3 horas",
+                            "difficulty": "Alta",
+                            "steps": [
+                                {
+                                    "id": "fanvue_03_01_production_s01",
+                                    "title": "Selección y setup de equipo profesional de producción",
+                                    "prompt": "EQUIPO PROFESIONAL DE PRODUCCIÓN - COPY PASTE ESTE PROMPT:\n\nActúa como director de producción especializado en contenido para plataformas premium. Necesito que selecciones el EQUIPO PROFESIONAL ÓPTIMO y configures el SETUP DE PRODUCCIÓN para contenido de alta calidad en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **📷 CAMERA EQUIPMENT SELECTION**: Selecciona cámaras, lenses, lighting profesional para tu budget\n2. **🎤 AUDIO EQUIPMENT SETUP**: Configura sistema de audio profesional para clarity premium\n3. **💡 LIGHTING SYSTEM CONFIGURATION**: Setup de lighting profesional para calidad cinematográfica\n4. **🎬 STUDIO SETUP OPTIMIZATION**: Diseño de espacio de producción optimizado\n5. **📱 MOBILE PRODUCTION SETUP**: Configuración para producción mobile de alta calidad\n6. **💰 BUDGET OPTIMIZATION**: Selección de equipo por ROI y scalability\n\n**ENTREGABLES REQUERIDOS:**\n- 📷 Lista completa de equipo profesional\n- 💰 Budget optimization analysis\n- 🎯 Setup configuration guides\n- 📊 ROI calculation por equipment piece\n- 🎨 Studio design y layout\n- 📱 Mobile production setup guide\n- 📋 Equipment maintenance plan\n\n**HERRAMIENTAS:** Equipment review sites, budget calculators, ROI analysis templates, setup guides.",
+                                    "time": "2 horas 30 min",
+                                    "difficulty": "Alta",
+                                    "description": "Selección y configuración de equipo profesional de producción para contenido de alta calidad"
+                                },
+                                {
+                                    "id": "fanvue_03_01_production_s02",
+                                    "title": "Técnicas profesionales de fotografía y videografía",
+                                    "prompt": "TÉCNICAS PROFESIONALES FOTO/VIDEO - COPY PASTE ESTE PROMPT:\n\nActúa como director de fotografía especializado en contenido para plataformas premium. Necesito que enseñes TÉCNICAS PROFESIONALES DE FOTOGRAFÍA Y VIDEOGRAFÍA para crear contenido de calidad cinematográfica en Fanvue.\n\n**INSTRUCCIONES DETALLADES:**\n1. **🎬 CINEMATOGRAPHY TECHNIQUES**: Composición, framing, camera angles, movement profesional\n2. **💡 LIGHTING MASTERY**: 3-point lighting, natural light, mood lighting, technical setup\n3. **📷 PHOTOGRAPHY TECHNIQUES**: Portrait photography, posing, expression, storytelling visual\n4. **🎥 VIDEO PRODUCTION**: Shooting techniques, sequencing, pacing, visual storytelling\n5. **🎭 DIRECTING TALENT**: Techniques para dirigirse a sí mismo/a frente a cámara\n6. **🎨 VISUAL STORYTELLING**: Creación de narrativa visual coherente y engaging\n\n**ENTREGABLES REQUERIDOS:**\n- 🎬 Guía completa de técnicas cinematográficas\n- 💡 Lighting setup diagrams y configurations\n- 📷 Photography techniques step-by-step\n- 🎥 Video production best practices\n- 🎭 Self-directing techniques guide\n- 🎨 Visual storytelling framework\n- 📋 Cheat sheets prácticos\n\n**HERRAMIENTAS:** Camera equipment, lighting gear, photography guides, video tutorials, practical exercises.",
+                                    "time": "3 horas",
+                                    "difficulty": "Alta",
+                                    "description": "Aprendizaje de técnicas profesionales de fotografía y videografía para calidad cinematográfica"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "fanvue_04_postproduction",
+                    "title": "Edición y post-producción profesional",
+                    "points": 18,
+                    "badge": "Editing",
+                    "description": "Técnicas avanzadas de edición, color grading, audio mastering y optimización de contenido para Fanvue.",
+                    "time": "5 horas",
+                    "difficulty": "Alta",
+                    "subtasks": [
+                        {
+                            "id": "fanvue_04_01_postproduction",
+                            "title": "Técnicas avanzadas de edición y color grading",
+                            "points": 10,
+                            "description": "Dominio de software profesional y técnicas de edición para contenido de calidad premium.",
+                            "time": "3 horas",
+                            "difficulty": "Alta",
+                            "steps": [
+                                {
+                                    "id": "fanvue_04_01_postproduction_s01",
+                                    "title": "Setup de software profesional y workflow optimizado",
+                                    "prompt": "SETUP DE SOFTWARE PROFESIONAL - COPY PASTE ESTE PROMPT:\n\nActúa como editor senior especializado en post-producción para contenido premium. Necesito que configures el SETUP DE SOFTWARE PROFESIONAL ÓPTIMO y desarrolles un WORKFLOW DE EDICIÓN EFICIENTE para contenido de Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **💻 SOFTWARE SELECTION**: Selección de software profesional (Adobe Premiere, DaVinci, Final Cut, Photoshop, Lightroom)\n2. **⚡ WORKFLOW OPTIMIZATION**: Desarrollo de workflow eficiente desde import hasta export\n3. **🎨 COLOR GRADING SETUP**: Configuración de color management y LUTs profesionales\n4. **📊 PERFORMANCE OPTIMIZATION**: Optimización de hardware y software para máximo rendimiento\n5. **🔄 ASSET MANAGEMENT**: Sistema de organización de assets y bibliotecas\n6. **🎯 QUALITY CONTROL**: Procesos de control de calidad y revisiones\n\n**ENTREGABLES REQUERIDOS:**\n- 💻 Software selection matrix comparativa\n- ⚡ Workflow diagram completo\n- 🎨 Color grading setup profesional\n- 📊 Performance optimization guide\n- 🔄 Asset management system\n- 🎯 Quality control checklist\n- 📋 Keyboard shortcuts customization\n\n**HERRAMIENTAS:** Adobe Creative Cloud, DaVinci Resolve, performance monitors, workflow templates.",
+                                    "time": "2 horas",
+                                    "difficulty": "Media-Alta",
+                                    "description": "Configuración de software profesional y desarrollo de workflow de edición optimizado"
+                                },
+                                {
+                                    "id": "fanvue_04_01_postproduction_s02",
+                                    "title": "Técnicas avanzadas de edición, color grading y audio mastering",
+                                    "prompt": "TÉCNICAS AVANZADAS DE EDICIÓN - COPY PASTE ESTE PROMPT:\n\nActúa como editor senior especializado en post-producción para contenido premium. Necesito que enseñes TÉCNICAS AVANZADAS DE EDICIÓN, COLOR GRADING Y AUDIO MASTERING para contenido de calidad cinematográfica en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🎬 ADVANCED EDITING TECHNIQUES**: Non-linear editing, multi-cam editing, advanced transitions\n2. **🎨 PROFESSIONAL COLOR GRADING**: Color theory, LUT creation, skin tone perfection, mood setting\n3. **🔊 AUDIO MASTERING**: Noise reduction, EQ optimization, sound design, audio sweetening\n4. **✨ VISUAL EFFECTS**: Subtle VFX, beauty retouching, cinematic effects, enhancement\n5. **📊 OPTIMIZATION TECHNIQUES**: Export settings, compression optimization, platform-specific tuning\n6. **🎯 QUALITY ENHANCEMENT**: Sharpening, detail enhancement, professional polish techniques\n\n**ENTREGABLES REQUERIDOS:**\n- 🎬 Advanced editing techniques mastery\n- 🎨 Professional color grading skills\n- 🔊 Audio mastering competence\n- ✨ Visual effects application\n- 📊 Optimization techniques\n- 🎯 Quality enhancement methods\n- 📋 Professional workflow integration\n\n**HERRAMIENTAS:** Adobe Premiere, DaVinci Resolve, Audition, professional plugins, reference monitors.",
+                                    "time": "3 horas",
+                                    "difficulty": "Alta",
+                                    "description": "Dominio de técnicas avanzadas de edición, color grading y audio mastering para calidad cinematográfica"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "fanvue_phase_05",
+                    "title": "Fase 5: Marketing y promoción estratégica",
+                    "description": "Estrategias avanzadas de marketing y promoción para maximizar visibilidad y engagement en Fanvue",
+                    "steps": [
+                        {
+                            "id": "fanvue_05_01_marketing_s01",
+                            "title": "Desarrollo de estrategia de marketing digital y growth hacking",
+                            "prompt": "ESTRATEGIA DE MARKETING DIGITAL - COPY PASTE ESTE PROMPT:\n\nActúa como estratega senior de marketing digital especializado en plataformas premium. Necesito que desarrolles una ESTRATEGIA COMPLETA DE MARKETING DIGITAL Y GROWTH HACKING para maximizar visibilidad y crecimiento en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **🎯 TARGET AUDIENCE ANALYSIS**: Deep audience research, persona development, niche identification\n2. **📊 COMPETITIVE ANALYSIS**: Competitor benchmarking, market positioning, differentiation strategy\n3. **🚀 GROWTH HACKING TECHNIQUES**: Viral loops, referral systems, engagement optimization\n4. **📱 MULTI-PLATFORM STRATEGY**: Cross-platform promotion, content repurposing, platform-specific tactics\n5. **📈 PERFORMANCE METRICS**: KPI definition, tracking setup, analytics implementation\n6. **💰 BUDGET OPTIMIZATION**: Cost-effective strategies, ROI maximization, resource allocation\n\n**ENTREGABLES REQUERIDOS:**\n- 🎯 Target audience personas completas\n- 📊 Competitive analysis matrix\n- 🚀 Growth hacking playbook\n- 📱 Multi-platform strategy roadmap\n- 📈 Performance dashboard setup\n- 💰 Budget optimization plan\n- 📋 Implementation timeline\n\n**HERRAMIENTAS:** Google Analytics, social media analytics, competitor analysis tools, growth hacking frameworks.",
+                            "time": "3 horas 30 min",
+                            "difficulty": "Alta",
+                            "description": "Desarrollo de estrategia completa de marketing digital y growth hacking para crecimiento sostenible"
+                        },
+                        {
+                            "id": "fanvue_05_01_marketing_s02",
+                            "title": "Implementación de campañas avanzadas y optimización de conversiones",
+                            "prompt": "CAMPAÑAS AVANZADAS DE MARKETING - COPY PASTE ESTE PROMPT:\n\nActúa como especialista senior en campañas de marketing y optimización de conversiones. Necesito que implementes CAMPAÑAS AVANZADAS DE MARKETING Y TÉCNICAS DE OPTIMIZACIÓN DE CONVERSIONES para maximizar resultados en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **📊 CAMPAIGN STRATEGY DEVELOPMENT**: Campaign planning, objective setting, target audience refinement\n2. **🎯 ADVANCED TARGETING TECHNIQUES**: Behavioral targeting, lookalike audiences, retargeting strategies\n3. **📈 CONVERSION RATE OPTIMIZATION**: A/B testing, landing page optimization, funnel analysis\n4. **📱 MULTI-CHANNEL INTEGRATION**: Email marketing, social media ads, influencer collaborations\n5. **💰 BUDGET MANAGEMENT**: Campaign budgeting, bid optimization, ROI tracking\n6. **📊 PERFORMANCE ANALYSIS**: Campaign analytics, KPI tracking, optimization recommendations\n\n**ENTREGABLES REQUERIDOS:**\n- 📊 Complete campaign strategy framework\n- 🎯 Advanced targeting setup\n- 📈 Conversion optimization playbook\n- 📱 Multi-channel integration plan\n- 💰 Budget management system\n- 📊 Performance analytics dashboard\n- 📋 Optimization action plan\n\n**HERRAMIENTAS:** Facebook Ads Manager, Google Ads, email marketing platforms, analytics tools, A/B testing software.",
+                            "time": "4 horas",
+                            "difficulty": "Alta",
+                            "description": "Implementación de campañas avanzadas y técnicas de optimización de conversiones para máximo ROI"
+                        }
+                     ]
+                 },
+                 {
+                     "id": "fanvue_phase_06",
+                     "title": "Fase 6: Monetización avanzada y revenue streams",
+                     "description": "Estrategias avanzadas de monetización y desarrollo de múltiples streams de ingresos para maximizar profitability",
+                     "steps": [
+                         {
+                             "id": "fanvue_06_01_monetization_s01",
+                             "title": "Desarrollo de estrategia de monetización multi-stream y pricing optimization",
+                             "prompt": "ESTRATEGIA DE MONETIZACIÓN MULTI-STREAM - COPY PASTE ESTE PROMPT:\n\nActúa como estratega senior de monetización especializado en plataformas premium. Necesito que desarrolles una ESTRATEGIA COMPLETA DE MONETIZACIÓN MULTI-STREAM Y PRICING OPTIMIZATION para maximizar profitability en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **💰 REVENUE STREAM DEVELOPMENT**: Multiple income streams identification, diversification strategy, revenue optimization\n2. **🎯 PRICING STRATEGY**: Value-based pricing, tiered pricing, psychological pricing techniques\n3. **📊 FINANCIAL MODELING**: Revenue forecasting, profitability analysis, financial projections\n4. **🔄 RECURRING REVENUE SYSTEMS**: Subscription models, membership programs, recurring payment setup\n5. **📈 SCALABILITY PLANNING**: Growth-focused monetization, expansion strategies, market penetration\n6. **📊 PERFORMANCE MONITORING**: Revenue tracking, KPI analysis, optimization recommendations\n\n**ENTREGABLES REQUERIDOS:**\n- 💰 Multi-stream revenue strategy framework\n- 🎯 Complete pricing optimization plan\n- 📊 Financial modeling and projections\n- 🔄 Recurring revenue system setup\n- 📈 Scalability growth plan\n- 📊 Performance monitoring dashboard\n- 📋 Implementation roadmap\n\n**HERRAMIENTAS:** Financial modeling software, pricing optimization tools, subscription management platforms, analytics dashboards.",
+                            "time": "3 horas 30 min",
+                            "difficulty": "Alta",
+                            "description": "Desarrollo de estrategia completa de monetización multi-stream y pricing optimization avanzado"
+                         },
+                         {
+                             "id": "fanvue_06_01_monetization_s02",
+                             "title": "Implementación de sistemas de pago avanzados y optimización de conversiones premium",
+                             "prompt": "SISTEMAS DE PAGO AVANZADOS - COPY PASTE ESTE PROMPT:\n\nActúa como especialista senior en sistemas de pago y optimización de conversiones premium. Necesito que implementes SISTEMAS DE PAGO AVANZADOS Y TÉCNICAS DE OPTIMIZACIÓN DE CONVERSIONES PREMIUM para maximizar revenue en Fanvue.\n\n**INSTRUCCIONES DETALLADAS:**\n1. **💳 ADVANCED PAYMENT SYSTEMS**: Multiple payment gateway integration, international payment setup, currency optimization\n2. **🎯 PREMIUM CONVERSION OPTIMIZATION**: High-ticket sales techniques, value demonstration, objection handling\n3. **📊 FRAUD PREVENTION**: Advanced fraud detection, security measures, chargeback prevention\n4. **🔄 RECURRING REVENUE OPTIMIZATION**: Subscription retention, churn reduction, lifetime value maximization\n5. **📈 PERFORMANCE ANALYTICS**: Payment analytics, conversion tracking, revenue attribution\n6. **💰 TAX COMPLIANCE**: International tax compliance, VAT handling, financial regulations\n\n**ENTREGABLES REQUERIDOS:**\n- 💳 Complete payment system integration\n- 🎯 Premium conversion optimization playbook\n- 📊 Advanced fraud prevention system\n- 🔄 Recurring revenue optimization framework\n- 📈 Performance analytics dashboard\n- 💰 Tax compliance setup\n- 📋 Security implementation plan\n\n**HERRAMIENTAS:** Stripe, PayPal, payment processors, fraud detection tools, analytics platforms, tax compliance software.",
+                            "time": "4 horas",
+                            "difficulty": "Alta",
+                            "description": "Implementación de sistemas de pago avanzados y técnicas de optimización de conversiones premium para máximo revenue"
+                         }
+                     ]
+                 }
+             ]
+         }
+     ]
+ }
