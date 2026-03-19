@@ -23,6 +23,18 @@ const elTotalCompleted = document.getElementById("totalCompleted");
 const elTotalTasks = document.getElementById("totalTasks");
 const elCurrentViewTitle = document.getElementById("currentViewTitle");
 
+// Detail View Elements
+const elDetailView = document.getElementById("detailView");
+const elDetailOverlay = document.getElementById("detailOverlay");
+const elDetailTitle = document.getElementById("detailTitle");
+const elDetailBody = document.getElementById("detailBody");
+const elDetailBadge = document.getElementById("detailBadge");
+const elDetailTime = document.getElementById("detailTime");
+const elDetailDiff = document.getElementById("detailDiff");
+const btnCloseDetail = document.getElementById("closeDetail");
+const detailDraftKey = "orquestador_detail_drafts_v1";
+let lastFocusedElement = null;
+let activeDetailItem = null;
 document.getElementById("resetProgress").addEventListener("click", () => {
   if (confirm("¿Estás seguro de reiniciar todo el progreso?")) {
       localStorage.removeItem(storeKey);
@@ -30,6 +42,9 @@ document.getElementById("resetProgress").addEventListener("click", () => {
   }
 });
 
+btnCloseDetail.addEventListener("click", hideDetail);
+elDetailOverlay.addEventListener("click", hideDetail);
+state.detailDrafts = loadDetailDrafts();
 async function loadProgress() {
   // First try local storage for immediate render
   let localData = {};
@@ -361,229 +376,351 @@ function updateTaskStatus(t, val) {
   }
 }
 
+function loadDetailDrafts() {
+  try {
+      const raw = localStorage.getItem(detailDraftKey);
+      return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+      return {};
+  }
+}
+
+function saveDetailDraft(itemId, draft) {
+  state.detailDrafts[itemId] = draft;
+  localStorage.setItem(detailDraftKey, JSON.stringify(state.detailDrafts));
+}
+
+function escapeHtml(str) {
+  return String(str || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+}
+
+function headingKey(str) {
+  return String(str || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\w\s]/g, "")
+      .toLowerCase()
+      .trim();
+}
+
+function parseGuideSections(guide) {
+  const text = String(guide || "").replace(/\r\n/g, "\n");
+  const sections = {};
+  let current = "general";
+  sections[current] = [];
+  text.split("\n").forEach(line => {
+      const m = line.match(/^###\s+(.*)$/);
+      if (m) {
+          current = headingKey(m[1]);
+          if (!sections[current]) sections[current] = [];
+      } else {
+          sections[current].push(line);
+      }
+  });
+  Object.keys(sections).forEach(k => sections[k] = sections[k].join("\n").trim());
+  return sections;
+}
+
+function extractList(text) {
+  return String(text || "")
+      .split("\n")
+      .map(l => l.trim())
+      .filter(l => /^[-*]\s+/.test(l) || /^\d+\.\s+/.test(l))
+      .map(l => l.replace(/^[-*]\s+/, "").replace(/^\d+\.\s+/, "").trim())
+      .filter(Boolean);
+}
+
+function extractParagraph(text) {
+  return String(text || "")
+      .split("\n")
+      .map(l => l.trim())
+      .filter(l => l && !/^[-*]\s+/.test(l) && !/^\d+\.\s+/.test(l))
+      .join(" ");
+}
+
+function getAllBusinesses() {
+  if (Array.isArray(state.tasks)) return state.tasks;
+  if (state.tasks && Array.isArray(state.tasks.businesses)) return state.tasks.businesses;
+  if (state.tasks && typeof state.tasks === "object") return Object.values(state.tasks);
+  return [];
+}
+
+function rerenderActiveBusiness() {
+  const all = getAllBusinesses();
+  if (all.length === 0) return;
+  const activeKey = document.querySelector(".nav-item.active")?.dataset.key;
+  const business = all.find(x => x.key === activeKey) || all[0];
+  updateGlobalStats(all);
+  renderBusiness(business);
+}
+
+function getPopupChecklist(item, sections) {
+  const validation = extractList(sections.validacion || sections.validacionprerrequisitos || "");
+  const entregables = extractList(sections.entregables || "");
+  const base = [
+      "Entiendo claramente el objetivo del paso",
+      "He definido una acción concreta para ejecutarlo hoy",
+      "He preparado evidencia de avance o resultado"
+  ];
+  return [...base, ...validation, ...entregables].slice(0, 8);
+}
+
+function buildDetailTemplate(item, draft, sections) {
+  const objetivo = extractParagraph(sections.objetivo) || item.description || "Completa este paso con calidad verificable y evidencia.";
+  const instrucciones = extractList(sections.instrucciones || sections.instruccionesaz || sections.general);
+  const tips = extractList(sections.tips || "");
+  const errores = extractList(sections.errorescomunes || "");
+  const ejemplo = extractParagraph(sections.ejemplo || "");
+  const checklist = getPopupChecklist(item, sections);
+  const resources = Array.isArray(item.tools) ? item.tools : [];
+  const currentProgress = state.progress[item.id] === true;
+
+  return `
+    <section class="popup-overview">
+      <div class="popup-progress-wrap">
+        <div class="popup-progress-labels">
+          <span>Preparación del paso</span>
+          <span id="popupProgressText">0%</span>
+        </div>
+        <div class="popup-progress-track"><div id="popupProgressBar" class="popup-progress-bar" style="width:0%"></div></div>
+      </div>
+      <p class="popup-objective">${escapeHtml(objetivo)}</p>
+      ${instrucciones.length ? `
+      <div class="popup-card">
+        <h3>Plan de ejecución paso a paso</h3>
+        <ol>${instrucciones.slice(0, 8).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ol>
+      </div>` : ""}
+      ${tips.length ? `
+      <div class="popup-card">
+        <h3>Recomendaciones de éxito</h3>
+        <ul>${tips.slice(0, 6).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+      </div>` : ""}
+      ${errores.length ? `
+      <div class="popup-card warning">
+        <h3>Evita estos errores</h3>
+        <ul>${errores.slice(0, 6).map(x => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+      </div>` : ""}
+      <div class="popup-card form-card">
+        <h3>Completar este paso</h3>
+        <label for="fieldGoal">Resultado esperado del paso</label>
+        <input id="fieldGoal" class="popup-input" type="text" maxlength="160" value="${escapeHtml(draft.goal || "")}" placeholder="Ejemplo: Definir el arquetipo final y guardarlo en mi biblia de personaje">
+        <small id="fieldGoalHint" class="field-hint">Describe un resultado concreto y medible.</small>
+
+        <label for="fieldPrompt">Prompt de trabajo</label>
+        <textarea id="fieldPrompt" class="popup-textarea" rows="4" placeholder="Escribe aquí el prompt final que usarás">${escapeHtml(draft.prompt || item.prompt || "")}</textarea>
+        <small id="fieldPromptHint" class="field-hint">Debe ser claro, específico y ejecutable.</small>
+
+        <label for="fieldNotes">Notas de ejecución</label>
+        <textarea id="fieldNotes" class="popup-textarea" rows="5" placeholder="Qué harás, cómo lo validarás y qué aprendiste">${escapeHtml(draft.notes || "")}</textarea>
+        <small id="fieldNotesHint" class="field-hint">Incluye decisión final, criterio y próximos pasos.</small>
+
+        <label for="fieldEvidence">Enlace de evidencia (opcional)</label>
+        <input id="fieldEvidence" class="popup-input" type="url" value="${escapeHtml(draft.evidence || "")}" placeholder="https://...">
+        <small id="fieldEvidenceHint" class="field-hint">Si adjuntas evidencia, valida mejor tu progreso.</small>
+
+        ${ejemplo ? `<div class="popup-example"><strong>Ejemplo:</strong> ${escapeHtml(ejemplo)}</div>` : ""}
+
+        <div class="popup-checklist">
+          <h4>Checklist de finalización</h4>
+          ${checklist.map((x, i) => `
+            <label class="check-row">
+              <input type="checkbox" class="check-item" data-index="${i}" ${(draft.checks?.[i]) ? "checked" : ""}>
+              <span>${escapeHtml(x)}</span>
+            </label>
+          `).join("")}
+        </div>
+      </div>
+      ${resources.length ? `
+      <div class="popup-card">
+        <h3>Recursos recomendados</h3>
+        <div class="tools-grid">
+          ${resources.map(tool => `<a href="${escapeHtml(tool.url)}" target="_blank" rel="noopener noreferrer" class="btn-tool-link">Abrir ${escapeHtml(tool.name)}</a>`).join("")}
+        </div>
+      </div>` : ""}
+      <div id="popupValidationBanner" class="popup-banner"></div>
+      <div class="popup-actions">
+        <button id="btnCopyPrompt" class="btn btn-secondary" type="button">Copiar prompt</button>
+        <button id="btnSaveDraft" class="btn btn-secondary" type="button">Guardar borrador</button>
+        <button id="btnCompleteStep" class="btn btn-primary" type="button">${currentProgress ? "Actualizar como completado" : "Marcar como completado"}</button>
+      </div>
+    </section>
+  `;
+}
+
+function evaluatePopupState(item) {
+  const goal = (elDetailBody.querySelector("#fieldGoal")?.value || "").trim();
+  const prompt = (elDetailBody.querySelector("#fieldPrompt")?.value || "").trim();
+  const notes = (elDetailBody.querySelector("#fieldNotes")?.value || "").trim();
+  const evidence = (elDetailBody.querySelector("#fieldEvidence")?.value || "").trim();
+  const checks = [...elDetailBody.querySelectorAll(".check-item")];
+  const checkedCount = checks.filter(x => x.checked).length;
+  const checksRatio = checks.length ? checkedCount / checks.length : 1;
+  const evidenceValid = !evidence || /^https?:\/\/\S+$/i.test(evidence);
+  const goalOk = goal.length >= 15;
+  const promptOk = prompt.length >= 20;
+  const notesOk = notes.length >= 40;
+  const score = Math.round((goalOk ? 20 : 0) + (promptOk ? 20 : 0) + (notesOk ? 25 : 0) + (evidenceValid ? 10 : 0) + (checksRatio * 25));
+  return { score, goalOk, promptOk, notesOk, evidenceValid, checkedCount, checksTotal: checks.length };
+}
+
+function syncPopupValidation() {
+  const status = evaluatePopupState(activeDetailItem);
+  const progressText = elDetailBody.querySelector("#popupProgressText");
+  const progressBar = elDetailBody.querySelector("#popupProgressBar");
+  const banner = elDetailBody.querySelector("#popupValidationBanner");
+  if (progressText) progressText.textContent = `${status.score}%`;
+  if (progressBar) progressBar.style.width = `${status.score}%`;
+  const hintGoal = elDetailBody.querySelector("#fieldGoalHint");
+  const hintPrompt = elDetailBody.querySelector("#fieldPromptHint");
+  const hintNotes = elDetailBody.querySelector("#fieldNotesHint");
+  const hintEvidence = elDetailBody.querySelector("#fieldEvidenceHint");
+  if (hintGoal) hintGoal.className = `field-hint ${status.goalOk ? "ok" : "error"}`;
+  if (hintPrompt) hintPrompt.className = `field-hint ${status.promptOk ? "ok" : "error"}`;
+  if (hintNotes) hintNotes.className = `field-hint ${status.notesOk ? "ok" : "error"}`;
+  if (hintEvidence) hintEvidence.className = `field-hint ${status.evidenceValid ? "ok" : "error"}`;
+  if (banner) {
+      if (status.score >= 80) {
+          banner.className = "popup-banner success";
+          banner.textContent = `Listo para completar. Checklist: ${status.checkedCount}/${status.checksTotal}.`;
+      } else {
+          banner.className = "popup-banner warning";
+          banner.textContent = `Te faltan datos clave para maximizar éxito (${status.score}%). Completa objetivo, prompt, notas y checklist.`;
+      }
+  }
+}
+
+function collectDraftFromPopup(item) {
+  const checks = [...elDetailBody.querySelectorAll(".check-item")].map(x => x.checked);
+  return {
+      goal: elDetailBody.querySelector("#fieldGoal")?.value || "",
+      prompt: elDetailBody.querySelector("#fieldPrompt")?.value || "",
+      notes: elDetailBody.querySelector("#fieldNotes")?.value || "",
+      evidence: elDetailBody.querySelector("#fieldEvidence")?.value || "",
+      checks
+  };
+}
+
+function handleDetailKeydown(e) {
+  if (!elDetailView.classList.contains("open")) return;
+  if (e.key === "Escape") {
+      hideDetail();
+      return;
+  }
+  if (e.key !== "Tab") return;
+  const focusables = elDetailView.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
+  const items = [...focusables].filter(el => !el.disabled && el.offsetParent !== null);
+  if (items.length === 0) return;
+  const first = items[0];
+  const last = items[items.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+  }
+}
+
 function showDetail(item) {
-  // Crear ventana emergente completa
-  const modal = document.createElement('div');
-  modal.className = 'task-modal';
-  modal.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  `;
-
-  const modalContent = document.createElement('div');
-  modalContent.className = 'task-modal-content';
-  modalContent.style.cssText = `
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 30px;
-    max-width: 800px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    border: 1px solid #333;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-  `;
-
-  // Header con título y botón de cerrar
-  const modalHeader = document.createElement('div');
-  modalHeader.style.cssText = `
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #333;
-  `;
-
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = item.title;
-  titleElement.style.cssText = `
-    color: #fff;
-    font-size: 1.8em;
-    font-weight: 700;
-    margin: 0;
-  `;
-
-  const closeButton = document.createElement('button');
-  closeButton.innerHTML = '×';
-  closeButton.style.cssText = `
-    background: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-  `;
-  closeButton.onmouseover = () => closeButton.style.background = '#cc0000';
-  closeButton.onmouseout = () => closeButton.style.background = '#ff4444';
-  closeButton.onclick = () => document.body.removeChild(modal);
-
-  modalHeader.appendChild(titleElement);
-  modalHeader.appendChild(closeButton);
-
-  // Badge si existe
+  activeDetailItem = item;
+  lastFocusedElement = document.activeElement;
+  elDetailTitle.textContent = item.title;
+  const draft = state.detailDrafts[item.id] || {};
+  const sections = parseGuideSections(item.guide || "");
+  elDetailBody.innerHTML = buildDetailTemplate(item, draft, sections);
   if (item.badge) {
-    const badgeElement = document.createElement('div');
-    badgeElement.textContent = item.badge;
-    badgeElement.style.cssText = `
-      background: linear-gradient(135deg, #0070f3, #0051a2);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      font-weight: 600;
-      margin-top: 10px;
-      display: inline-block;
-    `;
-    modalHeader.appendChild(badgeElement);
+      elDetailBadge.textContent = item.badge;
+      elDetailBadge.classList.remove("hidden");
+  } else {
+      elDetailBadge.classList.add("hidden");
+  }
+  if (item.time) {
+      elDetailTime.textContent = item.time;
+      elDetailTime.classList.remove("hidden");
+  } else {
+      elDetailTime.classList.add("hidden");
+  }
+  if (item.difficulty) {
+      elDetailDiff.textContent = item.difficulty;
+      elDetailDiff.classList.remove("hidden");
+  } else {
+      elDetailDiff.classList.add("hidden");
   }
 
-  // Contenido principal
-  const contentElement = document.createElement('div');
-  contentElement.className = 'task-modal-body';
-  contentElement.style.cssText = `
-    color: #e0e0e0;
-    line-height: 1.6;
-    font-size: 1.1em;
-  `;
+  const liveFields = ["#fieldGoal", "#fieldPrompt", "#fieldNotes", "#fieldEvidence"];
+  liveFields.forEach(sel => {
+      const node = elDetailBody.querySelector(sel);
+      if (node) {
+          node.addEventListener("input", () => {
+              syncPopupValidation();
+              saveDetailDraft(item.id, collectDraftFromPopup(item));
+          });
+      }
+  });
+  elDetailBody.querySelectorAll(".check-item").forEach(node => {
+      node.addEventListener("change", () => {
+          syncPopupValidation();
+          saveDetailDraft(item.id, collectDraftFromPopup(item));
+      });
+  });
 
-  let desc = item.guide || item.description || "Sin descripción detallada.";
-  
-  // Mejor procesamiento de Markdown
-  desc = desc
-      .replace(/### 🎯 (.*)/g, '<h3 style="color: #0070f3; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🎯 $1</h3>')
-      .replace(/### ✅ (.*)/g, '<h3 style="color: #00cc66; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">✅ $1</h3>')
-      .replace(/### 🛠️ (.*)/g, '<h3 style="color: #ff9900; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🛠️ $1</h3>')
-      .replace(/### 📋 (.*)/g, '<h3 style="color: #9966cc; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">📋 $1</h3>')
-      .replace(/### 💡 (.*)/g, '<h3 style="color: #ffcc00; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">💡 $1</h3>')
-      .replace(/### ✅ (.*)/g, '<h3 style="color: #00cc66; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">✅ $1</h3>')
-      .replace(/### 📦 (.*)/g, '<h3 style="color: #ff6699; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">📦 $1</h3>')
-      .replace(/### ⚠️ (.*)/g, '<h3 style="color: #ff4444; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">⚠️ $1</h3>')
-      .replace(/### 🚀 (.*)/g, '<h3 style="color: #00ccff; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">🚀 $1</h3>')
-      .replace(/### (.*)/g, '<h3 style="color: #fff; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em;">$1</h3>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong style="color: #fff;">$1</strong>')
-      .replace(/```([\s\S]*?)```/g, '<div style="background: #2a2a2a; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #0070f3; font-family: monospace; white-space: pre-wrap;">$1</div>')
-      .replace(/- (.*)/g, '<li style="margin: 8px 0; padding-left: 5px;">• $1</li>')
-      .replace(/\n\n/g, '<br><br>')
-      .replace(/\n/g, '<br>');
+  elDetailBody.querySelector("#btnCopyPrompt")?.addEventListener("click", async () => {
+      const text = elDetailBody.querySelector("#fieldPrompt")?.value || "";
+      if (!text.trim()) return;
+      try {
+          await navigator.clipboard.writeText(text);
+      } catch (e) {}
+      syncPopupValidation();
+  });
 
-  contentElement.innerHTML = desc;
+  elDetailBody.querySelector("#btnSaveDraft")?.addEventListener("click", () => {
+      saveDetailDraft(item.id, collectDraftFromPopup(item));
+      syncPopupValidation();
+  });
 
-  // Render Tools mejorado
-  if (item.tools && Array.isArray(item.tools) && item.tools.length > 0) {
-      const toolsHtml = `
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #333;">
-              <h3 style="color: #ff9900; margin-bottom: 15px; font-size: 1.2em;">🛠️ Herramientas Directas</h3>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-                  ${item.tools.map(tool => `
-                      <a href="${tool.url}" target="_blank" style="
-                          background: linear-gradient(135deg, #0070f3, #0051a2);
-                          color: white; 
-                          padding: 12px 20px; 
-                          border-radius: 8px; 
-                          text-decoration: none;
-                          display: flex;
-                          align-items: center;
-                          gap: 8px;
-                          font-size: 1em;
-                          font-weight: 500;
-                          transition: transform 0.2s, box-shadow 0.2s;
-                          text-align: center;
-                      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0, 112, 243, 0.3)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
-                          🚀 ${tool.name}
-                      </a>
-                  `).join('')}
-              </div>
-          </div>
-      `;
-      contentElement.innerHTML += toolsHtml;
+  elDetailBody.querySelector("#btnCompleteStep")?.addEventListener("click", async () => {
+      syncPopupValidation();
+      const status = evaluatePopupState(item);
+      saveDetailDraft(item.id, collectDraftFromPopup(item));
+      if (status.score < 70) {
+          alert("Completa los campos clave antes de marcar este paso como finalizado.");
+          return;
+      }
+      state.progress[item.id] = true;
+      await saveProgress();
+      rerenderActiveBusiness();
+      hideDetail();
+  });
+
+  syncPopupValidation();
+  elDetailOverlay.classList.add("open");
+  elDetailOverlay.setAttribute("aria-hidden", "false");
+  elDetailView.classList.add("open");
+  elDetailView.setAttribute("aria-hidden", "false");
+  document.addEventListener("keydown", handleDetailKeydown);
+  btnCloseDetail.focus();
+}
+
+function hideDetail() {
+  elDetailOverlay.classList.remove("open");
+  elDetailOverlay.setAttribute("aria-hidden", "true");
+  elDetailView.classList.remove("open");
+  elDetailView.setAttribute("aria-hidden", "true");
+  document.removeEventListener("keydown", handleDetailKeydown);
+  activeDetailItem = null;
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
   }
-
-  // Botones de acción
-  const actionButtons = document.createElement('div');
-  actionButtons.style.cssText = `
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px solid #333;
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-  `;
-
-  const closeBtn = document.createElement('button');
-  closeBtn.textContent = 'Cerrar';
-  closeBtn.style.cssText = `
-    background: #666;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 500;
-    transition: background 0.2s;
-  `;
-  closeBtn.onmouseover = () => closeBtn.style.background = '#555';
-  closeBtn.onmouseout = () => closeBtn.style.background = '#666';
-  closeBtn.onclick = () => document.body.removeChild(modal);
-
-  actionButtons.appendChild(closeBtn);
-
-  // Ensamblar modal
-  modalContent.appendChild(modalHeader);
-  modalContent.appendChild(contentElement);
-  modalContent.appendChild(actionButtons);
-  modal.appendChild(modalContent);
-
-  // Añadir al documento
-  document.body.appendChild(modal);
-
-  // Animación de entrada
-  setTimeout(() => {
-    modal.style.opacity = '1';
-    modalContent.style.transform = 'translateY(0)';
-  }, 10);
-
-  // Cerrar con ESC
-  const handleEscape = (e) => {
-    if (e.key === 'Escape') {
-      document.body.removeChild(modal);
-      document.removeEventListener('keydown', handleEscape);
-    }
-  };
-  document.addEventListener('keydown', handleEscape);
-
-  // Cerrar al hacer clic fuera
-  modal.onclick = (e) => {
-    if (e.target === modal) {
-      document.body.removeChild(modal);
-      document.removeEventListener('keydown', handleEscape);
-    }
-  };
 }
 
 // Init - Carga de datos con soporte para file:// y http://
 function loadTasksData() {
     try {
-        // Intento 1: Si estamos en servidor HTTP, usar fetch
         if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
             return fetch('data/tasks.json?v=' + dataVersion)
                 .then(r => {
@@ -591,11 +728,9 @@ function loadTasksData() {
                     return r.json();
                 });
         }
-        
-        // Intento 2: Si estamos en file://, usar XMLHttpRequest sincrónico
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'data/tasks.json?v=' + dataVersion, false); // Sincrónico
+            xhr.open('GET', 'data/tasks.json?v=' + dataVersion, false);
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     try {
@@ -612,7 +747,6 @@ function loadTasksData() {
             };
             xhr.send(null);
         });
-        
     } catch (e) {
         return Promise.reject(e);
     }

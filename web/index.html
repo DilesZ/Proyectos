@@ -60,7 +60,22 @@
     </main>
   </div>
 
-
+  <!-- Detail View Slide-over -->
+  <div id="detailOverlay" class="detail-overlay" aria-hidden="true"></div>
+  <div id="detailView" class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-hidden="true" tabindex="-1">
+    <header class="detail-header">
+      <h2 id="detailTitle" style="margin:0; font-size:1.25rem;">Detalle</h2>
+      <button id="closeDetail" class="btn btn-secondary" aria-label="Cerrar detalle" style="padding:0.25rem 0.5rem;">✕</button>
+    </header>
+    <div class="detail-content">
+      <div class="detail-meta-container" style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+          <span id="detailBadge" class="badge hidden"></span>
+          <span id="detailTime" class="badge hidden"></span>
+          <span id="detailDiff" class="badge hidden"></span>
+      </div>
+      <div id="detailBody"></div>
+    </div>
+  </div>
 
   <script src="app.js?v=3.0"></script>
 </body>
