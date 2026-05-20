@@ -54,3 +54,8 @@ This file is the mandatory persistent log for every file edit made in the projec
 - Files: `web/app.js`, `checkpoints/edit_log.md`
 - Change: enabled free navigation between sprint days in the UI
 - Why: the user wanted to see future days without being forced to complete Day 1 first
+
+- Date: 2026-05-20
+- Files: `web/index.html`, `web/styles.css`, `checkpoints/edit_log.md`
+- Change: updated branding (Nexus IA) and modernized the UI with a new color palette, glassmorphism effects, and refined typography
+- Why: the user requested a change in logo, subtitle, and general appearance to make the system look more professional and execution-focused
