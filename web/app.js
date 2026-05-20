@@ -80,98 +80,98 @@ const firstRevenueSprint = {
       id: "day1",
       label: "Día 1",
       title: "Identidad Z",
-      objective: "Definir a Elena como un híbrido Fitness + GFE para maximizar ARPS.",
-      proof: "Perfil guardado en la UI con tono y promesa GFE.",
-      doneText: "Identidad lista para convertir fans en pagadores.",
+      objective: "Configurar la personalidad de Elena (GFE + Fitness) para que el fan sienta conexión inmediata.",
+      proof: "Ficha de personaje completada en el panel de Nexus IA.",
+      doneText: "Identidad lista: Elena ya no es solo una imagen, tiene alma y voz.",
       steps: [
-        "Definir nombre y arquetipo (Elena / GFE Fitness)",
-        "Redactar Bio con gancho emocional",
-        "Establecer tono de voz cercano y vulnerable",
-        "Configurar promesa de valor exclusiva"
+        "Copiar Nombre: 'Elena' y Arquetipo: 'Fitness GFE'",
+        "Pegar Bio: 'Tu compañera de gym que te espera en casa con un café y una sonrisa ☕💪 | Exclusivo aquí 👇'",
+        "Fijar Tono: 'Cercano, vulnerable, notas de voz dulces (ElevenLabs)'",
+        "Establecer Promesa: 'Acceso a mi vida real, entrenos sin filtros y charlas íntimas cada noche'"
       ]
     },
     {
       id: "day2",
       label: "Día 2",
       title: "Activos Maestros",
-      objective: "Generar la cara maestra y 30 imágenes con consistencia facial absoluta.",
-      proof: "Dataset de 30 fotos subidas al repo/Drive.",
-      doneText: "Elena existe visualmente y es indistinguible de una humana.",
+      objective: "Generar la cara maestra y 30 fotos (15 SFW y 15 Paywall) con consistencia absoluta.",
+      proof: "Carpeta local /assets/elena/day2 con 30 imágenes consistentes.",
+      doneText: "Elena es visualmente real y consistente en todos los escenarios.",
       steps: [
-        "Generar cara maestra (Flux.1)",
-        "Crear 15 fotos SFW (Social Media)",
-        "Crear 15 fotos Paywall (Fanvue/PPV)",
-        "Verificar consistencia facial en todo el set"
+        "Abrir Flux.1 y generar la 'Cara Maestra' (usar prompt de persona_elena_fitness.md)",
+        "Generar 15 fotos SFW (Ropa deportiva, cocina, calle) manteniendo la cara",
+        "Generar 15 fotos Paywall (Luz tenue, ropa de casa, post-gym) manteniendo la cara",
+        "Verificar que en las 30 fotos parezca la misma persona (ojos, nariz, sonrisa)"
       ]
     },
     {
       id: "day3",
       label: "Día 3",
       title: "Embudo de Ventas",
-      objective: "Abrir canales y configurar el Welcome DM Funnel.",
-      proof: "Links activos y mensaje de bienvenida configurado.",
-      doneText: "El sistema está listo para recibir tráfico y cobrar.",
+      objective: "Configurar la infraestructura de captación y el mensaje de bienvenida automático.",
+      proof: "IG/TikTok activo y Mensaje de Bienvenida configurado en Fanvue.",
+      doneText: "La red de pesca está echada: el tráfico ya tiene a dónde ir y dónde pagar.",
       steps: [
-        "Crear IG/TikTok con el nombre de Elena",
-        "Configurar link en bio hacia Fanvue",
-        "Redactar mensaje de bienvenida con oferta PPV",
-        "Publicar los primeros 3 clips virales"
+        "Crear cuenta IG/TikTok: @elena_gfe_fit (o similar) con link a Fanvue",
+        "En Fanvue, activar 'Welcome Message' con el texto del script GFE",
+        "Adjuntar al Welcome Message un 'Unlockable' de $9.99 (Set Post-Gym)",
+        "Subir los primeros 3 videos virales (usar Luma/Kling con fotos del Día 2)"
       ]
     },
     {
       id: "day4",
       label: "Día 4",
       title: "Oferta de Bienvenida",
-      objective: "Lanzar el primer Unlockable automático de $9.99.",
-      proof: "Set de pago configurado en Fanvue.",
-      doneText: "La primera oferta de pago está en el aire.",
+      objective: "Lanzar el primer set de pago (Unlockable) y configurar el gancho de suscripción.",
+      proof: "Post bloqueado (PPV) activo en el muro de Fanvue.",
+      doneText: "El primer producto digital de Elena está a la venta.",
       steps: [
-        "Fijar precio de bienvenida ($9.99)",
-        "Subir set de fotos exclusivo 'Post-Gym'",
-        "Configurar el link de pago en el DM automático",
-        "Escribir 3 variaciones de copy para cerrar el PPV"
+        "Publicar en el muro: 'Set Post-Gym (10 fotos)' bloqueado por $9.99",
+        "Escribir copy: 'Todavía estoy sudada... estas fotos son solo para ti. ¿Vienes?'",
+        "Configurar descuento del 50% en suscripción base por tiempo limitado",
+        "Verificar que el link de pago funciona correctamente"
       ]
     },
     {
       id: "day5",
       label: "Día 5",
       title: "Inyección de Tráfico",
-      objective: "Publicar 5 piezas de contenido con CTA directo al Paywall.",
-      proof: "Capturas de posts publicados en TikTok/IG.",
-      doneText: "El tráfico está fluyendo hacia la oferta de pago.",
+      objective: "Atraer a los primeros 100 visitantes desde redes sociales usando clips virales.",
+      proof: "3 Reels publicados con CTA visible hacia el link de la bio.",
+      doneText: "El sistema está recibiendo visitas reales.",
       steps: [
-        "Publicar 3 Reels de Elena con audio tendencia",
-        "Publicar 2 carruseles en IG con CTA en la descripción",
-        "Responder los primeros 10 comentarios humanamente",
-        "Verificar clics en el link de la Bio"
+        "Publicar Reel 1: Motivación fitness (Elena entrenando)",
+        "Publicar Reel 2: Momento GFE (Elena tomando café/sonriendo)",
+        "Publicar Reel 3: Curiosidad (Elena probándose ropa con CTA)",
+        "Responder los primeros 10 comentarios para forzar el algoritmo"
       ]
     },
     {
       id: "day6",
       label: "Día 6",
       title: "Optimización GFE",
-      objective: "Iniciar chats privados para cerrar ventas personalizadas.",
-      proof: "Lista de 3 conversaciones activas en Fanvue.",
-      doneText: "Elena está construyendo relaciones que facturan.",
+      objective: "Convertir visitantes en fans leales mediante el chat privado.",
+      proof: "Mínimo 3 conversaciones iniciadas en el chat de Fanvue.",
+      doneText: "Elena está construyendo el vínculo emocional que genera 'Whales'.",
       steps: [
-        "Revisar suscriptores nuevos",
-        "Enviar mensaje de audio personalizado (ElevenLabs)",
-        "Ofrecer set personalizado por $15-20",
-        "Corregir el copy según las objeciones recibidas"
+        "Revisar nuevos seguidores y enviar: 'Hola! ¿Entrenas hoy?'",
+        "Enviar nota de voz (ElevenLabs): 'Gracias por seguirme, me haces el día!'",
+        "Si preguntan por más fotos, enviar el link al Unlockable del Día 4",
+        "Corregir la bio si nadie hace clic en el link"
       ]
     },
     {
       id: "day7",
       label: "Día 7",
       title: "Cierre de Facturación",
-      objective: "Lograr el primer pago de $10-$15.",
-      proof: "Captura de saldo positivo en Fanvue.",
-      doneText: "¡Primera facturación conseguida! El sistema funciona.",
+      objective: "Lograr el primer pago real de $10-$15 mediante una oferta flash.",
+      proof: "Captura de pantalla de la primera venta en el dashboard de Fanvue.",
+      doneText: "¡DIAMANTES! El sistema ha generado su primer ingreso real.",
       steps: [
-        "Publicar oferta flash de 24h",
-        "Seguimiento intensivo en DMs",
-        "Lanzar el 'Unlockable Maestro'",
-        "Registrar resultados y celebrar"
+        "Publicar Story en IG: 'Solo 24h: Acceso a mi set privado al 50%'",
+        "Enviar mensaje masivo en Fanvue: '¿Te vas a perder lo de anoche?'",
+        "Lanzar un 'Flash Unlockable' de $5 para los que no han comprado nada",
+        "Registrar la primera venta y celebrar el éxito del sprint"
       ]
     }
   ]

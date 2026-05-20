@@ -47,9 +47,9 @@
 
 ## Next Action
 
-- Input "Elena" profile into the UI and complete Day 1.
-- Start Day 2: Generate 30 base images using Nano Banana Pro and the prompts in [persona_elena_fitness.md](file:///c:/Users/PC%20CASA/Documents/Projects/Proyectos/businesses/influencer_agency/persona_elena_fitness.md).
-- **Revenue Action**: Define the first $10-15 "Welcome Offer" for Fanvue and create the "Lead Magnet" content (Day 4 priority).
+- Seguir la [elena_execution_guide.md](file:///c:/Users/PC%20CASA/Documents/Projects/Proyectos/checkpoints/elena_execution_guide.md) paso a paso.
+- Completar el **Día 1** en la UI usando los datos exactos de la guía.
+- **Revenue Action**: Configurar el "Welcome DM Funnel" en Fanvue (Día 3 prioritario).
 
 ## Restart Prompt
 
