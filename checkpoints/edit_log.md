@@ -49,3 +49,8 @@ This file is the mandatory persistent log for every file edit made in the projec
 - Files: `web/app.js`, `checkpoints/edit_log.md`
 - Change: implemented interactive workspaces for Days 2 through 7 in the web UI
 - Why: the user requested that all days be available for execution later, so I created specialized forms and state persistence for each stage of the 7-day sprint
+
+- Date: 2026-05-20
+- Files: `web/app.js`, `checkpoints/edit_log.md`
+- Change: enabled free navigation between sprint days in the UI
+- Why: the user wanted to see future days without being forced to complete Day 1 first

@@ -276,7 +276,10 @@ function saveMissionState() {
 function getSprintProgress() {
   const days = firstRevenueSprint.days;
   const completedCount = days.filter(day => state.mission.completedDays[day.id]).length;
-  const currentDay = days.find(day => !state.mission.completedDays[day.id]) || days[days.length - 1];
+  // Use a temporary viewingDay if set, otherwise fallback to the first uncompleted day
+  const currentDay = state.mission.viewingDayId 
+    ? (days.find(day => day.id === state.mission.viewingDayId) || days[0])
+    : (days.find(day => !state.mission.completedDays[day.id]) || days[days.length - 1]);
   const pct = Math.round((completedCount / days.length) * 100);
   return { completedCount, currentDay, pct };
 }
@@ -620,13 +623,16 @@ function renderMissionPanel(business) {
   const blockerOptions = firstRevenueSprint.blockers.map(blocker => `
       <option value="${escapeHtml(blocker)}" ${state.mission.blocker === blocker ? "selected" : ""}>${escapeHtml(blocker)}</option>
   `).join("");
-  const dayCards = firstRevenueSprint.days.map(day => `
-      <button class="sprint-day-card ${state.mission.completedDays[day.id] ? "done" : ""} ${currentDay.id === day.id ? "current" : ""}" data-day-id="${day.id}" type="button">
+  const dayCards = firstRevenueSprint.days.map(day => {
+      const isCurrent = currentDay.id === day.id;
+      const isDone = !!state.mission.completedDays[day.id];
+      return `
+      <button class="sprint-day-card ${isDone ? "done" : ""} ${isCurrent ? "current" : ""}" data-day-id="${day.id}" type="button">
         <span class="sprint-day-label">${day.label}</span>
         <strong>${escapeHtml(day.title)}</strong>
-        <span>${state.mission.completedDays[day.id] ? "Completado" : currentDay.id === day.id ? "Actual" : "Pendiente"}</span>
+        <span>${isDone ? "Completado" : isCurrent ? "Viendo" : "Pendiente"}</span>
       </button>
-  `).join("");
+  `}).join("");
   const dayWorkspace = currentDay.id === "day1" ? renderDay1Workspace() : renderGenericDayWorkspace(currentDay);
 
   return `
@@ -893,6 +899,7 @@ function bindMissionPanel(container, business) {
           const dayId = node.dataset.dayId;
           const day = firstRevenueSprint.days.find(item => item.id === dayId);
           if (!day) return;
+          state.mission.viewingDayId = dayId; // Set the day we want to view
           state.mission.nextAction = day.steps[0];
           saveMissionState();
           renderBusiness(business);
