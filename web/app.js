@@ -6,6 +6,56 @@ const dataVersion = "20260109-fixed2";
 const storeKey = "orquestador_progress_v2";
 const missionStoreKey = "orquestador_mission_state_v1";
 const activeTrackKey = "influencer_agency";
+const voiceAgentsSprint = {
+  trackKey: "voice_agents",
+  trackName: "Agentes de Voz IA (B2B)",
+  missionTitle: "Sprint 48h: Primera Factura B2B",
+  missionSummary: "Cerrar un cliente de negocio local para un piloto de Agente de Voz en menos de 48 horas.",
+  revenueGoal: "$300 - $1,000 por Setup",
+  restartPrompt: "Lee businesses/voice_agents/sprint_48h.md y ayúdame a ejecutar la demo de voz.",
+  blockers: [
+    "No hay nicho seleccionado",
+    "El bot no suena natural",
+    "Calendly no sincroniza",
+    "Miedo al outreach frío",
+    "No hay link de pago listo"
+  ],
+  milestones: [
+    "Hito 1: Demo funcional que me llama al móvil",
+    "Hito 2: 10 llamadas de auditoría realizadas",
+    "Hito 3: Primer cobro de $300 recibido"
+  ],
+  days: [
+    {
+      id: "voice_day1",
+      label: "Día 1",
+      title: "Demo Irresistible",
+      objective: "Tener un bot que agende citas y te llame para demostrarlo.",
+      proof: "Captura de cita agendada en Calendly por el bot.",
+      doneText: "El bot suena increíble y está conectado a la agenda.",
+      steps: [
+        "Elegir nicho (Dentistas/Talleres)",
+        "Configurar asistente en Vapi.ai",
+        "Conectar con Calendly vía Make",
+        "Hacer una prueba de auto-llamada"
+      ]
+    },
+    {
+      id: "voice_day2",
+      label: "Día 2",
+      title: "Asalto Comercial",
+      objective: "Hacer 10 demos en vivo y cobrar el primer setup.",
+      proof: "Link de pago enviado o factura cobrada.",
+      doneText: "He hablado con 10 dueños y tengo un interesado real.",
+      steps: [
+        "Listar 10 prospectos en Google Maps",
+        "Realizar llamadas de auditoría",
+        "Transferir llamadas al bot en vivo",
+        "Enviar oferta de $300 por setup"
+      ]
+    }
+  ]
+};
 const firstRevenueSprint = {
   trackKey: activeTrackKey,
   trackName: "Influencer IA (Fanvue)",
@@ -273,8 +323,9 @@ function saveMissionState() {
   localStorage.setItem(missionStoreKey, JSON.stringify(state.mission));
 }
 
-function getSprintProgress() {
-  const days = firstRevenueSprint.days;
+function getSprintProgress(sprint) {
+  const currentSprint = sprint || (state.mission.activeTrack === "voice_agents" ? voiceAgentsSprint : firstRevenueSprint);
+  const days = currentSprint.days;
   const completedCount = days.filter(day => state.mission.completedDays[day.id]).length;
   // Use a temporary viewingDay if set, otherwise fallback to the first uncompleted day
   const currentDay = state.mission.viewingDayId 
@@ -602,14 +653,16 @@ function renderDay7Workspace() {
 }
 
 function renderMissionPanel(business) {
-  if (business.key !== activeTrackKey) {
+  const sprint = business.key === "voice_agents" ? voiceAgentsSprint : firstRevenueSprint;
+  
+  if (business.key !== activeTrackKey && business.key !== "voice_agents") {
       return `
         <section class="mission-shell mission-paused">
           <div class="mission-card mission-card-compact">
             <div class="mission-card-header">
               <div>
                 <span class="eyebrow">Track Activo</span>
-                <h3>${firstRevenueSprint.trackName}</h3>
+                <h3>${sprint.trackName}</h3>
               </div>
               <span class="badge">En espera</span>
             </div>
@@ -619,11 +672,11 @@ function renderMissionPanel(business) {
       `;
   }
 
-  const { completedCount, currentDay, pct } = getSprintProgress();
-  const blockerOptions = firstRevenueSprint.blockers.map(blocker => `
+  const { completedCount, currentDay, pct } = getSprintProgress(sprint);
+  const blockerOptions = sprint.blockers.map(blocker => `
       <option value="${escapeHtml(blocker)}" ${state.mission.blocker === blocker ? "selected" : ""}>${escapeHtml(blocker)}</option>
   `).join("");
-  const dayCards = firstRevenueSprint.days.map(day => {
+  const dayCards = sprint.days.map(day => {
       const isCurrent = currentDay.id === day.id;
       const isDone = !!state.mission.completedDays[day.id];
       return `
@@ -641,23 +694,23 @@ function renderMissionPanel(business) {
         <div class="mission-card-header">
           <div>
             <span class="eyebrow">Mision Activa</span>
-            <h3>${firstRevenueSprint.missionTitle}</h3>
+            <h3>${sprint.missionTitle}</h3>
           </div>
           <span class="badge points">${pct}% sprint</span>
         </div>
-        <p class="mission-copy">${firstRevenueSprint.missionSummary}</p>
+        <p class="mission-copy">${sprint.missionSummary}</p>
         <div class="mission-meta-grid">
           <div class="mission-stat">
             <span>Track</span>
-            <strong>${firstRevenueSprint.trackName}</strong>
+            <strong>${sprint.trackName}</strong>
           </div>
           <div class="mission-stat">
             <span>Objetivo</span>
-            <strong>${firstRevenueSprint.revenueGoal}</strong>
+            <strong>${sprint.revenueGoal}</strong>
           </div>
           <div class="mission-stat">
             <span>Progreso</span>
-            <strong>${completedCount}/${firstRevenueSprint.days.length} dias</strong>
+            <strong>${completedCount}/${sprint.days.length} dias</strong>
           </div>
         </div>
         <div class="progress-container mission-progress">
@@ -690,7 +743,7 @@ function renderMissionPanel(business) {
             <p>${escapeHtml(currentDay.doneText)}</p>
           </div>
           <div class="mission-actions">
-            <button class="btn btn-primary" id="markCurrentDayDone" type="button">${state.mission.completedDays[currentDay.id] ? "Marcar pendiente" : "Marcar dia completado"}</button>
+            <button class="btn btn-primary" id="markCurrentDayDone" type="button" data-track="${sprint.trackKey}">${state.mission.completedDays[currentDay.id] ? "Marcar pendiente" : "Marcar dia completado"}</button>
           </div>
         </div>
 
@@ -723,7 +776,7 @@ function renderMissionPanel(business) {
         <div class="mission-card-header">
           <div>
             <span class="eyebrow">Sprint</span>
-            <h3>Ruta de 7 dias</h3>
+            <h3>Ruta del Track</h3>
           </div>
           <span class="badge">${completedCount} completados</span>
         </div>
@@ -740,7 +793,7 @@ function renderMissionPanel(business) {
           </div>
         </div>
         <ul class="mission-list">
-          ${firstRevenueSprint.milestones.map(item => `<li>${escapeHtml(item)}</li>`).join("")}
+          ${sprint.milestones.map(item => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
       </div>
     </section>
@@ -748,9 +801,9 @@ function renderMissionPanel(business) {
 }
 
 function bindMissionPanel(container, business) {
-  if (business.key !== activeTrackKey) return;
-
-  const { currentDay } = getSprintProgress();
+  const sprint = business.key === "voice_agents" ? voiceAgentsSprint : firstRevenueSprint;
+  
+  const { currentDay } = getSprintProgress(sprint);
   container.querySelector("#markCurrentDayDone")?.addEventListener("click", () => {
       if (currentDay.id === "day1" && !state.mission.completedDays[currentDay.id] && !getDay1ProfileStatus().ready) {
           alert("Completa el perfil base antes de cerrar el Dia 1.");
@@ -759,7 +812,7 @@ function bindMissionPanel(container, business) {
       const isDone = !!state.mission.completedDays[currentDay.id];
       state.mission.completedDays[currentDay.id] = !isDone;
       if (!isDone) {
-          const nextPending = firstRevenueSprint.days.find(day => !state.mission.completedDays[day.id]);
+          const nextPending = sprint.days.find(day => !state.mission.completedDays[day.id]);
           state.mission.nextAction = nextPending ? nextPending.steps[0] : "Revisar el cuello de botella y empujar el siguiente hito.";
       }
       saveMissionState();
@@ -897,7 +950,7 @@ function bindMissionPanel(container, business) {
   container.querySelectorAll(".sprint-day-card").forEach(node => {
       node.addEventListener("click", () => {
           const dayId = node.dataset.dayId;
-          const day = firstRevenueSprint.days.find(item => item.id === dayId);
+          const day = sprint.days.find(item => item.id === dayId);
           if (!day) return;
           state.mission.viewingDayId = dayId; // Set the day we want to view
           state.mission.nextAction = day.steps[0];

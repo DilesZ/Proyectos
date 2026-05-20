@@ -74,3 +74,8 @@ This file is the mandatory persistent log for every file edit made in the projec
 - Files: `memory.md`, `checkpoints/current.md`, `checkpoints/edit_log.md`
 - Change: finalized documentation for the entire session, capturing the transition to DilesZ AI and the current execution state
 - Why: to ensure 100% continuity and context for any future session, regardless of the account or device used
+
+- Date: 2026-05-20
+- Files: `businesses/voice_agents/sprint_48h.md`, `web/data/tasks.json`, `web/app.js`, `checkpoints/edit_log.md`
+- Change: created the "Voice Agents IA (B2B)" track with a specialized 48h high-speed sprint; integrated the new track into the UI with custom missions, milestones, and interactive tasks
+- Why: the user requested a faster way to monetize, and Voice Agents offer a high-ticket B2B service route with a 48h turnaround to the first invoice

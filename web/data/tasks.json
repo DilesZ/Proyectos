@@ -1,6 +1,110 @@
 {
   "businesses": [
     {
+      "key": "voice_agents",
+      "name": "Agentes de Voz IA (B2B)",
+      "tasks": [
+        {
+          "id": "voice_phase_01",
+          "title": "Fase 1: Demo Irresistible",
+          "points": 15,
+          "badge": "Setup",
+          "description": "Configuración del agente de voz y creación de la demo para ventas.",
+          "time": "4 horas",
+          "difficulty": "Media",
+          "subtasks": [
+            {
+              "id": "voice_01_01_vapi",
+              "title": "Configuración en Vapi.ai",
+              "points": 5,
+              "description": "Crear el primer asistente de voz funcional.",
+              "time": "1 hora",
+              "difficulty": "Baja",
+              "steps": [
+                {
+                  "id": "voice_01_01_s01",
+                  "title": "Paso 1: Crear cuenta y primer asistente",
+                  "time": "20 min",
+                  "description": "Registro en Vapi.ai y creación de un bot de agendamiento."
+                },
+                {
+                  "id": "voice_01_01_s02",
+                  "title": "Paso 2: Prompting del sistema",
+                  "time": "40 min",
+                  "description": "Escribir las instrucciones del bot para que gestione citas de forma natural."
+                }
+              ]
+            },
+            {
+              "id": "voice_01_02_demo",
+              "title": "Preparación de la Demo",
+              "points": 10,
+              "description": "Configurar la auto-llamada para demostraciones en vivo.",
+              "time": "3 horas",
+              "difficulty": "Media",
+              "steps": [
+                {
+                  "id": "voice_01_02_s01",
+                  "title": "Paso 1: Integrar con Calendly",
+                  "time": "1 hora",
+                  "description": "Conectar el bot a una agenda real para demostrar agendamiento."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice_phase_02",
+          "title": "Fase 2: Asalto Comercial",
+          "points": 25,
+          "badge": "Revenue",
+          "description": "Outreach a negocios locales y cierre de la primera factura.",
+          "time": "8 horas",
+          "difficulty": "Alta",
+          "subtasks": [
+            {
+              "id": "voice_02_01_prospecting",
+              "title": "Prospección Relámpago",
+              "points": 10,
+              "description": "Listar 10 negocios con problemas de recepción telefónica.",
+              "time": "2 horas",
+              "difficulty": "Baja",
+              "steps": [
+                {
+                  "id": "voice_02_01_s01",
+                  "title": "Paso 1: Google Maps Scraper manual",
+                  "time": "1 hora",
+                  "description": "Identificar clínicas o talleres con reseñas negativas por falta de atención."
+                }
+              ]
+            },
+            {
+              "id": "voice_02_02_sales",
+              "title": "Llamadas de Auditoría",
+              "points": 15,
+              "description": "Realizar las 10 llamadas y ejecutar la demo de IA.",
+              "time": "6 horas",
+              "difficulty": "Alta",
+              "steps": [
+                {
+                  "id": "voice_02_02_s01",
+                  "title": "Paso 1: Ejecutar script de ventas DilesZ",
+                  "time": "3 horas",
+                  "description": "Ofrecer la auditoría de 1 minuto y transferir al bot."
+                },
+                {
+                  "id": "voice_02_02_s02",
+                  "title": "Paso 2: Envío de factura de Setup ($300)",
+                  "time": "3 horas",
+                  "description": "Cerrar el primer cliente y formalizar el pago."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "influencer_agency",
       "name": "Influencer IA (Fanvue)",
       "tasks": [
