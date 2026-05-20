@@ -4,6 +4,130 @@ const state = {
 };
 const dataVersion = "20260109-fixed2";
 const storeKey = "orquestador_progress_v2";
+const missionStoreKey = "orquestador_mission_state_v1";
+const activeTrackKey = "influencer_agency";
+const firstRevenueSprint = {
+  trackKey: activeTrackKey,
+  trackName: "Influencer IA (Fanvue)",
+  missionTitle: "Primer Sprint de Facturacion",
+  missionSummary: "Lanzar una primera version operativa del negocio y provocar el primer evento de monetizacion.",
+  revenueGoal: "1 suscriptor de pago o 1 unlock de pago",
+  restartPrompt: "Lee system.md, memory.md, agets.md, skills.md, checkpoints/current.md y checkpoints/first_revenue_sprint.md. Luego ayudame a continuar desde la mision activa y el siguiente paso pendiente.",
+  blockers: [
+    "No hay claridad sobre la oferta",
+    "No hay CTA visible",
+    "No hay suficientes activos para publicar",
+    "El perfil no transmite valor",
+    "Hay trafico pero no clics",
+    "Hay clics pero no pagos"
+  ],
+  milestones: [
+    "Hito 1: primera facturacion",
+    "Hito 2: 100 EUR",
+    "Hito 3: sistema repetible durante 2 semanas"
+  ],
+  days: [
+    {
+      id: "day1",
+      label: "Dia 1",
+      title: "Definir Producto",
+      objective: "Dejar cerrada la identidad y la propuesta base.",
+      proof: "Documento con nombre, arquetipo, bio y promesa.",
+      doneText: "Ya no hay dudas sobre quien es el personaje ni que vende.",
+      steps: [
+        "Elegir un solo arquetipo",
+        "Definir nombre, bio, tono y promesa",
+        "Escribir la propuesta de valor publica",
+        "Definir el tipo de contenido de arranque"
+      ]
+    },
+    {
+      id: "day2",
+      label: "Dia 2",
+      title: "Crear Activos Base",
+      objective: "Tener el pack minimo para abrir perfiles.",
+      proof: "Carpeta con imagenes finales y prompts guardados.",
+      doneText: "Existen suficientes activos para publicar sin improvisar.",
+      steps: [
+        "Generar cara maestra",
+        "Crear 9-12 imagenes iniciales consistentes",
+        "Seleccionar foto de perfil",
+        "Guardar los mejores prompts usados"
+      ]
+    },
+    {
+      id: "day3",
+      label: "Dia 3",
+      title: "Abrir Canales",
+      objective: "Dejar operativo el embudo minimo.",
+      proof: "Capturas de perfiles configurados.",
+      doneText: "Un usuario ya puede descubrir el perfil y llegar al punto de pago.",
+      steps: [
+        "Crear o preparar perfil principal de trafico",
+        "Crear o preparar Fanvue",
+        "Cargar bio, imagenes y texto base",
+        "Configurar link principal y mensaje de bienvenida"
+      ]
+    },
+    {
+      id: "day4",
+      label: "Dia 4",
+      title: "Oferta y Conversion",
+      objective: "Dejar clara la primera oferta de cobro.",
+      proof: "Documento con pricing, oferta, CTA y textos.",
+      doneText: "Existe un mecanismo claro para pasar de visita a pago.",
+      steps: [
+        "Fijar precio de entrada",
+        "Definir oferta de bienvenida",
+        "Definir primer contenido de pago o unlock",
+        "Escribir 3 mensajes base de conversion"
+      ]
+    },
+    {
+      id: "day5",
+      label: "Dia 5",
+      title: "Publicacion Inicial",
+      objective: "Lanzar el primer bloque de trafico.",
+      proof: "Enlaces o capturas de publicaciones.",
+      doneText: "El embudo ya esta expuesto al mercado.",
+      steps: [
+        "Publicar 3-5 piezas iniciales",
+        "Publicar al menos 1 pieza con CTA directo",
+        "Registrar formato, hora y copy",
+        "Medir primeras señales"
+      ]
+    },
+    {
+      id: "day6",
+      label: "Dia 6",
+      title: "Ajuste Rapido",
+      objective: "Corregir friccion antes de escalar.",
+      proof: "Lista corta de cambios aplicados.",
+      doneText: "El sistema es mas claro y mas facil de convertir.",
+      steps: [
+        "Revisar que perfil, CTA y oferta sean coherentes",
+        "Mejorar el copy que peor convierte",
+        "Detectar si falta mas prueba social o mas contenido",
+        "Preparar una segunda tanda de publicaciones"
+      ]
+    },
+    {
+      id: "day7",
+      label: "Dia 7",
+      title: "Push a Primera Facturacion",
+      objective: "Provocar el primer pago.",
+      proof: "Evidencia de primer pago o diagnostico del bloqueo principal.",
+      doneText: "Hay ingreso o hay un bloqueo muy concreto identificado.",
+      steps: [
+        "Publicar contenido con CTA directo",
+        "Responder rapido a interacciones",
+        "Empujar mensaje de bienvenida o unlock",
+        "Registrar resultados",
+        "Si no hay pago, diagnosticar el cuello de botella principal"
+      ]
+    }
+  ]
+};
 // Simple userId generation/retrieval for demo purposes
 function getUserId() {
     let uid = localStorage.getItem("orquestador_uid");
@@ -45,6 +169,7 @@ document.getElementById("resetProgress").addEventListener("click", () => {
 btnCloseDetail.addEventListener("click", hideDetail);
 elDetailOverlay.addEventListener("click", hideDetail);
 state.detailDrafts = loadDetailDrafts();
+state.mission = loadMissionState();
 async function loadProgress() {
   // First try local storage for immediate render
   let localData = {};
@@ -85,6 +210,385 @@ async function saveProgress() {
   } catch (e) {
       console.error("API save error", e);
   }
+}
+
+function loadMissionState() {
+  const defaultState = {
+      completedDays: {},
+      nextAction: firstRevenueSprint.days[0].steps[0],
+      blocker: "",
+      sessionNote: "",
+      day1Profile: {
+          archetype: "",
+          name: "",
+          bio: "",
+          tone: "",
+          promise: "",
+          contentAngle: ""
+      }
+  };
+  try {
+      const raw = localStorage.getItem(missionStoreKey);
+      return raw ? { ...defaultState, ...JSON.parse(raw) } : defaultState;
+  } catch (e) {
+      console.warn("Mission state load error", e);
+      return defaultState;
+  }
+}
+
+function saveMissionState() {
+  localStorage.setItem(missionStoreKey, JSON.stringify(state.mission));
+}
+
+function getSprintProgress() {
+  const days = firstRevenueSprint.days;
+  const completedCount = days.filter(day => state.mission.completedDays[day.id]).length;
+  const currentDay = days.find(day => !state.mission.completedDays[day.id]) || days[days.length - 1];
+  const pct = Math.round((completedCount / days.length) * 100);
+  return { completedCount, currentDay, pct };
+}
+
+function getDay1ProfileStatus() {
+  const profile = state.mission.day1Profile || {};
+  const checks = {
+      archetype: !!profile.archetype?.trim(),
+      name: (profile.name || "").trim().length >= 2,
+      bio: (profile.bio || "").trim().length >= 20,
+      tone: (profile.tone || "").trim().length >= 8,
+      promise: (profile.promise || "").trim().length >= 15,
+      contentAngle: (profile.contentAngle || "").trim().length >= 10
+  };
+  const completed = Object.values(checks).filter(Boolean).length;
+  const total = Object.keys(checks).length;
+  return {
+      checks,
+      completed,
+      total,
+      pct: Math.round((completed / total) * 100),
+      ready: completed === total
+  };
+}
+
+function getDay1Summary() {
+  const profile = state.mission.day1Profile || {};
+  return [
+      `Arquetipo: ${profile.archetype || "-"}`,
+      `Nombre: ${profile.name || "-"}`,
+      `Bio: ${profile.bio || "-"}`,
+      `Tono: ${profile.tone || "-"}`,
+      `Promesa: ${profile.promise || "-"}`,
+      `Contenido de arranque: ${profile.contentAngle || "-"}`
+  ].join("\n");
+}
+
+function renderDay1Workspace() {
+  const profile = state.mission.day1Profile || {};
+  const status = getDay1ProfileStatus();
+  const archetypes = [
+      "Gamer",
+      "Fitness",
+      "Girl Next Door",
+      "Alt / Cosplay"
+  ];
+
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 1 Ejecutable</span>
+          <h3>Cierra el perfil base</h3>
+        </div>
+        <span class="badge points">${status.pct}% listo</span>
+      </div>
+      <p class="mission-copy">Completa esta ficha para salir de la sesion con un personaje definido y usable en los siguientes dias del sprint.</p>
+      <div class="popup-progress-track mission-inline-progress">
+        <div class="popup-progress-bar" style="width:${status.pct}%"></div>
+      </div>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label" for="day1Archetype">Arquetipo</label>
+          <select id="day1Archetype" class="popup-input">
+            <option value="">Selecciona un arquetipo</option>
+            ${archetypes.map(item => `<option value="${escapeHtml(item)}" ${profile.archetype === item ? "selected" : ""}>${escapeHtml(item)}</option>`).join("")}
+          </select>
+        </div>
+        <div>
+          <label class="mission-label" for="day1Name">Nombre</label>
+          <input id="day1Name" class="popup-input" type="text" maxlength="60" value="${escapeHtml(profile.name || "")}" placeholder="Ejemplo: Elena">
+        </div>
+      </div>
+      <label class="mission-label" for="day1Bio">Bio base</label>
+      <textarea id="day1Bio" class="popup-textarea" rows="3" placeholder="Describe quien es, que transmite y por que alguien querria seguirla">${escapeHtml(profile.bio || "")}</textarea>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label" for="day1Tone">Tono</label>
+          <input id="day1Tone" class="popup-input" type="text" maxlength="100" value="${escapeHtml(profile.tone || "")}" placeholder="Ejemplo: cercana, juguetona y natural">
+        </div>
+        <div>
+          <label class="mission-label" for="day1Promise">Promesa</label>
+          <input id="day1Promise" class="popup-input" type="text" maxlength="140" value="${escapeHtml(profile.promise || "")}" placeholder="Que va a recibir el usuario si la sigue o paga">
+        </div>
+      </div>
+      <label class="mission-label" for="day1ContentAngle">Contenido de arranque</label>
+      <textarea id="day1ContentAngle" class="popup-textarea" rows="3" placeholder="Que tipo de fotos, escenas o publicaciones vas a usar para empezar">${escapeHtml(profile.contentAngle || "")}</textarea>
+
+      <div class="mission-checklist-box">
+        <h4>Checklist de cierre</h4>
+        <div class="mission-mini-list">
+          <span class="${status.checks.archetype ? "ok" : ""}">Arquetipo definido</span>
+          <span class="${status.checks.name ? "ok" : ""}">Nombre definido</span>
+          <span class="${status.checks.bio ? "ok" : ""}">Bio utilizable</span>
+          <span class="${status.checks.tone ? "ok" : ""}">Tono claro</span>
+          <span class="${status.checks.promise ? "ok" : ""}">Promesa clara</span>
+          <span class="${status.checks.contentAngle ? "ok" : ""}">Contenido de arranque definido</span>
+        </div>
+      </div>
+
+      <div class="mission-section">
+        <h4>Resumen listo para copiar</h4>
+        <pre class="mission-summary">${escapeHtml(getDay1Summary())}</pre>
+      </div>
+
+      <div class="mission-actions">
+        <button class="btn btn-secondary" id="saveDay1Profile" type="button">Guardar perfil base</button>
+        <button class="btn btn-secondary" id="copyDay1Summary" type="button">Copiar resumen</button>
+        <button class="btn btn-primary" id="completeDay1FromForm" type="button" ${status.ready ? "" : "disabled"}>Cerrar Dia 1</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderMissionPanel(business) {
+  if (business.key !== activeTrackKey) {
+      return `
+        <section class="mission-shell mission-paused">
+          <div class="mission-card mission-card-compact">
+            <div class="mission-card-header">
+              <div>
+                <span class="eyebrow">Track Activo</span>
+                <h3>${firstRevenueSprint.trackName}</h3>
+              </div>
+              <span class="badge">En espera</span>
+            </div>
+            <p class="mission-copy">Este negocio esta fuera del sprint actual. No abras un segundo track hasta llegar a la primera facturacion.</p>
+          </div>
+        </section>
+      `;
+  }
+
+  const { completedCount, currentDay, pct } = getSprintProgress();
+  const blockerOptions = firstRevenueSprint.blockers.map(blocker => `
+      <option value="${escapeHtml(blocker)}" ${state.mission.blocker === blocker ? "selected" : ""}>${escapeHtml(blocker)}</option>
+  `).join("");
+  const dayCards = firstRevenueSprint.days.map(day => `
+      <button class="sprint-day-card ${state.mission.completedDays[day.id] ? "done" : ""} ${currentDay.id === day.id ? "current" : ""}" data-day-id="${day.id}" type="button">
+        <span class="sprint-day-label">${day.label}</span>
+        <strong>${escapeHtml(day.title)}</strong>
+        <span>${state.mission.completedDays[day.id] ? "Completado" : currentDay.id === day.id ? "Actual" : "Pendiente"}</span>
+      </button>
+  `).join("");
+  const dayWorkspace = currentDay.id === "day1" ? renderDay1Workspace() : "";
+
+  return `
+    <section class="mission-shell">
+      <div class="mission-card mission-hero">
+        <div class="mission-card-header">
+          <div>
+            <span class="eyebrow">Mision Activa</span>
+            <h3>${firstRevenueSprint.missionTitle}</h3>
+          </div>
+          <span class="badge points">${pct}% sprint</span>
+        </div>
+        <p class="mission-copy">${firstRevenueSprint.missionSummary}</p>
+        <div class="mission-meta-grid">
+          <div class="mission-stat">
+            <span>Track</span>
+            <strong>${firstRevenueSprint.trackName}</strong>
+          </div>
+          <div class="mission-stat">
+            <span>Objetivo</span>
+            <strong>${firstRevenueSprint.revenueGoal}</strong>
+          </div>
+          <div class="mission-stat">
+            <span>Progreso</span>
+            <strong>${completedCount}/${firstRevenueSprint.days.length} dias</strong>
+          </div>
+        </div>
+        <div class="progress-container mission-progress">
+          <div class="progress-bar" style="width: ${pct}%"></div>
+        </div>
+      </div>
+
+      <div class="mission-grid">
+        <div class="mission-card">
+          <div class="mission-card-header">
+            <div>
+              <span class="eyebrow">Ahora</span>
+              <h3>${currentDay.label}: ${escapeHtml(currentDay.title)}</h3>
+            </div>
+            <button class="btn btn-secondary" id="copyRestartPrompt" type="button">Copiar reinicio</button>
+          </div>
+          <p class="mission-copy"><strong>Objetivo:</strong> ${escapeHtml(currentDay.objective)}</p>
+          <div class="mission-section">
+            <h4>Pasos de hoy</h4>
+            <ol class="mission-list">
+              ${currentDay.steps.map(step => `<li>${escapeHtml(step)}</li>`).join("")}
+            </ol>
+          </div>
+          <div class="mission-section">
+            <h4>Prueba requerida</h4>
+            <p>${escapeHtml(currentDay.proof)}</p>
+          </div>
+          <div class="mission-section">
+            <h4>Condicion de completado</h4>
+            <p>${escapeHtml(currentDay.doneText)}</p>
+          </div>
+          <div class="mission-actions">
+            <button class="btn btn-primary" id="markCurrentDayDone" type="button">${state.mission.completedDays[currentDay.id] ? "Marcar pendiente" : "Marcar dia completado"}</button>
+          </div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-card-header">
+            <div>
+              <span class="eyebrow">Checkpoint Rapido</span>
+              <h3>Guardar continuidad</h3>
+            </div>
+            <span class="badge">${escapeHtml(currentDay.label)}</span>
+          </div>
+          <label class="mission-label" for="missionNextAction">Siguiente accion concreta</label>
+          <input id="missionNextAction" class="popup-input" type="text" maxlength="160" value="${escapeHtml(state.mission.nextAction || "")}" placeholder="Ejemplo: Elegir arquetipo fitness y cerrar bio hoy">
+          <label class="mission-label" for="missionBlocker">Bloqueo principal</label>
+          <select id="missionBlocker" class="popup-input">
+            <option value="">Sin bloqueo activo</option>
+            ${blockerOptions}
+          </select>
+          <label class="mission-label" for="missionSessionNote">Nota de sesion</label>
+          <textarea id="missionSessionNote" class="popup-textarea" rows="5" placeholder="Que avanzaste, que falta, que probaras despues">${escapeHtml(state.mission.sessionNote || "")}</textarea>
+          <div class="mission-actions">
+            <button class="btn btn-secondary" id="saveMissionCheckpoint" type="button">Guardar checkpoint</button>
+          </div>
+        </div>
+      </div>
+
+      ${dayWorkspace}
+
+      <div class="mission-card">
+        <div class="mission-card-header">
+          <div>
+            <span class="eyebrow">Sprint</span>
+            <h3>Ruta de 7 dias</h3>
+          </div>
+          <span class="badge">${completedCount} completados</span>
+        </div>
+        <div class="sprint-days-grid">
+          ${dayCards}
+        </div>
+      </div>
+
+      <div class="mission-card mission-card-compact">
+        <div class="mission-card-header">
+          <div>
+            <span class="eyebrow">Hitos</span>
+            <h3>Secuencia de crecimiento</h3>
+          </div>
+        </div>
+        <ul class="mission-list">
+          ${firstRevenueSprint.milestones.map(item => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ul>
+      </div>
+    </section>
+  `;
+}
+
+function bindMissionPanel(container, business) {
+  if (business.key !== activeTrackKey) return;
+
+  const { currentDay } = getSprintProgress();
+  container.querySelector("#markCurrentDayDone")?.addEventListener("click", () => {
+      if (currentDay.id === "day1" && !state.mission.completedDays[currentDay.id] && !getDay1ProfileStatus().ready) {
+          alert("Completa el perfil base antes de cerrar el Dia 1.");
+          return;
+      }
+      const isDone = !!state.mission.completedDays[currentDay.id];
+      state.mission.completedDays[currentDay.id] = !isDone;
+      if (!isDone) {
+          const nextPending = firstRevenueSprint.days.find(day => !state.mission.completedDays[day.id]);
+          state.mission.nextAction = nextPending ? nextPending.steps[0] : "Revisar el cuello de botella y empujar el siguiente hito.";
+      }
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  container.querySelector("#saveMissionCheckpoint")?.addEventListener("click", () => {
+      state.mission.nextAction = container.querySelector("#missionNextAction")?.value.trim() || "";
+      state.mission.blocker = container.querySelector("#missionBlocker")?.value || "";
+      state.mission.sessionNote = container.querySelector("#missionSessionNote")?.value.trim() || "";
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  const saveDay1Profile = () => {
+      if (currentDay.id !== "day1") return;
+      state.mission.day1Profile = {
+          archetype: container.querySelector("#day1Archetype")?.value || "",
+          name: container.querySelector("#day1Name")?.value.trim() || "",
+          bio: container.querySelector("#day1Bio")?.value.trim() || "",
+          tone: container.querySelector("#day1Tone")?.value.trim() || "",
+          promise: container.querySelector("#day1Promise")?.value.trim() || "",
+          contentAngle: container.querySelector("#day1ContentAngle")?.value.trim() || ""
+      };
+      if (!state.mission.nextAction || state.mission.nextAction === firstRevenueSprint.days[0].steps[0]) {
+          state.mission.nextAction = state.mission.day1Profile.promise
+              ? "Revisar el resumen del personaje y preparar la prueba requerida del Dia 1."
+              : "Completar la ficha del personaje base del Dia 1.";
+      }
+      saveMissionState();
+  };
+
+  container.querySelector("#saveDay1Profile")?.addEventListener("click", () => {
+      saveDay1Profile();
+      renderBusiness(business);
+  });
+
+  container.querySelector("#copyDay1Summary")?.addEventListener("click", async () => {
+      saveDay1Profile();
+      try {
+          await navigator.clipboard.writeText(getDay1Summary());
+      } catch (e) {}
+      renderBusiness(business);
+  });
+
+  container.querySelector("#completeDay1FromForm")?.addEventListener("click", () => {
+      saveDay1Profile();
+      const status = getDay1ProfileStatus();
+      if (!status.ready) {
+          alert("Todavia faltan campos clave para cerrar el Dia 1.");
+          return;
+      }
+      state.mission.completedDays.day1 = true;
+      const nextPending = firstRevenueSprint.days.find(day => !state.mission.completedDays[day.id]);
+      state.mission.nextAction = nextPending ? nextPending.steps[0] : "Revisar el cuello de botella y empujar el siguiente hito.";
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  container.querySelector("#copyRestartPrompt")?.addEventListener("click", async () => {
+      try {
+          await navigator.clipboard.writeText(firstRevenueSprint.restartPrompt);
+      } catch (e) {}
+  });
+
+  container.querySelectorAll(".sprint-day-card").forEach(node => {
+      node.addEventListener("click", () => {
+          const dayId = node.dataset.dayId;
+          const day = firstRevenueSprint.days.find(item => item.id === dayId);
+          if (!day) return;
+          state.mission.nextAction = day.steps[0];
+          saveMissionState();
+          renderBusiness(business);
+      });
+  });
 }
 
 function computeStats(all) {
@@ -182,6 +686,7 @@ function renderBusiness(b) {
   const pct = total === 0 ? 0 : Math.round((done / total) * 100);
 
   container.innerHTML = `
+      ${renderMissionPanel(b)}
       <div class="project-header">
           <div class="progress-container">
               <div class="progress-bar" style="width: ${pct}%"></div>
@@ -195,6 +700,7 @@ function renderBusiness(b) {
   `;
 
   elContent.appendChild(container);
+  bindMissionPanel(container, b);
   const list = container.querySelector(".task-list");
 
   b.tasks.forEach(t => {
