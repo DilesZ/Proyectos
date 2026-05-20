@@ -31,6 +31,18 @@
   --glass: rgba(10, 10, 10, 0.8);
 }
 
+@keyframes aura-pulse {
+  0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.3); }
+  100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.1); }
+}
+
+@keyframes power-up {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.02); filter: brightness(1.2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -266,10 +278,11 @@ body {
 }
 
 .mission-hero {
-  border-color: rgba(245, 158, 11, 0.2);
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(59, 130, 246, 0.05), rgba(5, 5, 5, 0.96));
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(59, 130, 246, 0.05), rgba(5, 5, 5, 0.96));
   position: relative;
   overflow: hidden;
+  animation: aura-pulse 4s infinite ease-in-out;
 }
 
 .mission-hero::before {
@@ -830,6 +843,16 @@ body {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+.mission-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mission-card:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .field-hint {
@@ -932,8 +955,11 @@ body {
   display: none !important;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
+#powerLevel {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  font-family: ui-monospace, monospace;
+}
   width: 8px;
 }
 ::-webkit-scrollbar-track {

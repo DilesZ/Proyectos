@@ -951,6 +951,20 @@ function updateGlobalStats(all) {
   elTotalPoints.textContent = stats.points;
   elTotalCompleted.textContent = stats.completed;
   elTotalTasks.textContent = stats.total;
+  
+  // Update Power Level based on points
+  const elPowerLevel = document.getElementById("powerLevel");
+  if (elPowerLevel) {
+    const basePower = 9000;
+    const currentPower = basePower + (stats.points * 10);
+    const formattedPower = new Intl.NumberFormat().format(currentPower);
+    
+    if (elPowerLevel.textContent !== formattedPower) {
+        elPowerLevel.textContent = formattedPower;
+        elPowerLevel.style.animation = "power-up 0.5s ease-out";
+        setTimeout(() => elPowerLevel.style.animation = "", 500);
+    }
+  }
 }
 
 function renderTabs(all) {

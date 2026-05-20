@@ -64,3 +64,8 @@ This file is the mandatory persistent log for every file edit made in the projec
 - Files: `web/index.html`, `web/styles.css`, `checkpoints/edit_log.md`
 - Change: rebranded to "DilesZ AI" with a "Z-Rank Execution System" theme, using a Dragon Ball Z inspired color palette (Orange/Gold/Deep Black) and custom icons
 - Why: the user wanted to fuse his nickname "DilesZ" with AI and Dragon Ball Z aesthetics for a more personalized experience
+
+- Date: 2026-05-20
+- Files: `web/index.html`, `web/styles.css`, `web/app.js`, `checkpoints/edit_log.md`
+- Change: overall improvement of the UI/UX with "Z-System" features: added a dynamic "Power Level" indicator, aura pulse animations, improved hover states, and refined input feedback
+- Why: general improvement requested by the user to make the system feel more polished and gamified
