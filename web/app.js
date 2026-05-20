@@ -225,6 +225,39 @@ function loadMissionState() {
           tone: "",
           promise: "",
           contentAngle: ""
+      },
+      day2Assets: {
+          masterFaceUrl: "",
+          imageCount: 0,
+          promptsSaved: false,
+          folderPath: ""
+      },
+      day3Channels: {
+          trafficProfile: "",
+          fanvueProfile: "",
+          linksConfigured: false,
+          welcomeMessageSet: false
+      },
+      day4Offer: {
+          price: "",
+          welcomeOffer: "",
+          firstUnlock: "",
+          conversionMessages: ""
+      },
+      day5Launch: {
+          postsPublished: 0,
+          ctaIncluded: false,
+          firstSignals: ""
+      },
+      day6Adjust: {
+          consistencyCheck: false,
+          copyImproved: false,
+          bottleneckIdentified: ""
+      },
+      day7Push: {
+          paymentReceived: false,
+          revenueAmount: "",
+          finalDiagnosis: ""
       }
   };
   try {
@@ -358,6 +391,213 @@ function renderDay1Workspace() {
   `;
 }
 
+function renderGenericDayWorkspace(day) {
+  const dayId = day.id;
+  const stateData = state.mission[dayId + "Data"] || {}; // We'll use a generic key for state
+  
+  // Specific renderers based on day
+  switch(dayId) {
+    case "day2": return renderDay2Workspace();
+    case "day3": return renderDay3Workspace();
+    case "day4": return renderDay4Workspace();
+    case "day5": return renderDay5Workspace();
+    case "day6": return renderDay6Workspace();
+    case "day7": return renderDay7Workspace();
+    default: return "";
+  }
+}
+
+function renderDay2Workspace() {
+  const data = state.mission.day2Assets || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 2 Ejecutable</span>
+          <h3>Crear Activos Base</h3>
+        </div>
+      </div>
+      <p class="mission-copy">Genera la cara maestra y el set inicial de imágenes consistentes.</p>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label">URL/Nombre Cara Maestra</label>
+          <input id="day2MasterFace" class="popup-input" type="text" value="${escapeHtml(data.masterFaceUrl)}" placeholder="Ej: elena_face_v1.png">
+        </div>
+        <div>
+          <label class="mission-label">Nº Imágenes Generadas</label>
+          <input id="day2ImageCount" class="popup-input" type="number" value="${data.imageCount || 0}">
+        </div>
+      </div>
+      <div class="mission-checklist-box">
+        <div class="check-row">
+          <input type="checkbox" id="day2PromptsSaved" ${data.promptsSaved ? "checked" : ""}>
+          <label for="day2PromptsSaved">Prompts guardados en el repositorio</label>
+        </div>
+      </div>
+      <label class="mission-label">Ruta de la carpeta de activos</label>
+      <input id="day2FolderPath" class="popup-input" type="text" value="${escapeHtml(data.folderPath)}" placeholder="Ej: /assets/elena/day2">
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay2Data">Guardar Avance Día 2</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDay3Workspace() {
+  const data = state.mission.day3Channels || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 3 Ejecutable</span>
+          <h3>Abrir Canales</h3>
+        </div>
+      </div>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label">User Red Principal (IG/X)</label>
+          <input id="day3TrafficProfile" class="popup-input" type="text" value="${escapeHtml(data.trafficProfile)}" placeholder="@elena_fitness">
+        </div>
+        <div>
+          <label class="mission-label">URL Fanvue</label>
+          <input id="day3FanvueProfile" class="popup-input" type="text" value="${escapeHtml(data.fanvueProfile)}" placeholder="fanvue.com/elena">
+        </div>
+      </div>
+      <div class="mission-checklist-box">
+        <div class="check-row">
+          <input type="checkbox" id="day3LinksConfigured" ${data.linksConfigured ? "checked" : ""}>
+          <label for="day3LinksConfigured">Links configurados y funcionando</label>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="day3WelcomeMessageSet" ${data.welcomeMessageSet ? "checked" : ""}>
+          <label for="day3WelcomeMessageSet">Mensaje de bienvenida automático listo</label>
+        </div>
+      </div>
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay3Data">Guardar Canales</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDay4Workspace() {
+  const data = state.mission.day4Offer || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 4 Ejecutable</span>
+          <h3>Oferta y Conversión</h3>
+        </div>
+      </div>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label">Precio Suscripción ($)</label>
+          <input id="day4Price" class="popup-input" type="text" value="${escapeHtml(data.price)}" placeholder="Ej: 9.99">
+        </div>
+        <div>
+          <label class="mission-label">Oferta de Bienvenida</label>
+          <input id="day4WelcomeOffer" class="popup-input" type="text" value="${escapeHtml(data.welcomeOffer)}" placeholder="Ej: 50% off primer mes">
+        </div>
+      </div>
+      <label class="mission-label">Primer Contenido de Pago (Unlock)</label>
+      <textarea id="day4FirstUnlock" class="popup-textarea" rows="2" placeholder="Describe el primer set que vas a vender">${escapeHtml(data.firstUnlock)}</textarea>
+      <label class="mission-label">Mensajes de Conversión Base</label>
+      <textarea id="day4ConversionMessages" class="popup-textarea" rows="3" placeholder="Escribe aquí los textos para cerrar ventas por DM">${escapeHtml(data.conversionMessages)}</textarea>
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay4Data">Guardar Oferta</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDay5Workspace() {
+  const data = state.mission.day5Launch || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 5 Ejecutable</span>
+          <h3>Publicación Inicial</h3>
+        </div>
+      </div>
+      <div class="mission-form-grid">
+        <div>
+          <label class="mission-label">Nº Posts Publicados</label>
+          <input id="day5PostsPublished" class="popup-input" type="number" value="${data.postsPublished || 0}">
+        </div>
+        <div style="display:flex; align-items:center; padding-top:2rem;">
+          <input type="checkbox" id="day5CtaIncluded" ${data.ctaIncluded ? "checked" : ""}>
+          <label for="day5CtaIncluded" style="margin-left:0.5rem;">¿Incluye CTA directo?</label>
+        </div>
+      </div>
+      <label class="mission-label">Primeras señales (likes, clics, subs)</label>
+      <textarea id="day5FirstSignals" class="popup-textarea" rows="3" placeholder="Anota aquí qué está pasando en las primeras horas">${escapeHtml(data.firstSignals)}</textarea>
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay5Data">Guardar Lanzamiento</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDay6Workspace() {
+  const data = state.mission.day6Adjust || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 6 Ejecutable</span>
+          <h3>Ajuste Rápido</h3>
+        </div>
+      </div>
+      <div class="mission-checklist-box">
+        <div class="check-row">
+          <input type="checkbox" id="day6ConsistencyCheck" ${data.consistencyCheck ? "checked" : ""}>
+          <label for="day6ConsistencyCheck">Revisada coherencia Perfil-CTA-Oferta</label>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="day6CopyImproved" ${data.copyImproved ? "checked" : ""}>
+          <label for="day6CopyImproved">Copy de peor rendimiento mejorado</label>
+        </div>
+      </div>
+      <label class="mission-label">Cuello de botella identificado</label>
+      <textarea id="day6BottleneckIdentified" class="popup-textarea" rows="3" placeholder="¿Dónde se está quedando la gente?">${escapeHtml(data.bottleneckIdentified)}</textarea>
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay6Data">Guardar Ajustes</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDay7Workspace() {
+  const data = state.mission.day7Push || {};
+  return `
+    <div class="mission-card mission-day-workspace">
+      <div class="mission-card-header">
+        <div>
+          <span class="eyebrow">Dia 7 Ejecutable</span>
+          <h3>Push a Primera Facturación</h3>
+        </div>
+      </div>
+      <div class="mission-form-grid">
+        <div style="display:flex; align-items:center;">
+          <input type="checkbox" id="day7PaymentReceived" ${data.paymentReceived ? "checked" : ""}>
+          <label for="day7PaymentReceived" style="margin-left:0.5rem; font-weight:bold; color:var(--success);">¿PRIMER PAGO RECIBIDO?</label>
+        </div>
+        <div>
+          <label class="mission-label">Monto facturado ($)</label>
+          <input id="day7RevenueAmount" class="popup-input" type="text" value="${escapeHtml(data.revenueAmount)}" placeholder="Ej: 14.99">
+        </div>
+      </div>
+      <label class="mission-label">Diagnóstico final / Lecciones aprendidas</label>
+      <textarea id="day7FinalDiagnosis" class="popup-textarea" rows="4" placeholder="Si hubo éxito, ¿qué funcionó? Si no, ¿cuál es el plan para mañana?">${escapeHtml(data.finalDiagnosis)}</textarea>
+      <div class="mission-actions">
+        <button class="btn btn-primary" id="saveDay7Data">Guardar Cierre de Sprint</button>
+      </div>
+    </div>
+  `;
+}
+
 function renderMissionPanel(business) {
   if (business.key !== activeTrackKey) {
       return `
@@ -387,7 +627,7 @@ function renderMissionPanel(business) {
         <span>${state.mission.completedDays[day.id] ? "Completado" : currentDay.id === day.id ? "Actual" : "Pendiente"}</span>
       </button>
   `).join("");
-  const dayWorkspace = currentDay.id === "day1" ? renderDay1Workspace() : "";
+  const dayWorkspace = currentDay.id === "day1" ? renderDay1Workspace() : renderGenericDayWorkspace(currentDay);
 
   return `
     <section class="mission-shell">
@@ -569,6 +809,75 @@ function bindMissionPanel(container, business) {
       state.mission.completedDays.day1 = true;
       const nextPending = firstRevenueSprint.days.find(day => !state.mission.completedDays[day.id]);
       state.mission.nextAction = nextPending ? nextPending.steps[0] : "Revisar el cuello de botella y empujar el siguiente hito.";
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 2 bindings
+  container.querySelector("#saveDay2Data")?.addEventListener("click", () => {
+      state.mission.day2Assets = {
+          masterFaceUrl: container.querySelector("#day2MasterFace")?.value.trim() || "",
+          imageCount: parseInt(container.querySelector("#day2ImageCount")?.value) || 0,
+          promptsSaved: container.querySelector("#day2PromptsSaved")?.checked || false,
+          folderPath: container.querySelector("#day2FolderPath")?.value.trim() || ""
+      };
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 3 bindings
+  container.querySelector("#saveDay3Data")?.addEventListener("click", () => {
+      state.mission.day3Channels = {
+          trafficProfile: container.querySelector("#day3TrafficProfile")?.value.trim() || "",
+          fanvueProfile: container.querySelector("#day3FanvueProfile")?.value.trim() || "",
+          linksConfigured: container.querySelector("#day3LinksConfigured")?.checked || false,
+          welcomeMessageSet: container.querySelector("#day3WelcomeMessageSet")?.checked || false
+      };
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 4 bindings
+  container.querySelector("#saveDay4Data")?.addEventListener("click", () => {
+      state.mission.day4Offer = {
+          price: container.querySelector("#day4Price")?.value.trim() || "",
+          welcomeOffer: container.querySelector("#day4WelcomeOffer")?.value.trim() || "",
+          firstUnlock: container.querySelector("#day4FirstUnlock")?.value.trim() || "",
+          conversionMessages: container.querySelector("#day4ConversionMessages")?.value.trim() || ""
+      };
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 5 bindings
+  container.querySelector("#saveDay5Data")?.addEventListener("click", () => {
+      state.mission.day5Launch = {
+          postsPublished: parseInt(container.querySelector("#day5PostsPublished")?.value) || 0,
+          ctaIncluded: container.querySelector("#day5CtaIncluded")?.checked || false,
+          firstSignals: container.querySelector("#day5FirstSignals")?.value.trim() || ""
+      };
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 6 bindings
+  container.querySelector("#saveDay6Data")?.addEventListener("click", () => {
+      state.mission.day6Adjust = {
+          consistencyCheck: container.querySelector("#day6ConsistencyCheck")?.checked || false,
+          copyImproved: container.querySelector("#day6CopyImproved")?.checked || false,
+          bottleneckIdentified: container.querySelector("#day6BottleneckIdentified")?.value.trim() || ""
+      };
+      saveMissionState();
+      renderBusiness(business);
+  });
+
+  // Day 7 bindings
+  container.querySelector("#saveDay7Data")?.addEventListener("click", () => {
+      state.mission.day7Push = {
+          paymentReceived: container.querySelector("#day7PaymentReceived")?.checked || false,
+          revenueAmount: container.querySelector("#day7RevenueAmount")?.value.trim() || "",
+          finalDiagnosis: container.querySelector("#day7FinalDiagnosis")?.value.trim() || ""
+      };
       saveMissionState();
       renderBusiness(business);
   });
