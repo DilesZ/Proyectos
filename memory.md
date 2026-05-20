@@ -141,6 +141,23 @@ This file is the durable memory of the project. It exists because chat context i
 - Next concrete action: Input Elena's data into the UI and generate the first batch of images.
 - Revenue Focus: Set up the first "Unlockable" (PPV) content strategy for Elena (Day 4 target).
 
+### Decision
+- What changed: The system has been rebranded to **DilesZ AI** with a **Z-Rank Execution System** theme (Dragon Ball Z inspired).
+- Why: To personalize the experience for the owner ("DilesZ") and gamify the execution process with a "Power Level" system.
+
+### State
+- Active track: `Influencer IA (Fanvue)`
+- Active mission: Sprint de 7 días hacia la primera facturación.
+- Revenue goal: 1 suscriptor de pago o 1 unlock de pago.
+- UI State: Navegación libre entre días habilitada; Power Level dinámico (base 9,000) integrado.
+
+### Risks
+- Blockers: Browser local storage is still the primary state container; cross-device sync relies on manual file checkpoints.
+- Assumptions: The owner will follow the "Revenue First" approach to trigger the first payment event by Day 7.
+
+### Next
+- Next concrete action: Complete Day 1 in the UI and begin generating the Master Face for Elena in Day 2.
+
 ## Update Template
 
 Use this format when updating memory:
