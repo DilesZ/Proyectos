@@ -1,102 +1,82 @@
 {
   "businesses": [
     {
-      "key": "voice_agents",
-      "name": "Agentes de Voz IA (B2B)",
+      "key": "viral_clips_service",
+      "name": "Agencia de Clips Virales (B2B)",
       "tasks": [
         {
-          "id": "voice_phase_01",
-          "title": "Fase 1: Demo Irresistible",
-          "points": 15,
-          "badge": "Setup",
-          "description": "Configuración del agente de voz y creación de la demo para ventas.",
+          "id": "clips_phase_01",
+          "title": "Fase 1: El Gancho de Valor",
+          "points": 20,
+          "badge": "Content",
+          "description": "Creación de clips gratuitos para demostrar valor a YouTubers.",
           "time": "4 horas",
-          "difficulty": "Media",
+          "difficulty": "Baja",
           "subtasks": [
             {
-              "id": "voice_01_01_vapi",
-              "title": "Configuración en Vapi.ai",
+              "id": "clips_01_01_prospecting",
+              "title": "Selección de YouTubers",
               "points": 5,
-              "description": "Crear el primer asistente de voz funcional.",
+              "description": "Identificar 5 canales con potencial.",
               "time": "1 hora",
-              "difficulty": "Baja",
               "steps": [
                 {
-                  "id": "voice_01_01_s01",
-                  "title": "Paso 1: Crear cuenta y primer asistente",
-                  "time": "20 min",
-                  "description": "Registro en Vapi.ai y creación de un bot de agendamiento."
-                },
-                {
-                  "id": "voice_01_01_s02",
-                  "title": "Paso 2: Prompting del sistema",
-                  "time": "40 min",
-                  "description": "Escribir las instrucciones del bot para que gestione citas de forma natural."
+                  "id": "clips_01_01_s01",
+                  "title": "Búsqueda en YouTube y registro de emails",
+                  "time": "30 min"
                 }
               ]
             },
             {
-              "id": "voice_01_02_demo",
-              "title": "Preparación de la Demo",
-              "points": 10,
-              "description": "Configurar la auto-llamada para demostraciones en vivo.",
+              "id": "clips_01_02_editing",
+              "title": "Edición de Muestras",
+              "points": 15,
+              "description": "Crear 3 clips virales de alta calidad.",
               "time": "3 horas",
-              "difficulty": "Media",
               "steps": [
                 {
-                  "id": "voice_01_02_s01",
-                  "title": "Paso 1: Integrar con Calendly",
-                  "time": "1 hora",
-                  "description": "Conectar el bot a una agenda real para demostrar agendamiento."
+                  "id": "clips_01_02_s01",
+                  "title": "Edición en CapCut con subtítulos dinámicos",
+                  "time": "2 horas"
                 }
               ]
             }
           ]
         },
         {
-          "id": "voice_phase_02",
-          "title": "Fase 2: Asalto Comercial",
-          "points": 25,
+          "id": "clips_phase_02",
+          "title": "Fase 2: El Cierre Comercial",
+          "points": 30,
           "badge": "Revenue",
-          "description": "Outreach a negocios locales y cierre de la primera factura.",
-          "time": "8 horas",
+          "description": "Envío de propuestas y cobro de la primera factura.",
+          "time": "4 horas",
           "difficulty": "Alta",
           "subtasks": [
             {
-              "id": "voice_02_01_prospecting",
-              "title": "Prospección Relámpago",
+              "id": "clips_02_01_outreach",
+              "title": "Envío de Clips",
               "points": 10,
-              "description": "Listar 10 negocios con problemas de recepción telefónica.",
-              "time": "2 horas",
-              "difficulty": "Baja",
+              "description": "Contactar a los creadores con el regalo.",
+              "time": "1 hora",
               "steps": [
                 {
-                  "id": "voice_02_01_s01",
-                  "title": "Paso 1: Google Maps Scraper manual",
-                  "time": "1 hora",
-                  "description": "Identificar clínicas o talleres con reseñas negativas por falta de atención."
+                  "id": "clips_02_01_s01",
+                  "title": "Email/DM personalizado con link a Drive",
+                  "time": "1 hora"
                 }
               ]
             },
             {
-              "id": "voice_02_02_sales",
-              "title": "Llamadas de Auditoría",
-              "points": 15,
-              "description": "Realizar las 10 llamadas y ejecutar la demo de IA.",
-              "time": "6 horas",
-              "difficulty": "Alta",
+              "id": "clips_02_02_billing",
+              "title": "Cobro de Factura",
+              "points": 20,
+              "description": "Recibir el primer pago por pack mensual.",
+              "time": "3 horas",
               "steps": [
                 {
-                  "id": "voice_02_02_s01",
-                  "title": "Paso 1: Ejecutar script de ventas DilesZ",
-                  "time": "3 horas",
-                  "description": "Ofrecer la auditoría de 1 minuto y transferir al bot."
-                },
-                {
-                  "id": "voice_02_02_s02",
-                  "title": "Paso 2: Envío de factura de Setup ($300)",
-                  "time": "3 horas",
-                  "description": "Cerrar el primer cliente y formalizar el pago."
+                  "id": "clips_02_02_s01",
+                  "title": "Envío de link de pago PayPal/Stripe",
+                  "time": "1 hora"
                 }
               ]
             }

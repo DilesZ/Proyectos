@@ -7,173 +7,171 @@ const storeKey = "orquestador_progress_v2";
 const missionStoreKey = "orquestador_mission_state_v1";
 const activeTrackKey = "influencer_agency";
 const voiceAgentsSprint = {
-  trackKey: "voice_agents",
-  trackName: "Agentes de Voz IA (B2B)",
-  missionTitle: "Sprint 48h: Primera Factura B2B",
-  missionSummary: "Cerrar un cliente de negocio local para un piloto de Agente de Voz en menos de 48 horas.",
-  revenueGoal: "$300 - $1,000 por Setup",
-  restartPrompt: "Lee businesses/voice_agents/sprint_48h.md y ayúdame a ejecutar la demo de voz.",
+  trackKey: "viral_clips_service",
+  trackName: "Agencia de Clips Virales (B2B)",
+  missionTitle: "Sprint 48h: Clips por Cash",
+  missionSummary: "Cerrar un creador de pago enviando muestras de alto valor hechas gratis a partir de su contenido.",
+  revenueGoal: "$100 - $300 por Pack Mensual",
+  restartPrompt: "Lee businesses/viral_clips/viral_clips_service.md y ayúdame a elegir YouTubers para prospectar.",
   blockers: [
-    "No hay nicho seleccionado",
-    "El bot no suena natural",
-    "Calendly no sincroniza",
-    "Miedo al outreach frío",
-    "No hay link de pago listo"
+    "No hay YouTubers seleccionados",
+    "La edición no es lo bastante pro",
+    "No sé cómo contactar al creador",
+    "Miedo al rechazo",
+    "No tengo link de Drive listo"
   ],
   milestones: [
-    "Hito 1: Demo funcional que me llama al móvil",
-    "Hito 2: 10 llamadas de auditoría realizadas",
-    "Hito 3: Primer cobro de $300 recibido"
+    "Hito 1: 3 clips editados y listos en Drive",
+    "Hito 2: 5 propuestas enviadas con éxito",
+    "Hito 3: Primer pago de $200 recibido"
   ],
   days: [
     {
-      id: "voice_day1",
+      id: "clips_day1",
       label: "Día 1",
-      title: "Demo Irresistible",
-      objective: "Tener un bot que agende citas y te llame para demostrarlo.",
-      proof: "Captura de cita agendada en Calendly por el bot.",
-      doneText: "El bot suena increíble y está conectado a la agenda.",
+      title: "El Gancho de Valor",
+      objective: "Tener 3 clips editados y listos para enviar como regalo.",
+      proof: "Enlace a carpeta de Google Drive con los 3 clips.",
+      doneText: "Los clips están editados con subtítulos dinámicos y listos.",
       steps: [
-        "Elegir nicho (Dentistas/Talleres)",
-        "Configurar asistente en Vapi.ai",
-        "Conectar con Calendly vía Make",
-        "Hacer una prueba de auto-llamada"
+        "Identificar 5 YouTubers de 50k-500k subs",
+        "Descargar su vídeo más popular de la semana",
+        "Extraer y editar 3 momentos virales en CapCut",
+        "Subir clips a Google Drive"
       ]
     },
     {
-      id: "voice_day2",
+      id: "clips_day2",
       label: "Día 2",
       title: "Asalto Comercial",
-      objective: "Hacer 10 demos en vivo y cobrar el primer setup.",
-      proof: "Link de pago enviado o factura cobrada.",
-      doneText: "He hablado con 10 dueños y tengo un interesado real.",
+      objective: "Contactar a los creadores y cerrar el primer pack de pago.",
+      proof: "Link de pago enviado o captura de respuesta positiva.",
+      doneText: "He enviado las 5 propuestas y estoy negociando.",
       steps: [
-        "Listar 10 prospectos en Google Maps",
-        "Realizar llamadas de auditoría",
-        "Transferir llamadas al bot en vivo",
-        "Enviar oferta de $300 por setup"
+        "Redactar emails/DMs personalizados",
+        "Enviar los clips como regalo directo",
+        "Hacer seguimiento a las 4 horas",
+        "Enviar oferta de pack mensual ($200)"
       ]
     }
   ]
 };
 const firstRevenueSprint = {
-  trackKey: activeTrackKey,
+  trackKey: "influencer_agency",
   trackName: "Influencer IA (Fanvue)",
-  missionTitle: "Primer Sprint de Facturacion",
-  missionSummary: "Lanzar una primera version operativa del negocio y provocar el primer evento de monetizacion.",
-  revenueGoal: "1 suscriptor de pago o 1 unlock de pago",
-  restartPrompt: "Lee system.md, memory.md, agets.md, skills.md, checkpoints/current.md y checkpoints/first_revenue_sprint.md. Luego ayudame a continuar desde la mision activa y el siguiente paso pendiente.",
+  missionTitle: "Sprint 7 Días: Primera Factura",
+  missionSummary: "Convertir a Elena en una máquina de facturación híbrida (Fitness + GFE) para maximizar el gasto por suscriptor.",
+  revenueGoal: "1 Suscriptor o 1 Unlock ($10-$15)",
+  restartPrompt: "Lee businesses/influencer_agency/persona_elena_fitness.md y ayúdame con el set de fotos del Día 2.",
   blockers: [
-    "No hay claridad sobre la oferta",
-    "No hay CTA visible",
-    "No hay suficientes activos para publicar",
-    "El perfil no transmite valor",
-    "Hay trafico pero no clics",
-    "Hay clics pero no pagos"
+    "Identidad visual inconsistente",
+    "Falta de tráfico desde IG/TikTok",
+    "Mensaje de bienvenida aburrido",
+    "No hay oferta PPV activa",
+    "Miedo a chatear con fans"
   ],
   milestones: [
-    "Hito 1: primera facturacion",
-    "Hito 2: 100 EUR",
-    "Hito 3: sistema repetible durante 2 semanas"
+    "Hito 1: Perfil de Elena optimizado para GFE",
+    "Hito 2: Primeras 30 fotos con consistencia LoRA",
+    "Hito 3: Primera venta de $10 realizada"
   ],
   days: [
     {
       id: "day1",
-      label: "Dia 1",
-      title: "Definir Producto",
-      objective: "Dejar cerrada la identidad y la propuesta base.",
-      proof: "Documento con nombre, arquetipo, bio y promesa.",
-      doneText: "Ya no hay dudas sobre quien es el personaje ni que vende.",
+      label: "Día 1",
+      title: "Identidad Z",
+      objective: "Definir a Elena como un híbrido Fitness + GFE para maximizar ARPS.",
+      proof: "Perfil guardado en la UI con tono y promesa GFE.",
+      doneText: "Identidad lista para convertir fans en pagadores.",
       steps: [
-        "Elegir un solo arquetipo",
-        "Definir nombre, bio, tono y promesa",
-        "Escribir la propuesta de valor publica",
-        "Definir el tipo de contenido de arranque"
+        "Definir nombre y arquetipo (Elena / GFE Fitness)",
+        "Redactar Bio con gancho emocional",
+        "Establecer tono de voz cercano y vulnerable",
+        "Configurar promesa de valor exclusiva"
       ]
     },
     {
       id: "day2",
-      label: "Dia 2",
-      title: "Crear Activos Base",
-      objective: "Tener el pack minimo para abrir perfiles.",
-      proof: "Carpeta con imagenes finales y prompts guardados.",
-      doneText: "Existen suficientes activos para publicar sin improvisar.",
+      label: "Día 2",
+      title: "Activos Maestros",
+      objective: "Generar la cara maestra y 30 imágenes con consistencia facial absoluta.",
+      proof: "Dataset de 30 fotos subidas al repo/Drive.",
+      doneText: "Elena existe visualmente y es indistinguible de una humana.",
       steps: [
-        "Generar cara maestra",
-        "Crear 9-12 imagenes iniciales consistentes",
-        "Seleccionar foto de perfil",
-        "Guardar los mejores prompts usados"
+        "Generar cara maestra (Flux.1)",
+        "Crear 15 fotos SFW (Social Media)",
+        "Crear 15 fotos Paywall (Fanvue/PPV)",
+        "Verificar consistencia facial en todo el set"
       ]
     },
     {
       id: "day3",
-      label: "Dia 3",
-      title: "Abrir Canales",
-      objective: "Dejar operativo el embudo minimo.",
-      proof: "Capturas de perfiles configurados.",
-      doneText: "Un usuario ya puede descubrir el perfil y llegar al punto de pago.",
+      label: "Día 3",
+      title: "Embudo de Ventas",
+      objective: "Abrir canales y configurar el Welcome DM Funnel.",
+      proof: "Links activos y mensaje de bienvenida configurado.",
+      doneText: "El sistema está listo para recibir tráfico y cobrar.",
       steps: [
-        "Crear o preparar perfil principal de trafico",
-        "Crear o preparar Fanvue",
-        "Cargar bio, imagenes y texto base",
-        "Configurar link principal y mensaje de bienvenida"
+        "Crear IG/TikTok con el nombre de Elena",
+        "Configurar link en bio hacia Fanvue",
+        "Redactar mensaje de bienvenida con oferta PPV",
+        "Publicar los primeros 3 clips virales"
       ]
     },
     {
       id: "day4",
-      label: "Dia 4",
-      title: "Oferta y Conversion",
-      objective: "Dejar clara la primera oferta de cobro.",
-      proof: "Documento con pricing, oferta, CTA y textos.",
-      doneText: "Existe un mecanismo claro para pasar de visita a pago.",
+      label: "Día 4",
+      title: "Oferta de Bienvenida",
+      objective: "Lanzar el primer Unlockable automático de $9.99.",
+      proof: "Set de pago configurado en Fanvue.",
+      doneText: "La primera oferta de pago está en el aire.",
       steps: [
-        "Fijar precio de entrada",
-        "Definir oferta de bienvenida",
-        "Definir primer contenido de pago o unlock",
-        "Escribir 3 mensajes base de conversion"
+        "Fijar precio de bienvenida ($9.99)",
+        "Subir set de fotos exclusivo 'Post-Gym'",
+        "Configurar el link de pago en el DM automático",
+        "Escribir 3 variaciones de copy para cerrar el PPV"
       ]
     },
     {
       id: "day5",
-      label: "Dia 5",
-      title: "Publicacion Inicial",
-      objective: "Lanzar el primer bloque de trafico.",
-      proof: "Enlaces o capturas de publicaciones.",
-      doneText: "El embudo ya esta expuesto al mercado.",
+      label: "Día 5",
+      title: "Inyección de Tráfico",
+      objective: "Publicar 5 piezas de contenido con CTA directo al Paywall.",
+      proof: "Capturas de posts publicados en TikTok/IG.",
+      doneText: "El tráfico está fluyendo hacia la oferta de pago.",
       steps: [
-        "Publicar 3-5 piezas iniciales",
-        "Publicar al menos 1 pieza con CTA directo",
-        "Registrar formato, hora y copy",
-        "Medir primeras señales"
+        "Publicar 3 Reels de Elena con audio tendencia",
+        "Publicar 2 carruseles en IG con CTA en la descripción",
+        "Responder los primeros 10 comentarios humanamente",
+        "Verificar clics en el link de la Bio"
       ]
     },
     {
       id: "day6",
-      label: "Dia 6",
-      title: "Ajuste Rapido",
-      objective: "Corregir friccion antes de escalar.",
-      proof: "Lista corta de cambios aplicados.",
-      doneText: "El sistema es mas claro y mas facil de convertir.",
+      label: "Día 6",
+      title: "Optimización GFE",
+      objective: "Iniciar chats privados para cerrar ventas personalizadas.",
+      proof: "Lista de 3 conversaciones activas en Fanvue.",
+      doneText: "Elena está construyendo relaciones que facturan.",
       steps: [
-        "Revisar que perfil, CTA y oferta sean coherentes",
-        "Mejorar el copy que peor convierte",
-        "Detectar si falta mas prueba social o mas contenido",
-        "Preparar una segunda tanda de publicaciones"
+        "Revisar suscriptores nuevos",
+        "Enviar mensaje de audio personalizado (ElevenLabs)",
+        "Ofrecer set personalizado por $15-20",
+        "Corregir el copy según las objeciones recibidas"
       ]
     },
     {
       id: "day7",
-      label: "Dia 7",
-      title: "Push a Primera Facturacion",
-      objective: "Provocar el primer pago.",
-      proof: "Evidencia de primer pago o diagnostico del bloqueo principal.",
-      doneText: "Hay ingreso o hay un bloqueo muy concreto identificado.",
+      label: "Día 7",
+      title: "Cierre de Facturación",
+      objective: "Lograr el primer pago de $10-$15.",
+      proof: "Captura de saldo positivo en Fanvue.",
+      doneText: "¡Primera facturación conseguida! El sistema funciona.",
       steps: [
-        "Publicar contenido con CTA directo",
-        "Responder rapido a interacciones",
-        "Empujar mensaje de bienvenida o unlock",
-        "Registrar resultados",
-        "Si no hay pago, diagnosticar el cuello de botella principal"
+        "Publicar oferta flash de 24h",
+        "Seguimiento intensivo en DMs",
+        "Lanzar el 'Unlockable Maestro'",
+        "Registrar resultados y celebrar"
       ]
     }
   ]
@@ -653,9 +651,9 @@ function renderDay7Workspace() {
 }
 
 function renderMissionPanel(business) {
-  const sprint = business.key === "voice_agents" ? voiceAgentsSprint : firstRevenueSprint;
+  const sprint = business.key === "viral_clips_service" ? voiceAgentsSprint : firstRevenueSprint;
   
-  if (business.key !== activeTrackKey && business.key !== "voice_agents") {
+  if (business.key !== activeTrackKey && business.key !== "viral_clips_service") {
       return `
         <section class="mission-shell mission-paused">
           <div class="mission-card mission-card-compact">
